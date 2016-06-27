@@ -1,5 +1,8 @@
 // Brilliant network wrapper courteousy of
 // https://github.com/pburtchaell/redux-promise-middleware
+// Works to create requests to a network resource and wraps the requests in
+// A promise.  This works great with redux promise middlewares
+// See the actions for post to see it in action located in ../actions/post.js
 import request from './request';
 
 /**
