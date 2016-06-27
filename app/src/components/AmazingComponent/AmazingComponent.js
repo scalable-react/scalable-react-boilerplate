@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 import styles from './AmazingComponent.module.scss';
 
 const AmazingComponent = () => (
-  <div className={`${styles.fullScreen} gradient-green`}>
+  <div className={styles.fullScreen}>
     <h1 className="section-header">I am truly an amazing component</h1>
     <div className={styles.flex}>
       <div className={styles.box + ' ' + styles.boxOne}>

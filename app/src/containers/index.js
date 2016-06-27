@@ -1,7 +1,5 @@
-import NotFound from './NotFound/NotFound';
-import LandingPage from './LandingPage/LandingPage'
+import MyAmazingContainer from './MyAmazingContainer/MyAmazingContainer';
 
 export {
-  NotFound,
-  LandingPage
+  MyAmazingContainer
 };
