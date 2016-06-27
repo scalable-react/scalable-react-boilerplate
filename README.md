@@ -87,6 +87,6 @@ Coming soon
 
 ### Acknowledgements
 
-This project is loosely based on: (This boilerplate)[https://github.com/mezod/boilerplate-koa-redux-react], specifically the npm scripts and file structure.
+This project is loosely based on: [This boilerplate](https://github.com/mezod/boilerplate-koa-redux-react), specifically the npm scripts and file structure.
 
 Thank you to @mezod for their hard work and inspiration.
