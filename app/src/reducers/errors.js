@@ -3,12 +3,12 @@ import {
 } from '../actions/actionCreators';
 
 export default function posts(state = {
-  posts: []
+  myModel: []
 }, action) {
   switch (action.type) {
     case DISPLAY_ERROR:
       return Object.assign(state, {
-        posts: [...action.error]
+        myModel: [...action.error]
       });
     default:
       return state;

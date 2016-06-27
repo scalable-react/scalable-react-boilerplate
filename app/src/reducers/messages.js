@@ -5,13 +5,13 @@ import {
 
 export default function posts(state = {
   alertVisible: false,
-  someModel: []
+  myModel: []
 }, action) {
   switch (action.type) {
     case DISPLAY_MESSAGE:
       return Object.assign({}, state, {
         alertVisible: true,
-        messages: action.messages
+        myModel: [...action.messages]
       });
     case DISMISS_MESSAGE:
       return Object.assign({}, state, {
