@@ -46,6 +46,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "css-loader": "^0.23.0",
+    "foundation-sites": "^6.2.3",
     "history": "^1.14.0",
     "html-webpack-plugin": "^2.7.1",
     "immutable": "^3.7.5",

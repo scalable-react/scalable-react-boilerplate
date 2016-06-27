@@ -1,9 +1,18 @@
-.container {
-  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5), rgba(0, 255, 127,.5));
+.fullScreen {
   height: 100vh;
-  width: 100%;
 }
 
-.amazingComponent {
-  // add css here
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 200px;
+  width: 50%;
+}
+
+.boxOne {
+  border: 1px solid goldenrod;
 }
