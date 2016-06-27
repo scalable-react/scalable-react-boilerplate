@@ -13,7 +13,7 @@ import request from './request';
  */
  const Network = resource => {
    const buildUrl = ({ id, resource } = {}) => {
-     let parameters = [
+     const parameters = [
        'http://localhost:3000',
        'api'
      ];
@@ -43,7 +43,7 @@ import request from './request';
       * @returns {promise}
       */
      post: (path, body, options = {}) => {
-       return request(buildURL(path), Object.assign(
+       return request(buildUrl(path), Object.assign(
          options,
          defaultOptions,
          {
@@ -99,7 +99,7 @@ import request from './request';
        ));
      },
 
-     ping: () => request(buildURL(), { method: 'GET' })
+     ping: () => request(buildUrl(), { method: 'GET' })
    };
  };
 
