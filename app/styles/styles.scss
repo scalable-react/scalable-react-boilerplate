@@ -2,8 +2,14 @@
 @import "../../node_modules/foundation-sites/scss/foundation";
 @import "./settings.scss";
 
-// Global Styles defined here.
+// Global Styles defined and foundation classes
 // Just delete this if you don't want to use it!
+// NOTE: Stylesheets will be loaded by Sass loader, unless the name includes a .module
+// postfix, i.e.: MyModule.module.scss.  This is to allow you to use the best of both worlds
+// i.e. css / sass modules and global styles with imports
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-everything;
 
 $primary-color: rgba(0, 216, 255, .9);
 $off-white: #E9EAEC;
@@ -16,113 +22,122 @@ body {
   overflow-x: hidden;
 }
 
-// Global Styles defined here.
-:global {
-  .centered {
-    text-align: center;
-  }
+.centered {
+  text-align: center;
+}
 
-  .dark-grey {
-    color: #454545;
-  }
+.dark-grey {
+  color: #454545;
+}
 
-  .text-medium {
-    font-size: 1.4rem;
-    line-height: 1.42857143;
-  }
+.text-medium {
+  font-size: 1.4rem;
+  line-height: 1.42857143;
+}
 
-  .section-header {
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #454545;
-    font-family: 'Raleway';
-    letter-spacing: 1px;
-    padding: 40px;
-    padding-top: 100px;
-  }
+.section-header {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #454545;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+  padding: 40px;
+  padding-top: 100px;
+}
 
-  .section-subheader {
-    color: $light-grey;
-    font-size: 18px;
-    font-style: italic;
-    text-align: center;
-  }
+.section-subheader {
+  color: $light-grey;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
 
-  span.divider {
-    background-color: $primary-color;
-    width: 150px;
-    height: 3px;
-    display: block;
-    margin: 35px 0;
-    margin-right: auto;
-    margin-left: auto;
-  }
+span.divider {
+  background-color: $primary-color;
+  width: 150px;
+  height: 3px;
+  display: block;
+  margin: 35px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  .section__off-white {
-    background: $off-white;
-  }
+.section__off-white {
+  background: $off-white;
+}
 
-  .gradient-green {
-    background-image: linear-gradient(45deg, rgba(0, 216, 255, .5), rgba(0, 255, 127,.5));
-  }
+.gradient-green {
+  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5), rgba(0, 255, 127,.5));
+}
 
-  .gradient-purple {
-    background-image: linear-gradient(135deg, #ca2091 0, #a041fa 20%, #3f65fb 50%, #0fcbfa 80%, #0fe6fa 100%);
-  }
+.gradient-purple {
+  background-image: linear-gradient(135deg, #ca2091 0, #a041fa 20%, #3f65fb 50%, #0fcbfa 80%, #0fe6fa 100%);
+}
 
-  .gradient-blue {
-    background: linear-gradient(to bottom, #FFE1FF 0%, #C9DAF8 100%);
-  }
-  .uppercase {
-    text-transform: uppercase;
-  }
+.gradient-blue {
+  background: linear-gradient(to bottom, #FFE1FF 0%, #C9DAF8 100%);
+}
+.uppercase {
+  text-transform: uppercase;
+}
 
-  .text-white {
-    color: white;
-  }
+.text-white {
+  color: white;
+}
 
-  .paragraph-text {
-    font-family: 'Open Sans';
-    font-size: 1.3rem;
-    padding: 10px;
-  }
+.paragraph-text {
+  font-family: 'Open Sans';
+  font-size: 1.3rem;
+  padding: 10px;
+}
 
-  .icon-medium {
-    font-size: 2rem;
-  }
+.icon-medium {
+  font-size: 2rem;
+}
 
-  .icon-small {
-    font-size: 1.5rem;
-  }
+.icon-small {
+  font-size: 1.5rem;
+}
 
-  .paper__fit {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    background-color: #fff;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-    padding: 60px;
-    width: 100%;
-    min-height: 200px;
-  }
+.paper__fit {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  padding: 60px;
+  width: 100%;
+  min-height: 200px;
+}
 
-  .huge-space {
-    margin-bottom: 200px;
-  }
+.huge-space {
+  margin-bottom: 200px;
+}
 
-  .tilted-background:before {
-    content: '';
-    position: absolute;
-    top: -9px;
-    left: -44px;
-    right: -44px;
-    height: 44px;
-    background: #f4f5be;
-    transform: rotate(-2deg);
-  }
+.tilted-background:before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -44px;
+  right: -44px;
+  height: 44px;
+  background: #f4f5be;
+  transform: rotate(-2deg);
+}
 
-  .paragraph-header-text {
+.paragraph-header-text {
+  margin: 0;
+  font-size: 29px;
+  line-height: 1.35;
+  color: #333c4e;
+  font-weight: 300;
+}
+
+.description-text {
+  font-family: 'Open Sans';
+  text-align: justify;
+  h4 {
     margin: 0;
     font-size: 29px;
     line-height: 1.35;
@@ -130,57 +145,45 @@ body {
     font-weight: 300;
   }
 
-  .description-text {
-    font-family: 'Open Sans';
-    text-align: justify;
-    h4 {
-      margin: 0;
-      font-size: 29px;
-      line-height: 1.35;
-      color: #333c4e;
-      font-weight: 300;
-    }
-
-    p {
-      margin: 0;
-      font-size: 23px;
-      color: #7e8890;
-      font-weight: 300;
-    }
+  p {
+    margin: 0;
+    font-size: 23px;
+    color: #7e8890;
+    font-weight: 300;
   }
+}
 
-  hr.section-divider {
-    margin-top: 52px;
-    margin-bottom: 42px;
-    display: block;
-    border: 0;
-    text-align: center;
-  }
+hr.section-divider {
+  margin-top: 52px;
+  margin-bottom: 42px;
+  display: block;
+  border: 0;
+  text-align: center;
+}
 
-  hr.section-divider:before {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-style: italic;
-    font-size: 28px;
-    letter-spacing: .6em;
-  }
+hr.section-divider:before {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: .6em;
+}
 
-  hr.section-divider:before {
-    content: '...';
-    display: inline-block;
-    margin-left: .6em;
-    color: rgba(0,0,0,.6);
-    position: relative;
-    top: -30px;
-  }
+hr.section-divider:before {
+  content: '...';
+  display: inline-block;
+  margin-left: .6em;
+  color: rgba(0,0,0,.6);
+  position: relative;
+  top: -30px;
+}
 
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    @media (min-width: 992px) {
-      width: 1000px;
-    }
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 992px) {
+    width: 1000px;
   }
 }
