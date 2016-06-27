@@ -1,5 +1,5 @@
 # Behind the boilerplate
-The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with a the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
+The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
 
 ## Docs
 
@@ -15,21 +15,17 @@ Coming soon
 
     npm run setup
 
-3. **Run the webserver**
+3. **Run development server**
 
-    npm run webserver
+   npm run start
 
-    Webserver should be running at http://localhost:3000/
+   Development server should be running at http://localhost:8080/
 
 4. **Make build**
 
    npm run build
 
-5. **Run development server**
 
-   npm run start
-
-   Development server should be running at http://localhost:8080/
 
 ## List of technology
 
