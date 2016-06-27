@@ -31,13 +31,18 @@ module.exports = {
       loader: 'json'
     },
     {
-      test: /\.scss$/,
+      test: /\.module\.scss$/,
       loaders: [
           'style',
           'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
           'resolve-url',
           'sass'
       ]
+    },
+    {
+      test: /\.scss$/,
+      exclude: /\.module\.scss$/,
+      loaders: ["style", "css", "sass"]
     },
     {
       test: /\.css$/,

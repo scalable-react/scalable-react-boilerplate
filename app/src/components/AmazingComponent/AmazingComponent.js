@@ -1,6 +1,6 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import styles from './AmazingComponent.scss';
+import styles from './AmazingComponent.module.scss';
 
 const AmazingComponent = () => (
   <div className={`${styles.fullScreen} gradient-green`}>

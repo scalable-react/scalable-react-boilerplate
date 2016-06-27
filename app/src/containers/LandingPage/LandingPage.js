@@ -1,6 +1,6 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import styles from './LandingPage.scss';
+import styles from './LandingPage.module.scss';
 // Example to import a component using ES6 destructuring.
 import { AmazingComponent } from '../../components';
 
