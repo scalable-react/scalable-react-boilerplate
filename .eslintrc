@@ -1,0 +1,17 @@
+{ 
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "func-names": 0,
+    "eol-last": 0
+  },
+  "plugins": [
+    "react",
+  ]
+}
