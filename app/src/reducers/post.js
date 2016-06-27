@@ -1,5 +1,6 @@
 /* An example of how to setup reducers for your post model.
  * working with the demo action creators for post model.
+ * utilizing promise middleware.
  */
 import * as types from '../constants/post';
 
