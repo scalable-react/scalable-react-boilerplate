@@ -15,21 +15,17 @@ Coming soon
 
     npm run setup
 
-3. **Run the webserver**
+3. **Run development server**
 
-    npm run webserver
+   npm run start
 
-    Webserver should be running at http://localhost:3000/
+   Development server should be running at http://localhost:8080/
 
 4. **Make build**
 
    npm run build
 
-5. **Run development server**
 
-   npm run start
-
-   Development server should be running at http://localhost:8080/
 
 ## List of technology
 
