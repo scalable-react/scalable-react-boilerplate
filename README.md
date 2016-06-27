@@ -1,4 +1,5 @@
-# Boilerplate that gives you just enough to start using React, Redux, Webpack and Hot Module Reloading, plus a few (optional) extras like redux-form, react-foundation, etc.
+# Behind the boilerplate
+The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with a the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
 
 ## Docs
 

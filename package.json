@@ -13,7 +13,6 @@
   "scripts": {
     "test": "`npm bin`/mocha --compilers js:babel-core/register --require ./app/tests/test_helper.js '*/tests/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch",
-    "webserver": "node api/src/server.js",
     "build": "`npm bin`/webpack",
     "dev": "`npm bin`/webpack-dev-server",
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx",
