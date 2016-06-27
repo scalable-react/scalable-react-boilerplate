@@ -18,12 +18,10 @@ const router = (
         <Route path="/" component={App}>
           <IndexRoute component={Containers.LandingPage} />
           {/* Examples of routes here.
-          <Route path="/portfolio" component={Containers.Portfolio} />
-          <Route path="/projects/:projectId" component={Containers.SingleProjectContainer} />
-          <Route path="/contact" component={Containers.Contact} />
+          <Route path="/beautiful" component={Containers.Beautiful} />
           <Route path="/blog" name="PostListView" component={Containers.PostListView} />
           <Route path="/blog/posts/:postId" name="SinglePostView" component={Containers.SinglePostView} />
-          <Route path="/resume/view" name="ResumeViewer" component={Containers.ResumePDF} />*/}
+         */}
           <Route path="*" component={Containers.NotFound} />
         </Route>
       </Router>
