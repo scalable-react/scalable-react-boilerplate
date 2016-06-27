@@ -10,4 +10,4 @@ const AmazingComponent = () => (
   </div>
 );
 
-export default CSSModules(AmazingComponent, style);
+export default CSSModules(AmazingComponent, styles);
