@@ -76,7 +76,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new HtmlwebpackPlugin({
-      title: 'Meetup Events',
+      title: 'React Redux Simple Starter',
       template: 'index.html'
     })
   ]
