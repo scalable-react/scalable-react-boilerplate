@@ -57,10 +57,6 @@ Coming soon
 - A bunch of useful scripts
 
 ## Scripts
-- **npm run webserver**
-
-     Starts Koa server
-
 - **npm run test**
 
      Runs unit tests
