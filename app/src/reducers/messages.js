@@ -3,6 +3,12 @@ import {
   DISMISS_MESSAGE
 } from '../actions/actionCreators';
 
+/* @function posts
+ * @description - A sample reducer showing how to display messages for a specific model (key from store)
+ * @param - { state } the state of the object, which has a default object set.
+ * @param - { action } the action that was dispatched.
+ * @return - None
+ */
 export default function posts(state = {
   alertVisible: false,
   myModel: []
@@ -16,9 +22,13 @@ export default function posts(state = {
     case DISMISS_MESSAGE:
       return Object.assign({}, state, {
         alertVisible: false,
-        messages: undefined
+        myModel: []
       });
     default:
       return state;
   }
 }
+
+/* Typically you would repeat this for each of your models and then combine them into one error reducer using
+ * Combine reducers.
+ */
