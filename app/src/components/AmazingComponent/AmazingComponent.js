@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import CSSModules from 'react-css-modules';
+import cssModules from 'react-css-modules';
 import styles from './AmazingComponent.module.scss';
 import { AmazingInput, AmazingBox } from 'components';
 
@@ -12,8 +12,8 @@ const AmazingComponent = ({
     <h1 className="section-header">I am truly an amazing component</h1>
     <AmazingInput onSubmit={onAddBox} />
     <div className={styles.flex}>
-      {boxes.map((box) =>
-        <AmazingBox content={box} />
+      {boxes.map((box, i) =>
+        <AmazingBox key={i} content={box} onRemove={onRemoveBox} />
       )}
     </div>
   </div>
@@ -25,4 +25,4 @@ AmazingComponent.propTypes = {
   onRemoveBox: PropTypes.func.isRequired
 }
 
-export default CSSModules(AmazingComponent, styles);
+export default cssModules(AmazingComponent, styles);

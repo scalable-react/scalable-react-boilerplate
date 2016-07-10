@@ -50,6 +50,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "components": "^0.1.0",
     "css-loader": "^0.23.0",
     "foundation-sites": "^6.2.3",
     "history": "^1.14.0",

@@ -1,6 +1,6 @@
 const initalState = {
   amazingComponent: {
-    boxes: [1, 2, 3, 4, 5]
+    boxes: ['Amazing', 'Super Amazing', 'Absolutely Amazing', 'Stunningly Amazing', 'Amazingly Amazing']
   }
 };
 
