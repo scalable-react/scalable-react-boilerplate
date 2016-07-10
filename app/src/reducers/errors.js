@@ -1,16 +1,19 @@
 import {
-  DISPLAY_ERROR
+  AMAZING_COMPONENT_ERROR,
 } from '../actions/actionCreators';
 
-export default function posts(state = {
-  myModel: []
-}, action) {
+const amazingComponent = (state = [], action) => {
   switch (action.type) {
-    case DISPLAY_ERROR:
+    case AMAZING_COMPONENT_ERROR:
       return Object.assign(state, {
-        myModel: [...action.error]
+        [
+          ...state,
+          ...action.error
+        ]
       });
     default:
       return state;
   }
 }
+
+export default amazingComponent;
