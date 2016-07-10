@@ -10,4 +10,8 @@ const AmazingInput = ({
   </div>
 );
 
+AmazingInput.propTypes = {
+  onSubmit: PropTypes.func.isRequired
+};
+
 export default AmazingInput;

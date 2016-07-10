@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { AmazingComponent } from '../../components';
+import { AmazingComponent } from 'components';
 import styles from './MyAmazingContainer.module.scss';
 import cssModules from 'react-css-modules';
 import { addBox, removeBox } from '../../actions/actionCreators';

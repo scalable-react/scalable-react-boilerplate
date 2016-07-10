@@ -69,7 +69,17 @@ module.exports = {
   ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      actions: path.resolve(ROOT_PATH, 'app/src/actions'),
+      utils: path.resolve(ROOT_PATH, 'app/src/utils'),
+      reducers: path.resolve(ROOT_PATH, 'app/src/reducers'),
+      store: path.resolve(ROOT_PATH, 'app/src/stores'),
+      components: path.resolve(ROOT_PATH, 'app/src/components'),
+      containers: path.resolve(ROOT_PATH, 'app/src/containers'),
+      constants: path.resolve(ROOT_PATH, 'app/src/constants'),
+      pages: path.resolve(ROOT_PATH, 'app/src/pages')
+    },
   },
   output: {
     path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'app/dist') : path.resolve(ROOT_PATH, 'app/build'),

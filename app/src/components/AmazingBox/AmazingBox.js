@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './AmazingBox.module.scss';
 
-const randomColor = Math.floor(Math.random()*16777215).toString(16);
+const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 const BoxStyle = {
   colorStyle: {
     color: `${randomColor}`
@@ -27,7 +27,7 @@ const AmazingBox = ({
   </div>
 );
 
-AmazingBox.PropTypes = {
+AmazingBox.propTypes = {
   content: PropTypes.string.isRequired,
   onRemove: PropTypes.func.isRequired
 };
