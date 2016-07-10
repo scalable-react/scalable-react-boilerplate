@@ -1,25 +1,21 @@
-import * as types from '../../constants/amazingComponent';
+import * as types from '../constants/amazingComponent';
 
 const amazingComponent = (state = {
-  errors: [],
-  messages:[]
+  boxes: [1, 2, 3, 4, 5]
 }, action) => {
   switch (action.type) {
-    case types.AMAZING_COMPONENT_ERROR:
+    case types.ADD_BOX:
       return Object.assign({}, state, {
-        errors: [...state.errors, action.error]
+        boxes: [
+          ...state.boxes, action.content
+        ]
       });
-    case types.AMAZING_COMPONENT_MESSAGE:
+    case types.REMOVE_BOX:
       return Object.assign({}, state, {
-        messages: [...state.messages, action.message]
-      });
-    case types.CLEAR_AMAZING_COMPONENT_ERROR:
-      return Object.assign({}, state, {
-        errors: []
-      });
-    case types.CLEAR_AMAZING_COMPONENT_MESSAGE:
-      return Object.assign({}, state, {
-        messages: []
+        boxes: [
+          ...state.slice(0, action.index),
+          ...state.slice(action.index + 1)
+        ]
       });
     default:
       return state;

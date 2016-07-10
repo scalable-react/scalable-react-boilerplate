@@ -1,19 +1,11 @@
-import * as types from '../../constants/amazingComponent';
+import * as types from '../constants/amazingComponent';
 
-export const amazingComponentError = (error) => ({
-  type: types.AMAZING_COMPONENT_ERROR,
-  error
+export const addBox = (content) => ({
+  type: types.ADD_BOX,
+  content
 });
 
-export const amazingComponentMessage = (message) => ({
-  type: types.AMAZING_COMPONENT_MESSAGE,
-  message
-});
-
-export const clearAmazingComponentError = () => ({
-  type: types.CLEAR_AMAZING_COMPONENT_ERROR
-});
-
-export const clearAmazingComponentMessage = () => ({
-  type: types.CLEAR_AMAZING_COMPONENT_MESSAGE
+export const removeBox = (index) => ({
+  type: types.REMOVE_BOX,
+  index
 });
