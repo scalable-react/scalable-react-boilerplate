@@ -3,6 +3,9 @@
   height: 200px;
   border: 1px solid black;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnClose {
