@@ -6,7 +6,7 @@ export const amazingComponentError = (error) => ({
 });
 
 export const amazingComponentMessage = (message) => ({
-  type: types.AMAZING_COMPONENT_ERROR,
+  type: types.AMAZING_COMPONENT_MESSAGE,
   message
 });
 
