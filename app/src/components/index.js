@@ -6,7 +6,7 @@
 
 import AmazingComponent from './AmazingComponent/AmazingComponent';
 import AmazingBox from './AmazingBox/AmazingBox';
-import AmazingInput from './AmazingInput/AmazingInput'
+import AmazingInput from './AmazingInput/AmazingInput';
 
 export {
   AmazingComponent,

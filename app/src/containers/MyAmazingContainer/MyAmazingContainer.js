@@ -5,7 +5,6 @@ import cssModules from 'react-css-modules';
 import { addBox, removeBox } from '../../actions/actionCreators';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { reduxForm } from 'redux-form';
 
 export const fields = ['contentInput'];
 
@@ -35,7 +34,7 @@ class MyAmazingContainer extends Component {
       <div className={styles.myAmazingContainer}>
         <h1 className={styles.bigTitle}>React Redux Simple Starter</h1>
         <AmazingComponent
-          {...this.props}
+          {...contentInput}
           boxes={boxes}
           onRemoveBox={removeBoxItem}
           onAddBox={this.handleAddItem}
