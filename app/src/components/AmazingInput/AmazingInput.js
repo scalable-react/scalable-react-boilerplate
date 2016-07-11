@@ -11,12 +11,11 @@ const AmazingInput = ({
     <input
       {...contentInput}
       className={styles.input}
-      value={contentInput.value}
       type="text"
       placeholder="Add content to create a new box"
     />
     <Button
-      size='large'
+      size={'large'}
       className={styles.button}
       onClick={onSubmit}
     >

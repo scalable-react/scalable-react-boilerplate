@@ -5,7 +5,10 @@ import cssModules from 'react-css-modules';
 import { addBox, removeBox } from '../../actions/actionCreators';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { reduxForm } from 'redux-form';
 
+// Define fields used by redux form
+// https://github.com/erikras/redux-form
 export const fields = ['contentInput'];
 
 // Containers are used for managing state.
@@ -15,16 +18,25 @@ class MyAmazingContainer extends Component {
   constructor(props) {
     super(props);
     this.handleAddItem = this.handleAddItem.bind(this);
+    this.handleRemoveItem = this.handleRemoveItem.bind(this);
   }
-  handleAddItem(content) {
+  handleAddItem(e) {
+    e.preventDefault();
     const {
-      addBoxItem
+      addBoxItem,
+      fields: {
+        contentInput
+      }
     } = this.props;
+    const content = contentInput.value;
     addBoxItem(content);
+  }
+  handleRemoveItem(id) {
+    const { removeBoxItem } = this.props;
+    removeBoxItem(id);
   }
   render() {
     const {
-      removeBoxItem,
       boxes,
       fields: {
         contentInput
@@ -36,7 +48,7 @@ class MyAmazingContainer extends Component {
         <AmazingComponent
           {...contentInput}
           boxes={boxes}
-          onRemoveBox={removeBoxItem}
+          onRemoveBox={this.handleRemoveItem}
           onAddBox={this.handleAddItem}
         />
       </div>
@@ -59,7 +71,7 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     addBoxItem: (content) => dispatch(addBox(content)),
     removeBoxItem: (index) => dispatch(removeBox(index))
-  }, dispatch)
+  }, dispatch);
 
 const ConnectedContainer = connect(
   mapStateToProps,
@@ -70,5 +82,5 @@ const StyledComponent = cssModules(ConnectedContainer, styles);
 
 export default reduxForm({
   form: 'boxes',
-  fields,
+  fields
 })(StyledComponent);

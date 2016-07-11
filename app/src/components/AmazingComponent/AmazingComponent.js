@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './AmazingComponent.module.scss';
 import { AmazingInput, AmazingBox } from 'components';
@@ -14,7 +14,7 @@ const AmazingComponent = ({
     <AmazingInput {...contentInput} onSubmit={onAddBox} />
     <div className={styles.flex}>
       {boxes.map((box, i) =>
-        <AmazingBox key={i} content={box} onRemove={onRemoveBox} />
+        <AmazingBox key={i} content={box} onRemove={onRemoveBox.bind(this, i)} />
       )}
     </div>
   </div>

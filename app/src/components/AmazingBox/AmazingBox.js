@@ -11,11 +11,13 @@ const BoxStyle = {
 
 const AmazingBox = ({
   content,
-  onRemove
+  onRemove,
+  i
 }) => (
   <div
     className={styles.box}
     style={BoxStyle.colorStyle}
+    id={`box-item-${i}`}
   >
     {content}
     <button

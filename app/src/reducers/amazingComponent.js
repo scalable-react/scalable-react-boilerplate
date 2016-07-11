@@ -1,7 +1,7 @@
 import * as types from '../constants/amazingComponent';
 
 const amazingComponent = (state = {
-  boxes: ['Amazing', 'Super Amazing', 'Absolutely Amazing', 'Stunningly Amazing', 'Amazingly Amazing']
+  boxes: []
 }, action) => {
   switch (action.type) {
     case types.ADD_BOX:
@@ -20,6 +20,6 @@ const amazingComponent = (state = {
     default:
       return state;
   }
-}
+};
 
 export default amazingComponent;

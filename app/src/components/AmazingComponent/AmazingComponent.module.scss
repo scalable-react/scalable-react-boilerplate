@@ -4,15 +4,7 @@
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.box {
-  height: 200px;
-  width: 50%;
-}
-
-.boxOne {
-  border: 1px solid goldenrod;
 }
