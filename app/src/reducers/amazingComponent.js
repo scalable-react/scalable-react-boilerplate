@@ -13,8 +13,8 @@ const amazingComponent = (state = {
     case types.REMOVE_BOX:
       return Object.assign({}, state, {
         boxes: [
-          ...state.slice(0, action.index),
-          ...state.slice(action.index + 1)
+          ...state.boxes.slice(0, action.index),
+          ...state.boxes.slice(action.index + 1)
         ]
       });
     default:
