@@ -5,7 +5,7 @@ import styles from './AmazingBox.module.scss';
 const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 const BoxStyle = {
   colorStyle: {
-    color: `${randomColor}`
+    color: `#${randomColor}`
   }
 };
 
