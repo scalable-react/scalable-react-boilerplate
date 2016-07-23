@@ -2,17 +2,15 @@ import React, { PropTypes, Component } from 'react';
 import { AmazingComponent } from 'components';
 import styles from './MyAmazingContainer.module.scss';
 import cssModules from 'react-css-modules';
-import { addBox, removeBox } from '../../actions/actionCreators';
+import * as AmazingActionCreators from '../../actions/actionCreators';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
-// Define fields used by redux form
-// https://github.com/erikras/redux-form
-export const fields = ['contentInput'];
 
 // Containers are used for managing state.
 // Whenever possible, write components as stateless functional
 // components and use classes for stateful containers.
+// There is also likely too much state here.  The form
+// Input elements can be managed by redux form, for example.
 class MyAmazingContainer extends Component {
   constructor(props) {
     super(props);
@@ -21,13 +19,15 @@ class MyAmazingContainer extends Component {
   }
   handleAddItem(content) {
     const {
-      addBoxItem
+      actions
     } = this.props;
-    addBoxItem(content);
+    actions.addBoxItem(content);
   }
   handleRemoveItem(id) {
-    const { removeBoxItem } = this.props;
-    removeBoxItem(id);
+    const {
+      actions
+    } = this.props;
+    actions.removeBoxItem(id);
   }
   render() {
     const {
@@ -48,20 +48,25 @@ class MyAmazingContainer extends Component {
 
 MyAmazingContainer.propTypes = {
   boxes: PropTypes.array.isRequired,
-  addBoxItem: PropTypes.func.isRequired,
-  removeBoxItem: PropTypes.func.isRequired
+  actions: PropTypes.object.isRequired
 };
 
+// Standard React-Redux Magic to connect your state to local props
+// https://github.com/reactjs/react-redux/blob/master/docs/api.md
 const mapStateToProps = (state) => ({
   boxes: state.amazingComponent.boxes
 });
 
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({
-    addBoxItem: (content) => dispatch(addBox(content)),
-    removeBoxItem: (index) => dispatch(removeBox(index))
-  }, dispatch);
+// More connected component magic
+// https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({
+    AmazingActionCreators
+  }, dispatch)
+});
 
+// CSS Module magic to connect the hashed selectors
+// https://github.com/gajus/react-css-modules
 const StyledComponent = cssModules(MyAmazingContainer, styles);
 
 export default connect(
