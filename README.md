@@ -1,9 +1,9 @@
 # Behind the boilerplate
 The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
 
-## Docs
+It follows best practices, including the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript) and uses the FTF (file-type first) organizational pattern.
 
-Coming soon
+## Docs
 
 ## Instructions
 
@@ -88,10 +88,12 @@ Coming soon
 
 ## Timeline / TODOS
 * [x] Write README file
+* [x] Setup Filetype First organization
 * [ ] Write wiki / other documentation
 * [ ] Write unit tests and setup folder structure for testing
 * [ ] Add better demonstration of included libraries (In Progress [see here](https://github.com/RyanCCollins/react-redux-simple-starter/tree/feat_rc_box_components))
 * [ ] Implement a Rails like component generator
+* [ ] Migrate to Feature First file organization as noted [in this article](http://engineering.kapost.com/2016/01/organizing-large-react-applications/) and in the [React Boilerplate](https://github.com/mxstbr/react-boilerplate)
 
 ### Acknowledgements
 
