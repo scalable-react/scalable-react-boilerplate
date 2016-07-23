@@ -6,7 +6,6 @@ import { MyAmazingContainer } from '../../containers';
 
 const LandingPage = (props) => (
   <div className={styles.container}>
-    <h1 className={styles.header}>Welcome to the React Simple Starter</h1>
     <MyAmazingContainer
       {...props}
     />

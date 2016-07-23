@@ -5,6 +5,7 @@ import cssModules from 'react-css-modules';
 import * as AmazingActionCreators from '../../actions/amazingComponent';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { HacksmithsLogo } from 'components';
 
 // Containers are used for managing state.
 // Whenever possible, write components as stateless functional
@@ -21,13 +22,13 @@ class MyAmazingContainer extends Component {
     const {
       actions
     } = this.props;
-    actions.addBoxItem(content);
+    actions.addBox(content);
   }
   handleRemoveItem(id) {
     const {
       actions
     } = this.props;
-    actions.removeBoxItem(id);
+    actions.removeBox(id);
   }
   render() {
     const {
@@ -35,6 +36,7 @@ class MyAmazingContainer extends Component {
     } = this.props;
     return (
       <div className={styles.myAmazingContainer}>
+        <HacksmithsLogo />
         <h1 className={styles.bigTitle}>React Redux Simple Starter</h1>
         <AmazingComponent
           boxes={boxes}
