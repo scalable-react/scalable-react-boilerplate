@@ -1,6 +1,7 @@
 .myAmazingContainer {
   background-image: linear-gradient(135deg, #ca2091 0, #a041fa 20%, #3f65fb 50%, #0fcbfa 80%, #0fe6fa 100%);
   min-height: 100vh;
+  overflow: auto;
 }
 
 .bigTitle {

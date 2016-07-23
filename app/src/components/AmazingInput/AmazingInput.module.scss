@@ -1,12 +1,10 @@
 .formGroup {
   display: flex;
   margin: 20px;
-}
-
-.input {
-  
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-  margin-right: 40px;
+  margin-left: 40px;
 }

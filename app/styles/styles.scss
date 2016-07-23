@@ -187,3 +187,43 @@ hr.section-divider:before {
     width: 1000px;
   }
 }
+
+.form-field {
+  display: block;
+  box-shadow: none;
+  position: relative;
+  padding: 6px 24px;
+  border: 1px solid rgba(0,0,0,.15);
+  margin-bottom: -1px;
+  background-color: #fff;
+  color: #333;
+  opacity: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+label.form-field {
+  display: block;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+span.form-field__contents {
+  display: block;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.form-field input[type=text] {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0 24px;
+  border-radius: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}

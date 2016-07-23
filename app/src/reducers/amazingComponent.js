@@ -7,7 +7,8 @@ const amazingComponent = (state = {
     case types.ADD_BOX:
       return Object.assign({}, state, {
         boxes: [
-          ...state.boxes, action.content
+          ...state.boxes,
+          action.content
         ]
       });
     case types.REMOVE_BOX:

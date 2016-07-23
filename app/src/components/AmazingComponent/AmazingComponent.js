@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './AmazingComponent.module.scss';
 import { AmazingInput, AmazingBox } from 'components';
@@ -6,15 +6,21 @@ import { AmazingInput, AmazingBox } from 'components';
 const AmazingComponent = ({
   boxes,
   onAddBox,
-  onRemoveBox,
-  contentInput
+  onRemoveBox
 }) => (
   <div className={styles.fullScreen}>
     <h1 className="section-header">Play with redux by adding a box to the wall</h1>
-    <AmazingInput {...contentInput} onSubmit={onAddBox} />
+    <AmazingInput
+      onSubmit={onAddBox}
+    />
     <div className={styles.flex}>
       {boxes.map((box, i) =>
-        <AmazingBox key={i} content={box} onRemove={onRemoveBox.bind(this, i)} />
+        <AmazingBox
+          key={i}
+          id={i}
+          content={box}
+          onRemove={onRemoveBox}
+        />
       )}
     </div>
   </div>
@@ -23,8 +29,7 @@ const AmazingComponent = ({
 AmazingComponent.propTypes = {
   boxes: PropTypes.array.isRequired,
   onAddBox: PropTypes.func.isRequired,
-  onRemoveBox: PropTypes.func.isRequired,
-  contentInput: PropTypes.object.isRequired
+  onRemoveBox: PropTypes.func.isRequired
 };
 
 export default cssModules(AmazingComponent, styles);

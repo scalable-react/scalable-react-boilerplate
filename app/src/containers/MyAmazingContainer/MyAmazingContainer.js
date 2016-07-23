@@ -5,7 +5,6 @@ import cssModules from 'react-css-modules';
 import { addBox, removeBox } from '../../actions/actionCreators';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { reduxForm } from 'redux-form';
 
 // Define fields used by redux form
 // https://github.com/erikras/redux-form
@@ -20,15 +19,10 @@ class MyAmazingContainer extends Component {
     this.handleAddItem = this.handleAddItem.bind(this);
     this.handleRemoveItem = this.handleRemoveItem.bind(this);
   }
-  handleAddItem(e) {
-    e.preventDefault();
+  handleAddItem(content) {
     const {
-      addBoxItem,
-      fields: {
-        contentInput
-      }
+      addBoxItem
     } = this.props;
-    const content = contentInput.value;
     addBoxItem(content);
   }
   handleRemoveItem(id) {
@@ -37,16 +31,12 @@ class MyAmazingContainer extends Component {
   }
   render() {
     const {
-      boxes,
-      fields: {
-        contentInput
-      }
+      boxes
     } = this.props;
     return (
       <div className={styles.myAmazingContainer}>
         <h1 className={styles.bigTitle}>React Redux Simple Starter</h1>
         <AmazingComponent
-          {...contentInput}
           boxes={boxes}
           onRemoveBox={this.handleRemoveItem}
           onAddBox={this.handleAddItem}
@@ -57,7 +47,6 @@ class MyAmazingContainer extends Component {
 }
 
 MyAmazingContainer.propTypes = {
-  fields: PropTypes.object.isRequired,
   boxes: PropTypes.array.isRequired,
   addBoxItem: PropTypes.func.isRequired,
   removeBoxItem: PropTypes.func.isRequired
@@ -73,14 +62,9 @@ const mapDispatchToProps = (dispatch) =>
     removeBoxItem: (index) => dispatch(removeBox(index))
   }, dispatch);
 
-const ConnectedContainer = connect(
+const StyledComponent = cssModules(MyAmazingContainer, styles);
+
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MyAmazingContainer);
-
-const StyledComponent = cssModules(ConnectedContainer, styles);
-
-export default reduxForm({
-  form: 'boxes',
-  fields
-})(StyledComponent);
+)(StyledComponent);

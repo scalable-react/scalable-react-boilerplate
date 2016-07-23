@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './AmazingBox.module.scss';
 
@@ -9,29 +9,45 @@ const BoxStyle = {
   }
 };
 
-const AmazingBox = ({
-  content,
-  onRemove,
-  i
-}) => (
-  <div
-    className={styles.box}
-    style={BoxStyle.colorStyle}
-    id={`box-item-${i}`}
-  >
-    {content}
-    <button
-      className={styles.btnClose}
-      onClick={onRemove}
-    >
-      ✕
-    </button>
-  </div>
-);
+class AmazingBox extends Component {
+  constructor() {
+    super();
+    this.handleRemoveItem = this.handleRemoveItem.bind(this);
+  }
+  handleRemoveItem() {
+    const {
+      onRemove,
+      id
+    } = this.props;
+    onRemove(id);
+  }
+  render() {
+    const {
+      id,
+      content
+    } = this.props;
+    return (
+      <div
+        className={styles.box}
+        style={BoxStyle.colorStyle}
+        id={`box-item-${id}`}
+      >
+        {content}
+        <button
+          className={styles.btnClose}
+          onClick={this.handleRemoveItem}
+        >
+          ✕
+        </button>
+      </div>
+    );
+  }
+}
 
 AmazingBox.propTypes = {
   content: PropTypes.string.isRequired,
-  onRemove: PropTypes.func.isRequired
+  onRemove: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired
 };
 
 export default cssModules(AmazingBox, styles);
