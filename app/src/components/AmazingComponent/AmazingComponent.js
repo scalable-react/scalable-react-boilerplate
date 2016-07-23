@@ -1,16 +1,35 @@
-import React from 'react';
-import CSSModules from 'react-css-modules';
+import React, { PropTypes } from 'react';
+import cssModules from 'react-css-modules';
 import styles from './AmazingComponent.module.scss';
+import { AmazingInput, AmazingBox } from 'components';
 
-const AmazingComponent = () => (
+const AmazingComponent = ({
+  boxes,
+  onAddBox,
+  onRemoveBox
+}) => (
   <div className={styles.fullScreen}>
-    <h1 className="section-header">I am truly an amazing component</h1>
+    <h1 className="section-header">Play with redux by adding a box to the wall</h1>
+    <AmazingInput
+      onSubmit={onAddBox}
+    />
     <div className={styles.flex}>
-      <div className={styles.box + ' ' + styles.boxOne}>
-        <h1 className="centered text-white">I am a box</h1>
-      </div>
+      {boxes.map((box, i) =>
+        <AmazingBox
+          key={i}
+          id={i}
+          content={box}
+          onRemove={onRemoveBox}
+        />
+      )}
     </div>
   </div>
 );
 
-export default CSSModules(AmazingComponent, styles);
+AmazingComponent.propTypes = {
+  boxes: PropTypes.array.isRequired,
+  onAddBox: PropTypes.func.isRequired,
+  onRemoveBox: PropTypes.func.isRequired
+};
+
+export default cssModules(AmazingComponent, styles);

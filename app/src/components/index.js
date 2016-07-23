@@ -5,7 +5,13 @@
 // import { MyComponent } from '../components';
 
 import AmazingComponent from './AmazingComponent/AmazingComponent';
+import AmazingBox from './AmazingBox/AmazingBox';
+import AmazingInput from './AmazingInput/AmazingInput';
+import HacksmithsLogo from './HacksmithsLogo/HacksmithsLogo';
 
 export {
-  AmazingComponent
+  AmazingComponent,
+  AmazingBox,
+  AmazingInput,
+  HacksmithsLogo
 };
