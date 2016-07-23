@@ -53,6 +53,10 @@ Coming soon
 - A bunch of useful scripts
 
 ## Scripts
+- **npm run setup**
+
+    Installs the application's dependencies
+
 - **npm run test**
 
      Runs unit tests
@@ -80,6 +84,14 @@ Coming soon
 - **npm run clean**
 
     Removes the bundled code and the production ready files
+
+
+## Timeline / TODOS
+* [x] Write README file
+* [ ] Write wiki / other documentation
+* [ ] Write unit tests and setup folder structure for testing
+* [ ] Add better demonstration of included libraries (In Progress [see here](https://github.com/RyanCCollins/react-redux-simple-starter/tree/feat_rc_box_components))
+* [ ] Implement a Rails like component generator
 
 ### Acknowledgements
 
