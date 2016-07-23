@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { AmazingComponent } from 'components';
 import styles from './MyAmazingContainer.module.scss';
 import cssModules from 'react-css-modules';
-import * as AmazingActionCreators from '../../actions/actionCreators';
+import * as AmazingActionCreators from '../../actions/amazingComponent';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 

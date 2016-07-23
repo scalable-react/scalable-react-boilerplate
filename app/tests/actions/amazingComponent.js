@@ -1,5 +1,5 @@
 import expect from 'expect';
-import * as actions from '../../src/actions/actionCreators';
+import * as actions from '../../src/actions/amazingComponent';
 import * as types from '../../src/constants/amazingComponent';
 
 describe('actions', () => {
