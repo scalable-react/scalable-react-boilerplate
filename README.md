@@ -50,7 +50,8 @@ It follows best practices, including the [AirBnb JS & JSX style guides](https://
 - [ESLint](http://eslint.org/) - linter
 - [Mocha](http://mochajs.org/) - unit tests
 - [jsdom](https://github.com/tmpvar/jsdom) - vdom to test React without browser
-- [Chai](http://chaijs.com/) - assertion library
+- [Expect](https://github.com/mjackson/expect) - assertion library
+- [Chai / Immutable](http://chaijs.com/) - assertion library for Immutable JS
 - A bunch of useful scripts
 
 ## Scripts
