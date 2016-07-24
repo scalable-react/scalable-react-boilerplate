@@ -29,7 +29,7 @@ To try the example application out or to use the project, follow the instruction
 
 
 
-## List of technology
+## Technologies / Libraries
 
 - [Node](https://nodejs.org/en/) - JS runtime environment
 - [npm](https://www.npmjs.com/) - package manager
@@ -101,6 +101,6 @@ To try the example application out or to use the project, follow the instruction
 
 ### Acknowledgements
 
-This project is loosely based on: [This boilerplate](https://github.com/mezod/boilerplate-koa-redux-react), specifically the npm scripts and file structure.
+This project is loosely based on: [This boilerplate](https://github.com/mezod/boilerplate-koa-redux-react).
 
 Thank you to @mezod for their hard work and inspiration.
