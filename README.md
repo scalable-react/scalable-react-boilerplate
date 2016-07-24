@@ -91,6 +91,7 @@ It follows best practices, including the [AirBnb JS & JSX style guides](https://
 * [x] Write README file
 * [x] Setup Filetype First organization
 * [x] Write unit tests and setup folder structure for testing (See tests directory for examples)
+* [ ] Write component tests using Jest and / or Enzyme
 * [ ] Write wiki / other documentation
 * [ ] Add better demonstration of included libraries (In Progress [see here](https://github.com/RyanCCollins/react-redux-simple-starter/tree/feat_rc_box_components))
 * [ ] Implement a Rails like component generator
