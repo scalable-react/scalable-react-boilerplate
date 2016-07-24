@@ -10,7 +10,7 @@ const AmazingComponent = ({
   onRemoveBox
 }) => (
   <div className={styles.fullScreen}>
-    <h1 className="section-header">Play with redux by adding a box to the wall</h1>
+    <h1 className={styles.sectionHeader}>Play with redux by adding a box to the wall</h1>
     <AmazingInput
       onSubmit={onAddBox}
     />
@@ -29,6 +29,11 @@ const AmazingComponent = ({
             onRemove={onRemoveBox}
           />
         )}
+        {!boxes.length &&
+          <p className={styles.noBoxes}>
+            No boxes here 😔.  Why don't you add one!
+          </p>
+        }
       </ReactCSSTransitionGroup>
     </div>
   </div>
