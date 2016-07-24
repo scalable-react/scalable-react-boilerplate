@@ -32,7 +32,8 @@ class AmazingBox extends Component {
         style={BoxStyle.colorStyle}
         id={`box-item-${id}`}
       >
-        {content}
+        <p className={styles.number}>#{id}</p>
+        <p className={styles.text}>{content}</p>
         <button
           className={styles.btnClose}
           onClick={this.handleRemoveItem}

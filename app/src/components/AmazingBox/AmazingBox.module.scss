@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .btnClose {
@@ -14,4 +15,20 @@
   right: 10px;
   font-size: 25px;
   cursor: pointer;
+}
+
+.number {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-family: 'Open Sans';
+  font-size: 1.8rem;
+}
+
+.text {
+  text-shadow: #CCC 1px 0 10px;
+  font-size: 1.5rem;
+  font-family: 'Lato';
+  letter-spacing: 5px;
+  text-align: center;
 }
