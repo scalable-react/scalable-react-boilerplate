@@ -4,9 +4,10 @@ The hardest part about React is getting setup.  This project aims to help anyone
 
 It follows best practices, including the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript) and uses the FTF (file-type first) organizational pattern.
 
-## Docs
+# Documentation
 
-## Instructions
+## Getting Started
+To try the example application out or to use the project, follow the instructions below.
 
 1. **Clone repo**
 
