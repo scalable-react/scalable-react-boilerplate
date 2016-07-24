@@ -62,9 +62,7 @@ const mapStateToProps = (state) => ({
 // More connected component magic
 // https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    AmazingActionCreators
-  }, dispatch)
+  actions: bindActionCreators(AmazingActionCreators, dispatch)
 });
 
 // CSS Module magic to connect the hashed selectors
