@@ -90,10 +90,10 @@ It follows best practices, including the [AirBnb JS & JSX style guides](https://
 ## Timeline / TODOS
 * [x] Write README file
 * [x] Setup Filetype First organization
+* [x] Add better demonstration of included libraries (run the test application)
 * [x] Write unit tests and setup folder structure for testing (See tests directory for examples)
 * [ ] Write component tests using Jest and / or Enzyme
 * [ ] Write wiki / other documentation
-* [ ] Add better demonstration of included libraries (In Progress [see here](https://github.com/RyanCCollins/react-redux-simple-starter/tree/feat_rc_box_components))
 * [ ] Implement a Rails like component generator
 * [ ] Migrate to Feature First file organization as noted [in this article](http://engineering.kapost.com/2016/01/organizing-large-react-applications/) and in the [React Boilerplate](https://github.com/mxstbr/react-boilerplate)
 
