@@ -1,4 +1,4 @@
-![React Redux Simple Starter Logo](https://github.com/ryan-collins-forks/Render)
+![React Redux Simple Starter Logo](https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/logo.png?raw=true)
 # Behind the boilerplate
 The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
 
