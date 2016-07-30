@@ -22,12 +22,12 @@ const mapStateToProps = (state) => ({
 
 // Map the dispatch and bind the action creators.
 // See: http://redux.js.org/docs/api/bindActionCreators.html
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(
     actionCreators,
     dispatch
-  );
-}
+  ),
+});
 
 // Use connect both here and in your components.
 // See: https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist
