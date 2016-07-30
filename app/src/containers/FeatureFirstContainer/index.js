@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import * as MyActions from './actions';
 
 class FeatureFirstContainer extends Component {
   constructor(props) {
@@ -34,4 +35,17 @@ FeatureFirstContainer.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-export default cssModules(FeatureFirstComponent, styles);
+const mapStateToProps = (state) => ({
+  isLoading: state.isLoading
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(MyActions, dispatch)
+});
+
+const StyledContainer = cssModules(FeatureFirstComponent, styles);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(StyledContainer);
