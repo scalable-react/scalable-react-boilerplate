@@ -1,5 +1,5 @@
-import MyAmazingContainer from './MyAmazingContainer/MyAmazingContainer';
+import FeatureFirstContainer from './FeatureFirstContainer/FeatureFirstContainer';
 
 export {
-  MyAmazingContainer
+  FeatureFirstContainer
 };
