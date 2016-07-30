@@ -1,4 +1,3 @@
-![Scalable React Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true)
 # Feature First / Scalable
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries.
 
@@ -145,6 +144,7 @@ Coming soon, the project will incorporate code generation following the best pra
 * [ ] Implement a Rails like component generator
 
 ### Acknowledgements
+![Scalable React Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-small.png?raw=true)
 This boilerplate began its life as a fork of the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter) project and was setup as a starter project for the Udacity Alumni Web application open-source project.
 
 It was created by several of the members of the Udacity Alumni product infrastructure team, including:
