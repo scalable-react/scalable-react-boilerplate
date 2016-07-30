@@ -1,19 +1,15 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
-import store, { history } from '../store/store';
-import App from '../components/App';
-import * as Pages from '../pages/';
-import ReduxToastr from 'react-redux-toastr';
+import store, { history } from './store';
+/* eslint-disable */
+import App from 'components/App';
+import * as Pages from 'pages';
+/* eslint-enable */
 
-const router = (
+const routes = (
   <Provider store={store}>
     <div>
-      <ReduxToastr
-        timeOut={4000}
-        newestOnTop
-        position="bottom-right"
-      />
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Pages.LandingPage} />
@@ -24,4 +20,4 @@ const router = (
   </Provider>
 );
 
-export default router;
+export default routes;

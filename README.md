@@ -12,7 +12,7 @@ To try the example application out or to use the project, follow the instruction
 
 1. **Clone repo**
 
-    git clone https://github.com/RyanCCollins/feature-first-react-boilerplate.git
+    git clone https://github.com/RyanCCollins/scalable-react-boilerplate.git
 
 2. **Install dependencies**
 

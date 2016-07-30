@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
-import rootReducer from './rootReducer';
+import rootReducer from './reducers';
 
 const initialState = {
   featureComponent: {
@@ -48,9 +48,9 @@ export const history = syncHistoryWithStore(browserHistory, store);
 
 /* Hot reloading of reducers.  How futuristic!! */
 if (module.hot) {
-  module.hot.accept('../reducers/', () => {
+  module.hot.accept('./reducers', () => {
     /*eslint-disable */ // Allow require
-    const nextRootReducer = require('./rootReducer').default;
+    const nextRootReducer = require('./reducers').default;
     /*eslint-enable */
     store.replaceReducer(nextRootReducer);
   });
