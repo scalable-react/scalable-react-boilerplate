@@ -53,7 +53,7 @@ To try the example application out or to use the project, follow the instruction
 |   |   |   ├── Main.js
 |   |   |   └── index.js
 |   |   ├── containers
-|   |   |   ├── MyContainer
+|   |   |   ├── FeatureFirstContainer
 |   |   |   |   ├── tests
 |   |   |   |   |   ├── actions.test.js
 |   |   |   |   |   ├── index.test.js
