@@ -71,13 +71,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
-      actions: path.resolve(ROOT_PATH, 'app/src/actions'),
-      utils: path.resolve(ROOT_PATH, 'app/src/utils'),
-      reducers: path.resolve(ROOT_PATH, 'app/src/reducers'),
-      store: path.resolve(ROOT_PATH, 'app/src/stores'),
       components: path.resolve(ROOT_PATH, 'app/src/components'),
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
-      constants: path.resolve(ROOT_PATH, 'app/src/constants'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages')
     },
   },
@@ -101,7 +96,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new HtmlwebpackPlugin({
-      title: 'React Redux Simple Starter',
+      title: 'Scalable React Boilerplate',
       template: 'index.html'
     })
   ]

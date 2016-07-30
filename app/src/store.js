@@ -4,8 +4,15 @@ import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
-import rootReducer from '../reducers/index';
-import initialState from './initialState';
+import rootReducer from './rootReducer';
+
+const initialState = {
+  featureComponent: {
+    isLoading: false,
+    data: {},
+    error: {},
+  },
+};
 
 /* Commonly used middlewares and enhancers */
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
@@ -42,7 +49,9 @@ export const history = syncHistoryWithStore(browserHistory, store);
 /* Hot reloading of reducers.  How futuristic!! */
 if (module.hot) {
   module.hot.accept('../reducers/', () => {
-    const nextRootReducer = require('../reducers/index').default;
+    /*eslint-disable */ // Allow require
+    const nextRootReducer = require('./rootReducer').default;
+    /*eslint-enable */
     store.replaceReducer(nextRootReducer);
   });
 }

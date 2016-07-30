@@ -1,6 +1,8 @@
+/* eslint-disable */ // React must be in scope here
 import React from 'react';
+/* eslint-enable */
 import { render } from 'react-dom';
-import router from './utils/router';
+import routes from './routes';
 import '../styles/styles.scss';
 
-render(router, document.getElementById('app'));
+render(routes, document.getElementById('app'));

@@ -1,10 +1,10 @@
-![Feature First Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true)
-# Feature First
-This boilerplate began its life as a fork of the [React Redux Simple Starter]() project and was setup as a starter project for the Udacity Alumni Web application open-source project.
+![Scalable React Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true)
+# Feature First / Scalable
+The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries.
 
-Following the lead of the famous [React Boilerplate]() project, this starter project incorporates the Feature-first architecture, meaning that files are organized by the feature they implement.  This provides a mechanism to scale React projects because it encourages isolation, encapsulation and reusability in user interface development.
+Following the lead of the famous [React Boilerplate]() project, this starter project incorporates the Feature-first architecture, meaning that files are organized by the feature they implement, not the filetype.  This provides a mechanism to scale React projects because it encourages isolation, encapsulation and reusability.
 
-We also encorprate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
+We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
 # Documentation
 
@@ -30,7 +30,7 @@ To try the example application out or to use the project, follow the instruction
    npm run build
 
 ### File Structure
-* Some files left out for brevity.  Please reference the files in the [Feature First React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for information about the file structure.
+* Some files left out for brevity.  Please reference the files in the [Scalable React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for an example of the file structure.  The application will ultimately be in use in a production web application project and more info will be posted here when we have production level examples.
 ```
 .
 ├── README.md
@@ -108,6 +108,8 @@ To try the example application out or to use the project, follow the instruction
     Removes the bundled code and the production ready files
 
 
+### Generators
+Coming soon, the project will incorporate code generation following the best practices outlined by this project's setup.
 
 ## Technologies / Libraries
 
@@ -143,8 +145,7 @@ To try the example application out or to use the project, follow the instruction
 * [ ] Implement a Rails like component generator
 
 ### Acknowledgements
-
-This project began its life as a fork of the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter).
+This boilerplate began its life as a fork of the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter) project and was setup as a starter project for the Udacity Alumni Web application open-source project.
 
 It was created by several of the members of the Udacity Alumni product infrastructure team, including:
 * [Ryan Collins](https://github.com/RyanCCollins)

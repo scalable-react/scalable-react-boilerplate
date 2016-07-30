@@ -17,11 +17,6 @@ const router = (
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Pages.LandingPage} />
-          {/* Examples of routes here.
-          <Route path="/beautiful" component={Containers.Beautiful} />
-          <Route path="/blog" name="PostListView" component={Containers.PostListView} />
-          <Route path="/blog/posts/:postId" name="SinglePostView" component={Containers.SinglePostView} />
-         */}
           <Route path="*" component={Pages.NotFoundPage} />
         </Route>
       </Router>
