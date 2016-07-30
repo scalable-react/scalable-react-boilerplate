@@ -9,6 +9,7 @@ const FeatureFirstComponent = () => (
         src="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true"
         alt="Udacity Alumni"
         className={styles.logoImage}
+        id="udacity-alumni-logo"
       />
     </div>
     <h1 className={styles.header}>

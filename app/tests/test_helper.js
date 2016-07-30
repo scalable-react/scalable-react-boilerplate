@@ -1,13 +1,12 @@
-import jsdom from 'jsdom';
+import chai from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+chai.use(chaiEnzyme());
 
-const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
-const win = doc.defaultView;
-
-global.document = doc;
-global.window = win;
-
-Object.keys(window).forEach((key) => {
-  if (!(key in global)) {
-    global[key] = window[key];
-  }
-});
+// Load up every single JS file under the source directory except for
+// reducers, routes and store files.
+const context = require.context(
+  '../../app/src',
+  true,
+  /^^((?!(app|reducers|routes|store)).)*\.js$/
+);
+context.keys().forEach(context);
