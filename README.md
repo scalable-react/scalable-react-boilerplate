@@ -1,8 +1,10 @@
-![React Redux Simple Starter Logo](https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/logo.png?raw=true)
-# Behind the boilerplate
-The hardest part about React is getting setup.  This project aims to help anyone quickly get bootstrapped with the latest versions of React, Redux, Webpack, etc.  It uses Hot Module Reloading and has a few optional add-ons like React Foundation, Redux Form, etc.
+![Feature First Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true)
+# Feature First
+This boilerplate began its life as a fork of the [React Redux Simple Starter]() project and was setup as a starter project for the Udacity Alumni Web application open-source project.
 
-It follows best practices, including the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript) and uses the FTF (file-type first) organizational pattern.
+Following the lead of the famous [React Boilerplate]() project, this starter project incorporates the Feature-first architecture, meaning that files are organized by the feature they implement.  This provides a mechanism to scale React projects because it encourages isolation, encapsulation and reusability in user interface development.
+
+We also encorprate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
 # Documentation
 
@@ -11,7 +13,7 @@ To try the example application out or to use the project, follow the instruction
 
 1. **Clone repo**
 
-    git clone https://github.com/RyanCCollins/react-redux-simple-starter.git
+    git clone https://github.com/RyanCCollins/feature-first-react-boilerplate.git
 
 2. **Install dependencies**
 
@@ -28,7 +30,7 @@ To try the example application out or to use the project, follow the instruction
    npm run build
 
 ### File Structure
-* Some files left out for brevity.  Please reference the files in the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter) project for information about the file structure.
+* Some files left out for brevity.  Please reference the files in the [Feature First React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for information about the file structure.
 ```
 .
 ├── README.md
@@ -40,27 +42,32 @@ To try the example application out or to use the project, follow the instruction
 |   ├── fonts
 |   ├── images
 |   ├── src
-|   |   ├── actions
 |   |   ├── components
-|   |   |   ├── MyComponent
-|   |   |   ├── MyOtherComponent
-|   |   |   ├── App.js
+|   |   |   ├── FeatureFirstComponent
+|   |   |   |   ├── index.js
+|   |   |   |   ├── index.module.scss
+|   |   |   |   └── tests
+|   |   |   |   |   └── index.test.js
+|   |   |   ├── App.jsx
 |   |   |   ├── Main.js
 |   |   |   └── index.js
 |   |   ├── containers
 |   |   |   ├── MyContainer
+|   |   |   |   ├── tests
+|   |   |   |   |   ├── actions.test.js
+|   |   |   |   |   ├── index.test.js
+|   |   |   |   |   └── reducer.test.js
+|   |   |   |   ├── actions.js
+|   |   |   |   ├── constants.js
+|   |   |   |   ├── index.js
+|   |   |   |   ├── index.module.scss
+|   |   |   |   └── reducer
 |   |   |   └── index.js
 |   |   ├── pages
-|   |   ├── reducers
 |   |   ├── store
 |   |   ├── utils
 |   |   └── index.js
-|   ├── styles
-|   └── tests
-|   |   ├── actions
-|   |   ├── components
-|   |   ├── reducers
-|   |   └── test_helper.js
+|   └── styles
 ├── .eslintignore
 ├── .eslintrc
 ├── .gitattributes
@@ -131,16 +138,14 @@ To try the example application out or to use the project, follow the instruction
 
 ## Timeline / TODOS
 * [x] Write README file
-* [x] Setup Filetype First organization
-* [x] Add better demonstration of included libraries (run the test application)
-* [x] Write unit tests and setup folder structure for testing (See tests directory for examples)
-* [ ] Write component tests using Jest and / or Enzyme
+* [ ] Write component tests using Enzyme
 * [ ] Write wiki / other documentation
 * [ ] Implement a Rails like component generator
-* [ ] Migrate to Feature First file organization as noted [in this article](http://engineering.kapost.com/2016/01/organizing-large-react-applications/) and in the [React Boilerplate](https://github.com/mxstbr/react-boilerplate)
 
 ### Acknowledgements
 
-This project is loosely based on: [This boilerplate](https://github.com/mezod/boilerplate-koa-redux-react).
+This project began its life as a fork of the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter).
 
-Thank you to @mezod for their hard work and inspiration.
+It was created by several of the members of the Udacity Alumni product infrastructure team, including:
+* [Ryan Collins](https://github.com/RyanCCollins)
+* [Andreas Daiminger](https://github.com/adai183)

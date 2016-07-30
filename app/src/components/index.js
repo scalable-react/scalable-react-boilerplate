@@ -1,5 +1,7 @@
-import FeatureFirstComponent from './FeatureFirstComponent/FeatureFirstComponent';
+import FeatureFirstComponent from './FeatureFirstComponent';
+import App from './App';
 
 export {
-  FeatureFirstComponent
+  FeatureFirstComponent,
+  App,
 };

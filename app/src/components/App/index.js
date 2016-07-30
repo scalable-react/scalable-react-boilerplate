@@ -1,13 +1,23 @@
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actionCreators from '../actions/actionCreators';
-import Main from './Main';
+import * as actionCreators from './index';
+
+const Main = (props) => (
+  <div>
+    {React.cloneElement(props.children, props)}
+  </div>
+);
+
+Main.propTypes = {
+  children: React.children,
+};
 
 // Map the global state to global props here.
 // See: https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist
 const mapStateToProps = (state) => ({
   messages: state.messages,
-  errors: state.errors
+  errors: state.errors,
 });
 
 // Map the dispatch and bind the action creators.

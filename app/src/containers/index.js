@@ -1,5 +1,5 @@
-import FeatureFirstContainer from './FeatureFirstContainer/FeatureFirstContainer';
+import FeatureFirstContainer from './FeatureFirstContainer/index';
 
 export {
-  FeatureFirstContainer
+  FeatureFirstContainer,
 };

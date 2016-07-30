@@ -2,13 +2,13 @@ import {
   LOAD_DATA_INITIATION,
   LOAD_DATA_SUCCESS,
   LOAD_DATA_FAILURE,
-  CLEAR_DATA_ERROR
+  CLEAR_DATA_ERROR,
 } from './constants';
 
 const initialState = {
   isLoading: false,
   data: {},
-  error: {}
+  error: {},
 };
 
 /**
@@ -22,21 +22,21 @@ const featureComponent = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_DATA_INITIATION:
       return Object.assign({}, state, {
-        isLoading: true
+        isLoading: true,
       });
     case LOAD_DATA_SUCCESS:
       return Object.assign({}, state, {
         isLoading: false,
-        data: action.data
+        data: action.data,
       });
     case LOAD_DATA_FAILURE:
       return Object.assign({}, state, {
         isLoading: false,
-        error: action.error
+        error: action.error,
       });
     case CLEAR_DATA_ERROR:
       return Object.assign({}, state, {
-        error: {}
+        error: {},
       });
     default:
       return state;

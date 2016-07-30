@@ -18,7 +18,7 @@ class FeatureFirstContainer extends Component {
   }
   initiateLoading() {
     const {
-      actions
+      actions,
     } = this.props;
     actions.loadDataInitiation();
   }
@@ -32,15 +32,15 @@ class FeatureFirstContainer extends Component {
 }
 
 FeatureFirstContainer.propTypes = {
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  isLoading: state.isLoading
+  isLoading: state.isLoading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(MyActions, dispatch)
+  actions: bindActionCreators(MyActions, dispatch),
 });
 
 const StyledContainer = cssModules(FeatureFirstComponent, styles);

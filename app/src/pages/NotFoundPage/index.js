@@ -1,6 +1,6 @@
 import React from 'react';
-import CSSModules from 'react-css-modules';
-import styles from './NotFoundPage.module.scss';
+import cssModules from 'react-css-modules';
+import styles from './index.module.scss';
 
 const NotFound = () => (
   <div className={styles.container}>
@@ -8,4 +8,4 @@ const NotFound = () => (
   </div>
 );
 
-export default CSSModules(NotFound, styles);
+export default cssModules(NotFound, styles);
