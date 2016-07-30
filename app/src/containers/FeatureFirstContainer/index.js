@@ -23,9 +23,16 @@ class FeatureFirstContainer extends Component {
     actions.loadDataInitiation();
   }
   render() {
+    const {
+      isLoading,
+    } = this.props;
     return (
       <div>
-
+        {isLoading ?
+          <h1>LOADING...</h1>
+        :
+          <FeatureFirstComponent />
+        }
       </div>
     );
   }
@@ -33,6 +40,7 @@ class FeatureFirstContainer extends Component {
 
 FeatureFirstContainer.propTypes = {
   actions: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({

@@ -1,7 +1,29 @@
 .container {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header {
   text-align: center;
+  font-size: 2.0rem;
+  color: #829db4;
+  margin-top: 40px;
+  max-width: 50%;
+  text-transform: uppercase;
+}
+
+.logoImageContainer {
+  display: flex;
+  animation-delay: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.logoImage {
+  border: 3px solid #829db4;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 3px rgba(63,63,63,0.1), inset 0px 0px 0px 3px rgba(63,63,63,0.1);
 }
