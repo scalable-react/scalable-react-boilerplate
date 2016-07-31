@@ -1,4 +1,4 @@
-import FeatureFirstContainer from './FeatureFirstContainer/index';
+import FeatureFirstContainer from './FeatureFirstContainer';
 
 export {
   FeatureFirstContainer,
