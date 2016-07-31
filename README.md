@@ -125,7 +125,18 @@ And follow the on screen prompts to select the options you wish to use.
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
 #### **Gotchas**
-If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.
+If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.  Of course, you will also need to import the component and use it somewhere for it to show up on screen.
+
+From `app/src/container/index.js` or `app/src/component/index.js`
+```
+// ... Other components here
+import MyComponent from 'MyComponent';
+
+export {
+  // ... Other components here
+  MyComponent
+}
+```
 
 ### Configuring your own generators
 For information on how to build your own generators with relative ease, please go to the [Plop Microgenerator](https://github.com/amwmedia/plop) homepage for detailed instructions.
