@@ -1,0 +1,31 @@
+{{#if wantPropTypes}}
+import React, { PropTypes } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+
+{{#if wantSCSSModules}}
+import styles from './index.module.scss';
+import cssModules from 'react-css-modules';
+{{/if}}
+
+const {{ properCase name }} = (props) => (
+  {{#if wantSCSSModules}}
+  <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+  {{else}}
+  <div>
+  {{/if}}
+  </div>
+);
+
+{{#if wantPropTypes}}
+{{ properCase name }}.propTypes = {
+
+};
+{{/if}}
+
+{{#if wantSCSSModules}}
+export default cssModules({{ properCase name }}, styles);
+{{else}}
+export default {{ properCase name }};
+{{/if}}
