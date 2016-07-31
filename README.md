@@ -171,9 +171,9 @@ For information on how to build your own generators with relative ease, please g
 
 ## Timeline / TODOS
 * [x] Write README file
-* [ ] Write component tests using Enzyme
+* [x] Write component tests using Enzyme
+* [x] Implement a Rails like component generator
 * [ ] Write wiki / other documentation
-* [ ] Implement a Rails like component generator
 
 ### Acknowledgements
 ![Scalable React Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-small.png?raw=true)
