@@ -1,6 +1,6 @@
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
-# Feature First / Scalable React Boilerplate
+# Scalable React Boilerplate
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries with React and cutting edge JavaScript.
 
 Following the lead of the famous [React Boilerplate]() project, this starter project incorporates the Feature-first architecture, meaning that files are organized by the feature they implement, not the filetype.  This provides a mechanism to scale React projects because it encourages isolation, encapsulation and reusability.
@@ -83,33 +83,26 @@ To try the example application out or to use the project, follow the instruction
 - **npm run test**
 
      Runs unit tests
-
 - **npm run test:watch**
 
      Watches for changes to run unit tests
-
 - **npm run build**
 
      Bundles the application
-
 - **npm run dev**
 
      Starts webpack development server
-
 - **npm run lint**
 
      Runs the linter
-
 - **npm run deploy**
 
      Creates the production ready files
-
 - **npm run clean**
 
     Removes the bundled code and the production ready files
 
-
-### Generators
+## Generators
 The boilerplate contains generates for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
 - containers
   - Connected / Not connected ES6 Class containers (higher order)
@@ -131,11 +124,11 @@ And follow the on screen prompts to select the options you wish to use.
 
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
+#### **Gotchas**
+If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.
+
+### Configuring your own generators
 For information on how to build your own generators with relative ease, please go to the [Plop Microgenerator](https://github.com/amwmedia/plop) homepage for detailed instructions.
-
-Generators will be added to add more functionality at a later time.
-
-NOTE: If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.
 
 ## Technologies / Libraries
 
