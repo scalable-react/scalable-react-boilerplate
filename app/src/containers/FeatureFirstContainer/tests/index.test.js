@@ -12,7 +12,7 @@ describe('<FeatureFirstContainer />', () => {
     );
     expect(
       component.text()
-    ).to.containe('LOADING');
+    ).to.contain('LOADING');
   });
   it('should render the feature first component with Udacity logo when done loading', () => {
     const component = shallow(
