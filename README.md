@@ -181,3 +181,5 @@ This boilerplate began its life as a fork of the [React Redux Simple Starter](ht
 It was created by several of the members of the Udacity Alumni product infrastructure team, including:
 * [Ryan Collins](https://github.com/RyanCCollins)
 * [Andreas Daiminger](https://github.com/adai183)
+* 
+Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas used here were reverse engineered from the same project.
