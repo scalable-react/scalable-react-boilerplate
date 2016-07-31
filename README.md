@@ -110,7 +110,32 @@ To try the example application out or to use the project, follow the instruction
 
 
 ### Generators
-Coming soon, the project will incorporate code generation following the best practices outlined by this project's setup.
+The boilerplate contains generates for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
+- containers
+  - Connected / Not connected ES6 Class containers (higher order)
+  - SCSS Modules
+  - Reducers, actions and constants
+  - Tests for all of the above
+- components
+  - Stateless functional components (recommended)
+  - ES6 class components
+  - SCSS modules
+  - Tests for all of the above
+
+To run the generators, run
+```
+npm run generate
+```
+
+And follow the on screen prompts to select the options you wish to use.
+
+The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
+
+For information on how to build your own generators with relative ease, please go to the [Plop Microgenerator](https://github.com/amwmedia/plop) homepage for detailed instructions.
+
+Generators will be added to add more functionality at a later time.
+
+NOTE: If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.
 
 ## Technologies / Libraries
 

@@ -1,0 +1,53 @@
+import React, { Component } from 'react';
+{{#if wantActionsAndReducer}}
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as {{ properCase name }}ActionCreators from './actions';
+{{/if}}
+{{#if wantSCSSModules}}
+import cssModules from 'react-css-modules';
+import styles from './index.module.scss';
+{{/if}}
+
+class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+  render() {
+    return (
+      {{#if wantSCSSModules}}
+      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+      {{else}}
+      <div>
+      {{/if}}
+      </div>
+    );
+  }
+}
+
+{{#if wantActionsAndReducer}}
+// mapStateToProps :: {State} -> {Props}
+const mapStateToProps = (state) => ({
+  // myProp: state.myProp,
+});
+
+// mapDispatchToProps :: Dispatch -> {Action}
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(
+    {{ properCase name }}ActionCreators,
+    dispatch
+  ),
+});
+{{/if}}
+
+{{#if wantSCSSModules}}
+const Container = cssModules({{ properCase name }}, styles);
+{{else}}
+const Container = {{ properCase name }};
+{{/if}}
+
+{{#if wantActionsAndReducer}}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Container);
+{{else}}
+export default Container;
+{{/if}}
