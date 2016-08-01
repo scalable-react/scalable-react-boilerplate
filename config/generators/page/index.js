@@ -34,7 +34,6 @@ module.exports = {
 
 
   actions: data => {
-
     // Generate index.js and index.module.scss
     const actions = [{
       type: 'add',
@@ -52,9 +51,9 @@ module.exports = {
     // TODO smarter route adding
     actions.push({
       type: 'modify',
-      path: '../../app/src/routes.js',
-      pattern: /(<Route path="\*" component={Pages.NotFoundPage} \/>)/g,
-      template: trimTemplateFile('route.js.hbs'),
+      path: '../../app/containers/index.js',
+      pattern: /(\/\* Assemble all containers for export \*\/)/g,
+      template: trimTemplateFile('config/generators/page/route.js.hbs'),
     });
 
     return actions;
