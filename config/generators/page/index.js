@@ -13,7 +13,8 @@ module.exports = {
       message: 'What is the name of the page component?',
       validate: (value) => {
         if ((/.+/).test(value)) {
-          return componentNameCheck(value) ? 'That component already exists. Please choose another name for your page component.' : true;
+          return componentNameCheck(value) ? 
+            'That component already exists. Please choose another name for your page component.' : true;
         }
         return 'The name is required.';
       },
