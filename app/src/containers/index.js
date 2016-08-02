@@ -1,5 +1,2 @@
-import FeatureFirstContainer from './FeatureFirstContainer';
-
-export {
-  FeatureFirstContainer,
-};
+/* Assemble all containers for export */
+export FeatureFirstContainer from './FeatureFirstContainer';

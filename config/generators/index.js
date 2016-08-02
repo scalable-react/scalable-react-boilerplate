@@ -1,10 +1,12 @@
 const fs = require('fs');
 const componentGenerator = require('./component/index.js');
 const containerGenerator = require('./container/index.js');
+const pagesGenerator = require('./page/index.js');
 
 module.exports = (plop) => {
   plop.setGenerator('component', componentGenerator);
   plop.setGenerator('container', containerGenerator);
+  plop.setGenerator('page', pagesGenerator);
   plop.addHelper('uppercase', (text) => {
     return text.toUpperCase();
   });

@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
-const NpmInstallPlugin = require('npm-install-webpack-plugin');
+import webpack from 'webpack';
+import path from 'path';
+import HtmlwebpackPlugin from 'html-webpack-plugin';
+import NpmInstallPlugin from 'npm-install-webpack-plugin';
 const ROOT_PATH = path.resolve(__dirname);
 
 const env = process.env.NODE_ENV || 'development';
