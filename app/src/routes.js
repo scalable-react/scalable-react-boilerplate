@@ -9,14 +9,12 @@ import * as Pages from 'pages';
 
 const routes = (
   <Provider store={store}>
-    <div>
-      <Router history={history}>
-        <Route path="/" component={App}>
-          <IndexRoute component={Pages.LandingPage} />
-          <Route path="*" component={Pages.NotFoundPage} />
-        </Route>
-      </Router>
-    </div>
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Pages.LandingPage} />
+        <Route path="*" component={Pages.NotFoundPage} />
+      </Route>
+    </Router>
   </Provider>
 );
 
