@@ -104,7 +104,7 @@ To try the example application out or to use the project, follow the instruction
     Removes the bundled code and the production ready files
 
 ## Generators
-The boilerplate contains generates for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
+The boilerplate contains generators for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
 - containers
   - Connected / Not connected ES6 Class containers (higher order)
   - SCSS Modules
