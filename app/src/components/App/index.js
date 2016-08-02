@@ -15,6 +15,7 @@ Main.propTypes = {
 
 // Map the global state to global props here.
 // See: https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist
+// mapStateToProps :: {State} -> {Action}
 const mapStateToProps = (state) => ({
   messages: state.messages,
   errors: state.errors,
@@ -22,6 +23,7 @@ const mapStateToProps = (state) => ({
 
 // Map the dispatch and bind the action creators.
 // See: http://redux.js.org/docs/api/bindActionCreators.html
+// mapDispatchToProps :: Dispatch Func -> {Actions}
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
     actionCreators,
