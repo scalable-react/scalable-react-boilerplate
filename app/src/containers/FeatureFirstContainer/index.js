@@ -1,6 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 /* eslint-disable import/no-unresolved */
-import { FeatureFirstComponent } from 'components';
+import {
+  LogoImage,
+  Header,
+} from 'components';
 /* eslint-enable import/no-unresolved */
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
@@ -27,11 +30,18 @@ class FeatureFirstContainer extends Component {
       isLoading,
     } = this.props;
     return (
-      <div>
+      <div className={styles.container}>
         {isLoading ?
           <h1>LOADING...</h1>
         :
-          <FeatureFirstComponent />
+          <div>
+            <LogoImage imageSource="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true" />
+            <div className={styles.headerText}>
+              <Header
+                content="Scaling the Front End feature first with the Udacity Alumni Dev Team!"
+              />
+            </div>
+          </div>
         }
       </div>
     );
@@ -53,7 +63,7 @@ const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(MyActions, dispatch),
 });
 
-const StyledContainer = cssModules(FeatureFirstComponent, styles);
+const StyledContainer = cssModules(FeatureFirstContainer, styles);
 
 export default connect(
   mapStateToProps,

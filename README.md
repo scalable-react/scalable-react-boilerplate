@@ -105,23 +105,30 @@ To try the example application out or to use the project, follow the instruction
 
 ## Generators
 The boilerplate contains generators for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
-- containers
+- Container `npm run generate:container`
+  - Name: the name of the container, i.e. `Awesome`, which converts to: `AwesomeContainer`
   - Connected / Not connected ES6 Class containers (higher order)
   - SCSS Modules
   - Reducers, actions and constants
   - Tests for all of the above
-- components
+  - README.md file that documents the container
+- Component `npm run generate:component`
+  - Name: the name of the component, i.e. `Button`
   - Stateless functional components (recommended)
   - ES6 class components
   - SCSS modules
   - Tests for all of the above
+  - README.md file that documents the component
+- Page `npm run generate:page`
+  - Name: The name of the route, i.e. Home, which gets converted to `HomePage`
+  - Route: the route that corresponds to the page
 
-To run the generators, run
+To run the generators with a list of options, run
 ```
 npm run generate
 ```
 
-Which will give you a list to select from with all of the available generators.  Follow the on screen prompts to select the options you wish to use.
+Follow the on screen prompts to select the options you wish to use.
 
 For convenience, you can bypass the initial selection and scaffold out containers, components and pages by running
 

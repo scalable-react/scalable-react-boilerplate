@@ -77,6 +77,14 @@ module.exports = {
         abortOnFail: true,
       });
 
+      // README.md
+      actions.push({
+        type: 'add',
+        path: '../../app/src/containers/{{properCase name}}Container/README.md',
+        templateFile: './container/README.md.hbs',
+        abortOnFail: true,
+      });
+
       // Constants
       actions.push({
         type: 'add',

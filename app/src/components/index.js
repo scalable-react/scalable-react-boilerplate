@@ -1,3 +1,4 @@
 /* Assemble all components for export */
-export FeatureFirstComponent from './FeatureFirstComponent';
+export Header from './Header';
+export LogoImage from './LogoImage';
 export App from './App';
