@@ -60,6 +60,14 @@ module.exports = {
       });
     }
 
+    // README.md
+    actions.push({
+      type: 'add',
+      path: '../../app/src/components/{{properCase name}}/README.md',
+      templateFile: './component/README.md.hbs',
+      abortOnFail: true,
+    });
+
     // Add container export to index.js in container root folder
     actions.push({
       type: 'modify',
