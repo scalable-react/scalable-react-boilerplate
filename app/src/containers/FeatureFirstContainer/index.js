@@ -43,10 +43,12 @@ FeatureFirstContainer.propTypes = {
   isLoading: PropTypes.bool.isRequired,
 };
 
+// mapStateToProps :: {State} -> {Action}
 const mapStateToProps = (state) => ({
   isLoading: state.isLoading,
 });
 
+// mapDispatchToProps :: Dispatch Func -> {Actions}
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(MyActions, dispatch),
 });
