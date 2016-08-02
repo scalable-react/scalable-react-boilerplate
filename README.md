@@ -176,7 +176,6 @@ For information on how to build your own generators with relative ease, please g
 * [ ] Write wiki / other documentation
 
 ### Acknowledgements
-![Scalable React Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-small.png?raw=true)
 ![Udacity Alumni Loves React](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-heart-react.png?raw=true)
 
 This boilerplate began its life as a fork of the [React Redux Simple Starter](https://github.com/RyanCCollins/react-redux-simple-starter) project and was setup as a starter project for the Udacity Alumni Web application open-source project.
