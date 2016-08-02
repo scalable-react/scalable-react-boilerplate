@@ -121,7 +121,15 @@ To run the generators, run
 npm run generate
 ```
 
-And follow the on screen prompts to select the options you wish to use.
+Which will give you a list to select from with all of the available generators.  Follow the on screen prompts to select the options you wish to use.
+
+For convenience, you can bypass the initial selection and scaffold out containers, components and pages by running
+
+```
+npm run generate:<type_of_component>
+```
+
+where <type_of_component> is one of: component, container or page.
 
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
