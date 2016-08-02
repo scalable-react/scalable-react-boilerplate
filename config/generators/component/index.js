@@ -1,4 +1,6 @@
 const componentNameCheck = require('../utils/componentNameCheck');
+const trimTemplateFile = require('../utils/trimTemplateFile');
+
 module.exports = {
   description: 'Add a component to the app',
   prompts: [
@@ -57,6 +59,14 @@ module.exports = {
         abortOnFail: true,
       });
     }
+
+    // Add container export to index.js in container root folder
+    actions.push({
+      type: 'modify',
+      path: '../../app/src/components/index.js',
+      pattern: /(\/\* Assemble all components for export \*\/)/g,
+      template: trimTemplateFile('config/generators/component/export.js.hbs'),
+    });
 
     return actions;
   },
