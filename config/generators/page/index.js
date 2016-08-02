@@ -11,6 +11,7 @@ module.exports = {
       type: 'input',
       name: 'name',
       message: 'What is the name of the page component?',
+      default: 'About',
       validate: (value) => {
         if ((/.+/).test(value)) {
           return componentNameCheck(value) ?

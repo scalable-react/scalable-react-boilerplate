@@ -8,7 +8,7 @@ module.exports = {
       type: 'input',
       name: 'name',
       message: 'What should it be called?',
-      default: 'MyContainer',
+      default: 'Scalable',
       validate: value => {
         if ((/.+/).test(value)) {
           return componentNameCheck(value) ? 'A container with this name already exists' : true;

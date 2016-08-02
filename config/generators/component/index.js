@@ -15,7 +15,7 @@ module.exports = {
       type: 'input',
       name: 'name',
       message: 'What is the name of the component?',
-      default: 'MyComponent',
+      default: 'Button',
       validate: (value) => {
         if ((/.+/).test(value)) {
           return componentNameCheck(value) ? 'That component already exists.' : true;
