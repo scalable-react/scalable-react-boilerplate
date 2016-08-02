@@ -31,7 +31,6 @@ module.exports = {
     },
   ],
   actions: (data) => {
-
     const actions = [{
       type: 'add',
       path: '../../app/src/containers/{{properCase name}}Container/index.js',
@@ -49,12 +48,7 @@ module.exports = {
       type: 'modify',
       path: '../../app/src/containers/index.js',
       pattern: /(\/\* Assemble all containers for export \*\/)/g,
-      template: trimTemplateFile('config/generators/container/export1.js.hbs'),
-    }, {
-      type: 'modify',
-      path: '../../app/src/containers/index.js',
-      pattern: /(export {)/g,
-      template: trimTemplateFile('config/generators/container/export2.js.hbs'),
+      template: trimTemplateFile('config/generators/container/export.js.hbs'),
     });
 
     if (data.wantSCSSModules) {
