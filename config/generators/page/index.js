@@ -52,7 +52,6 @@ module.exports = {
     // TODO smarter route adding
     actions.push({
       type: 'modify',
-<<<<<<< HEAD
       path: '../../app/src/routes.js',
       pattern: /(<Route path="\*" component={Pages.NotFoundPage} \/>)/g,
       template: trimTemplateFile('config/generators/page/route.js.hbs'),
@@ -61,15 +60,6 @@ module.exports = {
       path: '../../app/src/pages/index.js',
       pattern: /(\/\* Assemble all pages for export \*\/)/g,
       template: trimTemplateFile('config/generators/page/export.js.hbs'),
-||||||| merged common ancestors
-      path: '../../app/containers/index.js',
-      pattern: /(\/\* Assemble all containers for export \*\/)/g,
-      template: trimTemplateFile('route.js.hbs'),
-=======
-      path: '../../app/containers/index.js',
-      pattern: /(\/\* Assemble all containers for export \*\/)/g,
-      template: trimTemplateFile('./page/route.js.hbs'),
->>>>>>> e841883816fcd4d2ac2d5941ae6022e65573a740
     });
 
     return actions;
