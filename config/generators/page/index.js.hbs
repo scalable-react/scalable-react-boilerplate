@@ -1,6 +1,29 @@
-/**
- * Page Generator index.js template
- * (leave blank for now)
- * TODO : Figure out how to connect route to redux.
- *        Should we also generate a Container in the containers folder for each new Route ?
- */
+import React from 'react';
+{{#if wantSCSSModules}}
+import cssModules from 'react-css-modules';
+import styles from './index.module.scss';
+{{/if}}
+// Example to import a component using ES6 destructuring.
+/* eslint-disable*/ // Containers is an alias, so no file is found
+import { {{ properCase name }}Container } from 'containers';
+/* eslint-enable */
+
+ // Pages map directly to Routes, i.e. one page equals on Route
+ // Handler that maps to a route in /utils/routes
+ const LandingPage = (props) => (
+   {{#if wantSCSSModules}}
+   <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
+   {{else}}
+   <div>
+   {{/if}}
+     <{{ properCase name }}Container
+       {...props}
+     />
+   </div>
+ );
+
+{{#if wantSCSSModules}}
+export default cssModules({{ properCase name }}, styles);
+{{else}}
+export default {{ properCase name }};
+{{/if}}

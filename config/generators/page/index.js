@@ -53,7 +53,7 @@ module.exports = {
       type: 'modify',
       path: '../../app/containers/index.js',
       pattern: /(\/\* Assemble all containers for export \*\/)/g,
-      template: trimTemplateFile('route.js.hbs'),
+      template: trimTemplateFile('./page/route.js.hbs'),
     });
 
     return actions;
