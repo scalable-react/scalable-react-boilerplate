@@ -141,7 +141,7 @@ where <type_of_component> is one of: component, container or page.
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
 #### **Gotchas**
-If you are importing / exporting your modules from a root directory index.js file, then you will need to manually import / export the component / container after it has been generated.  Of course, you will also need to import the component and use it somewhere for it to show up on screen.
+In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the comments within the root level index.js file in each directory and things will work fine!
 
 From `app/src/container/index.js` or `app/src/component/index.js`
 ```
