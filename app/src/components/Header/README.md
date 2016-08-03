@@ -5,4 +5,4 @@ An H1 header element
 
 | Prop          | Type     | Default     | Possible Values   
 | ------------- | -------- | ----------- | ---------------------------------------------
-| **content** |          |         | The content to show in the header
+| **content** | String         |         | The content to show in the header
