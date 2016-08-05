@@ -188,6 +188,8 @@ For information on how to build your own generators with relative ease, please g
 * [x] Write README file
 * [x] Write component tests using Enzyme
 * [x] Implement a Rails like component generator
+* [x] Add README.md files to each component
+* [ ] Dogfood the project and iterate on suggestions
 * [ ] Write wiki / other documentation
 
 ### Acknowledgements
