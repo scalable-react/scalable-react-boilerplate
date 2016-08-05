@@ -70,7 +70,6 @@
     "immutable": "^3.7.5",
     "isomorphic-fetch": "^2.2.0",
     "json-loader": "^0.5.4",
-    "logo.svg": "^1.0.1",
     "node-sass": "^3.4.2",
     "react": "^15.1.0",
     "react-addons-css-transition-group": "^15.2.1",
