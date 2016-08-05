@@ -2,9 +2,34 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from './actions';
+import {
+  Header,
+  Title,
+  Menu,
+  Anchor,
+  Search,
+} from 'grommet';
+import styles from './index.module.scss';
 
 const Main = (props) => (
   <div>
+    <Header justify="between">
+      <Title>
+        <img className={styles.logo} src="logo.svg" alt=""/>
+      </Title>
+      <Menu direction="row" align="center" responsive={false}>
+        <Anchor href="#" className="active">
+          First
+        </Anchor>
+        <Anchor href="#">
+          Second
+        </Anchor>
+        <Anchor href="#">
+          Third
+        </Anchor>
+        <Search dropAlign={{"right": "right"}} />
+      </Menu>
+    </Header>
     {React.cloneElement(props.children, props)}
   </div>
 );
