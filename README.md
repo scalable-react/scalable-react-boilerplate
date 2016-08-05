@@ -189,6 +189,8 @@ For information on how to build your own generators with relative ease, please g
 * [x] Write component tests using Enzyme
 * [x] Implement a Rails like component generator
 * [x] Add README.md files to each component
+* [ ] Add [Grommet](grommet.io) as an optional starter component library
+* [ ] Add Webpack stats plugin
 * [ ] Dogfood the project and iterate on suggestions
 * [ ] Write wiki / other documentation
 
