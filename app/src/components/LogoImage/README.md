@@ -5,4 +5,4 @@ A simple logo image that takes a URL prop and handles styling internally.
 
 | Prop          | Type     | Default     | Possible Values   
 | ------------- | -------- | ----------- | ---------------------------------------------
-| **imageSource** |          |         | The source for the logo image
+|**imageSource**|          |             | The source for the logo image

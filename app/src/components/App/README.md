@@ -5,4 +5,4 @@ Top level Application component that sits above other components.
 
 | Prop          | Type     | Default     | Possible Values   
 | ------------- | -------- | ----------- | ---------------------------------------------
-| **children** | Element   |         | Any children react components
+| **children** | Element   |             | Any children react components

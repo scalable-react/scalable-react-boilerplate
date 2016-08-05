@@ -2,9 +2,11 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from './actions';
+import { Navbar } from 'components';
 
 const Main = (props) => (
   <div>
+    <Navbar />
     {React.cloneElement(props.children, props)}
   </div>
 );
