@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
+import Visualizer from 'webpack-visualizer-plugin';
 const ROOT_PATH = path.resolve(__dirname);
 
 const env = process.env.NODE_ENV || 'development';
@@ -98,6 +99,7 @@ module.exports = {
     new HtmlwebpackPlugin({
       title: 'Scalable React Boilerplate',
       template: 'index.html'
-    })
+    }),
+    new Visualizer()
   ]
 };
