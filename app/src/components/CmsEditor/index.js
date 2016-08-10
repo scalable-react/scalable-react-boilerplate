@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
 import { Editor, EditorState, RichUtils } from 'draft-js';
+import { stateToHTML } from 'draft-js-export-html';
 import { styleMap, getBlockStyle, BlockStyleControls, InlineStyleControls } from './utils';
 
 class CmsEditor extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -13,6 +14,10 @@ class CmsEditor extends Component { // eslint-disable-line react/prefer-stateles
     this.focus = () => this.refs.editor.focus();
     this.onChange = (editorState) => this.setState({ editorState });
 
+    this.logContent = () => {
+      let html = stateToHTML(this.state.editorState.getCurrentContent()); // eslint-disable-line
+      console.log(html);
+    };
     this.handleKeyCommand = (command) => this._handleKeyCommand(command);
     this.toggleBlockType = (type) => this._toggleBlockType(type);
     this.toggleInlineStyle = (style) => this._toggleInlineStyle(style);
@@ -59,27 +64,35 @@ class CmsEditor extends Component { // eslint-disable-line react/prefer-stateles
     }
 
     return (
-      <div className="RichEditor-root">
-        <BlockStyleControls
-          editorState={editorState}
-          onToggle={this.toggleBlockType}
-        />
-        <InlineStyleControls
-          editorState={editorState}
-          onToggle={this.toggleInlineStyle}
-        />
-        <div className={className} onClick={this.focus}>
-          <Editor
-            blockStyleFn={getBlockStyle}
-            customStyleMap={styleMap}
+      <div className={styles.container}>
+        <div className="RichEditor-root">
+          <BlockStyleControls
             editorState={editorState}
-            handleKeyCommand={this.handleKeyCommand}
-            onChange={this.onChange}
-            placeholder="Tell a story..."
-            ref="editor"
-            spellCheck
+            onToggle={this.toggleBlockType}
           />
+          <InlineStyleControls
+            editorState={editorState}
+            onToggle={this.toggleInlineStyle}
+          />
+          <div className={className} onClick={this.focus}>
+            <Editor
+              blockStyleFn={getBlockStyle}
+              customStyleMap={styleMap}
+              editorState={editorState}
+              handleKeyCommand={this.handleKeyCommand}
+              onChange={this.onChange}
+              placeholder="Tell a story..."
+              ref="editor"
+              spellCheck
+            />
+          </div>
         </div>
+        <button
+          className={`button ${styles.button}`}
+          onClick={this.logContent}
+        >
+          log editor content
+        </button>
       </div>
     );
   }
