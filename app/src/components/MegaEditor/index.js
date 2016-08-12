@@ -28,7 +28,7 @@ class MegaEditor extends Component {
         <Megadraft
           editorState={this.state.editorState}
           onChange={this.onChange}
-          placeholder={'Tell a story'}
+          placeholder={'Tell a story ...'}
         />
         <button
           className={`button ${styles.button}`}
