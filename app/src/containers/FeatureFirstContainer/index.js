@@ -3,6 +3,7 @@ import React, { PropTypes, Component } from 'react';
 import {
   LogoImage,
   Header,
+  MegaEditor,
 } from 'components';
 /* eslint-enable import/no-unresolved */
 import styles from './index.module.scss';
@@ -40,6 +41,9 @@ class FeatureFirstContainer extends Component {
               <Header
                 content="Scaling the Front End feature first with the Udacity Alumni Dev Team!"
               />
+            </div>
+            <div className={styles.editor}>
+              <MegaEditor />
             </div>
           </div>
         }

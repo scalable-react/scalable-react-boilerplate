@@ -1,5 +1,4 @@
 .container {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,4 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.editor {
+  margin-top: 200px;
 }

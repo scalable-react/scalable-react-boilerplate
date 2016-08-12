@@ -12,12 +12,11 @@ class MegaEditor extends Component {
     this.onChange = ::this.onChange;
 
     this.logContent = () => {
-
       const options = {
         blockRenderers: {
           atomic: (block) => {
             const data = block.getData();
-            return '<img src="' + data._root.entries[0][1] + '">';
+            return `<img src="${data._root.entries[0][1]}">`;
           },
         },
       };
@@ -28,10 +27,13 @@ class MegaEditor extends Component {
 
       console.log('%cJSON: \n', 'font-weight: bold', content);
       console.log('%cHTML: \n', 'font-weight: bold', html);
+
+      /* Helper function to read block data
       const blockData = contentState.getBlocksAsArray().map(function (block) {
         return block.getData()._root;
       });
       console.log(blockData);
+      */
     };
   }
 
