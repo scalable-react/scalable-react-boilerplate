@@ -28,8 +28,7 @@
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
-    "setup": "npm install",
-    "serve": "node server.js"
+    "setup": "npm install"
   },
   "repository": {
     "type": "git",
