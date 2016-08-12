@@ -1,9 +1,8 @@
-# Dockerfile (tag: v3)
 FROM node:4.2.4
 RUN npm install -g webpack
 WORKDIR /app
 COPY package.json /app/
-RUN npm config set registry http://registry.npmjs.org/ && npm install
+RUN npm install
 COPY . ./
 RUN webpack
 ENV NODE_ENV=production
