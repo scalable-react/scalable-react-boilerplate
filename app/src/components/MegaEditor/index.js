@@ -10,11 +10,28 @@ class MegaEditor extends Component {
 
     this.state = { editorState: editorStateFromRaw(null) };
     this.onChange = ::this.onChange;
+
     this.logContent = () => {
-      let html = stateToHTML(this.state.editorState.getCurrentContent()); // eslint-disable-line
-      let content = editorStateToJSON(this.state.editorState); // eslint-disable-line
+
+      const options = {
+        blockRenderers: {
+          atomic: (block) => {
+            const data = block.getData();
+            return '<img src="' + data._root.entries[0][1] + '">';
+          },
+        },
+      };
+
+      const contentState = this.state.editorState.getCurrentContent();
+      const content = editorStateToJSON(this.state.editorState);
+      const html = stateToHTML(contentState, options);
+
       console.log('%cJSON: \n', 'font-weight: bold', content);
       console.log('%cHTML: \n', 'font-weight: bold', html);
+      const blockData = contentState.getBlocksAsArray().map(function (block) {
+        return block.getData()._root;
+      });
+      console.log(blockData);
     };
   }
 

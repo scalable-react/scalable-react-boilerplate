@@ -15,8 +15,15 @@ class CmsEditor extends Component { // eslint-disable-line react/prefer-stateles
     this.onChange = (editorState) => this.setState({ editorState });
 
     this.logContent = () => {
-      let html = stateToHTML(this.state.editorState.getCurrentContent()); // eslint-disable-line
+
+      let contentState = this.state.editorState.getCurrentContent();
+      let html = stateToHTML(contentState); // eslint-disable-line
+      const blockData = contentState.getBlocksAsArray().map(function (block) {
+        return block.getType();
+      });
+
       console.log(html);
+      console.log(blockData);
     };
     this.handleKeyCommand = (command) => this._handleKeyCommand(command);
     this.toggleBlockType = (type) => this._toggleBlockType(type);
