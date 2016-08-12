@@ -13,6 +13,7 @@ const routes = (
       <Route path="/" component={App}>
         <IndexRoute component={Pages.LandingPage} />
         <Route path="/cms" component={Pages.CmsPage} />
+          <Route path="/megadraft" component={Pages.MegaDraftPage} />
           <Route path="*" component={Pages.NotFoundPage} />
       </Route>
     </Router>
