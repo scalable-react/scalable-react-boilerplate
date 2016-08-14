@@ -192,6 +192,7 @@ For information on how to build your own generators with relative ease, please g
 * [x] Add [Grommet](grommet.io) as an optional starter component library
 * [x] Add Webpack stats plugin
 * [x] Dogfood the project and iterate on suggestions
+* [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 
 ### Acknowledgements
