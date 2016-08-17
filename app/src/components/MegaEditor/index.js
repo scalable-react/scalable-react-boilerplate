@@ -3,6 +3,7 @@ import Megadraft, { editorStateFromRaw, editorStateToJSON } from 'megadraft';
 import { stateToHTML } from 'draft-js-export-html';
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
+import { saveArticle } from '../../helpers/api';
 
 class MegaEditor extends Component {
   constructor(props) {
@@ -23,10 +24,13 @@ class MegaEditor extends Component {
 
       const contentState = this.state.editorState.getCurrentContent();
       const content = editorStateToJSON(this.state.editorState);
+      const formattedContent = JSON.parse(content).blocks;
       const html = stateToHTML(contentState, options);
 
-      console.log('%cJSON: \n', 'font-weight: bold', content);
+      console.log('%cJSON: \n', 'font-weight: bold', formattedContent);
       console.log('%cHTML: \n', 'font-weight: bold', html);
+      
+      saveArticle(formattedContent);
 
       /* Helper function to read block data
       const blockData = contentState.getBlocksAsArray().map(function (block) {
@@ -34,6 +38,8 @@ class MegaEditor extends Component {
       });
       console.log(blockData);
       */
+
+      this.setState({ editorState: editorStateFromRaw(null) });
     };
   }
 
@@ -53,7 +59,7 @@ class MegaEditor extends Component {
           className={`button ${styles.button}`}
           onClick={this.logContent}
         >
-          log editor content
+          Publish
         </button>
       </div>
     );
