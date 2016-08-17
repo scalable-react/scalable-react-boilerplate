@@ -1,3 +1,17 @@
+/**
+* @Author: myMac
+* @Date:   2016-08-17T12:32:01-04:00
+* @Email:  admin@ryancollins.io
+* @Last modified by:   myMac
+* @Last modified time: 2016-08-17T12:32:01-04:00
+* @License: All rights reserved.
+
+ This source code is licensed under the MIT license found in the
+ LICENSE file in the root directory of this source tree.
+*/
+
+
+
 import webpack from 'webpack';
 import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
@@ -6,8 +20,7 @@ const ROOT_PATH = path.resolve(__dirname);
 
 const env = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 8080;
-const HOST = '0.0.0.0'; // Set to localhost if need be.
-const URL = `http://${HOST}:${PORT}`
+const HOST = '0.0.0.0';
 
 
 module.exports = {
@@ -16,6 +29,9 @@ module.exports = {
     path.resolve(ROOT_PATH,'app/src/index')
   ],
   module: {
+    noParse: [
+      // If libraries complain about babel, put them here.
+    ],
     preLoaders: [
       {
         test: /\.jsx?$/,
