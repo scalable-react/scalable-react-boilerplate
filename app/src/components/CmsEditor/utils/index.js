@@ -101,5 +101,3 @@ export const InlineStyleControls = (props) => {
     </div>
   );
 };
-
-/*eslint-enable */

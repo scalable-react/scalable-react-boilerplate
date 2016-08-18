@@ -9,8 +9,13 @@ class MegaEditor extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { editorState: editorStateFromRaw(null) };
+    this.state = {
+      editorState: editorStateFromRaw(null),
+      articleTitle: '',
+    };
+
     this.onChange = ::this.onChange;
+    this.handleInputChange = ::this.handleInputChange;
 
     this.logContent = () => {
       const options = {
@@ -26,11 +31,13 @@ class MegaEditor extends Component {
       const content = editorStateToJSON(this.state.editorState);
       const formattedContent = JSON.parse(content).blocks;
       const html = stateToHTML(contentState, options);
-
+      const articleTitle = this.state.articleTitle;
+      /*eslint-disable */
       console.log('%cJSON: \n', 'font-weight: bold', formattedContent);
       console.log('%cHTML: \n', 'font-weight: bold', html);
-      
-      saveArticle(formattedContent);
+      /*eslint-ensable */
+
+      saveArticle(articleTitle,formattedContent);
 
       /* Helper function to read block data
       const blockData = contentState.getBlocksAsArray().map(function (block) {
@@ -43,13 +50,29 @@ class MegaEditor extends Component {
     };
   }
 
+  componentDidMount() {
+    this.refs.titleInput.focus();
+  }
+
   onChange(editorState) {
     this.setState({ editorState });
+  }
+
+  handleInputChange (event) {
+    this.setState({articleTitle: event.target.value});
   }
 
   render() {
     return (
       <div className={styles.container}>
+        <input
+          className={styles.input}
+          ref="titleInput"
+          type="text"
+          value={this.state.articleTitle}
+          onChange={this.handleInputChange}
+          placeholder="Title"
+        />
         <Megadraft
           editorState={this.state.editorState}
           onChange={this.onChange}
