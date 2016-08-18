@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { Component } from 'react';
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
@@ -107,3 +108,4 @@ class CmsEditor extends Component { // eslint-disable-line react/prefer-stateles
 }
 
 export default cssModules(CmsEditor, styles);
+/*eslint-ensable*/

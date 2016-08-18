@@ -9,10 +9,28 @@ class ContentRenderer extends Component { // eslint-disable-line react/prefer-st
   }
 
   render() {
-    console.log(this.props.contentBlocks);
-    const text = this.props.contentBlocks.map((block) => <p>{block.text}</p>);
+    /*
+    TODO: complete mapping for all styles
+          - render inlineStyles
+          - render Links
+    */
+    const blocks = this.props.contentBlocks.map((block) => {
+      switch (block.type) {
+        case 'unstyled':
+          return <p key={block.key}>{block.text}</p>;
+        case 'atomic':
+          return <p key={block.key}><img src={block.data.src} /></p>;
+        case 'blockquote':
+          return <blockquote key={block.key}>{block.text}</blockquote>;
+        default:
+          return <p key={block.key}>{block.text}</p>;
+      }
+    });
+
     return (
-      <p>{text}</p>
+    <div>
+      {blocks}
+    </div>
     );
   }
 }

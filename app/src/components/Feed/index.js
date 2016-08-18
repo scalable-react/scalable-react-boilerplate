@@ -17,7 +17,6 @@ class Feed extends Component { // eslint-disable-line react/prefer-stateless-fun
       const allArticles = snapshot.val();
       const arr = Object.keys(allArticles).map((k) => allArticles[k]);
       this.setState({ articles: arr });
-      console.log(this.state.articles);
     });
   }
 
@@ -28,7 +27,7 @@ class Feed extends Component { // eslint-disable-line react/prefer-stateless-fun
           return (
             <div>
               <Title content={a.title} key={a.articleId} />
-              <ContentRenderer contentBlocks={a.contentBlocks} />
+              <ContentRenderer contentBlocks={a.contentBlocks} key={a.title} />
             </div>
           );
         })}

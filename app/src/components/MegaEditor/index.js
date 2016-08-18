@@ -33,7 +33,7 @@ class MegaEditor extends Component {
       const html = stateToHTML(contentState, options);
       const articleTitle = this.state.articleTitle;
       /*eslint-disable */
-      console.log('%cJSON: \n', 'font-weight: bold', formattedContent);
+      console.log('%cJSON: \n', 'font-weight: bold', content);
       console.log('%cHTML: \n', 'font-weight: bold', html);
       /*eslint-ensable */
 
@@ -46,7 +46,10 @@ class MegaEditor extends Component {
       console.log(blockData);
       */
 
-      this.setState({ editorState: editorStateFromRaw(null) });
+      this.setState({
+        editorState: editorStateFromRaw(null) ,
+        articleTitle: '',
+      });
     };
   }
 
