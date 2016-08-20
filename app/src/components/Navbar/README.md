@@ -1,11 +1,8 @@
 ## Navbar Component
-A component that ...
+A simple Navbar component
 
 ### Example
 
 ```js
 <Navbar />
 ```
-
-
-### Other Information
