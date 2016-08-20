@@ -35,7 +35,9 @@ class FeatureFirstContainer extends Component {
           <h1>LOADING...</h1>
         :
           <div>
-            <LogoImage imageSource="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true" />
+            <LogoImage
+              imageSource="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true" 
+            />
             <div className={styles.headerText}>
               <Header
                 content="Scaling the Front End feature first with the Udacity Alumni Dev Team!"
