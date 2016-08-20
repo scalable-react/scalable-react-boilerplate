@@ -1,9 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const ROOT_PATH = path.resolve(__dirname);
+const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 const modules = [
-  'app',
+  'app/src',
   'node_modules',
 ];
 
@@ -22,7 +23,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'isparta',
-        include: path.resolve('app/'),
+        include: path.resolve('app/src'),
       },
     ],
     loaders: [
@@ -33,6 +34,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlwebpackPlugin({
+      title: 'Scalable React Boilerplate',
+      template: 'index.html',
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -50,9 +55,9 @@ module.exports = {
     modules,
     alias: {
       sinon: 'sinon/pkg/sinon',
-      components: path.resolve(ROOT_PATH, 'app/src/components'),
-      containers: path.resolve(ROOT_PATH, 'app/src/containers'),
-      pages: path.resolve(ROOT_PATH, 'app/src/pages'),
+      components: path.resolve(ROOT_PATH, '../../app/src/components'),
+      containers: path.resolve(ROOT_PATH, '../../app/src/containers'),
+      pages: path.resolve(ROOT_PATH, '../../app/src/pages'),
     },
   },
 };
