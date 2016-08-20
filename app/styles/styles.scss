@@ -1,1 +1,12 @@
-@import "./grommet.scss";
+// Included if you are using grommet.  Otherwise, just erase this next line.
+@import "./grommet.scss"; // <- This line to be exact.
+
+// Add globally used utility styles here.
+// Or import scss libraries that are to be used without CSS modules.
+/*
+.my-style {
+  max-width: 20px;
+  color: goldenrod;
+}
+<div className="my-style" />
+*/

@@ -8,6 +8,12 @@ Following the lead of the famous [React Boilerplate]() project, this starter pro
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
+# Experimentation
+This is a living and breathing project. At times, we may implement features that are expiremental, meaning that they may not entirely work.  We will do our best to point out the areas that are not fully tested and encourage you to submit issues and pull requests if you find a bug and want to help us fix it!
+
+### Docker Support
+Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
+
 # Documentation
 
 ## Getting Started
@@ -189,9 +195,10 @@ For information on how to build your own generators with relative ease, please g
 * [x] Write component tests using Enzyme
 * [x] Implement a Rails like component generator
 * [x] Add README.md files to each component
-* [ ] Add [Grommet](grommet.io) as an optional starter component library
-* [ ] Add Webpack stats plugin
-* [ ] Dogfood the project and iterate on suggestions
+* [x] Add [Grommet](grommet.io) as an optional starter component library
+* [x] Add Webpack stats plugin
+* [x] Dogfood the project and iterate on suggestions
+* [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 
 ### Acknowledgements
