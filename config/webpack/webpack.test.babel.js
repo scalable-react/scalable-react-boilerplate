@@ -10,7 +10,7 @@ const modules = [
   'node_modules',
 ];
 
-const ROOT_PATH = path.resolve(__dirname);
+const ROOT_PATH = path.resolve('../../' + __dirname);
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -29,7 +29,7 @@ module.exports = {
     preLoaders: [
       { test: /\.js$/,
         loader: 'isparta',
-        include: path.resolve('app/'),
+        include: path.resolve('app/src'),
       },
     ],
     loaders: [
@@ -99,7 +99,7 @@ module.exports = {
       sinon: 'sinon/pkg/sinon',
       components: path.resolve(ROOT_PATH, 'app/src/components'),
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
-      pages: path.resolve(ROOT_PATH, 'app/src/pages')
+      pages: path.resolve(ROOT_PATH, 'app/src/pages'),
     },
   },
 };
