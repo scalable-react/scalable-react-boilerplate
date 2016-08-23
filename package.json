@@ -28,7 +28,9 @@
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
-    "setup": "npm install"
+    "setup": "npm install",
+    "devtest": "webpack-dev-server --config ./config/webpack/webpack.test.babel.js",
+    "test2": "NODE_ENV=test mocha --compilers js:babel-core/register --require config/testing/test-bundler \"./app/src/**/*.test.js\""
   },
   "repository": {
     "type": "git",
