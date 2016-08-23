@@ -10,7 +10,7 @@ const modules = [
   'node_modules',
 ];
 
-const ROOT_PATH = path.resolve('../../' + __dirname);
+const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -97,9 +97,9 @@ module.exports = {
     alias: {
       // required for enzyme to work properly
       sinon: 'sinon/pkg/sinon',
-      components: path.resolve(ROOT_PATH, 'app/src/components'),
-      containers: path.resolve(ROOT_PATH, 'app/src/containers'),
-      pages: path.resolve(ROOT_PATH, 'app/src/pages'),
+      components: path.resolve(ROOT_PATH, '../../app/src/components'),
+      containers: path.resolve(ROOT_PATH, '../../app/src/containers'),
+      pages: path.resolve(ROOT_PATH, '../../app/src/pages'),
     },
   },
 };
