@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as MyActions from './actions';
 
-class FeatureFirstContainer extends Component {
+export class FeatureFirstContainer extends Component {
   constructor(props) {
     super(props);
     this.initiateLoading = this.initiateLoading.bind(this);
@@ -36,7 +36,7 @@ class FeatureFirstContainer extends Component {
         :
           <div>
             <LogoImage
-              imageSource="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true" 
+              imageSource="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/udacity-alumni-small.png?raw=true"
             />
             <div className={styles.headerText}>
               <Header

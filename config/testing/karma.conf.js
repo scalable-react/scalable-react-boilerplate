@@ -1,14 +1,15 @@
-const webpackConfig = require('../../config/webpack/webpack.test.config');
+const webpackConfig = require('../webpack/webpack.test.babel');
 const argv = require('minimist')(process.argv.slice(2));
 const path = require('path');
 
-// From React Boilerplate
-// See here: https://github.com/mxstbr/react-boilerplate/blob/master/internals/webpack/webpack.test.babel.js
 module.exports = (config) => {
   config.set({
     frameworks: ['mocha'],
     reporters: ['coverage', 'mocha'],
-    browsers: ['Chrome'],
+    browsers: process.env.TRAVIS // eslint-disable-line no-nested-ternary
+      ? ['ChromeTravis']
+      : process.env.APPVEYOR
+        ? ['IE'] : ['Chrome'],
 
     autoWatch: false,
     singleRun: true,
@@ -21,7 +22,7 @@ module.exports = (config) => {
 
     files: [
       {
-        pattern: './test_helper.js',
+        pattern: './test-bundler.js',
         watched: false,
         served: true,
         included: true,
@@ -29,7 +30,10 @@ module.exports = (config) => {
     ],
 
     preprocessors: {
-      ['./test_helper.js']: ['webpack', 'sourcemap'], // eslint-disable-line no-useless-computed-key
+      ['./test-bundler.js']: [
+        'webpack',
+        'sourcemap',
+      ],
     },
 
     webpack: webpackConfig,
@@ -55,6 +59,6 @@ module.exports = (config) => {
         { type: 'text-summary' },
       ],
     },
-
+    failOnEmptyTestSuite: false,
   });
 };
