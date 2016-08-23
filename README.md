@@ -163,6 +163,24 @@ export {
 ### Configuring your own generators
 For information on how to build your own generators with relative ease, please go to the [Plop Microgenerator](https://github.com/amwmedia/plop) homepage for detailed instructions.
 
+## Testing
+Included in the setup is a test suite that will run your tests in the browser using Karma.  A number of testing utilities are included, including
+- Expect (Plus Expect-JSX)
+- Mocha
+- Chai (JSX and Immutable)
+- Enzyme
+- Karma (including multiple Karma plugins)
+
+You can see examples for testing of React Components, Redux Action Creators and Reducers in the repository [here](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/app/src/containers/FeatureFirstContainer/tests).  Please follow the convention of naming tests with a .test.js postfix, or else the test suite will not recognize your tests.
+
+To run tests, you will run
+```js
+npm run test
+```
+
+which will pick up any file with the .test.js postfix and run it through Karma / Mocha, printing a report to the commandline.
+
+
 ## Technologies / Libraries
 
 - [Node](https://nodejs.org/en/) - JS runtime environment
@@ -186,6 +204,7 @@ For information on how to build your own generators with relative ease, please g
 - [Mocha](http://mochajs.org/) - unit tests
 - [jsdom](https://github.com/tmpvar/jsdom) - vdom to test React without browser
 - [Expect](https://github.com/mjackson/expect) - assertion library
+- [Enzyme](https://github.com/airbnb/enzyme) - React Testing utils for rendering of components
 - [Chai / Immutable](http://chaijs.com/) - assertion library for Immutable JS
 - A bunch of useful scripts
 
