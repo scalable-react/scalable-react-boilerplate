@@ -7,6 +7,11 @@ import {
   CLEAR_DATA_ERROR,
 } from '../constants';
 
+// Testing actions is as easy as validating that the actions are dispatch
+// The way you think they are being dispatched.
+// Just test that your expected Action object is what is actually dispatched.
+// If you need help,
+// See here: http://redux.js.org/docs/recipes/WritingTests.html
 describe('FeatureFirstContainer actions', () => {
   it('should dispatch an action to initiate the loading process', () => {
     const expectedAction = {
