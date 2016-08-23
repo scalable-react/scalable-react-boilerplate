@@ -7,7 +7,7 @@ import {
   CLEAR_DATA_ERROR,
 } from '../constants';
 
-// Testing actions is as easy as validating that the actions are dispatch
+// Testing actions is as easy as validating that the actions are dispatched
 // The way you think they are being dispatched.
 // Just test that your expected Action object is what is actually dispatched.
 // If you need help,
