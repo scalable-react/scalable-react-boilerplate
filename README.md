@@ -8,8 +8,12 @@ Following the lead of the famous [React Boilerplate]() project, this starter pro
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
-# Experimentation
-This is a living and breathing project. At times, we may implement features that are expiremental, meaning that they may not entirely work.  We will do our best to point out the areas that are not fully tested and encourage you to submit issues and pull requests if you find a bug and want to help us fix it!
+# What is Feature First?
+In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach. 
+
+We encourage encapsulation of features by asking that you organize each feature into a seperate folder (feature-first).  In React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component.  Your actions, reducers, tests, styles, and everything else are all internal to the component they represent.  By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects.  You can thank us later!
+
+This may be confusing at first, but we've set you up with a few examples and code generation tools.  Give it a try! We promise you will enjoy it.
 
 ### Docker Support
 Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
