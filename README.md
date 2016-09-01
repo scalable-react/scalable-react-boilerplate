@@ -4,7 +4,7 @@
 
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries with React and cutting edge JavaScript.
 
-Following the lead of the famous [React Boilerplate]() project, this starter project incorporates the Feature-first architecture, meaning that files are organized by the feature they implement, not the filetype.  This provides a mechanism to scale React projects because it encourages isolation, encapsulation and reusability.
+You can read more about the organizational strategy used in this app in [this Medium post](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.6htl4s54y).
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
