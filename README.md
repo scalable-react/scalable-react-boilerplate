@@ -9,7 +9,7 @@ Following the lead of the famous [React Boilerplate]() project, this starter pro
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
 # What is Feature First?
-In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach. 
+In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
 We encourage encapsulation of features by asking that you organize each feature into a seperate folder (feature-first).  In React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component.  Your actions, reducers, tests, styles, and everything else are all internal to the component they represent.  By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects.  You can thank us later!
 
@@ -38,9 +38,9 @@ To try the example application out or to use the project, follow the instruction
    Your app will be served at: http://0.0.0.0:1337/
 
 ## Deployment
-In order to deploy the app, a demo express server setup has been included.  If you peak inside the server folder, you will see an example setup.  The public folder includes all of the files that are generated when running the: `npm run deploy` script.  This includes the bundle.js, index.html and an app folder that includes all assets. 
+In order to deploy the app, a demo express server setup has been included.  If you peak inside the server folder, you will see an example setup.  The public folder includes all of the files that are generated when running the: `npm run deploy` script.  This includes the production minified bundle.js, index.html and an app folder that includes all image assets.
 
-The express server can be run with `npm run serve:bundle`.  This will start a static express server and serve the generated assets, just like you would in production.
+The express server can be run with `npm run serve:bundle`.  This will start a static express server and serve the generated assets, just like you would in production.  A Procfile is included, that will run the node server on [Heroku](https://heroku.com) automatically if you push your project to Heroku after running the `npm run deploy` command.
 
 NOTE: the deployment script will place all your generated assets in the `server/public` folder, where they can be served in production.
 
