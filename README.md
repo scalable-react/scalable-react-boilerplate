@@ -9,7 +9,7 @@ You can read more about the organizational strategy used in this app in [this Me
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
 # What is Feature First?
-In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach. 
+In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
 We encourage encapsulation of features by asking that you organize each feature into a seperate folder (feature-first).  In React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component.  Your actions, reducers, tests, styles, and everything else are all internal to the component they represent.  By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects.  You can thank us later!
 
@@ -40,13 +40,16 @@ To try the example application out or to use the project, follow the instruction
 
    npm run start
 
-   Development server should be running at http://localhost:8080/
+   Your app will be served at: http://0.0.0.0:1337/
 
-4. **Make build**
+## Deployment
+In order to deploy the app, a demo express server setup has been included.  If you peak inside the server folder, you will see an example setup.  The public folder includes all of the files that are generated when running the: `npm run deploy` script.  This includes the production minified bundle.js, index.html and an app folder that includes all image assets.
 
-   npm run build
+The express server can be run with `npm run serve:bundle`.  This will start a static express server and serve the generated assets, just like you would in production.  A Procfile is included, that will run the node server on [Heroku](https://heroku.com) automatically if you push your project to Heroku after running the `npm run deploy` command.
 
-### File Structure
+NOTE: the deployment script will place all your generated assets in the `server/public` folder, where they can be served in production.
+
+## File Structure
 * Some files left out for brevity.  Please reference the files in the [Scalable React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for an example of the file structure.  The application will ultimately be in use in a production web application project and more info will be posted here when we have production level examples.
 ```
 .
@@ -93,30 +96,31 @@ To try the example application out or to use the project, follow the instruction
 
 ## Scripts
 - **npm run setup**
-
-    Installs the application's dependencies
+  + Installs the application's dependencies
 
 - **npm run test**
+  + Runs unit tests
 
-     Runs unit tests
 - **npm run test:watch**
+  + Watches for changes to run unit tests
 
-     Watches for changes to run unit tests
 - **npm run build**
+  + Bundles the application
 
-     Bundles the application
 - **npm run dev**
+  + Starts webpack development server
 
-     Starts webpack development server
 - **npm run lint**
+  + Runs the linter
 
-     Runs the linter
 - **npm run deploy**
+  + Creates the production ready files within the `/server/public` folder
 
-     Creates the production ready files
 - **npm run clean**
+  + Removes the bundled code and the production ready files
 
-    Removes the bundled code and the production ready files
+- **npm run serve:bundle**
+  + Serve production assets from the `/server/public` folder.
 
 ## Generators
 The boilerplate contains generators for easy project scaffolding.  At the moment, the generator has the following scaffold generating commands built in:
@@ -155,7 +159,7 @@ where <type_of_component> is one of: component, container or page.
 
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
-#### **Gotchas**
+### **Gotchas**
 In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the comments within the root level index.js file in each directory and things will work fine!
 
 From `app/src/container/index.js` or `app/src/component/index.js`
@@ -226,6 +230,8 @@ which will pick up any file with the .test.js postfix and run it through Karma /
 * [x] Add [Grommet](grommet.io) as an optional starter component library
 * [x] Add Webpack stats plugin
 * [x] Dogfood the project and iterate on suggestions
+* [x] Setup production server configuration
+* [ ] Add Jest as testing utility
 * [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 

@@ -25,10 +25,11 @@
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "deploy": "NODE_ENV=production webpack -p",
+    "deploy": "cross-env NODE_ENV=production webpack -p",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
-    "setup": "npm install"
+    "setup": "npm install",
+    "serve:bundle": "cross-env NODE_ENV=production PORT=1337 node server.js"
   },
   "repository": {
     "type": "git",
@@ -62,6 +63,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "components": "^0.1.0",
     "css-loader": "^0.23.0",
+    "express": "^4.14.0",
     "expect": "^1.20.2",
     "expect-jsx": "^2.6.0",
     "file-loader": "^0.9.0",
