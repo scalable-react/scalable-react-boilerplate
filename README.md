@@ -43,11 +43,11 @@ To try the example application out or to use the project, follow the instruction
    Your app will be served at: http://0.0.0.0:1337/
 
 ## Deployment
-In order to deploy the app, a demo express server setup has been included.  If you peak inside the server folder, you will see an example setup.  The public folder includes all of the files that are generated when running the: `npm run deploy` script.  This includes the production minified bundle.js, index.html and an app folder that includes all image assets.
+A demo ExpressJS setup is included with the app.  The express server will serve up the production minified bundle.js, index.html and any other assets that are located in the `/server/public` folder.
 
-The express server can be run with `npm run serve:bundle`.  This will start a static express server and serve the generated assets, just like you would in production.  A Procfile is included, that will run the node server on [Heroku](https://heroku.com) automatically if you push your project to Heroku after running the `npm run deploy` command.
+Running `npm run serve:bundle` will set your environment to production and serve these files via Express.  Also, a Procfile is included, which will run the Express server on Heroku when you push your code.
 
-NOTE: the deployment script will place all your generated assets in the `server/public` folder, where they can be served in production.
+NOTE: the deployment script, `npm run deploy`, will place all your generated assets in the `server/public` folder, where they can be served in production.
 
 ## File Structure
 * Some files left out for brevity.  Please reference the files in the [Scalable React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for an example of the file structure.  The application will ultimately be in use in a production web application project and more info will be posted here when we have production level examples.
