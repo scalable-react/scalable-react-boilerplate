@@ -1,6 +1,6 @@
 {
   "name": "scalable-react-boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A highly scalable React starter project",
   "main": "index.js",
   "babel": {
