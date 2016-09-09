@@ -1,5 +1,5 @@
 ![Code Ship](https://codeship.com/projects/92d32ae0-5907-0134-8eb1-7aa2649e3d2b/status?branch=master)
-[![Codacy grade](https://img.shields.io/codacy/grade/fb3bf4881b8d4b98a8a3ff59f47b14d4.svg?maxAge=2592000)](https://github.com/RyanCCollins/scalable-react-boilerplate)
+[![Codacy grade](https://img.shields.io/codacy/grade/5c49f0bc54434788b6ed1f00347aa9fc.svg?maxAge=2592000)](https://github.com/RyanCCollins/scalable-react-boilerplate)
 
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
