@@ -15,6 +15,6 @@ chai.use(chaiJsx);
 const context = require.context(
   '../../app/src',
   true,
-  /([^\a]+).test\.js$/
+  /([^]+).test\.js$/
 );
 context.keys().forEach(context);
