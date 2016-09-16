@@ -75,8 +75,11 @@ module.exports = {
       pages: path.resolve(ROOT_PATH, 'app/src/pages')
     },
   },
-  output: {
-    path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'server/public') : path.resolve(ROOT_PATH, 'app/build'),
+  output: { // Set output to public folder in production
+    path: process.env.NODE_ENV === 'production' ?
+      path.resolve(ROOT_PATH, 'server/public')
+    :
+      path.resolve(ROOT_PATH, 'app/build'),
     publicPath: '/',
     filename: 'bundle.js',
   },
@@ -91,7 +94,21 @@ module.exports = {
     host: HOST,
     port: PORT
   },
-  plugins: [
+  plugins: process.env.NODE_ENV === 'production' ?
+  [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
+  ]
+:
+  [
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new HtmlwebpackPlugin({
