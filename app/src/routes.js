@@ -9,7 +9,10 @@ import * as Pages from 'pages';
 
 const routes = (
   <Provider store={store}>
-    <Router history={history}>
+    <Router
+      history={history} // Scroll to top on route transitions
+      onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
+    >
       <Route path="/" component={App}>
         <IndexRoute component={Pages.LandingPage} />
         <Route path="*" component={Pages.NotFoundPage} />

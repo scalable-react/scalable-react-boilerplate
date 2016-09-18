@@ -5,6 +5,8 @@ import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from './reducers';
+const isClient = typeof document !== 'undefined';
+const isDeveloping = process.env.NODE_ENV !== 'production';
 
 const initialState = {
   featureComponent: {
@@ -17,15 +19,21 @@ const initialState = {
 /* Commonly used middlewares and enhancers */
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
 const loggerMiddleware = createLogger();
-const middlewares = [thunk, promiseMiddleware(), loggerMiddleware];
+const middlewares = [thunk, promiseMiddleware()];
+
+if (isDeveloping) {
+  middlewares.push(loggerMiddleware);
+}
 
 /* Everyone should use redux dev tools */
 /* https://github.com/gaearon/redux-devtools */
 /* https://medium.com/@meagle/understanding-87566abcfb7a */
 const enhancers = [];
 const devToolsExtension = window.devToolsExtension;
-if (typeof devToolsExtension === 'function') {
-  enhancers.push(devToolsExtension());
+if (isClient && isDeveloping) {
+  if (typeof devToolsExtension === 'function') {
+    enhancers.push(devToolsExtension());
+  }
 }
 
 const composedEnhancers = compose(
