@@ -20,8 +20,12 @@ This may be confusing at first, but we've set you up with a few examples and cod
 
 ## Example Apps
 Below are a few example apps that have been built with this project
-- React Weekly [See the Code](https://github.com/RyanCCollins/react-weekly) [See the App](http://www.reactweekly.co/)
-- Restaurant Reviewer [See the Code](https://github.com/RyanCCollins/restaurant-reviewer) [See the Working App](http://restaurant-reviewer-client.herokuapp.com/)
+- React Weekly 
+    - [See the Code](https://github.com/RyanCCollins/react-weekly) 
+    - [See the App](http://www.reactweekly.co/)
+- Restaurant Reviewer 
+    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer) 
+    - [See the Working App](http://restaurant-reviewer-client.herokuapp.com/)
 
 ### Docker Support
 Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
