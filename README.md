@@ -14,7 +14,7 @@ We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX 
 # What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
-We encourage encapsulation of features by asking that you organize each feature into a separate folder (feature-first).  In React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component.  Your actions, reducers, tests, styles, and everything else are all internal to the component they represent.  By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects.  You can thank us later!
+We encourage encapsulation of features by asking that you organize each feature into the same folder.  With React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component.  Your actions, reducers, tests, styles, and everything else are all internal to the component they represent.  By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects.  You can thank us later!
 
 This may be confusing at first, but we've set you up with a few examples and code generation tools.  Give it a try! We promise you will enjoy it.
 
