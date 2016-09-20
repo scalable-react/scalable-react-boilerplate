@@ -3,14 +3,16 @@ import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
 import Visualizer from 'webpack-visualizer-plugin';
-const ROOT_PATH = path.resolve(__dirname);
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const ROOT_PATH = path.resolve(__dirname);
 const env = process.env.NODE_ENV || 'development';
+const isProduction = env === 'production';
 const PORT = process.env.PORT || 1337;
 const HOST = '0.0.0.0'; // Set to localhost if need be.
 
 module.exports = {
-  devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map',
+  devtool: isProduction ? '' : 'source-map',
   entry: [
     path.resolve(ROOT_PATH,'app/src/index')
   ],
@@ -18,7 +20,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.jsx?$/,
-        loaders: process.env.NODE_ENV === 'production' ? [] : ['eslint'],
+        loaders: isProduction ? [] : ['eslint'],
         include: path.resolve(ROOT_PATH, './app')
       }
     ],
@@ -75,13 +77,17 @@ module.exports = {
       pages: path.resolve(ROOT_PATH, 'app/src/pages')
     },
   },
-  output: { // Set output to public folder in production
-    path: process.env.NODE_ENV === 'production' ?
+  output: {
+    path: isProduction ?
       path.resolve(ROOT_PATH, 'server/public')
     :
       path.resolve(ROOT_PATH, 'app/build'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: isProduction ? '[name].[chunkhash].js' : 'bundle.js',
+    chunkFilename: '[name].[chunkhash].chunk.js',
+  },
+  stats: {
+    chunks: isProduction,
   },
   devServer: {
     contentBase: path.resolve(ROOT_PATH, 'app/build'),
@@ -94,27 +100,48 @@ module.exports = {
     host: HOST,
     port: PORT
   },
-  plugins: process.env.NODE_ENV === 'production' ?
-  [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-    }),
-  ]
-:
-  [
-    new webpack.HotModuleReplacementPlugin(),
-    new NpmInstallPlugin(),
-    new HtmlwebpackPlugin({
-      title: 'Scalable React Boilerplate',
-      template: 'index.html'
-    }),
-    new Visualizer()
-  ]
+  plugins: isProduction ?
+    [
+      new ExtractTextPlugin('[name].[contenthash].css'),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        children: true,
+        minChunks: 2,
+        async: true,
+      }),
+      new HtmlwebpackPlugin({
+        template: 'config/templates/_index.html',
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true,
+        },
+        inject: true,
+      }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      }),
+      new webpack.optimize.OccurrenceOrderPlugin(true),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        sourceMap: false
+      }),
+    ]
+  :
+    [
+      new webpack.HotModuleReplacementPlugin(),
+      new NpmInstallPlugin(),
+      new HtmlwebpackPlugin({
+        title: 'Scalable React Boilerplate',
+        template: 'index.html'
+      }),
+      new Visualizer()
+    ]
 };

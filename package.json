@@ -14,8 +14,7 @@
     "test": {
       "plugins": [
         [
-          "babel-plugin-webpack-loaders",
-          {
+          "babel-plugin-webpack-loaders", {
             "config": "./config/testing/webpack.test.config.js",
             "verbose": false
           }
@@ -40,18 +39,17 @@
     "configFile": "./config/webpack/webpack.test.config.js"
   },
   "scripts": {
-    "t": "BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
+    "t": "npm run test",
     "test:watch": "npm test -- --watch",
-    "test": "npm run t",
+    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
     "build": "webpack",
     "dev": "webpack-dev-server",
     "generate": "plop --plopfile config/generators/index.js",
-    "generator": "npm run generate",
     "generate:component": "plop --plopfile config/generators/index.js component",
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "deploy": "cross-env NODE_ENV=production webpack -p",
+    "deploy": "cross-env NODE_ENV=production webpack",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",
@@ -92,6 +90,7 @@
     "expect": "^1.20.2",
     "expect-jsx": "^2.6.0",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "foundation-sites": "^6.2.3",
     "grommet": "^0.6.10",
