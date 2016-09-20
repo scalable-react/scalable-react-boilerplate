@@ -8,12 +8,10 @@ import rootReducer from './reducers';
 const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
+import { initialState as featureComponent } from './containers/FeatureFirstContainer/reducer';
+
 const initialState = {
-  featureComponent: {
-    isLoading: false,
-    data: {},
-    error: {},
-  },
+  featureComponent,
 };
 
 /* Commonly used middlewares and enhancers */

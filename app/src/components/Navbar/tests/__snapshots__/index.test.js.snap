@@ -1,0 +1,63 @@
+exports[`<Navbar /> should render with default props 1`] = `
+<div>
+  <Header
+    align="center"
+    direction="row"
+    justify="between"
+    pad={
+      Object {
+        "between": "small",
+        "horizontal": "none",
+        "vertical": "none"
+      }
+    }
+    responsive={false}
+    tag="header">
+    <Title
+      responsive={true}>
+      <img
+        alt="logo"
+        src={Object {}} />
+    </Title>
+    <Menu
+      align="center"
+      closeOnClick={true}
+      direction="row"
+      dropAlign={
+        Object {
+          "left": "left",
+          "top": "top"
+        }
+      }
+      pad="none"
+      responsive={false}>
+      <Anchor
+        className="active"
+        href="#"
+        tag="a">
+        First
+      </Anchor>
+      <Anchor
+        href="#"
+        tag="a">
+        Second
+      </Anchor>
+      <Anchor
+        href="#"
+        tag="a">
+        Third
+      </Anchor>
+      <Search
+        align="left"
+        dropAlign={
+          Object {
+            "right": "right"
+          }
+        }
+        iconAlign="end"
+        inline={false}
+        responsive={true} />
+    </Menu>
+  </Header>
+</div>
+`;

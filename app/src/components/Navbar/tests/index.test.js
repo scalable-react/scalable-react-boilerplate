@@ -1,14 +1,12 @@
-import Header from '../index';
 import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
+import { shallowToJson } from 'enzyme-to-json';
+import Navbar from '../index';
 
-describe('<Header />', () => {
+describe('<Navbar />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Header
-        content="Hello World"
-      />
+      <Navbar />
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });

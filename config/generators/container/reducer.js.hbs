@@ -1,19 +1,17 @@
-import {
-  {{ uppercase name }}_DEFAULT_ACTION,
-} from './constants';
+import * as types from './constants';
 
-const initialState = {
+export const initialState = {
   // Initial State goes here!
 };
 
 const {{ camelCase name }}Reducer =
   (state = initialState, action) => {
     switch (action.type) {
-      case DEFAULT_ACTION:
+      case types.DEFAULT_ACTION:
         return state;
       default:
         return state;
     }
-};
+  };
 
 export default {{ camelCase name }}Reducer;

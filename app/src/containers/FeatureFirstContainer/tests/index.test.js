@@ -1,37 +1,20 @@
-import { FeatureFirstContainer } from '../index';
-import expect from 'expect';
+import FeatureFirstContainer from '../index';
 import React from 'react';
 import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { initialState as featureComponent } from '../reducer';
 
-// We are testing our react components using
-// Airbnb's enzyme
-// Checkout https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f#.n5bteqyp4
-// When testing connected containers, things can be a little trickier
-// because you need to mock the store in order to test the components
-// in total isolation.
-// SEE: http://redux.js.org/docs/recipes/WritingTests.html
-function setup() {
-  const props = {
-    isLoading: true,
-  };
-  const wrapper = shallow(
-    <FeatureFirstContainer isLoading={props.isLoading} />
-  );
-  return {
-    props,
-    wrapper,
-  };
-}
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
 
 describe('<FeatureFirstContainer />', () => {
-  it('should show a loading indicator while loading', () => {
-    const {
-      wrapper,
-    } = setup();
-    expect(
-      wrapper.contains(
-        <h1>LOADING...</h1>
-      )
-    ).toBe(true);
+  it('renders with default props', () => {
+    const store = mockStore({ featureComponent });
+    const wrapper = shallow(
+      <FeatureFirstContainer store={store} />
+    );
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });
