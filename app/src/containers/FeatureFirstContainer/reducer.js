@@ -5,7 +5,7 @@ import {
   CLEAR_DATA_ERROR,
 } from './constants';
 
-const initialState = {
+export const initialState = {
   isLoading: false,
   data: {},
   error: {},

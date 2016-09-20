@@ -6,12 +6,10 @@ import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from './reducers';
 
+import { initialState as featureComponent } from './containers/FeatureFirstContainer/reducer';
+
 const initialState = {
-  featureComponent: {
-    isLoading: false,
-    data: {},
-    error: {},
-  },
+  featureComponent,
 };
 
 /* Commonly used middlewares and enhancers */
