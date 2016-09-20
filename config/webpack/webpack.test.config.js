@@ -16,7 +16,7 @@ module.exports = {
   externals: {
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true
+    'react/lib/ReactContext': true,
   },
   module: {
     loaders: [
