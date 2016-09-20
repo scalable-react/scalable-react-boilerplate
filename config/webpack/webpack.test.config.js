@@ -13,6 +13,11 @@ module.exports = {
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
     },
   },
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
   module: {
     loaders: [
       {
