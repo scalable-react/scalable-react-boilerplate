@@ -1,8 +1,6 @@
-import {
-  {{ uppercase name }}_DEFAULT_ACTION,
-} from './constants';
+import * as types from './constants';
 
 // {{ camelCase name }}defaultAction :: None -> {Action}
 export const {{ camelCase name }}DefaultAction = () => ({
-  type: {{ uppercase name }}_DEFAULT_ACTION,
+  type: types.{{ uppercase name }}_DEFAULT_ACTION,
 });
