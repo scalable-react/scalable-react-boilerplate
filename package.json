@@ -68,8 +68,8 @@
     "css modules"
   ],
   "engines": {
-    "node": "4.2.4",
-    "npm": "3.8.8"
+    "node": "5.2.0",
+    "npm": "3.10.7"
   },
   "author": "Ryan Collins",
   "license": "MIT",
