@@ -3,6 +3,8 @@ import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
 import Visualizer from 'webpack-visualizer-plugin';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const ROOT_PATH = path.resolve(__dirname);
 const env = process.env.NODE_ENV || 'development';
 const isProduction = env === 'production';
@@ -81,7 +83,11 @@ module.exports = {
     :
       path.resolve(ROOT_PATH, 'app/build'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: isProduction ? '[name].[chunkhash].js' : 'bundle.js',
+    chunkFilename: '[name].[chunkhash].chunk.js',
+  },
+  stats: {
+    chunks: isProduction,
   },
   devServer: {
     contentBase: path.resolve(ROOT_PATH, 'app/build'),
