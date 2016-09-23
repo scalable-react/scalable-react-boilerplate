@@ -8,7 +8,12 @@
   },
   "rules": {
     "func-names": 0,
-    "eol-last": 0
+    "eol-last": 0,
+    "react/jsx-no-bind": [ 2, {
+      "ignoreRefs": false,
+      "allowArrowFunctions": true,
+      "allowBind": true
+    }]
   },
   "plugins": [
     "react",
