@@ -3,12 +3,14 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
-import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from './reducers';
 const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
-import { initialState as featureComponent } from './containers/FeatureFirstContainer/reducer';
+// Import your initialstate from each reducer and combine it into one object.
+import {
+  initialState as featureComponent,
+} from './containers/FeatureFirstContainer/reducer';
 
 const initialState = {
   featureComponent,
@@ -17,7 +19,7 @@ const initialState = {
 /* Commonly used middlewares and enhancers */
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
 const loggerMiddleware = createLogger();
-const middlewares = [thunk, promiseMiddleware()];
+const middlewares = [thunk];
 
 if (isDeveloping) {
   middlewares.push(loggerMiddleware);

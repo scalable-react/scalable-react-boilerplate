@@ -7,18 +7,45 @@ import App from 'components/App';
 import * as Pages from 'pages';
 /* eslint-enable */
 
-const routes = (
+if (typeof module !== 'undefined' && module.require) {
+  if (typeof require.ensure === 'undefined') {
+    require.ensure = require('node-ensure');
+  }
+}
+
+export const routes = {
+  component: App,
+  path: '/',
+  indexRoute: {
+    getComponent(location, callback) {
+      require.ensure([], () => {
+        const LandingPage = require('./pages/LandingPage').default;
+        callback(null, LandingPage);
+      });
+    },
+  },
+  childRoutes: [
+    {
+      path: '*',
+      getComponent(location, callback) {
+        require.ensure([], () => {
+          const NotFoundPage = require('./pages/NotFoundPage').default;
+          callback(null, NotFoundPage);
+        });
+      },
+    },
+  ],
+};
+
+const RouterApp = () => (
   <Provider store={store}>
     <Router
       history={history} // Scroll to top on route transitions
       onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
     >
-      <Route path="/" component={App}>
-        <IndexRoute component={Pages.LandingPage} />
-        <Route path="*" component={Pages.NotFoundPage} />
-      </Route>
+      {routes}
     </Router>
   </Provider>
 );
 
-export default routes;
+export default RouterApp;
