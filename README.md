@@ -27,6 +27,7 @@ Below are a few example apps that have been built with this project
     - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer) 
     - [See the Working App](http://restaurant-reviewer-client.herokuapp.com/)
 
+## Experimental Features
 ### Server Rendering
 Need an extra performance boost with React Server Rendering, code chunking and lazy loading?  Take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_server_rendering) for an example.
 
