@@ -3,8 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 /* eslint-disable */
-import App from 'components/App';
-import * as Pages from 'pages';
+import App from './components/App';
 /* eslint-enable */
 
 if (typeof module !== 'undefined' && module.require) {

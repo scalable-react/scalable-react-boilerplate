@@ -29,7 +29,7 @@ app.use((req, res) => {
           </Provider>
         );
         res.status(200)
-          .send(createTemplate(body, store.getState(), mainHash, vendorHash));
+          .send(createTemplate(body, store.getState()));
       } else {
         res.status(400).send('Not Found 🤔');
       }

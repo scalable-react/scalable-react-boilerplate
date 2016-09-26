@@ -29,9 +29,9 @@ if (isDeveloping) {
 /* https://github.com/gaearon/redux-devtools */
 /* https://medium.com/@meagle/understanding-87566abcfb7a */
 const enhancers = [];
-const devToolsExtension = window.devToolsExtension;
 if (isClient && isDeveloping) {
   if (typeof devToolsExtension === 'function') {
+    const devToolsExtension = window.devToolsExtension;
     enhancers.push(devToolsExtension());
   }
 }
@@ -52,7 +52,8 @@ const store = createStore(
 );
 
 /* See: https://github.com/reactjs/react-router-redux/issues/305 */
-export const history = syncHistoryWithStore(browserHistory, store);
+export const history = isClient ?
+  syncHistoryWithStore(browserHistory, store) : undefined;
 
 /* Hot reloading of reducers.  How futuristic!! */
 if (module.hot) {

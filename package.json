@@ -14,7 +14,8 @@
     "test": {
       "plugins": [
         [
-          "babel-plugin-webpack-loaders", {
+          "babel-plugin-webpack-loaders",
+          {
             "config": "./config/testing/webpack.test.config.js",
             "verbose": false
           }
@@ -102,6 +103,7 @@
     "jest-cli": "^15.1.1",
     "json-loader": "^0.5.4",
     "minimist": "^1.2.0",
+    "node-ensure": "0.0.0",
     "node-sass": "^3.4.2",
     "react": "^15.1.0",
     "react-addons-css-transition-group": "^15.2.1",

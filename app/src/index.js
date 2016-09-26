@@ -3,8 +3,8 @@ import React from 'react';
 /* eslint-enable */
 import { render } from 'react-dom';
 import RouterApp from './routes';
-import { history } from './store/store';
-import { routes } from './utils/routes';
+import { history } from './store';
+import { routes } from './routes';
 import { match } from 'react-router';
 import '../styles/styles.scss';
 

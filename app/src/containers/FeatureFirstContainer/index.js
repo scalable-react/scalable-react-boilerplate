@@ -3,7 +3,7 @@ import React, { PropTypes, Component } from 'react';
 import {
   LogoImage,
   Header,
-} from 'components';
+} from '../../components';
 /* eslint-enable import/no-unresolved */
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
