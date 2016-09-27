@@ -128,6 +128,7 @@
     "babel-eslint": "^5.0.0-beta4",
     "babel-jest": "^15.0.0",
     "babel-plugin-webpack-loaders": "^0.7.1",
+    "babel-runtime": "^6.11.6",
     "cross-env": "^2.0.0",
     "enzyme": "^2.4.1",
     "enzyme-to-json": "^1.0.3",
