@@ -25,7 +25,7 @@ const Navbar = () => (
         <Anchor href="#">
           Third
         </Anchor>
-        <Search dropAlign={{ right: 'right'}} />
+        <Search dropAlign={{ right: 'right' }} />
       </Menu>
     </Header>
   </div>
