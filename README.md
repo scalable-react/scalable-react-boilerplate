@@ -242,7 +242,7 @@ which will pick up any file with the .test.js postfix and run it through Karma /
 * [x] Add Webpack stats plugin
 * [x] Dogfood the project and iterate on suggestions
 * [x] Setup production server configuration
-* [ ] Add Jest as testing utility
+* [x] Add Jest as testing utility
 * [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 
