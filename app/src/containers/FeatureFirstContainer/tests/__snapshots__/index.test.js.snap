@@ -8,6 +8,7 @@ exports[`<FeatureFirstContainer /> renders with default props 1`] = `
       "loadDataSuccess": [Function anonymous]
     }
   }
+  isLoading={false}
   store={
     Object {
       "clearActions": [Function clearActions],
