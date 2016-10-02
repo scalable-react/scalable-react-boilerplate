@@ -41,7 +41,7 @@
   "scripts": {
     "t": "npm run test",
     "test:watch": "npm test -- --watch",
-    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
+    "test": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
     "build": "./node_modules/.bin/webpack",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "generate": "plop --plopfile config/generators/index.js",
