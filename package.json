@@ -14,8 +14,7 @@
     "test": {
       "plugins": [
         [
-          "babel-plugin-webpack-loaders",
-          {
+          "babel-plugin-webpack-loaders", {
             "config": "./config/testing/webpack.test.config.js",
             "verbose": false
           }
@@ -43,14 +42,14 @@
     "t": "npm run test",
     "test:watch": "npm test -- --watch",
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
-    "build": "webpack",
-    "dev": "webpack-dev-server",
+    "build": "./node_modules/.bin/webpack",
+    "dev": "./node_modules/.bin/webpack-dev-server",
     "generate": "plop --plopfile config/generators/index.js",
     "generate:component": "plop --plopfile config/generators/index.js component",
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "deploy": "cross-env NODE_ENV=production webpack",
+    "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",
@@ -91,7 +90,7 @@
     "expect": "^1.20.2",
     "expect-jsx": "^2.6.0",
     "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^v2.0.0-beta.3",
     "file-loader": "^0.9.0",
     "foundation-sites": "^6.2.3",
     "grommet": "^0.6.10",
@@ -122,7 +121,7 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "svg-react-loader": "^0.3.6",
-    "webpack": "^1.12.9"
+    "webpack": "v2.1.0-beta.19"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta4",
@@ -144,7 +143,7 @@
     "redux-devtools": "^3.0.1",
     "redux-mock-store": "^1.1.4",
     "sinon": "2.0.0-pre",
-    "webpack-dev-server": "^1.14.0",
+    "webpack-dev-server": "2.1.0-beta.3",
     "webpack-visualizer-plugin": "^0.1.5"
   }
 }
