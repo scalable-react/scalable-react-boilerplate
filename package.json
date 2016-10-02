@@ -93,7 +93,7 @@
     "extract-text-webpack-plugin": "^v2.0.0-beta.3",
     "file-loader": "^0.9.0",
     "foundation-sites": "^6.2.3",
-    "grommet": "^0.6.10",
+    "grommet": "https://github.com/ryanccollins/grommet/tarball/stable",
     "history": "^1.14.0",
     "html-webpack-plugin": "^2.7.1",
     "immutable": "^3.7.5",
