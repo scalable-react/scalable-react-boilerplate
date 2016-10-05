@@ -218,7 +218,7 @@ To run tests, you will run
 npm run test
 ```
 
-which will pick up any file with the .test.js postfix and run it through Karma / Mocha, printing a report to the commandline.
+which will pick up any file with the .test.js postfix and run it through Jest.
 
 
 ## Technologies / Libraries
