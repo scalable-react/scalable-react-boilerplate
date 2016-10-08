@@ -29,6 +29,12 @@ Below are a few example apps that have been built with this project
 - Corporate Dashboard
     - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
     - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
+- Meetup Event Planner
+    - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
+    - [See the Live App](http://meetup-event-planner.herokuapp.com/)
+- Udacity Alumni App
+    - [See the Code](https://github.com/udacityalumni/alumni-client)
+    - Live App coming soon
 
 ## Experimental Features
 ### Server Rendering
