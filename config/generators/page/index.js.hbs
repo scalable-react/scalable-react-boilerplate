@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 import { {{ properCase name }}Container } from 'containers';
 {{/if}}
 
-const {{ properCase name }}Page = (props) => (
+const {{ properCase name }}Page = () => (
   <div className={styles.container}>
     {{#if wantContainer}}
     <{{ properCase name }}Container />
