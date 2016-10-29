@@ -8,8 +8,12 @@ import * as {{ properCase name }}ActionCreators from './actions';
 import cssModules from 'react-css-modules';
 import styles from './index.module.scss';
 {{/if}}
+{{#if wantGraphQL}}
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+{{/if}}
 
-class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+class {{ properCase name }}Container extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       {{#if wantSCSSModules}}
@@ -36,18 +40,52 @@ const mapDispatchToProps = (dispatch) => ({
   ),
 });
 {{/if}}
-
 {{#if wantSCSSModules}}
-const Container = cssModules({{ properCase name }}, styles);
+
+const Container = cssModules({{ properCase name }}Container, styles);
 {{else}}
-const Container = {{ properCase name }};
+
+const Container = {{ properCase name }}Container;
 {{/if}}
 
+{{#if wantGraphQL}}
+const {{ camelCase name }}Query = gql`
+  query {{ camelCase name }} {
+    id
+  }
+`;
+
+const ContainerWithData = graphql({{ camelCase name }}Query, {
+  props: ({ data: { loading, error, {{ camelCase name }} } }) => ({
+    {{ camelCase name }},
+    loading,
+    error,
+  }),
+})(Container);
+
+const {{ camelCase name }}Mutation = gql`
+  mutation {{ camelCase name }} {
+    id
+  }
+`;
+
+const ContainerWithMutation = graphql({{ camelCase name }}Mutation)(ContainerWithData);
+{{/if}}
 {{#if wantActionsAndReducer}}
+  {{#if wantGraphQL}}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ContainerWithMutation);
+  {{else}}
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Container);
+{{/if}}
 {{else}}
+
 export default Container;
 {{/if}}
