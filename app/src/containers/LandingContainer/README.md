@@ -1,11 +1,8 @@
 ## LandingContainer
-A container that does ...
+The main container for the demo site.
 
 ### Example Usage
 
 ```js
 <LandingContainer  />
 ```
-
-
-### Other Information
