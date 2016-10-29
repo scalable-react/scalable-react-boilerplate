@@ -10,7 +10,6 @@ import app from './containers/AppContainer/reducer';
 const rootReducer = combineReducers({
   app,
   /* GENERATOR: Compile all of your reducers */
-  selectorTest,
   landing,
   routing: routerReducer,
   form: formReducer,
