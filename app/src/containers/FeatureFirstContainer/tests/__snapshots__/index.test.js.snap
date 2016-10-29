@@ -8,12 +8,14 @@ exports[`<FeatureFirstContainer /> renders with default props 1`] = `
       "loadDataSuccess": [Function anonymous]
     }
   }
+  isLoading={false}
   store={
     Object {
       "clearActions": [Function clearActions],
       "dispatch": [Function anonymous],
       "getActions": [Function getActions],
       "getState": [Function getState],
+      "replaceReducer": [Function replaceReducer],
       "subscribe": [Function subscribe]
     }
   } />

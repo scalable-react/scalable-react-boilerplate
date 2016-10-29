@@ -22,10 +22,13 @@ If this is confusing, don't fret, we've set you up with a few examples and code 
 Below are a few example apps that have been built with this project
 - React Weekly 
     - [See the Code](https://github.com/RyanCCollins/react-weekly) 
-    - [See the App](http://www.reactweekly.co/)
+    - [See the Live App](http://www.reactweekly.co/)
 - Restaurant Reviewer 
     - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer) 
-    - [See the Working App](http://restaurant-reviewer-client.herokuapp.com/)
+    - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
+- Corporate Dashboard
+    - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
+    - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
 
 ## Experimental Features
 ### Server Rendering
@@ -242,7 +245,7 @@ which will pick up any file with the .test.js postfix and run it through Karma /
 * [x] Add Webpack stats plugin
 * [x] Dogfood the project and iterate on suggestions
 * [x] Setup production server configuration
-* [ ] Add Jest as testing utility
+* [x] Add Jest as testing utility
 * [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 

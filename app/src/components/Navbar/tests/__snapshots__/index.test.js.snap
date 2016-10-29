@@ -11,8 +11,7 @@ exports[`<Navbar /> should render with default props 1`] = `
         "vertical": "none"
       }
     }
-    responsive={false}
-    tag="header">
+    responsive={false}>
     <Title
       responsive={true}>
       <img

@@ -57,7 +57,7 @@ FeatureFirstContainer.propTypes = {
 
 // mapStateToProps :: {State} -> {Action}
 const mapStateToProps = (state) => ({
-  isLoading: state.isLoading,
+  isLoading: state.featureComponent.isLoading,
 });
 
 // mapDispatchToProps :: Dispatch Func -> {Actions}

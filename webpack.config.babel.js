@@ -3,7 +3,7 @@ import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
 import Visualizer from 'webpack-visualizer-plugin';
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const ROOT_PATH = path.resolve(__dirname);
 const env = process.env.NODE_ENV || 'development';
@@ -39,17 +39,24 @@ module.exports = {
     },
     {
       test: /\.module\.scss$/,
-      loaders: [
-          'style',
-          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
-          'resolve-url',
-          'sass'
-      ]
+      loader: !isProduction ?
+        'style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!sass-loader'
+      :
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!sass-loader'
+        }),
     },
     {
       test: /\.scss$/,
       exclude: /\.module\.scss$/,
-      loaders: ["style", "css", "sass"]
+      loader: !isProduction ?
+        'style-loader!css-loader!sass-loader'
+      :
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: '!css-loader!sass-loader'
+        }),
     },
     {
       test: /\.css$/,
@@ -68,6 +75,11 @@ module.exports = {
       loader: 'file?name=[path][name].[hash].[ext]'
     }
   ]
+  },
+  sassLoader: {
+    includePaths: [
+      './node_modules',
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
