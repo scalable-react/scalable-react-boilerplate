@@ -23,6 +23,12 @@ If this is confusing, don't fret, we've set you up with a few examples and code 
 
 ## Example Apps
 Below are a few example apps that have been built with this project
+- Udacity Alumni App
+    - [See the Code](https://github.com/udacityalumni/alumni-client)
+    - Live App coming soon
+- RyanCollins.io v3.0
+    - [See the Code](https://github.com/RyanCCollins/ryancollinsio) 
+    - Live App coming soon
 - React Weekly 
     - [See the Code](https://github.com/RyanCCollins/react-weekly) 
     - [See the Live App](http://www.reactweekly.co/)
@@ -35,9 +41,6 @@ Below are a few example apps that have been built with this project
 - Meetup Event Planner
     - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
     - [See the Live App](http://meetup-event-planner.herokuapp.com/)
-- Udacity Alumni App
-    - [See the Code](https://github.com/udacityalumni/alumni-client)
-    - Live App coming soon
 
 ## Experimental Features
 ### Server Rendering
@@ -188,9 +191,11 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - SCSS modules
   - Tests for all of the above
   - README.md file that documents the component
+  - GraphQL: If you want, the generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
 - Page `npm run generate:page`
   - Name: The name of the route, i.e. Home, which gets converted to `HomePage`
   - Route: the route that corresponds to the page
+  - Container Import: Most of the time, a Route exists only to import a container by the same name.  This is enabled by default, so make sure to run the container generator if you want to use this feature.
 
 To run the generators with a list of options, run
 ```
@@ -210,17 +215,13 @@ where <type_of_component> is one of: component, container or page.
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
 ### **Gotchas**
-In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the comments within the root level index.js file in each directory and things will work fine!
+In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the any comment that is prefixed with GENERATOR and things will work great.
 
 From `app/src/container/index.js` or `app/src/component/index.js`
 ```
-// ... Other components here
-import MyComponent from 'MyComponent';
-
-export {
-  // ... Other components here
-  MyComponent
-}
+/* GENERATOR: Assemble all containers for export */
+export LandingContainer from './LandingContainer';
+export AppContainer from './AppContainer';
 ```
 
 ### Configuring your own generators
