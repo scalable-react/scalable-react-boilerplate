@@ -1,5 +1,6 @@
 {
   "name": "Scalable React Boilerplate",
+  "short_name": "Scalable React",
   "icons": [{
     "src": "\/favicon/android-icon-36x36.png",
     "sizes": "36x36",
