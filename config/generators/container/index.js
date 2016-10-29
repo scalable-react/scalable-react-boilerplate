@@ -31,6 +31,12 @@ module.exports = {
     },
     {
       type: 'confirm',
+      name: 'wantSelectors',
+      default: false,
+      message: 'Do you want to use reselect?',
+    },
+    {
+      type: 'confirm',
       name: 'wantGraphQL',
       default: false,
       message: 'Do you want a colocated GraphQL / Apollo query and mutation for this container?',
@@ -62,6 +68,15 @@ module.exports = {
         type: 'add',
         path: '../../app/src/containers/{{properCase name}}Container/index.module.scss',
         templateFile: './container/styles.scss.hbs',
+        abortOnFail: true,
+      });
+    }
+
+    if (data.wantSelectors) {
+      actions.push({
+        type: 'add',
+        path: '../../app/src/containers/{{properCase name}}Container/selectors.js',
+        templateFile: './container/selectors.js.hbs',
         abortOnFail: true,
       });
     }

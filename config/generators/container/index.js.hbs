@@ -12,6 +12,10 @@ import styles from './index.module.scss';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 {{/if}}
+{{#if wantSelectors}}
+import { createSelector } from 'reselect';
+import { select{{ properCase name }} } from './selectors';
+{{/if}}
 
 class {{ properCase name }}Container extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -28,13 +32,20 @@ class {{ properCase name }}Container extends Component { // eslint-disable-line 
 
 {{ properCase name }}Container.propTypes = {
   // isLoading: PropTypes.bool.isRequired,
-}
+};
 
 {{#if wantActionsAndReducer}}
+{{#if wantSelectors}}
+const mapStateToProps = createSelector(
+  select{{properCase name}}(),
+  ({{camelCase name}}) => ({ {{camelCase name}} })
+);
+{{else}}
 // mapStateToProps :: {State} -> {Props}
 const mapStateToProps = (state) => ({
   // myProp: state.myProp,
 });
+{{/if}}
 
 // mapDispatchToProps :: Dispatch -> {Action}
 const mapDispatchToProps = (dispatch) => ({
