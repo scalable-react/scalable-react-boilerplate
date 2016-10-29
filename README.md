@@ -281,6 +281,7 @@ which will pick up any file with the .test.js postfix and run it through Jest.
 * [x] Dogfood the project and iterate on suggestions
 * [x] Setup production server configuration
 * [x] Add Jest as testing utility
+* [x] Incporporate Server Rendering
 * [ ] Create Docker container & automation scripts
 * [ ] Write wiki / other documentation
 
