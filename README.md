@@ -41,7 +41,7 @@ Below are a few example apps that have been built with this project
 
 ## Experimental Features
 ### Server Rendering
-Need an extra performance boost with React Server Rendering, code chunking and lazy loading?  Take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_server_rendering) for an example.
+Server rendering has been merged into the master branch 🎉🎉🎉.
 
 ### Docker Support
 Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
