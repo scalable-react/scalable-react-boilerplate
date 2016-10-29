@@ -107,7 +107,7 @@ class LandingContainer extends Component {
             </Section>
             <Section align="center" justify="center">
               <Headline align="center">
-                Who's Behind all This?
+                Who\'s Behind all This?
               </Headline>
               <Divider />
               <Columns
