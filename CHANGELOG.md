@@ -1,8 +1,8 @@
 Change Log
 
-1.0.0
+## 1.0.0
 
-Beta Release
+### Beta Release
 
 - Serverside rendering
 - Apollo Client
