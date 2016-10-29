@@ -55,7 +55,7 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/src/routes.js',
-      pattern: /(<Route path="\*" component={Pages.NotFoundPage} \/>)/g,
+      pattern: /(\/\* Newly generated Routes go here \*\/)/g,
       template: trimTemplateFile('config/generators/page/route.js.hbs'),
     }, {
       type: 'modify',

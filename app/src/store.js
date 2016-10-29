@@ -1,25 +1,29 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { syncHistoryWithStore, routerActions, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers';
+import { UserAuthWrapper as userAuthWrapper } from 'redux-auth-wrapper';
+import client from './apolloClient';
 const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
-// Import your initialstate from each reducer and combine it into one object.
-import {
-  initialState as featureComponent,
-} from './containers/FeatureFirstContainer/reducer';
+/* Import all of your initial state */
+import { initialState as landing } from './containers/LandingContainer/reducer';
+import { initialState as app } from './containers/AppContainer/reducer';
 
 const initialState = {
-  featureComponent,
+  app,
+  /* Compile all of your initial state */
+  landing,
 };
 
 /* Commonly used middlewares and enhancers */
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
 const loggerMiddleware = createLogger();
-const middlewares = [thunk];
+const routingMiddleware = routerMiddleware(browserHistory);
+const middlewares = [thunk, routingMiddleware, client.middleware()];
 
 if (isDeveloping) {
   middlewares.push(loggerMiddleware);
@@ -30,8 +34,8 @@ if (isDeveloping) {
 /* https://medium.com/@meagle/understanding-87566abcfb7a */
 const enhancers = [];
 if (isClient && isDeveloping) {
+  const devToolsExtension = window.devToolsExtension;
   if (typeof devToolsExtension === 'function') {
-    const devToolsExtension = window.devToolsExtension;
     enhancers.push(devToolsExtension());
   }
 }
@@ -54,6 +58,21 @@ const store = createStore(
 /* See: https://github.com/reactjs/react-router-redux/issues/305 */
 export const history = isClient ?
   syncHistoryWithStore(browserHistory, store) : undefined;
+
+export const userIsAuthenticated = userAuthWrapper({
+  authSelector: state => state.app.user,
+  redirectAction: routerActions.replace,
+  failureRedirectPath: '/login',
+  wrapperDisplayName: 'userIsAuthenticated',
+});
+
+export const userIsAdmin = userAuthWrapper({
+  authSelector: state => state.app.user,
+  redirectAction: routerActions.replace,
+  failureRedirectPath: '/',
+  wrapperDisplayName: 'userIsAdmin',
+  predicate: user => user.role === 'admin',
+});
 
 /* Hot reloading of reducers.  How futuristic!! */
 if (module.hot) {

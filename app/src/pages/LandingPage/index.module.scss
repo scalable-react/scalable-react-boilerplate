@@ -1,10 +1,4 @@
 .container {
-  height: 100vh;
+  min-height: calc(100vh - 100px);
   width: 100%;
-  background: linear-gradient(24deg, #7622aa 0%, #8390bb 100%);
 };
-
-.header {
-  font-size: 32px;
-  font: 'Open Sans';
-}

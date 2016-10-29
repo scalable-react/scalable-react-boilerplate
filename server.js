@@ -1,3 +1,3 @@
 require('babel-core/register');
-require('./server/utils/ignoreAssets');
+require('./config/webpack/ignoreAssets');
 var app = require('./server/app');

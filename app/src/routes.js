@@ -1,11 +1,8 @@
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
+import { Router } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
-/* eslint-disable */
-import App from './components/App';
-/* eslint-enable */
-
+import { AppContainer } from 'containers';
 if (typeof module !== 'undefined' && module.require) {
   if (typeof require.ensure === 'undefined') {
     require.ensure = require('node-ensure');
@@ -13,7 +10,7 @@ if (typeof module !== 'undefined' && module.require) {
 }
 
 export const routes = {
-  component: App,
+  component: AppContainer,
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
@@ -23,6 +20,7 @@ export const routes = {
       });
     },
   },
+  /* Newly generated Routes go here */
   childRoutes: [
     {
       path: '*',
