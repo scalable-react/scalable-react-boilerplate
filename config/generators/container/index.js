@@ -29,6 +29,12 @@ module.exports = {
       default: true,
       message: 'Do you want actions/constants/reducer for this container?',
     },
+    {
+      type: 'confirm',
+      name: 'wantGraphQL',
+      default: false,
+      message: 'Do you want a colocated GraphQL / Apollo query and mutation for this container?',
+    },
   ],
   actions: (data) => {
     const actions = [{
@@ -76,7 +82,7 @@ module.exports = {
         templateFile: './container/actions.test.js.hbs',
         abortOnFail: true,
       });
-      
+
       actions.push({
         type: 'modify',
         path: '../../app/src/store.js',
