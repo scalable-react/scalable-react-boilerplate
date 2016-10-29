@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.0.2
+- Add an option to use reselect when generating a container.
+
 ## 1.0.1
 
 - This release includes a new generator for containers that creates a graphql / apollo query and mutation if the option is selected.
