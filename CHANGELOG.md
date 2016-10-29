@@ -1,4 +1,9 @@
-Change Log
+# Change Log
+
+## 1.0.1
+
+- This release includes a new generator for containers that creates a graphql / apollo query and mutation if the option is selected.
+- By selecting the graphql option when running the container generator, the user will be prompted about adding graphql queries / mutations.
 
 ## 1.0.0
 
