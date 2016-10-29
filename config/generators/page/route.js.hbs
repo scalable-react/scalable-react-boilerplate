@@ -1,2 +1,12 @@
-<Route path="{{ path }}" component={{curly true}}Pages.{{ properCase name }}Page{{curly}} />
-          $1
+    {
+      path: '{{ path }}',
+      getComponent(location, callback) {
+        require.ensure([], () => {
+          const {{ properCase name }}Page = require(
+            './pages/{{ properCase name }}Page'
+        ).default;
+          callback(null, {{ properCase name }}Page);
+        });
+      },
+    },
+$1

@@ -3,12 +3,10 @@ import * as actions from '../actions';
 import * as types from '../constants';
 
 describe('{{ properCase name }} actions', () => {
-  describe('Default Action', () => {
-    it('has a type of DEFAULT_ACTION', () => {
-      const expected = {
-        type: types.{{ uppercase name }}_DEFAULT_ACTION,
-      };
-      expect(actions.{{ camelCase name }}DefaultAction()).toEqual(expected);
-    });
+  it('has a type of {{ uppercase name }}_DEFAULT_ACTION', () => {
+    const expected = {
+      type: types.{{ uppercase name }}_DEFAULT_ACTION,
+    };
+    expect(actions.{{ camelCase name }}DefaultAction()).toEqual(expected);
   });
 });

@@ -1,2 +1,3 @@
 /* Assemble all containers for export */
-export FeatureFirstContainer from './FeatureFirstContainer';
+export LandingContainer from './LandingContainer';
+export AppContainer from './AppContainer';

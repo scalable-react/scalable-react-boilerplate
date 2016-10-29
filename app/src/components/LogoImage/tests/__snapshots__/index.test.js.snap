@@ -1,8 +1,0 @@
-exports[`<Header /> should render with default props 1`] = `
-<div>
-  <img
-    alt="Udacity Logo"
-    id="udacity-alumni-logo"
-    src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true" />
-</div>
-`;

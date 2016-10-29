@@ -6,7 +6,7 @@ import Navbar from '../index';
 describe('<Navbar />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Navbar />
+      <Navbar pathname="/" />
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });

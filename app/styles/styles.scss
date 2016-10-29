@@ -10,3 +10,21 @@
 }
 <div className="my-style" />
 */
+
+html {
+  overflow-x: hidden;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+a.active {
+  color: #2e3d49 !important;
+  border-bottom: 2px solid #7d97ad;
+}

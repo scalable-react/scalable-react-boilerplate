@@ -2,8 +2,10 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlwebpackPlugin from 'html-webpack-plugin';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
-import Visualizer from 'webpack-visualizer-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
+import precss from 'precss';
+import OfflinePlugin from 'offline-plugin';
 
 const ROOT_PATH = path.resolve(__dirname);
 const env = process.env.NODE_ENV || 'development';
@@ -12,7 +14,7 @@ const PORT = process.env.PORT || 1337;
 const HOST = '0.0.0.0'; // Set to localhost if need be.
 
 module.exports = {
-  devtool: isProduction ? '' : 'source-map',
+  devtool: isProduction ? '' : 'cheap-module-eval-source-map',
   entry: [
     path.resolve(ROOT_PATH,'app/src/index')
   ],
@@ -40,22 +42,22 @@ module.exports = {
     {
       test: /\.module\.scss$/,
       loader: !isProduction ?
-        'style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!sass-loader'
+        'style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
       :
         ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!sass-loader'
+          loader: 'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
         }),
     },
     {
       test: /\.scss$/,
       exclude: /\.module\.scss$/,
       loader: !isProduction ?
-        'style-loader!css-loader!sass-loader'
+        'style-loader!css-loader!postcss-loader!sass-loader'
       :
         ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: '!css-loader!sass-loader'
+          loader: '!css-loader!postcss-loader!sass-loader'
         }),
     },
     {
@@ -80,6 +82,12 @@ module.exports = {
     includePaths: [
       './node_modules',
     ]
+  },
+  postcss: function () {
+    return {
+      defaults: [precss, autoprefixer],
+      cleaner:  [autoprefixer({ browsers: [] })]
+    };
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -145,6 +153,20 @@ module.exports = {
       new webpack.optimize.UglifyJsPlugin({
         sourceMap: false
       }),
+      new OfflinePlugin({
+        relativePaths: false,
+        publicPath: '/',
+        caches: {
+          main: [':rest:'],
+
+          // All chunks marked as `additional`, loaded after main section
+          // and do not prevent SW to install. Change to `optional` if
+          // do not want them to be preloaded at all (cached only when first loaded)
+          additional: ['*.chunk.js'],
+        },
+        safeToUseOptionalCaches: true,
+        AppCache: false,
+      }),
     ]
   :
     [
@@ -153,7 +175,6 @@ module.exports = {
       new HtmlwebpackPlugin({
         title: 'Scalable React Boilerplate',
         template: 'index.html'
-      }),
-      new Visualizer()
+      })
     ]
 };

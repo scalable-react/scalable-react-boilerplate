@@ -1,24 +1,49 @@
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
-import { Provider } from 'react-redux';
+import { Router } from 'react-router';
+import { ApolloProvider } from 'react-apollo';
 import store, { history } from './store';
-/* eslint-disable */
-import App from 'components/App';
-import * as Pages from 'pages';
-/* eslint-enable */
+import client from './apolloClient';
+import { AppContainer } from 'containers';
+if (typeof module !== 'undefined' && module.require) {
+  if (typeof require.ensure === 'undefined') {
+    require.ensure = require('node-ensure');
+  }
+}
 
-const routes = (
-  <Provider store={store}>
+export const routes = {
+  component: AppContainer,
+  path: '/',
+  indexRoute: {
+    getComponent(location, callback) {
+      require.ensure([], () => {
+        const LandingPage = require('./pages/LandingPage').default;
+        callback(null, LandingPage);
+      });
+    },
+  },
+  /* Newly generated Routes go here */
+  childRoutes: [
+    {
+      path: '*',
+      getComponent(location, callback) {
+        require.ensure([], () => {
+          const NotFoundPage = require('./pages/NotFoundPage').default;
+          callback(null, NotFoundPage);
+        });
+      },
+    },
+  ],
+};
+
+const RouterApp = (props) => (
+  <ApolloProvider {...props} store={store} client={client}>
     <Router
       history={history} // Scroll to top on route transitions
       onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
     >
-      <Route path="/" component={App}>
-        <IndexRoute component={Pages.LandingPage} />
-        <Route path="*" component={Pages.NotFoundPage} />
-      </Route>
+      {routes}
     </Router>
-  </Provider>
+  </ApolloProvider>
 );
 
-export default routes;
+export default RouterApp;
