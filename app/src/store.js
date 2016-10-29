@@ -13,8 +13,8 @@ import { initialState as landing } from './containers/LandingContainer/reducer';
 import { initialState as app } from './containers/AppContainer/reducer';
 
 const initialState = {
-  app,
   /* GENERATOR: Compile all of your initial state */
+  app,
   landing,
 };
 

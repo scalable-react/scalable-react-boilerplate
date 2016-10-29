@@ -22,6 +22,7 @@ export const routes = {
     },
   },
   childRoutes: [
+/* GENERATOR: Newly generated Routes go here */
     {
       path: '*',
       getComponent(location, callback) {
@@ -31,7 +32,6 @@ export const routes = {
         });
       },
     },
-/* GENERATOR: Newly generated Routes go here */
   ],
 };
 

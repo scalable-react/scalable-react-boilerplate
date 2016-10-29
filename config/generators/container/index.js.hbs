@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -24,6 +24,10 @@ class {{ properCase name }}Container extends Component { // eslint-disable-line 
       </div>
     );
   }
+}
+
+{{ properCase name }}Container.propTypes = {
+  // isLoading: PropTypes.bool.isRequired,
 }
 
 {{#if wantActionsAndReducer}}
