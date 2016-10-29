@@ -1,0 +1,33 @@
+exports[`<Contributor /> should render with default props 1`] = `
+<Heading
+  align="center"
+  className={undefined}
+  justify="center"
+  size="large"
+  tag="h1">
+  <undefined
+    src="https://avatars.githubusercontent.com/u/13810084?v=3" />
+  <Heading
+    align="center"
+    tag="h3">
+    Ryan Collins
+  </Heading>
+  <Paragraph>
+    Experienced Software Engineer specializing in implementing cutting-edge technologies in a multitude of domains, focusing on React and Front End.  Weekend Data Scientist and Functional Programmer.
+  </Paragraph>
+  <Anchor
+    href="https://github.com/ryanccollins"
+    icon={
+      <function Icon() {
+          (0, _classCallCheck3.default)(this, Icon);
+          return (0, _possibleConstructorReturn3.default)(this, (Icon.__proto__ || (0, _getPrototypeOf2.default)(Icon)).apply(this, arguments));
+        }
+        a11yTitleId="social-github-title"
+        responsive={true} />
+    }
+    primary={true}
+    tag="a">
+    ryanccollins
+  </Anchor>
+</Heading>
+`;

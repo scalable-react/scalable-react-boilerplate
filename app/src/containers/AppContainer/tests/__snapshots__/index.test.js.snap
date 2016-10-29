@@ -1,0 +1,25 @@
+exports[`<AppContainer /> should render with default props 1`] = `
+<AppContainer
+  actions={
+    Object {
+      "appContainerDefaultAction": [Function anonymous]
+    }
+  }
+  location={
+    Object {
+      "pathname": "/"
+    }
+  }
+  store={
+    Object {
+      "clearActions": [Function clearActions],
+      "dispatch": [Function anonymous],
+      "getActions": [Function getActions],
+      "getState": [Function getState],
+      "replaceReducer": [Function replaceReducer],
+      "subscribe": [Function subscribe]
+    }
+  }>
+  <div />
+</AppContainer>
+`;

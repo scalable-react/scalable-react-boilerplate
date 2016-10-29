@@ -1,0 +1,70 @@
+exports[`<AppFooter /> should render with default props 1`] = `
+<Footer
+  colorIndex="light-2"
+  direction="row"
+  pad="large"
+  responsive={false}>
+  <Box
+    align="center"
+    announce={false}
+    className={undefined}
+    direction="column"
+    focusable={true}
+    pad="none"
+    responsive={true}
+    tag="div">
+    <Heading
+      tag="h3">
+      By
+       
+      <a
+        className={undefined}
+        href="http://www.ryancollins.io">
+        Ryan Collins
+      </a>
+    </Heading>
+    <Heading
+      tag="h5">
+      This app is licensed under the
+       
+      <a
+        className={undefined}
+        href="https://github.com/RyanCCollins/ryancollinsio/blob/master/LICENSE">
+        MIT License.
+      </a>
+       
+      Take a peak at the
+       
+      <br />
+      <Anchor
+        className={undefined}
+        href="https://github.com/RyanCCollins/ryancollinsio"
+        tag="a">
+        source code.
+      </Anchor>
+    </Heading>
+    <nav
+      aria-hidden={true}
+      className="grommetux-box grommetux-box--direction-row grommetux-box--responsive grommetux-box--pad-none grommetux-menu grommetux-menu--row grommetux-menu--inline">
+      <SocialShare
+        a11yTitle="Go to Facebook to Share this website"
+        link="http://www.ryancollins.io"
+        text="RyanCollins.io"
+        title=""
+        type="facebook" />
+      <SocialShare
+        a11yTitle="Go to Twitter to Share this website"
+        link="http://www.ryancollins.io"
+        text="RyanCollins.io"
+        title=""
+        type="twitter" />
+      <SocialShare
+        a11yTitle="Go to Linkedin to Share this website"
+        link="http://www.ryancollins.io"
+        text="RyanCollins.io"
+        title="Restaurant Reviewer"
+        type="linkedin" />
+    </nav>
+  </Box>
+</Footer>
+`;

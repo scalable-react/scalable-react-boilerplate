@@ -1,5 +1,6 @@
 exports[`<Navbar /> should render with default props 1`] = `
-<div>
+<div
+  className={undefined}>
   <Header
     align="center"
     direction="row"
@@ -16,6 +17,7 @@ exports[`<Navbar /> should render with default props 1`] = `
       responsive={true}>
       <img
         alt="logo"
+        className={undefined}
         src={Object {}} />
     </Title>
     <Menu
@@ -32,9 +34,9 @@ exports[`<Navbar /> should render with default props 1`] = `
       responsive={false}>
       <Anchor
         className="active"
-        href="#"
+        href="/"
         tag="a">
-        First
+        Home
       </Anchor>
       <Anchor
         href="#"

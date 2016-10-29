@@ -1,14 +1,12 @@
-import Header from '../index';
+import Avatar from '../index';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
 
-describe('<Header />', () => {
+describe('<Avatar />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Header
-        content="Hello World"
-      />
+      <Avatar src="https://github.com/ryanccollins.png" />
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });

@@ -13,7 +13,9 @@ describe('<AppContainer />', () => {
   it('should render with default props', () => {
     const store = mockStore({ app });
     const wrapper = shallow(
-      <AppContainer store={store} />
+      <AppContainer location={{ pathname: '/' }} store={store}>
+        <div />
+      </AppContainer>
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });

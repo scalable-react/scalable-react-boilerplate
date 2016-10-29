@@ -11,7 +11,16 @@ import Headline from 'grommet-udacity/components/Headline';
 import Footer from 'grommet-udacity/components/Footer';
 import Button from 'grommet-udacity/components/Button';
 import Heading from 'grommet-udacity/components/Heading';
-import { LoadingIndicator, Divider, WelcomeModal } from 'components';
+import List from 'grommet-udacity/components/List';
+import ListItem from 'grommet-udacity/components/ListItem';
+import Anchor from 'grommet-udacity/components/Anchor';
+import Columns from 'grommet-udacity/components/Columns';
+import {
+  LoadingIndicator,
+  Divider,
+  WelcomeModal,
+  Contributor,
+} from 'components';
 import { reduxForm } from 'redux-form';
 
 export const formFields = [
@@ -37,6 +46,8 @@ class LandingContainer extends Component {
       isLoading,
       actions,
       isShowingModal,
+      contributors,
+      links,
       name,
       fields: {
         nameInput,
@@ -70,15 +81,52 @@ class LandingContainer extends Component {
               <Divider />
             </Section>
             <Section align="center" justify="center">
-              <Heading align="center" justify="center">
-                {`Welcome ${name}!`}
+              <Heading align="center">
+                {name && `Welcome ${name}!`}
               </Heading>
+              <Heading tag="h4" align="center">
+                This boilerplate was made as a tool for use in Udacity Alumni projects.
+              </Heading>
+              <Heading tag="h4" align="center">
+                Since making it, is has been used in dozens of projects.
+              </Heading>
+              <Heading tag="h4" align="center">
+                Some of these are listed below
+              </Heading>
+              <Box align="center" pad="medium">
+                <List>
+                  {links.map((link, i) =>
+                    <ListItem key={i}>
+                      <Anchor href={link.url}>
+                        {link.name}
+                      </Anchor>
+                    </ListItem>
+                  )}
+                </List>
+              </Box>
             </Section>
-            <Footer>
+            <Section align="center" justify="center">
+              <Headline align="center">
+                Who's Behind all This?
+              </Headline>
+              <Divider />
+              <Columns
+                maxCount={2}
+                justify="center"
+                masonry
+              >
+                {contributors.map((person, i) =>
+                  <Contributor key={i} person={person} />
+                )}
+              </Columns>
+            </Section>
+            <Footer pad="large" align="center" jusify="center" direction="column">
               <Heading align="center" tag="h2">
                 Have any questions?
               </Heading>
-              <Button label="Get in Touch" href="mailto:admin@ryancollins.io" />
+              <Box align="center" justify="center" pad="medium">
+                <Button label="Get in Touch" href="mailto:admin@ryancollins.io" />
+              </Box>
             </Footer>
           </Box>
         }
@@ -93,6 +141,8 @@ LandingContainer.propTypes = {
   isShowingModal: PropTypes.bool.isRequired,
   fields: PropTypes.object.isRequired,
   name: PropTypes.string,
+  contributors: PropTypes.array.isRequired,
+  links: PropTypes.array.isRequired,
 };
 
 // mapStateToProps :: {State} -> {Props}
@@ -100,6 +150,8 @@ const mapStateToProps = (state) => ({
   isLoading: state.landing.isLoading,
   name: state.landing.name,
   isShowingModal: state.landing.isShowingModal,
+  contributors: state.landing.contributors,
+  links: state.landing.links,
 });
 
 // mapDispatchToProps :: Dispatch -> {Action}

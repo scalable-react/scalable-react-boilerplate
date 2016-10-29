@@ -1,0 +1,4 @@
+exports[`<Divider /> should render with default props 1`] = `
+<span
+  className={undefined} />
+`;
