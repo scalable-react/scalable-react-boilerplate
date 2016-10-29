@@ -29,6 +29,12 @@ Below are a few example apps that have been built with this project
 - Corporate Dashboard
     - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
     - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
+- Meetup Event Planner
+    - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
+    - [See the Live App](http://meetup-event-planner.herokuapp.com/)
+- Udacity Alumni App
+    - [See the Code](https://github.com/udacityalumni/alumni-client)
+    - Live App coming soon
 
 ## Experimental Features
 ### Server Rendering
@@ -41,6 +47,8 @@ Coming soon the app will support Docker, which will contain a configured web ser
 
 ## Getting Started
 To try the example application out or to use the project, follow the instructions below.
+
+There are two options for installation:
 
 1. **Clone repo**
 
@@ -55,6 +63,18 @@ To try the example application out or to use the project, follow the instruction
    npm run start
 
    Your app will be served at: http://0.0.0.0:1337/
+
+or, you can install it using Slush via the npm package
+```
+npm install -g slush slush-generator-scalable-react
+```
+
+cd into the folder where you want to create your project and run:
+```
+slush generator-scalable-react
+```
+
+Follow the onscreen instructions to create your app.
 
 ## Deployment
 A demo ExpressJS setup is included with the app.  The express server will serve up the production minified bundle.js, index.html and any other assets that are located in the `/server/public` folder.
@@ -191,12 +211,11 @@ export {
 For information on how to build your own generators with relative ease, please go to the [Plop Microgenerator](https://github.com/amwmedia/plop) homepage for detailed instructions.
 
 ## Testing
-Included in the setup is a test suite that will run your tests in the browser using Karma.  A number of testing utilities are included, including
+Included in the setup is a test suite that will run your tests using Jest.  A number of testing utilities are included, including
 - Expect (Plus Expect-JSX)
-- Mocha
 - Chai (JSX and Immutable)
 - Enzyme
-- Karma (including multiple Karma plugins)
+- Jest & enzyme-to-json in order to use the Jest snappshotting with Enzyme.
 
 You can see examples for testing of React Components, Redux Action Creators and Reducers in the repository [here](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/app/src/containers/FeatureFirstContainer/tests).  Please follow the convention of naming tests with a .test.js postfix, or else the test suite will not recognize your tests.
 
@@ -205,7 +224,7 @@ To run tests, you will run
 npm run test
 ```
 
-which will pick up any file with the .test.js postfix and run it through Karma / Mocha, printing a report to the commandline.
+which will pick up any file with the .test.js postfix and run it through Jest.
 
 
 ## Technologies / Libraries
