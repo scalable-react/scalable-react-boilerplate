@@ -1,5 +1,8 @@
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
+# NOTE:
+It is recommended that you use the server_rendering branch if you are building a production app.  This branch also contains Apollo for using this boilerplate with GraphQL colocated queries.
+
 # Scalable React Boilerplate
 [![npm version](https://badge.fury.io/js/scalable-react-boilerplate.svg)](https://badge.fury.io/js/scalable-react-boilerplate)
 ![Code Ship](https://codeship.com/projects/92d32ae0-5907-0134-8eb1-7aa2649e3d2b/status?branch=master)
