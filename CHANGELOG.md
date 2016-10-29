@@ -7,6 +7,7 @@ Change Log
 - Serverside rendering
 - Apollo Client
 - New Demo App
+  - Add reusable components
 - Lazy Route Loading
 - Update Grommet-Udacity to 0.1.12
 - Update Webpack to 2.1.19-beta
