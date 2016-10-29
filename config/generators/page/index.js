@@ -32,6 +32,12 @@ module.exports = {
         return 'path is required';
       },
     },
+    {
+      type: 'confirm',
+      name: 'wantContainer',
+      default: true,
+      message: 'Do you want to import a container by the same name?',
+    },
   ],
 
 
@@ -55,12 +61,12 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/src/routes.js',
-      pattern: /(\/\* Newly generated Routes go here \*\/)/g,
+      pattern: /(\/\* GENERATOR: Newly generated Routes go here \*\/)/g,
       template: trimTemplateFile('config/generators/page/route.js.hbs'),
     }, {
       type: 'modify',
       path: '../../app/src/pages/index.js',
-      pattern: /(\/\* Assemble all pages for export \*\/)/g,
+      pattern: /(\/\* GENERATOR: Assemble all pages for export \*\/)/g,
       template: trimTemplateFile('config/generators/page/export.js.hbs'),
     });
 

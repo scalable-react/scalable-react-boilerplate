@@ -51,7 +51,9 @@ const Container = {{ properCase name }}Container;
 {{#if wantGraphQL}}
 const {{ camelCase name }}Query = gql`
   query {{ camelCase name }} {
-    id
+    {{ camelCase name }} {
+      __typename
+    }
   }
 `;
 
@@ -65,7 +67,9 @@ const ContainerWithData = graphql({{ camelCase name }}Query, {
 
 const {{ camelCase name }}Mutation = gql`
   mutation {{ camelCase name }} {
-    id
+    {{ camelCase name }} {
+      __typename
+    }
   }
 `;
 

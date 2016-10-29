@@ -72,7 +72,7 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/src/components/index.js',
-      pattern: /(\/\* Assemble all components for export \*\/)/g,
+      pattern: /(\/\* GENERATOR: Assemble all components for export \*\/)/g,
       template: trimTemplateFile('config/generators/component/export.js.hbs'),
     });
 

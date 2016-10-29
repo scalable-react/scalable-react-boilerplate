@@ -1,10 +1,17 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
 import styles from './index.module.scss';
+{{#if wantContainer}}
+import { {{ properCase name }}Container } from 'containers';
+{{/if}}
 
 const {{ properCase name }}Page = (props) => (
   <div className={styles.container}>
+    {{#if wantContainer}}
+    <{{ properCase name }}Container />
+    {{else}}
     Hello from {{ properCase name }}Page !
+    {{/if}}
   </div>
 );
 

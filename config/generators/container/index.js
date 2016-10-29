@@ -53,7 +53,7 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/src/containers/index.js',
-      pattern: /(\/\* Assemble all containers for export \*\/)/g,
+      pattern: /(\/\* GENERATOR: Assemble all containers for export \*\/)/g,
       template: trimTemplateFile('config/generators/container/export.js.hbs'),
     });
 
@@ -86,28 +86,28 @@ module.exports = {
       actions.push({
         type: 'modify',
         path: '../../app/src/store.js',
-        pattern: /(\/\* Import all of your initial state \*\/)/g,
+        pattern: /(\/\* GENERATOR: Import all of your initial state \*\/)/g,
         template: trimTemplateFile('config/generators/container/store.import.js.hbs'),
       });
 
       actions.push({
         type: 'modify',
         path: '../../app/src/store.js',
-        pattern: /(\/\* Compile all of your initial state \*\/)/g,
+        pattern: /(\/\* GENERATOR: Compile all of your initial state \*\/)/g,
         template: trimTemplateFile('config/generators/container/store.usage.js.hbs'),
       });
 
       actions.push({
         type: 'modify',
         path: '../../app/src/reducers.js',
-        pattern: /(\/\* Import all of your reducers \*\/)/g,
+        pattern: /(\/\* GENERATOR: Import all of your reducers \*\/)/g,
         template: trimTemplateFile('config/generators/container/reducers.import.js.hbs'),
       });
 
       actions.push({
         type: 'modify',
         path: '../../app/src/reducers.js',
-        pattern: /(\/\* Compile all of your reducers \*\/)/g,
+        pattern: /(\/\* GENERATOR: Compile all of your reducers \*\/)/g,
         template: trimTemplateFile('config/generators/container/reducers.usage.js.hbs'),
       });
 

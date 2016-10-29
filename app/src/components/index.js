@@ -1,4 +1,4 @@
-/* Assemble all components for export */
+/* GENERATOR: Assemble all components for export */
 export Contributor from './Contributor';
 export Avatar from './Avatar';
 export WelcomeModal from './WelcomeModal';

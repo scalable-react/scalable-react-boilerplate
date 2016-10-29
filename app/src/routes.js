@@ -21,7 +21,6 @@ export const routes = {
       });
     },
   },
-  /* Newly generated Routes go here */
   childRoutes: [
     {
       path: '*',
@@ -32,6 +31,7 @@ export const routes = {
         });
       },
     },
+/* GENERATOR: Newly generated Routes go here */
   ],
 };
 
