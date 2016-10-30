@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Box from 'grommet-udacity/components/Box';
 import Section from 'grommet-udacity/components/Section';
 import Headline from 'grommet-udacity/components/Headline';
 import { Divider, About } from 'components';
+import links from './data';
 
 class AboutContainer extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -14,18 +15,10 @@ class AboutContainer extends Component { // eslint-disable-line react/prefer-sta
           </Headline>
           <Divider />
         </Section>
-        <About />
+        <About links={links} />
       </Box>
     );
   }
 }
 
-AboutContainer.propTypes = {
-  // isLoading: PropTypes.bool.isRequired,
-};
-
-
-const Container = AboutContainer;
-
-
-export default Container;
+export default AboutContainer;
