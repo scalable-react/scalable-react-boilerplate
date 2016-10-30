@@ -31,7 +31,7 @@ export const routes = {
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      System.import('./pages/LandingPage')
+      System.import('./pages/LandingPage') // eslint-disable-line block-scoped-var
         .then(loadRoute(callback))
         .catch((err) => errorLoading(err));
     },
@@ -40,7 +40,7 @@ export const routes = {
     {
       path: '/about',
       getComponent(location, callback) {
-        System.import('./pages/AboutPage')
+        System.import('./pages/AboutPage') // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
           .catch((err) => errorLoading(err));
       },
@@ -49,7 +49,7 @@ export const routes = {
     {
       path: '*',
       getComponent(location, callback) {
-        System.import('./pages/NotFoundPage')
+        System.import('./pages/NotFoundPage') // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
           .catch((err) => errorLoading(err));
       },
