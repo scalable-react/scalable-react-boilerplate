@@ -43,7 +43,7 @@ const About = ({
           </List>
         </Box>
       </Section>
-      <Markdown content={readme} />
+      {readme && <Markdown content={readme} />}
     </Article>
   </Box>
 );

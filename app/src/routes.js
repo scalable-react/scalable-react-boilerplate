@@ -6,6 +6,17 @@ import store, { history } from './store';
 import client from './apolloClient';
 import { AppContainer } from 'containers';
 
+/* eslint-disable */
+// Polyfill for the System.import
+if (typeof System === 'undefined') {
+  var System = {
+    import(path) {
+      return Promise.resolve(require(path));
+    },
+  };
+}
+/* eslint-enable */
+
 // Switching to system.import to make use of dynamic tree shaking
 // https://medium.com/modus-create-front-end-development/automatic-code-splitting-for-react-router-w-es6-imports-a0abdaa491e9#.msrxv8fwd
 const errorLoading = (err) =>

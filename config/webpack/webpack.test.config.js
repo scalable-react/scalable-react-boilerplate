@@ -21,6 +21,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.md$/,
+        loader: 'html!markdown',
+      },
+      {
         test: /\.scss$/,
         loaders: ['style', 'css', 'postcss', 'sass'],
       },
