@@ -43,7 +43,9 @@ const About = ({
           </List>
         </Box>
       </Section>
-      {readme && <Markdown content={readme} />}
+      {typeof readme === 'string' &&
+        <Markdown content={readme} />
+      }
     </Article>
   </Box>
 );
