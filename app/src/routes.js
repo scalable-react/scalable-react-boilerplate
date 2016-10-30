@@ -1,35 +1,46 @@
+/* global System b:true */
 import React from 'react';
 import { Router } from 'react-router';
 import { ApolloProvider } from 'react-apollo';
 import store, { history } from './store';
 import client from './apolloClient';
 import { AppContainer } from 'containers';
-if (typeof module !== 'undefined' && module.require) {
-  if (typeof require.ensure === 'undefined') {
-    require.ensure = require('node-ensure');
-  }
-}
+
+// Switching to system.import to make use of dynamic tree shaking
+// https://medium.com/modus-create-front-end-development/automatic-code-splitting-for-react-router-w-es6-imports-a0abdaa491e9#.msrxv8fwd
+const errorLoading = (err) =>
+  console.error('Dynamic loading failed' + err); // eslint-disable-line
+
+const loadRoute = (cb) =>
+  (module) =>
+    cb(null, module.default);
 
 export const routes = {
   component: AppContainer,
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      require.ensure([], () => {
-        const LandingPage = require('./pages/LandingPage').default;
-        callback(null, LandingPage);
-      });
+      System.import('./pages/LandingPage')
+        .then(loadRoute(callback))
+        .catch((err) => errorLoading(err));
     },
   },
   childRoutes: [
+    {
+      path: '/about',
+      getComponent(location, callback) {
+        System.import('./pages/AboutPage')
+          .then(loadRoute(callback))
+          .catch((err) => errorLoading(err));
+      },
+    },
 /* GENERATOR: Newly generated Routes go here */
     {
       path: '*',
       getComponent(location, callback) {
-        require.ensure([], () => {
-          const NotFoundPage = require('./pages/NotFoundPage').default;
-          callback(null, NotFoundPage);
-        });
+        System.import('./pages/NotFoundPage')
+          .then(loadRoute(callback))
+          .catch((err) => errorLoading(err));
       },
     },
   ],
