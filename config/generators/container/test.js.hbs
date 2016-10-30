@@ -11,7 +11,7 @@ const mockStore = configureMockStore(middlewares);
 
 describe('<{{ properCase name }} />', () => {
   it('should render with default props', () => {
-    const store = mockStore({ {{ properCase name }} });
+    const store = mockStore({ {{ camelCase name }} });
     const wrapper = shallow(
       <{{ properCase name }}Container store={store} />
     );
