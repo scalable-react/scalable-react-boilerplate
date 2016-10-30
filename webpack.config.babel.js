@@ -15,7 +15,16 @@ const HOST = '0.0.0.0'; // Set to localhost if need be.
 
 module.exports = {
   devtool: isProduction ? '' : 'cheap-module-eval-source-map',
-  entry: [
+  entry: isProduction ? {
+    main: [
+      path.resolve(ROOT_PATH, 'app/src/index')
+    ],
+    vendor: [
+      'react',
+      'react-dom',
+      'grommet-udacity'
+    ]
+  } : [
     path.resolve(ROOT_PATH,'app/src/index')
   ],
   module: {
@@ -30,6 +39,10 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: ['react-hot', 'babel']
+    },
+    {
+      test: /\.md$/,
+      loader: "html!markdown" 
     },
     {
       test: /\.svg$/,
@@ -126,7 +139,7 @@ module.exports = {
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         children: true,
-        minChunks: 2,
+        minChunks: Infinity,
         async: true,
       }),
       new HtmlwebpackPlugin({
@@ -174,7 +187,7 @@ module.exports = {
       new NpmInstallPlugin(),
       new HtmlwebpackPlugin({
         title: 'Scalable React Boilerplate',
-        template: 'index.html'
+        template: 'config/templates/_index.dev.html'
       })
     ]
 };

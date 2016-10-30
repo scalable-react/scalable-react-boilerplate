@@ -1,12 +1,9 @@
     {
       path: '{{ path }}',
       getComponent(location, callback) {
-        require.ensure([], () => {
-          const {{ properCase name }}Page = require(
-            './pages/{{ properCase name }}Page'
-        ).default;
-          callback(null, {{ properCase name }}Page);
-        });
+        System.import('./pages/{{ properCase name }}Page')  // eslint-disable-line block-scoped-var
+          .then(loadRoute(callback))
+          .catch((err) => errorLoading(err));
       },
     },
 $1

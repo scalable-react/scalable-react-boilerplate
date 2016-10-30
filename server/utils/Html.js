@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-function Html({ content, state, scriptHash, cssHash }) {
+function Html({ content, state, scriptHash, vendorHash, cssHash }) {
   return (
     <html lang="en">
       <head>
@@ -14,6 +14,7 @@ function Html({ content, state, scriptHash, cssHash }) {
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
         <script src={`/main.${scriptHash}.js`} charSet="UTF-8" />
+        <script src={`/vendor.${vendorHash}.js`} type="text/javascript" />
         <script
           dangerouslySetInnerHTML={{ __html: `window.__APOLLO_STATE__=${JSON.stringify(state)};` }}
           charSet="UTF-8"

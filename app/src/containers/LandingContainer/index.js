@@ -47,7 +47,6 @@ class LandingContainer extends Component {
       actions,
       isShowingModal,
       contributors,
-      links,
       name,
       fields: {
         nameInput,
@@ -76,34 +75,23 @@ class LandingContainer extends Component {
             />
             <Section align="center" justify="center">
               <Headline align="center">
-                About the App
+                {name && `Welcome ${name}!`}
               </Headline>
               <Divider />
-            </Section>
-            <Section align="center" justify="center">
-              <Heading align="center">
-                {name && `Welcome ${name}!`}
+              <Heading align="center" tag="h2">
+                Thanks so much for using this boilerplate!
               </Heading>
-              <Heading tag="h4" align="center">
-                This boilerplate was made as a tool for use in Udacity Alumni projects.
+              <Heading align="center" tag="h2">
+                We worked super hard to make this a useful starter project
               </Heading>
-              <Heading tag="h4" align="center">
-                Since making it, is has been used in dozens of projects.
-              </Heading>
-              <Heading tag="h4" align="center">
-                Some of these are listed below
-              </Heading>
-              <Box align="center" pad="medium">
-                <List>
-                  {links.map((link, i) =>
-                    <ListItem key={i}>
-                      <Anchor href={link.url}>
-                        {link.name}
-                      </Anchor>
-                    </ListItem>
-                  )}
-                </List>
-              </Box>
+              <Footer pad="large" align="center" jusify="center" direction="column">
+                <Heading align="center" tag="h2">
+                  Ready to get started?
+                </Heading>
+                <Box align="center" justify="center" pad="medium">
+                  <Button label="Go to About Page" href="/about" />
+                </Box>
+              </Footer>
             </Section>
             <Section align="center" justify="center">
               <Headline align="center">
@@ -142,7 +130,6 @@ LandingContainer.propTypes = {
   fields: PropTypes.object.isRequired,
   name: PropTypes.string,
   contributors: PropTypes.array.isRequired,
-  links: PropTypes.array.isRequired,
 };
 
 // mapStateToProps :: {State} -> {Props}
@@ -151,7 +138,6 @@ const mapStateToProps = (state) => ({
   name: state.landing.name,
   isShowingModal: state.landing.isShowingModal,
   contributors: state.landing.contributors,
-  links: state.landing.links,
 });
 
 // mapDispatchToProps :: Dispatch -> {Action}

@@ -21,11 +21,8 @@ const Navbar = ({
         <Anchor href="/" className={pathname === '/' ? 'active' : ''}>
           Home
         </Anchor>
-        <Anchor href="#">
-          Second
-        </Anchor>
-        <Anchor href="#">
-          Third
+        <Anchor href="/about" className={pathname === '/about' ? 'active' : ''}>
+          About
         </Anchor>
         <Search dropAlign={{ right: 'right' }} />
       </Menu>
