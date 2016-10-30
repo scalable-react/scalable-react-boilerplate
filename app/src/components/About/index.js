@@ -5,7 +5,6 @@ import Article from 'grommet-udacity/components/Article';
 import Heading from 'grommet-udacity/components/Heading';
 import Markdown from 'grommet-udacity/components/Markdown';
 import Section from 'grommet-udacity/components/Section';
-import Headline from 'grommet-udacity/components/Headline';
 import List from 'grommet-udacity/components/List';
 import ListItem from 'grommet-udacity/components/ListItem';
 import Anchor from 'grommet-udacity/components/Anchor';
@@ -21,6 +20,7 @@ const About = ({
         <Heading>
           Scalable React Boilerplate
         </Heading>
+        <Divider />
       </Section>
       <Section align="center" justify="center">
         <Paragraph>
