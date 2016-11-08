@@ -185,6 +185,7 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - Connected / Not connected ES6 Class containers (higher order)
   - SCSS Modules
   - Reducers, actions and constants
+  - GraphQL: The generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
   - Tests for all of the above
   - README.md file that documents the container
 - Component `npm run generate:component`
@@ -194,7 +195,6 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - SCSS modules
   - Tests for all of the above
   - README.md file that documents the component
-  - GraphQL: If you want, the generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
 - Page `npm run generate:page`
   - Name: The name of the route, i.e. Home, which gets converted to `HomePage`
   - Route: the route that corresponds to the page
