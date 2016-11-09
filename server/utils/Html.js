@@ -27,6 +27,7 @@ function Html({ content, state, scriptHash, vendorHash, cssHash }) {
 Html.propTypes = {
   scriptHash: PropTypes.string.isRequired,
   cssHash: PropTypes.string.isRequired,
+  vendorHash: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   state: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
