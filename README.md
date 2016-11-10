@@ -299,3 +299,10 @@ It was created by several of the members of the Udacity Alumni product infrastru
 * [Andreas Daiminger](https://github.com/adai183)
 
 Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas used here were reverse engineered from the same project.
+
+## Troubleshooting
+The most often reason for an error is a mismatch in node and npm versions. In the case of this project, we are using Node version 5.2.0.
+
+Instructions for installing NVM and setting your node version for the project can be [found here](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
+
+If you get an error message, such as "Unexpected token import", that means that your Babel installation is not working right.  Please see [here](https://github.com/babel/babel/issues) for potential troubleshooting steps.
