@@ -2,7 +2,6 @@ exports[`<LoadingIndicator /> should render with default props 1`] = `
 <Box
   align="center"
   announce={false}
-  className={undefined}
   direction="column"
   focusable={true}
   justify="center"

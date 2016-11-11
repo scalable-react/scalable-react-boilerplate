@@ -1,6 +1,5 @@
 exports[`<Navbar /> should render with default props 1`] = `
-<div
-  className={undefined}>
+<div>
   <Header
     align="center"
     direction="row"
@@ -9,7 +8,7 @@ exports[`<Navbar /> should render with default props 1`] = `
       Object {
         "between": "small",
         "horizontal": "none",
-        "vertical": "none"
+        "vertical": "none",
       }
     }
     responsive={false}>
@@ -17,7 +16,6 @@ exports[`<Navbar /> should render with default props 1`] = `
       responsive={true}>
       <img
         alt="logo"
-        className={undefined}
         src={Object {}} />
     </Title>
     <Menu
@@ -27,7 +25,7 @@ exports[`<Navbar /> should render with default props 1`] = `
       dropAlign={
         Object {
           "left": "left",
-          "top": "top"
+          "top": "top",
         }
       }
       pad="none"
@@ -39,20 +37,16 @@ exports[`<Navbar /> should render with default props 1`] = `
         Home
       </Anchor>
       <Anchor
-        href="#"
+        className=""
+        href="/about"
         tag="a">
-        Second
-      </Anchor>
-      <Anchor
-        href="#"
-        tag="a">
-        Third
+        About
       </Anchor>
       <Search
         align="left"
         dropAlign={
           Object {
-            "right": "right"
+            "right": "right",
           }
         }
         iconAlign="end"

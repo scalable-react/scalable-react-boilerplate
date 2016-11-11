@@ -1,5 +1,4 @@
 exports[`<Avatar /> should render with default props 1`] = `
 <img
-  className={undefined}
   src="https://github.com/ryanccollins.png" />
 `;

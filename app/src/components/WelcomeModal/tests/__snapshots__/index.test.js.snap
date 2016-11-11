@@ -3,7 +3,7 @@ exports[`<WelcomeModal /> should render with default props 1`] = `
   align="center"
   closer={true}
   hidden={true}
-  onClose={[Function onClose]}>
+  onClose={[Function]}>
   <Box
     align="center"
     announce={false}
@@ -64,7 +64,7 @@ exports[`<WelcomeModal /> should render with default props 1`] = `
       responsive={false}>
       <Button
         label="Submit"
-        onClick={[Function onSubmit]}
+        onClick={[Function]}
         primary={true}
         type="button" />
     </Footer>

@@ -1,7 +1,6 @@
 exports[`<Contributor /> should render with default props 1`] = `
 <Heading
   align="center"
-  className={undefined}
   justify="center"
   size="large"
   tag="h1">
@@ -18,10 +17,7 @@ exports[`<Contributor /> should render with default props 1`] = `
   <Anchor
     href="https://github.com/ryanccollins"
     icon={
-      <function Icon() {
-          (0, _classCallCheck3.default)(this, Icon);
-          return (0, _possibleConstructorReturn3.default)(this, (Icon.__proto__ || (0, _getPrototypeOf2.default)(Icon)).apply(this, arguments));
-        }
+      <SocialGithub
         a11yTitleId="social-github-title"
         responsive={true} />
     }

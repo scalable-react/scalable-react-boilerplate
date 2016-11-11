@@ -7,7 +7,6 @@ exports[`<AppFooter /> should render with default props 1`] = `
   <Box
     align="center"
     announce={false}
-    className={undefined}
     direction="column"
     focusable={true}
     pad="none"
@@ -18,7 +17,6 @@ exports[`<AppFooter /> should render with default props 1`] = `
       By
        
       <a
-        className={undefined}
         href="http://www.ryancollins.io">
         Ryan Collins
       </a>
@@ -28,7 +26,6 @@ exports[`<AppFooter /> should render with default props 1`] = `
       This app is licensed under the
        
       <a
-        className={undefined}
         href="https://github.com/RyanCCollins/ryancollinsio/blob/master/LICENSE">
         MIT License.
       </a>
@@ -37,7 +34,6 @@ exports[`<AppFooter /> should render with default props 1`] = `
        
       <br />
       <Anchor
-        className={undefined}
         href="https://github.com/RyanCCollins/ryancollinsio"
         tag="a">
         source code.
