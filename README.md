@@ -88,22 +88,7 @@ Follow the onscreen instructions to create your app.
 
 A demo ExpressJS setup is included with the app.  The express server will serve up the production minified bundle.js, index.html and any other assets that are located in the `/server/public` folder.
 
-Running `npm run serve:bundle` will set your environment to production and serve these files via Express.  Also, a Procfile is included, which will run the Express server on Heroku when you push your code.
-
-NOTE: the deployment script, `npm run deploy`, will place all your generated assets in the `server/public` folder, where they can be served in production.
-
-To deploy with server-rendering, there is one small thing you will need to do. After your run the deploy script, go into the `server/app.js` file and add the hashes for your main javascript and css bundles as shown below.
-
-```
-  const html = (
-    <Html
-      content={content}
-      scriptHash="f5a35ab068d111293b63"
-      cssHash="6cf439ec56ba2b8700ce1665ebe17a68"
-      state={{ data: context.store.getState().apollo.data }}
-    />
-  );
-```
+The deploy script is now totally automated and will hook into the server-rendering automatically.  Running `npm run serve:bundle` will set your environment to production and serve these files via Express.  Also, a Procfile is included, which will run the Express server on Heroku when you push your code.
 
 ## File Structure
 * Some files left out for brevity.  Please reference the files in the [Scalable React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for an example of the file structure.  The application will ultimately be in use in a production web application project and more info will be posted here when we have production level examples.
