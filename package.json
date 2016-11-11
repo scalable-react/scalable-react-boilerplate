@@ -53,6 +53,7 @@
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
+    "predeploy": "rimraf server/public/*",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
@@ -136,11 +137,13 @@
     "redux-thunk": "^1.0.0",
     "reselect": "^2.5.4",
     "resolve-url-loader": "^1.4.4",
+    "rimraf": "^2.5.4",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "svg-react-loader": "^0.3.6",
     "utils": "^0.3.1",
-    "webpack": "2.1.0-beta.19"
+    "webpack": "2.1.0-beta.19",
+    "webpack-manifest-plugin": "^1.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta4",

@@ -6,6 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import precss from 'precss';
 import OfflinePlugin from 'offline-plugin';
+import ManifestPlugin from 'webpack-manifest-plugin';
 
 const ROOT_PATH = path.resolve(__dirname);
 const env = process.env.NODE_ENV || 'development';
@@ -42,7 +43,7 @@ module.exports = {
     },
     {
       test: /\.md$/,
-      loader: "html!markdown" 
+      loader: "html!markdown"
     },
     {
       test: /\.svg$/,
@@ -135,6 +136,10 @@ module.exports = {
   },
   plugins: isProduction ?
     [
+      new ManifestPlugin({
+        fileName: 'manifest.json',
+        basePath: '/server/'
+      }),
       new ExtractTextPlugin('[name].[contenthash].css'),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
