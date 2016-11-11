@@ -16,6 +16,7 @@ import { routes } from '../app/src/routes.js';
 import { createNetworkInterface } from 'apollo-client';
 import Html from './utils/Html';
 import createApolloClient from './utils/create-apollo-client';
+import manifest from './public/manifest.json';
 
 // Need to set this to your api url
 const baseUrl = typeof process.env.BASE_URL !== 'undefined' ?
@@ -35,7 +36,7 @@ app.use((req, res) => {
         console.error('ROUTER ERROR:', error); // eslint-disable-line no-console
         res.status(500);
       } else if (renderProps) {
-        console.log(`Called match with renderProps: ${renderProps}`);
+        console.log(`Called match with renderProps: ${JSON.stringify(renderProps, null, 2)}`);
         const client = createApolloClient({
           ssrMode: true,
           networkInterface: createNetworkInterface({
@@ -52,13 +53,12 @@ app.use((req, res) => {
         );
         getDataFromTree(component).then((context) => {
           const content = renderToString(component);
-
           const html = (
             <Html
               content={content}
-              scriptHash="4dfa65c1c81d92cb8987"
-              vendorHash="6613d5dee8bcbc47994e"
-              cssHash="adbc67f873a4b5e91cf0c06e05a37dba"
+              scriptHash={manifest["main.js"]}
+              vendorHash={manifest["vendor.js"]}
+              cssHash={manifest["main.css"]}
               state={{ data: context.store.getState().apollo.data }}
             />
           );
