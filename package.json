@@ -10,6 +10,11 @@
       "stage-0"
     ],
     "env": {
+      "development": {
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
+      },
       "production": {
         "plugins": [
           [
@@ -27,7 +32,9 @@
               "verbose": false
             }
           ],
-          ["transform-es2015-modules-commonjs"]
+          [
+            "transform-es2015-modules-commonjs"
+          ]
         ]
       }
     }
@@ -130,7 +137,9 @@
     "react-addons-test-utils": "^15.3.2",
     "react-addons-update": "^15.3.2",
     "react-apollo": "^0.5.13",
+    "react-css-modules": "^3.7.6",
     "react-dom": "^15.0.1",
+    "react-hot-loader": "^3.0.0-beta.6",
     "react-foundation": "^0.6.8",
     "react-intl": "^2.1.3",
     "react-redux": "^4.4.5",
@@ -141,7 +150,6 @@
     "redux-form": "^5.2.5",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^1.0.0",
-    "react-css-modules": "^3.7.6",
     "reselect": "^2.5.4",
     "resolve-url-loader": "^1.4.4",
     "rimraf": "^2.5.4",
@@ -150,6 +158,7 @@
     "svg-react-loader": "^0.3.6",
     "utils": "^0.3.1",
     "webpack": "2.1.0-beta.19",
+    "webpack-hot-middleware": "^2.10.0",
     "webpack-manifest-plugin": "^1.1.0"
   },
   "devDependencies": {
