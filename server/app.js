@@ -1,10 +1,6 @@
 /* eslint-disable */
-const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 1338 : process.env.PORT;
-const path = require('path');
-const express = require('express');
-const app = express();
-
+import express from 'express';
+import path from 'path';
 import morgan from 'morgan';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
@@ -18,9 +14,13 @@ import Html from './utils/Html';
 import createApolloClient from './utils/create-apollo-client';
 import manifest from './public/manifest.json';
 
+const app = express();
+const isDeveloping = process.env.NODE_ENV !== 'production';
+
 // Need to set this to your api url
-const baseUrl = typeof process.env.BASE_URL !== 'undefined' ?
-  process.env.BASE_URL : 'https://0.0.0.0:3000/';
+const IP = 'localhost';
+const PORT = 1337;
+const baseUrl = process.env.BASE_URL || `http://${IP}:${PORT}`;
 const apiUrl = `${baseUrl}graphql`;
 
 app.use(morgan('combined'));
@@ -70,10 +70,10 @@ app.use((req, res) => {
     })
 });
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(PORT, IP, (err) => {
   if (err) {
     return console.warn(err);
   }
-  return console.info(`==> 😎 Listening on port ${port}. Open http://0.0.0.0:${port}/ in your browser.`);
+  return console.info(`==> 😎 Listening on port ${PORT}. Open http://${IP}:${PORT} in your browser.`);
 });
 /* eslint-enable */

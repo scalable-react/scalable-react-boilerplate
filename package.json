@@ -9,23 +9,27 @@
       "react",
       "stage-0"
     ],
-    "plugins": [
-      "babel-plugin-webpack-alias", {
-        "config": "./config/testing/webpack.test.config.js"
+    "env": {
+      "production": {
+        "plugins": [
+          [
+            "babel-plugin-webpack-alias", {
+              "config": "./webpack.config.prod.js"
+            }
+          ]
+        ]
+      },
+      "test": {
+        "plugins": [
+          [
+            "babel-plugin-webpack-loaders", {
+              "config": "./config/testing/webpack.test.config.js",
+              "verbose": false
+            }
+          ],
+          ["transform-es2015-modules-commonjs"]
+        ]
       }
-    ]
-  },
-  "env": {
-    "test": {
-      "plugins": [
-        [
-          "babel-plugin-webpack-loaders", {
-            "config": "./config/testing/webpack.test.config.js",
-            "verbose": false
-          }
-        ],
-        ["transform-es2015-modules-commonjs"]
-      ]
     }
   },
   "jest": {
