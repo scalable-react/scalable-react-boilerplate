@@ -18,7 +18,7 @@ const app = express();
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
 // Need to set this to your api url
-const IP = process.env.IP || 'localhost';
+const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
 const baseUrl = process.env.BASE_URL || `http://${IP}:${PORT}`;
 const apiUrl = `${baseUrl}graphql`;
