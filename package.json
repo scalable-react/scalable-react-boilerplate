@@ -10,7 +10,9 @@
       "stage-0"
     ],
     "plugins": [
-      "babel-plugin-webpack-alias"
+      "babel-plugin-webpack-alias", {
+        "config": "./config/testing/webpack.test.config.js",
+      }
     ]
   },
   "env": {
