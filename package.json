@@ -11,7 +11,7 @@
     ],
     "plugins": [
       "babel-plugin-webpack-alias", {
-        "config": "./config/testing/webpack.test.config.js",
+        "config": "./config/testing/webpack.test.config.js"
       }
     ]
   },
