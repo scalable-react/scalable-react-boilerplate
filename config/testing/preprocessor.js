@@ -1,7 +1,7 @@
 const babelJest = require('babel-jest');
 
 module.exports = {
-  process(src, filename) {
+  process: function(src, filename) {
     if (!filename.match(/\.jsx?$/)) {
       return '';
     }

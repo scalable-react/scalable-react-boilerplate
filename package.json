@@ -21,7 +21,8 @@
             "config": "./config/testing/webpack.test.config.js",
             "verbose": false
           }
-        ]
+        ],
+        ["transform-es2015-modules-commonjs"]
       ]
     }
   },
@@ -45,15 +46,15 @@
     "t": "npm run test",
     "test:watch": "npm test -- --watch",
     "test": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=test node --harmony_proxies node_modules/.bin/jest",
-    "build": "./node_modules/.bin/webpack",
-    "dev": "./node_modules/.bin/webpack-dev-server",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.prod.js",
+    "dev": "node devServer.js",
     "generate": "plop --plopfile config/generators/index.js",
     "generate:component": "plop --plopfile config/generators/index.js component",
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "predeploy": "rimraf server/public/*",
-    "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
+    "predeploy": "rimraf server/public/*.*",
+    "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",

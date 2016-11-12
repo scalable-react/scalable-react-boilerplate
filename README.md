@@ -27,13 +27,13 @@ Below are a few example apps that have been built with this project
     - [See the Code](https://github.com/udacityalumni/alumni-client)
     - Live App coming soon
 - RyanCollins.io v3.0
-    - [See the Code](https://github.com/RyanCCollins/ryancollinsio) 
+    - [See the Code](https://github.com/RyanCCollins/ryancollinsio)
     - Live App coming soon
-- React Weekly 
-    - [See the Code](https://github.com/RyanCCollins/react-weekly) 
+- React Weekly
+    - [See the Code](https://github.com/RyanCCollins/react-weekly)
     - [See the Live App](http://www.reactweekly.co/)
-- Restaurant Reviewer 
-    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer) 
+- Restaurant Reviewer
+    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
     - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
 - Corporate Dashboard
     - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
@@ -68,7 +68,7 @@ There are two options for installation:
 
    npm run start
 
-   Your app will be served at: http://0.0.0.0:1337/
+   Your app will be served at: http://localhost:1337
 
 or, you can install it using Slush via the npm package
 ```

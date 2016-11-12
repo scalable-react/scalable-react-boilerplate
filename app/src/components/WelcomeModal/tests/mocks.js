@@ -1,4 +1,4 @@
-export const fields = {
+const fields = {
   nameInput: {
     name: 'nameInput',
     value: '',
@@ -14,3 +14,5 @@ export const fields = {
     autofilled: false,
   },
 };
+
+export default fields;
