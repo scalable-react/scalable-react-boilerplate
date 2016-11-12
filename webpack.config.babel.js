@@ -27,6 +27,10 @@ module.exports = {
       loaders: ['react-hot', 'babel']
     },
     {
+      test: /\.md$/,
+      loader: "html!markdown"
+    },
+    {
       test: /\.svg$/,
       loader: 'babel!svg-react'
     },
@@ -95,7 +99,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new HtmlwebpackPlugin({
-      title: 'RyanCollins.io',
+      title: 'Scalable React Boilerplate',
       template: 'config/templates/_index.dev.html',
     }),
   ],

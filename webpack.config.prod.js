@@ -23,9 +23,6 @@ module.exports = {
       'react',
       'react-dom',
       'grommet-udacity',
-      'antd',
-      'react-rte',
-      'recharts',
     ],
   },
   module: {
@@ -41,6 +38,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel'],
+      },
+      {
+        test: /\.md$/,
+        loader: "html!markdown"
       },
       {
         test: /\.svg$/,
@@ -143,7 +144,7 @@ module.exports = {
       AppCache: false,
     }),
     new HtmlwebpackPlugin({
-      template: 'config/templates/_index.html',
+      template: 'config/templates/_index.prod.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
