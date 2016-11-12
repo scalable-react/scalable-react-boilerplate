@@ -11,6 +11,9 @@ const ROOT_PATH = path.resolve(__dirname);
 module.exports = {
   devtool: 'eval',
   entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client?http://0.0.0.0:1337',
+    'webpack/hot/only-dev-server',
     path.resolve(ROOT_PATH, 'app/src/index'),
   ],
   module: {

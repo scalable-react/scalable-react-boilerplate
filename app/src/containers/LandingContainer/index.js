@@ -71,8 +71,20 @@ class LandingContainer extends Component {
         :
           <Box>
             <Hero
-              backgroundImage="https://github.com/RyanCCollins/cdn/raw/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true"
-            />
+              justify="center"
+              align="center"
+              backgroundImage="https://github.com/RyanCCollins/cdn/blob/master/misc/gradient.jpg?raw=true"
+            >
+              <Box align="center" justify="center">
+                <img
+                  className="img-responsive"
+                  src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
+                />
+                <Headline align="center">
+                  Scaling the Front End Feature First
+                </Headline>
+              </Box>
+            </Hero>
             <Section align="center" justify="center">
               <Headline align="center">
                 {name && `Welcome ${name}!`}
