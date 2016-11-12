@@ -56,9 +56,9 @@ app.use((req, res) => {
           const html = (
             <Html
               content={content}
-              scriptHash={manifest["main.js"]}
-              vendorHash={manifest["vendor.js"]}
-              cssHash={manifest["main.css"]}
+              scriptHash={manifest["/main.js"]}
+              vendorHash={manifest["/vendor.js"]}
+              cssHash={manifest["/main.css"]}
               state={{ data: context.store.getState().apollo.data }}
             />
           );

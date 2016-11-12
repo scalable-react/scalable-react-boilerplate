@@ -11,19 +11,19 @@
     ],
     "plugins": [
       "babel-plugin-webpack-alias"
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          [
-            "babel-plugin-webpack-loaders", {
-              "config": "./config/testing/webpack.test.config.js",
-              "verbose": false
-            }
-          ],
-          ["transform-es2015-modules-commonjs"]
-        ]
-      }
+    ]
+  },
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-loaders", {
+            "config": "./config/testing/webpack.test.config.js",
+            "verbose": false
+          }
+        ],
+        ["transform-es2015-modules-commonjs"]
+      ]
     }
   },
   "jest": {
