@@ -12,10 +12,15 @@ module.exports = {
   devtool: 'eval',
   entry: [
     'react-hot-loader/patch',
-    'webpack-hot-middleware/client?http://0.0.0.0:1337',
+    'webpack-dev-server/client?http://localhost:1337',
     'webpack/hot/only-dev-server',
     path.resolve(ROOT_PATH, 'app/src/index'),
   ],
+  output: {
+    path: path.resolve(ROOT_PATH, 'app/build'),
+    publicPath: '/',
+    filename: 'bundle.js',
+  },
   module: {
     preLoaders: [
       {
@@ -27,7 +32,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: ['react-hot', 'babel']
+      loaders: ['babel']
     },
     {
       test: /\.md$/,
@@ -91,12 +96,6 @@ module.exports = {
       defaults: [precss, autoprefixer],
       cleaner:  [autoprefixer({ browsers: [] })]
     };
-  },
-  output: {
-    path: path.resolve(ROOT_PATH, 'app/build'),
-    publicPath: '/',
-    filename: 'bundle.js',
-    chunkFilename: '[name].[chunkhash].chunk.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -11,9 +11,6 @@ import Headline from 'grommet-udacity/components/Headline';
 import Footer from 'grommet-udacity/components/Footer';
 import Button from 'grommet-udacity/components/Button';
 import Heading from 'grommet-udacity/components/Heading';
-import List from 'grommet-udacity/components/List';
-import ListItem from 'grommet-udacity/components/ListItem';
-import Anchor from 'grommet-udacity/components/Anchor';
 import Columns from 'grommet-udacity/components/Columns';
 import {
   LoadingIndicator,
@@ -75,13 +72,14 @@ class LandingContainer extends Component {
               align="center"
               backgroundImage="https://github.com/RyanCCollins/cdn/blob/master/misc/gradient.jpg?raw=true"
             >
-              <Box align="center" justify="center">
+              <Box align="center" justify="center" style={{ width: '100%' }}>
                 <img
                   className="img-responsive"
+                  style={{ width: '300px' }}
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
                 />
                 <Headline align="center">
-                  Scaling the Front End Feature First
+                  Scaling the Front End Feature First!
                 </Headline>
               </Box>
             </Hero>
@@ -122,7 +120,7 @@ class LandingContainer extends Component {
             </Section>
             <Footer pad="large" align="center" jusify="center" direction="column">
               <Heading align="center" tag="h2">
-                Have any questions?
+                Have any questions??
               </Heading>
               <Box align="center" justify="center" pad="medium">
                 <Button label="Get in Touch" href="mailto:admin@ryancollins.io" />
