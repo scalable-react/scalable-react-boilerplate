@@ -2,6 +2,7 @@ import {
   LOAD_DATA_INITIATION,
   LOAD_DATA_SUCCESS,
   CLOSE_MODAL,
+  OPEN_MODAL,
 } from './constants';
 
 // loadDataInitiation :: None -> {Action}
@@ -18,6 +19,10 @@ export const loadDataSuccess = () => ({
 // closeModal :: None -> {Action}
 export const closeModal = () => ({
   type: CLOSE_MODAL,
+});
+
+export const openModal = () => ({
+  type: OPEN_MODAL,
 });
 
 export const fakeSubmission = (name) => (dispatch) => {

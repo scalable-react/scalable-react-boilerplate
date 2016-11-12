@@ -4,7 +4,7 @@ import update from 'react-addons-update';
 export const initialState = {
   isLoading: false,
   name: null,
-  isShowingModal: true,
+  isShowingModal: false,
   contributors: [
     {
       name: 'Ryan Collins',
@@ -29,6 +29,12 @@ export const initialState = {
 const landingReducer =
   (state = initialState, action) => {
     switch (action.type) {
+      case types.OPEN_MODAL:
+        return update(state, {
+          isShowingModal: {
+            $set: true,
+          },
+        });
       case types.CLOSE_MODAL:
         return update(state, {
           isShowingModal: {

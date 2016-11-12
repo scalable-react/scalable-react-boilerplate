@@ -84,9 +84,16 @@ class LandingContainer extends Component {
               </Box>
             </Hero>
             <Section align="center" justify="center">
-              <Headline align="center">
-                {name && `Welcome ${name}!`}
-              </Headline>
+              {name ?
+                <Headline align="center">
+                  {name && `Welcome ${name}!`}
+                </Headline>
+              :
+                <Button
+                  label="Click Me"
+                  onClick={actions.openModal}
+                />
+              }
               <Divider />
               <Heading align="center" tag="h2">
                 Thanks so much for using this boilerplate!
