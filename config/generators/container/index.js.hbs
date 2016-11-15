@@ -17,7 +17,7 @@ import { createSelector } from 'reselect';
 import { select{{ properCase name }} } from './selectors';
 {{/if}}
 {{#if wantStyledComponents}}
-import * as Styles from './styles';
+import { StyledWrapper } from './styles';
 {{/if}}
 
 class {{ properCase name }}Container extends Component { // eslint-disable-line react/prefer-stateless-function

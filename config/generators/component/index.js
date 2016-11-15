@@ -65,9 +65,9 @@ module.exports = {
         abortOnFail: true,
       });
     }
-    
+
     if (data.wantStyledComponents) {
-       actions.push({
+      actions.push({
         type: 'add',
         path: '../../app/src/components/{{properCase name}}/styles.js',
         templateFile: './component/styles.js.hbs',
