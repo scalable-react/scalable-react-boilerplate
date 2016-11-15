@@ -71,7 +71,8 @@
     "start": "npm run dev",
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",
-    "serve:bundle": "cross-env NODE_ENV=production PORT=1337 node server.js"
+    "serve:bundle": "cross-env NODE_ENV=production PORT=1337 node server.js",
+    "postinstall": "npm run deploy"
   },
   "repository": {
     "type": "git",
