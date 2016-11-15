@@ -3,10 +3,12 @@ import React, { PropTypes } from 'react';
 {{else}}
 import React from 'react';
 {{/if}}
-
 {{#if wantSCSSModules}}
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
+{{/if}}
+{{#if wantStyledComponents}}
+import { StyledWrapper } from './styles';
 {{/if}}
 
 const {{ properCase name }} = (props) => (

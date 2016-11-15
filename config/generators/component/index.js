@@ -31,6 +31,12 @@ module.exports = {
     },
     {
       type: 'confirm',
+      name: 'wantStyledComponents',
+      default: false,
+      message: 'Should the component use styled components?',
+    },
+    {
+      type: 'confirm',
       name: 'wantPropTypes',
       default: true,
       message: 'Should the component have PropTypes?',
@@ -56,6 +62,15 @@ module.exports = {
         type: 'add',
         path: '../../app/src/components/{{properCase name}}/index.module.scss',
         templateFile: './component/styles.scss.hbs',
+        abortOnFail: true,
+      });
+    }
+
+    if (data.wantStyledComponents) {
+      actions.push({
+        type: 'add',
+        path: '../../app/src/components/{{properCase name}}/styles.js',
+        templateFile: './component/styles.js.hbs',
         abortOnFail: true,
       });
     }

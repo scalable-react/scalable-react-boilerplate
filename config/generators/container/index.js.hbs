@@ -13,8 +13,10 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 {{/if}}
 {{#if wantSelectors}}
-import { createSelector } from 'reselect';
 import { select{{ properCase name }} } from './selectors';
+{{/if}}
+{{#if wantStyledComponents}}
+import { StyledWrapper } from './styles';
 {{/if}}
 
 class {{ properCase name }}Container extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -36,10 +38,9 @@ class {{ properCase name }}Container extends Component { // eslint-disable-line 
 
 {{#if wantActionsAndReducer}}
 {{#if wantSelectors}}
-const mapStateToProps = createSelector(
-  select{{properCase name}}(),
-  ({{camelCase name}}) => ({ {{camelCase name}} })
-);
+const mapStateToProps = (state) => ({
+  // myProp: select{{properCase name}}(state.{{ camelCase name }}),
+});
 {{else}}
 // mapStateToProps :: {State} -> {Props}
 const mapStateToProps = (state) => ({

@@ -7,6 +7,9 @@ import React, { Component } from 'react';
 import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
 {{/if}}
+{{#if wantStyledComponents}}
+import { StyledWrapper } from './styles';
+{{/if}}
 
 class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
