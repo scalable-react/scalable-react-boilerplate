@@ -169,6 +169,7 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - Name: the name of the container, i.e. `Awesome`, which converts to: `AwesomeContainer`
   - Connected / Not connected ES6 Class containers (higher order)
   - SCSS Modules
+  - [Styled Components](https://github.com/styled-components/styled-components)
   - Reducers, actions and constants
   - GraphQL: The generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
   - Tests for all of the above
@@ -178,6 +179,7 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - Stateless functional components (recommended)
   - ES6 class components
   - SCSS modules
+  - [Styled Components](https://github.com/styled-components/styled-components)
   - Tests for all of the above
   - README.md file that documents the component
 - Page `npm run generate:page`
