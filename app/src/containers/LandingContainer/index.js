@@ -18,6 +18,7 @@ import {
   WelcomeModal,
   Contributor,
 } from 'components';
+import { Maybe } from 'functional-components';
 import { reduxForm } from 'redux-form';
 
 export const formFields = [
@@ -57,7 +58,7 @@ class LandingContainer extends Component {
           onClose={actions.closeModal}
           isVisible={isShowingModal}
         />
-        {isLoading ?
+        <Maybe predicate={isLoading}>
           <Section
             align="center"
             justify="center"
@@ -65,7 +66,8 @@ class LandingContainer extends Component {
           >
             <LoadingIndicator isLoading />
           </Section>
-        :
+        </Maybe>
+        <Maybe predicate={!isLoading}>
           <Box>
             <Hero
               justify="center"
@@ -134,7 +136,7 @@ class LandingContainer extends Component {
               </Box>
             </Footer>
           </Box>
-        }
+        </Maybe>
       </Box>
     );
   }
