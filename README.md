@@ -250,6 +250,7 @@ which will pick up any file with the .test.js postfix and run it through Jest.
 - [Redux](https://github.com/rackt/redux) - awesome flux architecture
 - [Redux Form](https://github.com/erikras/redux-form)- works with React Redux to enable an html form in React to use Redux to store all of its state.
 - [redux-thunk](https://github.com/gaearon/redux-thunk) - thunk middleware for redux
+- [Styled Components](https://github.com/styled-components/styled-components) Visual primitives for the component age 💅 http://styled-components.com
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - API fetch network requests
 - [redux-devtools](https://github.com/gaearon/redux-devtools) - redux development tool
 - [SASS](http://sass-lang.com/) - styles
