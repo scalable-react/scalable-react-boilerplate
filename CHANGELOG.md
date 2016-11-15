@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.0.4
+Styled components were added as an option to containers and components when generated
+
 ## 1.0.3
 - Code chunking will now place react, react-dom and grommet-udacity into the vendor file.
 - Use System.imports to load up modules via React Router, which facilitates Tree-Shaking
