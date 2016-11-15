@@ -1,7 +1,7 @@
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
 # PLEASE NOTE:
-Recently, this boilerplate received a huge update including: GraphQL / Apollo Support, Server Rendering, Generator Refactoring, etc.  If you are using this in production, you may want to use the [Stable](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/stable) branch for a bit.  See the [CHANGELOG](https://github.com/RyanCCollins/scalable-react-boilerplate/blob/master/CHANGELOG.md) for more information of the recent updates.
+Recently, this boilerplate received a huge update including: Styled Components, GraphQL / Apollo Support, Server Rendering, Generator Refactoring, etc.  If you are using this in production, you may want to use the [Stable](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/stable) branch for a bit.  See the [CHANGELOG](https://github.com/RyanCCollins/scalable-react-boilerplate/blob/master/CHANGELOG.md) for more information of the recent updates.
 
 # Scalable React Boilerplate
 [![npm version](https://badge.fury.io/js/scalable-react-boilerplate.svg)](https://badge.fury.io/js/scalable-react-boilerplate)
