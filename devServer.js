@@ -4,8 +4,8 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.babel.js');
 const path = require('path');
 
-const PORT = 1337;
-const IP = 'localhost';
+const PORT = process.env.PORT || 1337;
+const IP = process.env.IP || 'localhost';
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
