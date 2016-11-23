@@ -30,7 +30,7 @@ Below are a few example apps that have been built with this project
 - RyanCollins.io v3.0 (GraphQL on Rails)
     - [See the server code](https://github.com/RyanCCollins/ryancollinsio)
     - [Clientside code](https://github.com/RyanCCollins/ryancollinsio/tree/master/client)
-    - Live App coming soon
+    - [See the live app](http://www.ryancollins.io/) (Beta)
 - Meetup Event Planner (GraphQL on Rails)
     - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
     - [See the Live App](http://meetup-event-planner.herokuapp.com/)
