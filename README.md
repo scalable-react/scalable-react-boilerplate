@@ -251,6 +251,8 @@ which will pick up any file with the .test.js postfix and run it through Jest.
 - [Redux Form](https://github.com/erikras/redux-form)- works with React Redux to enable an html form in React to use Redux to store all of its state.
 - [redux-thunk](https://github.com/gaearon/redux-thunk) - thunk middleware for redux
 - [Styled Components](https://github.com/styled-components/styled-components) Visual primitives for the component age 💅 http://styled-components.com
+- [Apollo Client](https://github.com/apollostack/apollo-client) Collocated GraphQL queries that are intelligently cached.  See [the docs](http://dev.apollodata.com/) and the [configuration file](https://github.com/RyanCCollins/scalable-react-boilerplate/blob/master/app/src/apolloClient.js) to configure in your own project (Note: you will need to connect to a GraphQL Server.  See the [example apps for details](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps).
+- [Graphql](http://graphql.org/)
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - API fetch network requests
 - [redux-devtools](https://github.com/gaearon/redux-devtools) - redux development tool
 - [SASS](http://sass-lang.com/) - styles
