@@ -23,24 +23,26 @@ If this is confusing, don't fret, we've set you up with a few examples and code 
 
 ## Example Apps
 Below are a few example apps that have been built with this project
-- Udacity Alumni App
-    - [See the Code](https://github.com/udacityalumni/alumni-client)
+- Udacity Alumni App (GraphQL on Rails)
+    - [Clientside code](https://github.com/udacityalumni/alumni-client)
+    - [Serverside code](https://github.com/udacityalumni/alumni-api)
     - Live App coming soon
-- RyanCollins.io v3.0
-    - [See the Code](https://github.com/RyanCCollins/ryancollinsio)
+- RyanCollins.io v3.0 (GraphQL on Rails)
+    - [See the server code](https://github.com/RyanCCollins/ryancollinsio)
+    - [Clientside code](https://github.com/RyanCCollins/ryancollinsio/tree/master/client)
     - Live App coming soon
-- React Weekly
-    - [See the Code](https://github.com/RyanCCollins/react-weekly)
-    - [See the Live App](http://www.reactweekly.co/)
-- Restaurant Reviewer
-    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
-    - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
-- Corporate Dashboard
-    - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
-    - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
-- Meetup Event Planner
+- Meetup Event Planner (GraphQL on Rails)
     - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
     - [See the Live App](http://meetup-event-planner.herokuapp.com/)
+- React Weekly (GraphQL JavaScript)
+    - [See the Code](https://github.com/RyanCCollins/react-weekly)
+    - [See the Live App](http://www.reactweekly.co/)
+- Corporate Dashboard (GraphQL JavaScript)
+    - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
+    - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
+- Restaurant Reviewer (No GraphQL)
+    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
+    - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
 
 ## Experimental Features
 ### Server Rendering
