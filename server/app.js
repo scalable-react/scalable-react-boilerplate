@@ -51,7 +51,7 @@ app.use((req, res) => {
             <RouterContext {...renderProps} />
           </ApolloProvider>
         );
-        getDataFromTree(component).then((context) => {
+        getDataFromTree(component).then((ctx) => {
           const content = renderToString(component);
           const html = (
             <Html

@@ -4,7 +4,7 @@ import Title from 'grommet-udacity/components/Title';
 import Anchor from 'grommet-udacity/components/Anchor';
 import Search from 'grommet-udacity/components/Search';
 import LogoImage from './logo.png';
-import { StyledMenu, StyledLogo } from './styles';
+import { StyledMenu, StyledLogo, LogoPlaceholder } from './styles';
 
 const Navbar = ({
   pathname,
@@ -12,7 +12,11 @@ const Navbar = ({
   <div>
     <Header justify="between">
       <Title>
-        <StyledLogo src={LogoImage} alt="logo"/>
+        {typeof window !== 'undefined' ?
+          <StyledLogo src={LogoImage} alt="logo"/>
+        :
+          <LogoPlaceholder />
+        }
       </Title>
       <StyledMenu inline direction="row" align="center" responsive={false}>
         <Anchor href="/" className={pathname === '/' ? 'active' : ''}>
