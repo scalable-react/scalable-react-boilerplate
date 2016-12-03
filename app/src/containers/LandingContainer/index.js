@@ -72,15 +72,16 @@ class LandingContainer extends Component {
             <Hero
               justify="center"
               align="center"
+              colorIndex="grey-1"
               backgroundImage="https://github.com/RyanCCollins/cdn/blob/master/misc/gradient.jpg?raw=true"
             >
-              <Box align="center" justify="center" style={{ width: '100%' }}>
+              <Box align="center" justify="center" style={{ width: '100%' }} colorIndex="grey-1-a">
                 <img
                   className="img-responsive"
                   style={{ width: '300px' }}
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
                 />
-                <Headline align="center">
+                <Headline align="center" size="small">
                   Scaling the Front End Feature First!
                 </Headline>
               </Box>
@@ -92,7 +93,7 @@ class LandingContainer extends Component {
                 </Headline>
               :
                 <Button
-                  label="Click Me"
+                  label="Click me for a greeting"
                   onClick={actions.openModal}
                 />
               }

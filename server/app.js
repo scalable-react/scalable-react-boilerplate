@@ -13,6 +13,7 @@ import { createNetworkInterface } from 'apollo-client';
 import Html from './utils/Html';
 import createApolloClient from './utils/create-apollo-client';
 import manifest from './public/manifest.json';
+import styleSheet from 'styled-components/lib/models/StyleSheet';
 
 const app = express();
 const isDeveloping = process.env.NODE_ENV !== 'production';
@@ -24,7 +25,6 @@ const baseUrl = process.env.BASE_URL || `http://${IP}:${PORT}`;
 const apiUrl = `${baseUrl}graphql`;
 
 app.use(morgan('combined'));
-
 app.use(express.static(__dirname + '/public'));
 
 app.use((req, res) => {
@@ -36,7 +36,7 @@ app.use((req, res) => {
         console.error('ROUTER ERROR:', error); // eslint-disable-line no-console
         res.status(500);
       } else if (renderProps) {
-        console.log(`Called match with renderProps: ${JSON.stringify(renderProps, null, 2)}`);
+        const styles = styleSheet.rules().map(rule => rule.cssText).join('\n');
         const client = createApolloClient({
           ssrMode: true,
           networkInterface: createNetworkInterface({
@@ -59,7 +59,8 @@ app.use((req, res) => {
               scriptHash={manifest["/main.js"]}
               vendorHash={manifest["/vendor.js"]}
               cssHash={manifest["/main.css"]}
-              state={{ data: context.store.getState().apollo.data }}
+              styles={styles}
+              state={ctx.store.getState()}
             />
           );
           res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
