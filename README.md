@@ -41,6 +41,8 @@ Below are a few example apps that have been built with this project
     - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
     - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
 
+__NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
+
 ## Experimental Features
 ### Server Rendering
 Server rendering has been merged into the master branch 🎉🎉🎉.
@@ -57,15 +59,20 @@ There are two options for installation:
 
 1. **Clone repo**
 
-    git clone https://github.com/RyanCCollins/scalable-react-boilerplate.git
+    `git clone https://github.com/RyanCCollins/scalable-react-boilerplate.git`
 
 2. **Install dependencies**
 
-    npm run setup
+    `npm run setup`
+
+    --or--
+
+    With Yarn installed globally, run
+    `npm run setup:yarn`
 
 3. **Run development server**
 
-   npm run start
+   `npm run start`
 
    Your app will be served at: http://localhost:1337
 
@@ -204,7 +211,7 @@ where <type_of_component> is one of: component, container or page.
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
 ### **Gotchas**
-In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the any comment that is prefixed with GENERATOR and things will work great.
+In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete any comment that is prefixed with `GENERATOR` and things will work great. See below for an example.
 
 From `app/src/container/index.js` or `app/src/component/index.js`
 ```
