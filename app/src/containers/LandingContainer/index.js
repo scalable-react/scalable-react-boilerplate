@@ -18,6 +18,7 @@ import {
   WelcomeModal,
   Contributor,
 } from 'components';
+import { Maybe } from 'functional-components';
 import { reduxForm } from 'redux-form';
 
 export const formFields = [
@@ -57,7 +58,7 @@ class LandingContainer extends Component {
           onClose={actions.closeModal}
           isVisible={isShowingModal}
         />
-        {isLoading ?
+        <Maybe predicate={isLoading}>
           <Section
             align="center"
             justify="center"
@@ -65,20 +66,22 @@ class LandingContainer extends Component {
           >
             <LoadingIndicator isLoading />
           </Section>
-        :
+        </Maybe>
+        <Maybe predicate={!isLoading}>
           <Box>
             <Hero
               justify="center"
               align="center"
+              colorIndex="grey-1"
               backgroundImage="https://github.com/RyanCCollins/cdn/blob/master/misc/gradient.jpg?raw=true"
             >
-              <Box align="center" justify="center" style={{ width: '100%' }}>
+              <Box align="center" justify="center" style={{ width: '100%' }} colorIndex="grey-1-a">
                 <img
                   className="img-responsive"
                   style={{ width: '300px' }}
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
                 />
-                <Headline align="center">
+                <Headline align="center" size="small">
                   Scaling the Front End Feature First!
                 </Headline>
               </Box>
@@ -90,7 +93,7 @@ class LandingContainer extends Component {
                 </Headline>
               :
                 <Button
-                  label="Click Me"
+                  label="Click me for a greeting"
                   onClick={actions.openModal}
                 />
               }
@@ -134,7 +137,7 @@ class LandingContainer extends Component {
               </Box>
             </Footer>
           </Box>
-        }
+        </Maybe>
       </Box>
     );
   }
