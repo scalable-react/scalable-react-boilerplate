@@ -2924,6 +2924,12 @@ function.prototype.name@^1.0.0:
     function-bind "^1.1.0"
     is-callable "^1.1.2"
 
+functional-components@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/functional-components/-/functional-components-0.0.5.tgz#07eddb9404e9d02d79fd869cbe9259c9b6839489"
+  dependencies:
+    react "^15.3.2"
+
 gauge@~2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.6.0.tgz#d35301ad18e96902b4751dcbbe40f4218b942a46"
@@ -6452,6 +6458,14 @@ react@^0.14.0:
 "react@^0.14.8 || ^15.0.1", react@^15.1.0, react@^15.3.0:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.3.2.tgz#a7bccd2fee8af126b0317e222c28d1d54528d09e"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+react@^15.3.2:
+  version "15.4.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
