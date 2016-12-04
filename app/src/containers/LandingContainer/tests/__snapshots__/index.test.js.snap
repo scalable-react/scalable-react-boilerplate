@@ -6,6 +6,7 @@ exports[`<Landing /> should render with default props 1`] = `
       "fakeSubmission": [Function],
       "loadDataInitiation": [Function],
       "loadDataSuccess": [Function],
+      "openModal": [Function],
     }
   }
   contributors={
@@ -25,7 +26,7 @@ exports[`<Landing /> should render with default props 1`] = `
     ]
   }
   isLoading={false}
-  isShowingModal={true}
+  isShowingModal={false}
   name={null}
   store={
     Object {

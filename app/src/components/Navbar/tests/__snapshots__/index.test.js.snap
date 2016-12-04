@@ -14,21 +14,14 @@ exports[`<Navbar /> should render with default props 1`] = `
     responsive={false}>
     <Title
       responsive={true}>
-      <img
+      <styled.img
         alt="logo"
         src={Object {}} />
     </Title>
-    <Menu
+    <Styled(Menu)
       align="center"
-      closeOnClick={true}
       direction="row"
-      dropAlign={
-        Object {
-          "left": "left",
-          "top": "top",
-        }
-      }
-      pad="none"
+      inline={true}
       responsive={false}>
       <Anchor
         className="active"
@@ -52,7 +45,7 @@ exports[`<Navbar /> should render with default props 1`] = `
         iconAlign="end"
         inline={false}
         responsive={true} />
-    </Menu>
+    </Styled(Menu)>
   </Header>
 </div>
 `;

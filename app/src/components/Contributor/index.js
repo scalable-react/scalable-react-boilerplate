@@ -6,7 +6,6 @@ import Box from 'grommet-udacity/components/Heading';
 import Paragraph from 'grommet-udacity/components/Paragraph';
 import Anchor from 'grommet-udacity/components/Anchor';
 import SocialGithubIcon from 'grommet-udacity/components/icons/base/SocialGithub';
-
 import { Avatar } from 'components';
 
 const Contributor = ({
