@@ -28,7 +28,7 @@
         "plugins": [
           [
             "babel-plugin-webpack-loaders", {
-              "config": "./config/testing/webpack.test.config.js",
+              "config": "./config/webpack/webpack.test.config.js",
               "verbose": false
             }
           ],
