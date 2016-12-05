@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import serialize from 'serialize-javascript';
 
 function Html({ content, state, scriptHash, vendorHash, cssHash, styles }) {
   return (
@@ -17,7 +18,9 @@ function Html({ content, state, scriptHash, vendorHash, cssHash, styles }) {
         <script src={`${scriptHash}`} charSet="UTF-8" />
         <script src={`${vendorHash}`} type="text/javascript" />
         <script
-          dangerouslySetInnerHTML={{ __html: `window.__APOLLO_STATE__=${JSON.stringify(state)};` }}
+          dangerouslySetInnerHTML={{
+            __html: `window.__APOLLO_STATE__=${serialize(state, { isJSON: true })};`,
+          }}
           charSet="UTF-8"
         />
       </body>
