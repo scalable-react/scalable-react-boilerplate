@@ -44,11 +44,13 @@ Below are a few example apps that have been built with this project
 __NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
 
 ## Experimental Features
-### Server Rendering
-Server rendering has been merged into the master branch 🎉🎉🎉.
 
-### Docker Support
-Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
+### GraphQL / Apollo Features
+This boilerplate includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
+
+The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
+
+Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
 
 # Documentation
 
@@ -294,7 +296,7 @@ It was created by several of the members of the Udacity Alumni product infrastru
 * [Ryan Collins](https://github.com/RyanCCollins)
 * [Andreas Daiminger](https://github.com/adai183)
 
-Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas used here were reverse engineered from the same project.
+Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas in this project, especially the feature-first architectural pattern, were reverse engineered from the same project.
 
 ## Troubleshooting
 The most often reason for an error is a mismatch in node and npm versions. In the case of this project, we are using Node version 5.2.0.
