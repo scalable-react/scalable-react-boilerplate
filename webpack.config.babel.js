@@ -89,6 +89,7 @@ module.exports = {
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
       fragments: path.resolve(ROOT_PATH, 'app/src/fragments'),
+      config: path.resolve(ROOT_PATH, 'app/src/config'),
     },
   },
   postcss: function () {
@@ -98,6 +99,9 @@ module.exports = {
     };
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new NpmInstallPlugin(),
     new HtmlwebpackPlugin({

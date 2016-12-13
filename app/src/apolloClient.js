@@ -2,13 +2,13 @@ import ApolloClient, {
   createNetworkInterface,
   addTypeName,
 } from 'apollo-client';
-const baseUrl = typeof process.env.BASE_URL !== 'undefined' ?
-  process.env.BASE_URL : 'https://0.0.0.0:3000/';
-const productionUrl = `${baseUrl}graphql`;
+import { BASE_URL } from 'config';
+
+const url = `${BASE_URL}graphql`;
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: productionUrl,
+    uri: url,
   }),
   initialState: typeof window !== 'undefined' ? window.__APOLLO_STATE__ : null,
   queryTransformer: addTypeName,

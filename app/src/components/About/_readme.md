@@ -1,3 +1,10 @@
+![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
+
+# Scalable React Boilerplate
+[![npm version](https://badge.fury.io/js/scalable-react-boilerplate.svg)](https://badge.fury.io/js/scalable-react-boilerplate)
+![Code Ship](https://codeship.com/projects/92d32ae0-5907-0134-8eb1-7aa2649e3d2b/status?branch=master)
+[![Codacy grade](https://img.shields.io/codacy/grade/fb3bf4881b8d4b98a8a3ff59f47b14d4.svg?maxAge=2592000)](https://github.com/RyanCCollins/scalable-react-boilerplate)
+
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries with React and cutting edge JavaScript.
 
 You can read more about the organizational strategy used in this app in [this Medium post](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.6htl4s54y).
@@ -13,31 +20,37 @@ If this is confusing, don't fret, we've set you up with a few examples and code 
 
 ## Example Apps
 Below are a few example apps that have been built with this project
-- Udacity Alumni App
-    - [See the Code](https://github.com/udacityalumni/alumni-client)
+- Udacity Alumni App (GraphQL on Rails)
+    - [Clientside code](https://github.com/udacityalumni/alumni-client)
+    - [Serverside code](https://github.com/udacityalumni/alumni-api)
     - Live App coming soon
-- RyanCollins.io v3.0
-    - [See the Code](https://github.com/RyanCCollins/ryancollinsio)
-    - Live App coming soon
-- React Weekly
-    - [See the Code](https://github.com/RyanCCollins/react-weekly)
-    - [See the Live App](http://www.reactweekly.co/)
-- Restaurant Reviewer
-    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
-    - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
-- Corporate Dashboard
-    - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
-    - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
-- Meetup Event Planner
+- RyanCollins.io v3.0 (GraphQL on Rails)
+    - [See the server code](https://github.com/RyanCCollins/ryancollinsio)
+    - [Clientside code](https://github.com/RyanCCollins/ryancollinsio/tree/master/client)
+    - [See the live app](http://www.ryancollins.io/) (Beta)
+- Meetup Event Planner (GraphQL on Rails)
     - [See the Code](https://github.com/RyanCCollins/meetup-event-planner)
     - [See the Live App](http://meetup-event-planner.herokuapp.com/)
+- React Weekly (GraphQL JavaScript)
+    - [See the Code](https://github.com/RyanCCollins/react-weekly)
+    - [See the Live App](http://www.reactweekly.co/)
+- Corporate Dashboard (GraphQL JavaScript)
+    - [See the Code](https://github.com/RyanCCollins/corporate-dashboard)
+    - [See the Live App](https://corporate-dashboard-client.herokuapp.com/)
+- Restaurant Reviewer (No GraphQL)
+    - [See the Code](https://github.com/RyanCCollins/restaurant-reviewer)
+    - [See the Live App](http://restaurant-reviewer-client.herokuapp.com/)
+
+__NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
 
 ## Experimental Features
-### Server Rendering
-Server rendering has been merged into the master branch 🎉🎉🎉.
 
-### Docker Support
-Coming soon the app will support Docker, which will contain a configured web server to make deployment of this boilerplate simple!  You can take a look at [this branch](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/feat_rc_docker_config) for more details.
+### GraphQL / Apollo Features
+This boilerplate includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
+
+The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
+
+Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
 
 # Documentation
 
@@ -48,17 +61,22 @@ There are two options for installation:
 
 1. **Clone repo**
 
-    git clone https://github.com/RyanCCollins/scalable-react-boilerplate.git
+    `git clone https://github.com/RyanCCollins/scalable-react-boilerplate.git`
 
 2. **Install dependencies**
 
-    npm run setup
+    `npm run setup`
+
+    --or--
+
+    With Yarn installed globally, run
+    `npm run setup:yarn`
 
 3. **Run development server**
 
-   npm run start
+   `npm run start`
 
-   Your app will be served at: http://0.0.0.0:1337/
+   Your app will be served at: http://localhost:1337
 
 or, you can install it using Slush via the npm package
 ```
@@ -73,24 +91,12 @@ slush generator-scalable-react
 Follow the onscreen instructions to create your app.
 
 ## Deployment
+
+<a href="https://myrskyt.com/container/deploy/https://github.com/RyanCCollins/scalable-react-boilerplate"><img src="https://myrskyt.com/static/img/button.jpg" height="40" width="155"></a>
+
 A demo ExpressJS setup is included with the app.  The express server will serve up the production minified bundle.js, index.html and any other assets that are located in the `/server/public` folder.
 
-Running `npm run serve:bundle` will set your environment to production and serve these files via Express.  Also, a Procfile is included, which will run the Express server on Heroku when you push your code.
-
-NOTE: the deployment script, `npm run deploy`, will place all your generated assets in the `server/public` folder, where they can be served in production.
-
-To deploy with server-rendering, there is one small thing you will need to do. After your run the deploy script, go into the `server/app.js` file and add the hashes for your main javascript and css bundles as shown below.
-
-```
-  const html = (
-    <Html
-      content={content}
-      scriptHash='f5a35ab068d111293b63'
-      cssHash='6cf439ec56ba2b8700ce1665ebe17a68'
-      state={{ data: context.store.getState().apollo.data }}
-    />
-  );
-```
+The deploy script is now totally automated and will hook into the server-rendering automatically.  Running `npm run serve:bundle` will set your environment to production and serve these files via Express.  Also, a Procfile is included, which will run the Express server on Heroku when you push your code.
 
 ## File Structure
 * Some files left out for brevity.  Please reference the files in the [Scalable React Boilerplate](https://github.com/RyanCCollins/feature-first-react-boilerplate) project for an example of the file structure.  The application will ultimately be in use in a production web application project and more info will be posted here when we have production level examples.
@@ -171,7 +177,9 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - Name: the name of the container, i.e. `Awesome`, which converts to: `AwesomeContainer`
   - Connected / Not connected ES6 Class containers (higher order)
   - SCSS Modules
+  - [Styled Components](https://github.com/styled-components/styled-components)
   - Reducers, actions and constants
+  - GraphQL: The generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
   - Tests for all of the above
   - README.md file that documents the container
 - Component `npm run generate:component`
@@ -179,9 +187,9 @@ The boilerplate contains generators for easy project scaffolding.  At the moment
   - Stateless functional components (recommended)
   - ES6 class components
   - SCSS modules
+  - [Styled Components](https://github.com/styled-components/styled-components)
   - Tests for all of the above
   - README.md file that documents the component
-  - GraphQL: If you want, the generator can add collocated queries and mutations using GraphQL / ApolloClient.  Accept the option to use this feature.
 - Page `npm run generate:page`
   - Name: The name of the route, i.e. Home, which gets converted to `HomePage`
   - Route: the route that corresponds to the page
@@ -205,7 +213,7 @@ where <type_of_component> is one of: component, container or page.
 The generators use the same feature-first file organization as the rest of the project, encapsulating components within their own folder.
 
 ### **Gotchas**
-In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete the any comment that is prefixed with GENERATOR and things will work great.
+In order to get the import / export to work, the generator does some pattern matching of the comments in the files to place the new imports.  Just don't delete any comment that is prefixed with `GENERATOR` and things will work great. See below for an example.
 
 From `app/src/container/index.js` or `app/src/component/index.js`
 ```
@@ -250,6 +258,9 @@ which will pick up any file with the .test.js postfix and run it through Jest.
 - [Redux](https://github.com/rackt/redux) - awesome flux architecture
 - [Redux Form](https://github.com/erikras/redux-form)- works with React Redux to enable an html form in React to use Redux to store all of its state.
 - [redux-thunk](https://github.com/gaearon/redux-thunk) - thunk middleware for redux
+- [Styled Components](https://github.com/styled-components/styled-components) Visual primitives for the component age 💅 http://styled-components.com
+- [Apollo Client](https://github.com/apollostack/apollo-client) Collocated GraphQL queries that are intelligently cached.  See [the docs](http://dev.apollodata.com/) and the [configuration file](https://github.com/RyanCCollins/scalable-react-boilerplate/blob/master/app/src/apolloClient.js) to configure in your own project (Note: you will need to connect to a GraphQL Server.  See the [example apps for details](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps).
+- [Graphql](http://graphql.org/)
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - API fetch network requests
 - [redux-devtools](https://github.com/gaearon/redux-devtools) - redux development tool
 - [SASS](http://sass-lang.com/) - styles
@@ -285,4 +296,11 @@ It was created by several of the members of the Udacity Alumni product infrastru
 * [Ryan Collins](https://github.com/RyanCCollins)
 * [Andreas Daiminger](https://github.com/adai183)
 
-Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas used here were reverse engineered from the same project.
+Many thanks to the team behind [React Boilerplate](https://github.com/mxstbr/react-boilerplate), especially @maxstbr for setting a standard for the level of quality we in the React community can all learn from.  Many of the ideas in this project, especially the feature-first architectural pattern, were reverse engineered from the same project.
+
+## Troubleshooting
+The most often reason for an error is a mismatch in node and npm versions. In the case of this project, we are using Node version 5.2.0.
+
+Instructions for installing NVM and setting your node version for the project can be [found here](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
+
+If you get an error message, such as "Unexpected token import", that means that your Babel installation is not working right.  Please see [here](https://github.com/babel/babel/issues) for potential troubleshooting steps.

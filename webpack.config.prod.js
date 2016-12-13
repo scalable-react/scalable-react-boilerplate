@@ -105,6 +105,7 @@ module.exports = {
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
       fragments: path.resolve(ROOT_PATH, 'app/src/fragments'),
+      config: path.resolve(ROOT_PATH, 'app/src/config'),
     },
   },
   output: {
@@ -159,7 +160,7 @@ module.exports = {
       inject: true,
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
