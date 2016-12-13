@@ -1,0 +1,6423 @@
+{
+  "data": {
+    "__schema": {
+      "queryType": {
+        "name": "Query"
+      },
+      "mutationType": {
+        "name": "Mutation"
+      },
+      "subscriptionType": null,
+      "types": [{
+        "kind": "OBJECT",
+        "name": "Query",
+        "description": "The root level query type",
+        "fields": [{
+          "name": "feedback",
+          "description": null,
+          "args": [{
+            "name": "auth_token",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Feedback",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "inquiries",
+          "description": null,
+          "args": [{
+            "name": "auth_token",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Inquiry",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "inquiryCategories",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post",
+          "description": null,
+          "args": [{
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }, {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Post",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "postCategories",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "postTags",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Tag",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "posts",
+          "description": null,
+          "args": [{
+            "name": "tag",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }, {
+            "name": "status",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Post",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project",
+          "description": null,
+          "args": [{
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }, {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Project",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "projectCategories",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "projectTags",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Tag",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "projects",
+          "description": null,
+          "args": [{
+            "name": "status",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Project",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "references",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Reference",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "args": [{
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }, {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Tutorial",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorials",
+          "description": null,
+          "args": [{
+            "name": "status",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Tutorial",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": null,
+          "args": [{
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "users",
+          "description": null,
+          "args": [{
+            "name": "auth_token",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "AuthUser",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "User",
+        "description": "The application, non auth user type",
+        "fields": [{
+          "name": "avatar",
+          "description": "The avatar url of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "bio",
+          "description": "The bio of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The id of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": "The name of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "SCALAR",
+        "name": "ID",
+        "description": "Represents a unique identifier that is Base64 obfuscated. It is often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"VXNlci0xMA==\"`) or integer (such as `4`) input value will be accepted as an ID.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "SCALAR",
+        "name": "String",
+        "description": "Represents textual data as UTF-8 character sequences. This type is most often used by GraphQL to represent free-form human-readable text.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Project",
+        "description": "Project type",
+        "fields": [{
+          "name": "caption",
+          "description": "The caption of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "category",
+          "description": "The category",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "comments",
+          "description": "Associated comments",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "ProjectComment",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "Date project was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": "The description of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "designPatterns",
+          "description": "The design patterns of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "featureImage",
+          "description": "The feature imaged",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The id of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "images",
+          "description": "Associated images for the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "ProjectImage",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "milestones",
+          "description": "The project milestones",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "projectUrl",
+          "description": "The url of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "repoUrl",
+          "description": "The repository Url",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "reviewerName",
+          "description": "The reviewer name of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "slug",
+          "description": "The slug for the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "status",
+          "description": "The status for the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tags",
+          "description": "The associated tags",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Tag",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "technicalInformation",
+          "description": "The technical info of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "technicalReview",
+          "description": "The Technical Review of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "title",
+          "description": "The title of the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "updated_at",
+          "description": "Date project was updated",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user that made the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "ProjectImage",
+        "description": "Image for a project",
+        "fields": [{
+          "name": "id",
+          "description": "The id of this image",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project",
+          "description": "The associated project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Project",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "src",
+          "description": "The source / url of the image",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "ProjectComment",
+        "description": "A comment on a post",
+        "fields": [{
+          "name": "body",
+          "description": "The body of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "The time the comment was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The ID of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project",
+          "description": "The related project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Project",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user who made the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "SCALAR",
+        "name": "Int",
+        "description": "Represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Tag",
+        "description": "The tag type",
+        "fields": [{
+          "name": "id",
+          "description": "The id of the tag",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "title",
+          "description": "The title of the tag",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Post",
+        "description": "blog post type",
+        "fields": [{
+          "name": "body",
+          "description": "The body of the post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "category",
+          "description": "The category",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "comments",
+          "description": "Associated comments",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "PostComment",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "The datetime it was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "feature_image",
+          "description": "The url to the featured image",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The id of the post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "slug",
+          "description": "The slug for the post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "status",
+          "description": "The status for the project",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tags",
+          "description": "Associated tags for a post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Tag",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "title",
+          "description": "The title of the post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user who made the post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "PostComment",
+        "description": "A comment on a post",
+        "fields": [{
+          "name": "body",
+          "description": "The body of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "The time the comment was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The ID of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post",
+          "description": "The related post",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Post",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user who made the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Reference",
+        "description": "Generic Reference type",
+        "fields": [{
+          "name": "avatar",
+          "description": "The person avatar",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "body",
+          "description": "The Reference body",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "company",
+          "description": "The company of the person",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The Reference ID",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": "The person name",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "sort_priority",
+          "description": "The sort priority of the reference",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "title",
+          "description": "The person title",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Inquiry",
+        "description": "A contact inquiry",
+        "fields": [{
+          "name": "category",
+          "description": "The category of the inquiry",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "ENUM",
+            "name": "InquiryCategoryEnum",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "email",
+          "description": "The email of the person",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "message",
+          "description": "The message of the inquiry",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": "The name of the person",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "ENUM",
+        "name": "InquiryCategoryEnum",
+        "description": "The status of the event",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [{
+          "name": "job",
+          "description": null,
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "suggestion",
+          "description": null,
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "other",
+          "description": null,
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "AuthUser",
+        "description": "The authenticated user model type",
+        "fields": [{
+          "name": "auth_token",
+          "description": "The user auth token",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "avatar",
+          "description": "The user avatar",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "bio",
+          "description": "The bio of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "The datetime string when the user was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "email",
+          "description": "The email of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The id of this user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": "The name of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "projects",
+          "description": "The user projects",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "Project",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "role",
+          "description": "The role of the user",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Tutorial",
+        "description": "A tutorial",
+        "fields": [{
+          "name": "body",
+          "description": "The body of the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "comments",
+          "description": "Associated comments",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "TutorialComment",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": "The description of the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The id of the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "image",
+          "description": "An image for the video",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "link",
+          "description": "The url of the video",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "slug",
+          "description": "The slug for the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "status",
+          "description": "The status of the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "title",
+          "description": "The title of the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user who created the tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "TutorialComment",
+        "description": "A comment on a tutorial",
+        "fields": [{
+          "name": "body",
+          "description": "The body of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "created_at",
+          "description": "The time the comment was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The ID of the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial",
+          "description": "The related tutorial",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Tutorial",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user who made the comment",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Feedback",
+        "description": "Feedback submitted by a user",
+        "fields": [{
+          "name": "description",
+          "description": "Description of the feedback",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": "The feedback id",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "url",
+          "description": "The url where the feedback came from",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": "The user that submitted the feedback",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "Mutation",
+        "description": null,
+        "fields": [{
+          "name": "CreateFeedback",
+          "description": "User submitted feedback for the site",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateFeedbackInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateFeedbackPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreateInquiry",
+          "description": "Create an inquiry",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateInquiryInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateInquiryPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreatePost",
+          "description": "Create a post",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreatePostInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreatePostPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreatePostComment",
+          "description": "Create a Post comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreatePostCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreatePostCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreateProject",
+          "description": "Create a project",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateProjectInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateProjectPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreateProjectComment",
+          "description": "Create a Project comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateProjectCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateProjectCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreateTutorial",
+          "description": "Create a tutorial",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateTutorialInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateTutorialPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "CreateTutorialComment",
+          "description": "Create a Tutorial comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CreateTutorialCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "CreateTutorialCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeletePost",
+          "description": "Edit a post",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeletePostInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeletePostPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeletePostComment",
+          "description": "Delete a Post comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeletePostCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeletePostCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeleteProject",
+          "description": "Delete a project",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeleteProjectInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeleteProjectPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeleteProjectComment",
+          "description": "Delete a Project comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeleteProjectCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeleteProjectCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeleteTutorial",
+          "description": "Delete a tutorial",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeleteTutorialInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeleteTutorialPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "DeleteTutorialComment",
+          "description": "Delete a tutorial comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "DeleteTutorialCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "DeleteTutorialCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditPost",
+          "description": "Edit a post",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditPostInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditPostPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditPostComment",
+          "description": "Edit a Post comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditPostCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditPostCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditProject",
+          "description": "Edit a project",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditProjectInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditProjectPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditProjectComment",
+          "description": "Edit a Project comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditProjectCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditProjectCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditTutorial",
+          "description": "Edit a tutorial",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditTutorialInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditTutorialPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "EditTutorialComment",
+          "description": "Edit a Tutorial comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EditTutorialCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "EditTutorialCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "RequestPasswordInstructions",
+          "description": "When a user requests that their password be reset, send them an email",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "RequestPasswordInstructionsInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "RequestPasswordInstructionsPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ResetPassword",
+          "description": "When a user returns to the password reset route with a token to reset password",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "ResetPasswordInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "ResetPasswordPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "SignIn",
+          "description": "Sign in a User",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "SignInInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "SignInPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "SignUp",
+          "description": "Sign up a User",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "SignUpInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "SignUpPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "UpdateProfile",
+          "description": "Update the user profile",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "UpdateProfileInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "UpdateProfilePayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "VotePostComment",
+          "description": "Run this when a user upvotes a comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "VotePostCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "VotePostCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "VoteProjectComment",
+          "description": "Run this when a user upvotes a comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "VoteProjectCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "VoteProjectCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "VoteTutorialComment",
+          "description": "Run this when a user upvotes a comment",
+          "args": [{
+            "name": "input",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "VoteTutorialCommentInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }],
+          "type": {
+            "kind": "OBJECT",
+            "name": "VoteTutorialCommentPayload",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "SignUpPayload",
+        "description": "Autogenerated return type of SignUp",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "AuthUser",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "SignUpInput",
+        "description": "Autogenerated input type of SignUp",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "user_signup",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "UserSignupInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "UserSignupInput",
+        "description": "The data the user enters on signup",
+        "fields": null,
+        "inputFields": [{
+          "name": "email",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "name",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "password",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "password_confirmation",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "bio",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "SignInPayload",
+        "description": "Autogenerated return type of SignIn",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "AuthUser",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "SignInInput",
+        "description": "Autogenerated input type of SignIn",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "email",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "password",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreatePostPayload",
+        "description": "Autogenerated return type of CreatePost",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Post",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreatePostInput",
+        "description": "Autogenerated input type of CreatePost",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "post",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "PostInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "PostInput",
+        "description": "The data the user enters when creating a post",
+        "fields": null,
+        "inputFields": [{
+          "name": "title",
+          "description": "The title of the post",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "body",
+          "description": "The body of the post",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "status",
+          "description": "The status for the post",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "feature_image",
+          "description": "The url for the feature image",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "tags",
+          "description": "Associated tags for the post",
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "TagInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "TagInput",
+        "description": "The tag input type",
+        "fields": null,
+        "inputFields": [{
+          "name": "title",
+          "description": "The title of the tag",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditPostPayload",
+        "description": "Autogenerated return type of EditPost",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Post",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditPostInput",
+        "description": "Autogenerated input type of EditPost",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "post",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "PostInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeletePostPayload",
+        "description": "Autogenerated return type of DeletePost",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeletePostInput",
+        "description": "Autogenerated input type of DeletePost",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateProjectPayload",
+        "description": "Autogenerated return type of CreateProject",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Project",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateProjectInput",
+        "description": "Autogenerated input type of CreateProject",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "project",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "ProjectInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "ProjectInput",
+        "description": "The user entered project input type",
+        "fields": null,
+        "inputFields": [{
+          "name": "title",
+          "description": "The title of the project",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "description",
+          "description": "The description of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "caption",
+          "description": "The caption of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "featureImage",
+          "description": "The featureImage of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "status",
+          "description": "The status for the project",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "projectUrl",
+          "description": "The projectUrl of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "repoUrl",
+          "description": "The repoUrl of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "milestones",
+          "description": "The milestones of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "designPatterns",
+          "description": "The designPatterns of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "technicalInformation",
+          "description": "The technicalInformation of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "technicalReview",
+          "description": "The technicalReview of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "reviewerName",
+          "description": "The reviewerName of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "category",
+          "description": "The category of the project",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "tags",
+          "description": "The associated tags for the project",
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "TagInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditProjectPayload",
+        "description": "Autogenerated return type of EditProject",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Project",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditProjectInput",
+        "description": "Autogenerated input type of EditProject",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "project",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "ProjectInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeleteProjectPayload",
+        "description": "Autogenerated return type of DeleteProject",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeleteProjectInput",
+        "description": "Autogenerated input type of DeleteProject",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateTutorialPayload",
+        "description": "Autogenerated return type of CreateTutorial",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Tutorial",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateTutorialInput",
+        "description": "Autogenerated input type of CreateTutorial",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "TutorialInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "TutorialInput",
+        "description": "A tutorial",
+        "fields": null,
+        "inputFields": [{
+          "name": "title",
+          "description": "The title of the tutorial",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "description",
+          "description": "The description of the tutorial",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "link",
+          "description": "The url of the video",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "image",
+          "description": "An image for the video",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "status",
+          "description": "The status of the tutorial",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "body",
+          "description": "The body of the tutorial",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditTutorialPayload",
+        "description": "Autogenerated return type of EditTutorial",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Tutorial",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditTutorialInput",
+        "description": "Autogenerated input type of EditTutorial",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "tutorial",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "TutorialInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeleteTutorialPayload",
+        "description": "Autogenerated return type of DeleteTutorial",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeleteTutorialInput",
+        "description": "Autogenerated input type of DeleteTutorial",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateInquiryPayload",
+        "description": "Autogenerated return type of CreateInquiry",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "id",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateInquiryInput",
+        "description": "Autogenerated input type of CreateInquiry",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "inquiry",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "InquiryInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "InquiryInput",
+        "description": "A contact inquiry",
+        "fields": null,
+        "inputFields": [{
+          "name": "name",
+          "description": "The name of the person",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "email",
+          "description": "The email of the person",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "message",
+          "description": "The message of the inquiry",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "category",
+          "description": "The category of the inquiry",
+          "type": {
+            "kind": "ENUM",
+            "name": "InquiryCategoryEnum",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateTutorialCommentPayload",
+        "description": "Autogenerated return type of CreateTutorialComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "TutorialComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateTutorialCommentInput",
+        "description": "Autogenerated input type of CreateTutorialComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "tutorial_id",
+          "description": "The tutorial id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CommentInput",
+        "description": "Generic comment input type",
+        "fields": null,
+        "inputFields": [{
+          "name": "body",
+          "description": "The body of the comment",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditTutorialCommentPayload",
+        "description": "Autogenerated return type of EditTutorialComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "tutorial_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "TutorialComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditTutorialCommentInput",
+        "description": "Autogenerated input type of EditTutorialComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeleteTutorialCommentPayload",
+        "description": "Autogenerated return type of DeleteTutorialComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": "The id of the comment that was deleted",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeleteTutorialCommentInput",
+        "description": "Autogenerated input type of DeleteTutorialComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "VoteTutorialCommentPayload",
+        "description": "Autogenerated return type of VoteTutorialComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The new total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "VoteTutorialCommentInput",
+        "description": "Autogenerated input type of VoteTutorialComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "tutorial_comment_id",
+          "description": "The ID of the tutorial comment",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreatePostCommentPayload",
+        "description": "Autogenerated return type of CreatePostComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "PostComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreatePostCommentInput",
+        "description": "Autogenerated input type of CreatePostComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The post comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "post_id",
+          "description": "The post id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditPostCommentPayload",
+        "description": "Autogenerated return type of EditPostComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "post_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "PostComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditPostCommentInput",
+        "description": "Autogenerated input type of EditPostComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The post comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeletePostCommentPayload",
+        "description": "Autogenerated return type of DeletePostComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": "The id of the comment that was deleted",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeletePostCommentInput",
+        "description": "Autogenerated input type of DeletePostComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "VotePostCommentPayload",
+        "description": "Autogenerated return type of VotePostComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The new total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "VotePostCommentInput",
+        "description": "Autogenerated input type of VotePostComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "post_comment_id",
+          "description": "The ID of the post comment",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateProjectCommentPayload",
+        "description": "Autogenerated return type of CreateProjectComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "ProjectComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateProjectCommentInput",
+        "description": "Autogenerated input type of CreateProjectComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The project comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "project_id",
+          "description": "The project id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "EditProjectCommentPayload",
+        "description": "Autogenerated return type of EditProjectComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "project_comment",
+          "description": "The comment that was created",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "ProjectComment",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "EditProjectCommentInput",
+        "description": "Autogenerated input type of EditProjectComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment",
+          "description": "The project comment",
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CommentInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "DeleteProjectCommentPayload",
+        "description": "Autogenerated return type of DeleteProjectComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deleted_id",
+          "description": "The id of the comment that was deleted",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "DeleteProjectCommentInput",
+        "description": "Autogenerated input type of DeleteProjectComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "comment_id",
+          "description": "The comment id",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "VoteProjectCommentPayload",
+        "description": "Autogenerated return type of VoteProjectComment",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "total_votes",
+          "description": "The new total number of votes",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "VoteProjectCommentInput",
+        "description": "Autogenerated input type of VoteProjectComment",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": "The user auth token",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "project_comment_id",
+          "description": "The ID of the project comment",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "UpdateProfilePayload",
+        "description": "Autogenerated return type of UpdateProfile",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "AuthUser",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "UpdateProfileInput",
+        "description": "Autogenerated input type of UpdateProfile",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "profile",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "ProfileInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "ProfileInput",
+        "description": "The user profile type",
+        "fields": null,
+        "inputFields": [{
+          "name": "name",
+          "description": "The name of the user",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "email",
+          "description": "The email of the user",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "bio",
+          "description": "The bio of the user",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "avatar",
+          "description": "The user avatar",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "public",
+          "description": "Whether the user is public or not",
+          "type": {
+            "kind": "SCALAR",
+            "name": "Boolean",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "SCALAR",
+        "name": "Boolean",
+        "description": "Represents `true` or `false` values.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "RequestPasswordInstructionsPayload",
+        "description": "Autogenerated return type of RequestPasswordInstructions",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "success",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "Boolean",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "RequestPasswordInstructionsInput",
+        "description": "Autogenerated input type of RequestPasswordInstructions",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "email",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "ResetPasswordPayload",
+        "description": "Autogenerated return type of ResetPassword",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "user",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "AuthUser",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "ResetPasswordInput",
+        "description": "Autogenerated input type of ResetPassword",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "password",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "password_confirmation",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "CreateFeedbackPayload",
+        "description": "Autogenerated return type of CreateFeedback",
+        "fields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "feedback",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "Feedback",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateFeedbackInput",
+        "description": "Autogenerated input type of CreateFeedback",
+        "fields": null,
+        "inputFields": [{
+          "name": "clientMutationId",
+          "description": "A unique identifier for the client performing the mutation.",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "feedback",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "FeedbackInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }, {
+          "name": "auth_token",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "INPUT_OBJECT",
+        "name": "FeedbackInput",
+        "description": "Feedback submitted by a user, input type",
+        "fields": null,
+        "inputFields": [{
+          "name": "description",
+          "description": "Description of the feedback",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }, {
+          "name": "url",
+          "description": "The url where the feedback came from",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__Schema",
+        "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+        "fields": [{
+          "name": "directives",
+          "description": "A list of all directives supported by this server.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Directive",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "mutationType",
+          "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "__Type",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "queryType",
+          "description": "The type that query operations will be rooted at.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "subscriptionType",
+          "description": "If this server support subscription, the type that subscription operations will be rooted at.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "__Type",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "types",
+          "description": "A list of all types supported by this server.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__Type",
+        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "fields": [{
+          "name": "description",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "enumValues",
+          "description": null,
+          "args": [{
+            "name": "includeDeprecated",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": "false"
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__EnumValue",
+                "ofType": null
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "fields",
+          "description": null,
+          "args": [{
+            "name": "includeDeprecated",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": "false"
+          }],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Field",
+                "ofType": null
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "inputFields",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__InputValue",
+                "ofType": null
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "interfaces",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "kind",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "ENUM",
+              "name": "__TypeKind",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ofType",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "OBJECT",
+            "name": "__Type",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "possibleTypes",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "ENUM",
+        "name": "__TypeKind",
+        "description": "An enum describing what kind of type a given `__Type` is.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [{
+          "name": "SCALAR",
+          "description": "Indicates this type is a scalar.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "OBJECT",
+          "description": "Indicates this type is an object. `fields` and `interfaces` are valid fields.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INTERFACE",
+          "description": "Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "UNION",
+          "description": "Indicates this type is a union. `possibleTypes` is a valid field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ENUM",
+          "description": "Indicates this type is an enum. `enumValues` is a valid field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INPUT_OBJECT",
+          "description": "Indicates this type is an input object. `inputFields` is a valid field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "LIST",
+          "description": "Indicates this type is a list. `ofType` is a valid field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "NON_NULL",
+          "description": "Indicates this type is a non-null. `ofType` is a valid field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__Field",
+        "description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+        "fields": [{
+          "name": "args",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__InputValue",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "deprecationReason",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "isDeprecated",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "type",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__InputValue",
+        "description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+        "fields": [{
+          "name": "defaultValue",
+          "description": "A GraphQL-formatted string representing the default value for this input value.",
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "type",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__EnumValue",
+        "description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+        "fields": [{
+          "name": "deprecationReason",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "isDeprecated",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "OBJECT",
+        "name": "__Directive",
+        "description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+        "fields": [{
+          "name": "args",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__InputValue",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "description",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "locations",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "__DirectiveLocation",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "name",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "onField",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "isDeprecated": true,
+          "deprecationReason": "Use `locations`."
+        }, {
+          "name": "onFragment",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "isDeprecated": true,
+          "deprecationReason": "Use `locations`."
+        }, {
+          "name": "onOperation",
+          "description": null,
+          "args": [
+
+          ],
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "isDeprecated": true,
+          "deprecationReason": "Use `locations`."
+        }],
+        "inputFields": null,
+        "interfaces": [
+
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      }, {
+        "kind": "ENUM",
+        "name": "__DirectiveLocation",
+        "description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [{
+          "name": "QUERY",
+          "description": "Location adjacent to a query operation.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "MUTATION",
+          "description": "Location adjacent to a mutation operation.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "SUBSCRIPTION",
+          "description": "Location adjacent to a subscription operation.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "FIELD",
+          "description": "Location adjacent to a field.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "FRAGMENT_DEFINITION",
+          "description": "Location adjacent to a fragment definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "FRAGMENT_SPREAD",
+          "description": "Location adjacent to a fragment spread.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INLINE_FRAGMENT",
+          "description": "Location adjacent to an inline fragment.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "SCHEMA",
+          "description": "Location adjacent to a schema definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "SCALAR",
+          "description": "Location adjacent to a scalar definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "OBJECT",
+          "description": "Location adjacent to an object type definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "FIELD_DEFINITION",
+          "description": "Location adjacent to a field definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ARGUMENT_DEFINITION",
+          "description": "Location adjacent to an argument definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INTERFACE",
+          "description": "Location adjacent to an interface definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "UNION",
+          "description": "Location adjacent to a union definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ENUM",
+          "description": "Location adjacent to an enum definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "ENUM_VALUE",
+          "description": "Location adjacent to an enum value definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INPUT_OBJECT",
+          "description": "Location adjacent to an input object type definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }, {
+          "name": "INPUT_FIELD_DEFINITION",
+          "description": "Location adjacent to an input object field definition.",
+          "isDeprecated": false,
+          "deprecationReason": null
+        }],
+        "possibleTypes": null
+      }],
+      "directives": [{
+        "name": "include",
+        "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [{
+          "name": "if",
+          "description": "Included when true.",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }]
+      }, {
+        "name": "skip",
+        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [{
+          "name": "if",
+          "description": "Skipped when true.",
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }]
+      }, {
+        "name": "deprecated",
+        "description": "Marks an element of a GraphQL schema as no longer supported.",
+        "locations": [
+          "FIELD_DEFINITION",
+          "ENUM_VALUE"
+        ],
+        "args": [{
+          "name": "reason",
+          "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted in [Markdown](https://daringfireball.net/projects/markdown/).",
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": "\"No longer supported\""
+        }]
+      }]
+    }
+  }
+}
