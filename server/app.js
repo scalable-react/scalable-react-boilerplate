@@ -7,9 +7,10 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { ApolloProvider } from 'react-apollo';
 import { getDataFromTree } from 'react-apollo/server';
+import { createNetworkInterface } from 'apollo-client';
 import store from '../app/src/store.js';
 import { routes } from '../app/src/routes.js';
-import { createNetworkInterface } from 'apollo-client';
+import { BASE_URL } from '../app/src/config';
 import Html from './utils/Html';
 import createApolloClient from './utils/create-apollo-client';
 import manifest from './public/manifest.json';
@@ -21,8 +22,7 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 // Need to set this to your api url
 const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
-const baseUrl = process.env.BASE_URL || `http://${IP}:${PORT}`;
-const apiUrl = `${baseUrl}graphql`;
+const apiUrl = `${BASE_URL}graphql`;
 
 app.use(morgan('combined'));
 app.use(express.static(__dirname + '/public'));
