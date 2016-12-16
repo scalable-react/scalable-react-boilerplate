@@ -4,6 +4,10 @@
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@types/async/-/async-2.0.32.tgz#bb7be943784ca63d0c7b1358ce598b5f3cebc059"
 
+"@types/chai@^3.4.32":
+  version "3.4.34"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-3.4.34.tgz#d5335792823bb09cddd5e38c3d211b709183854d"
+
 "@types/isomorphic-fetch@0.0.30":
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.30.tgz#a21717624cde9a48c2db53a4e500fc5c32a99bbc"
@@ -146,41 +150,26 @@ anymatch@^1.3.0:
     arrify "^1.0.0"
     micromatch "^2.1.5"
 
-apollo-client@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.5.1.tgz#d22e6da2886e12dc3f9d76a517c171a9a4ee930a"
+apollo-client:
+  version "0.5.20"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.5.20.tgz#2e9085ace68b8e7061ccb192be44dc0539f2c1a1"
   dependencies:
-    graphql-anywhere "^0.2.4"
-    graphql-tag "^0.1.13"
-    lodash.assign "^4.0.8"
-    lodash.clonedeep "^4.3.2"
-    lodash.countby "^4.4.0"
-    lodash.flatten "^4.2.0"
-    lodash.forown "^4.1.0"
-    lodash.has "^4.3.1"
-    lodash.identity "^3.0.0"
-    lodash.includes "^4.1.2"
-    lodash.isboolean "^3.0.3"
-    lodash.isequal "^4.2.0"
-    lodash.isnull "^3.0.0"
-    lodash.isnumber "^3.0.3"
-    lodash.isobject "^3.0.2"
-    lodash.isstring "^4.0.1"
-    lodash.isundefined "^3.0.1"
-    lodash.mapvalues "^4.4.0"
-    lodash.merge "^4.6.0"
-    lodash.pick "^4.2.0"
+    graphql-anywhere "^1.0.0"
+    graphql-tag "^1.1.1"
+    lodash "^4.17.2"
     redux "^3.3.1"
     symbol-observable "^1.0.2"
-    whatwg-fetch "^1.0.0"
+    whatwg-fetch "^2.0.0"
   optionalDependencies:
     "@types/async" "^2.0.31"
+    "@types/chai" "^3.4.32"
     "@types/isomorphic-fetch" "0.0.30"
     "@types/lodash" "^4.14.34"
     "@types/node" "^6.0.38"
     "@types/promises-a-plus" "0.0.26"
     "@types/redux" "^3.5.29"
     "@types/sinon" "^1.16.29"
+    typed-graphql "1.0.2"
 
 append-transform@^0.3.0:
   version "0.3.0"
@@ -3156,31 +3145,13 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-graphql-anywhere@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-0.2.4.tgz#700d5106dc7fbd39a08084d81a6f543475589774"
-  dependencies:
-    lodash.assign "^4.0.8"
-    lodash.clonedeep "^4.3.2"
-    lodash.countby "^4.4.0"
-    lodash.flatten "^4.2.0"
-    lodash.forown "^4.1.0"
-    lodash.has "^4.3.1"
-    lodash.identity "^3.0.0"
-    lodash.includes "^4.1.2"
-    lodash.isequal "^4.2.0"
-    lodash.isnull "^3.0.0"
-    lodash.isnumber "^3.0.3"
-    lodash.isobject "^3.0.2"
-    lodash.isstring "^4.0.1"
-    lodash.isundefined "^3.0.1"
-    lodash.mapvalues "^4.4.0"
-    lodash.merge "^4.6.0"
-    lodash.pick "^4.2.0"
+graphql-anywhere@^1.0.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-1.1.2.tgz#897d2868d35723ce7d8b4ead3455c285ea51a2d2"
 
-graphql-tag@^0.1.13:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-0.1.16.tgz#dc91350b19093b4771a013b55f32ee2290567c4e"
+graphql-tag@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.1.2.tgz#3e9951d5664e73c1aceee0329f0152bf3020fbb7"
 
 graphql@^0.5.0:
   version "0.5.0"
@@ -4628,7 +4599,7 @@ lodash.assign@^3.0.0, lodash.assign@^3.2.0:
     lodash._createassigner "^3.0.0"
     lodash.keys "^3.0.0"
 
-lodash.assign@^4.0.0, lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.0.8, lodash.assign@^4.1.0, lodash.assign@^4.2.0:
+lodash.assign@^4.0.0, lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.1.0, lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
 
@@ -4665,10 +4636,6 @@ lodash.compact@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash.compact/-/lodash.compact-3.0.1.tgz#540ce3837745975807471e16b4a2ba21e7256ca5"
 
-lodash.countby@^4.4.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.countby/-/lodash.countby-4.6.0.tgz#5351f24de16724a0059b561f920b0d80af78a33c"
-
 lodash.deburr@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-3.2.0.tgz#6da8f54334a366a7cf4c4c76ef8d80aa1b365ed5"
@@ -4704,25 +4671,9 @@ lodash.foreach@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
 
-lodash.forown@^4.1.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.forown/-/lodash.forown-4.4.0.tgz#85115cf04f73ef966eced52511d3893cc46683af"
-
 lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-
-lodash.has@^4.3.1:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
-
-lodash.identity@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.identity/-/lodash.identity-3.0.0.tgz#ad7bc6a4e647d79c972e1b80feef7af156267876"
-
-lodash.includes@^4.1.2:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lodash.includes/-/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
 
 lodash.indexof@^4.0.5:
   version "4.0.5"
@@ -4736,25 +4687,13 @@ lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
 
-lodash.isboolean@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lodash.isboolean/-/lodash.isboolean-3.0.3.tgz#6c2e171db2a257cd96802fd43b01b20d5f5870f6"
-
 lodash.isempty@^4.2.1, lodash.isempty@4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
 
-lodash.isequal@^4.1.1, lodash.isequal@^4.2.0:
+lodash.isequal@^4.1.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.4.0.tgz#6295768e98e14dc15ce8d362ef6340db82852031"
-
-lodash.isnull@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.isnull/-/lodash.isnull-3.0.0.tgz#fafbe59ea1dca27eed786534039dd84c2e07c56e"
-
-lodash.isnumber@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lodash.isnumber/-/lodash.isnumber-3.0.3.tgz#3ce76810c5928d03352301ac287317f11c0b1ffc"
 
 lodash.isobject@^3.0.2:
   version "3.0.2"
@@ -4767,10 +4706,6 @@ lodash.isplainobject@^4.0.4, lodash.isplainobject@^4.0.6:
 lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
-
-lodash.isundefined@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash.isundefined/-/lodash.isundefined-3.0.1.tgz#23ef3d9535565203a66cefd5b830f848911afb48"
 
 lodash.keys@^3.0.0:
   version "3.1.2"
@@ -4788,7 +4723,7 @@ lodash.mapvalues@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.mapvalues/-/lodash.mapvalues-4.6.0.tgz#1bafa5005de9dd6f4f26668c30ca37230cc9689c"
 
-lodash.merge@^4.4.0, lodash.merge@^4.6.0:
+lodash.merge@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
@@ -4796,7 +4731,7 @@ lodash.omitby@^4.5.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.omitby/-/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
 
-lodash.pick@^4.2.0, lodash.pick@^4.2.1, lodash.pick@^4.4.0:
+lodash.pick@^4.2.1, lodash.pick@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
 
@@ -4868,7 +4803,7 @@ lodash@^4.0.0, lodash@^4.12.0, lodash@^4.13.1, lodash@^4.16.2, lodash@^4.16.4, l
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
 
-lodash@^4.11.1:
+lodash@^4.11.1, lodash@^4.17.2:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
@@ -7531,6 +7466,10 @@ type-is@~1.6.13:
     media-typer "0.3.0"
     mime-types "~2.1.11"
 
+typed-graphql@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/typed-graphql/-/typed-graphql-1.0.2.tgz#4c0f788775d552df4d4ec3d73f25469252f40fb8"
+
 typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
@@ -7930,7 +7869,11 @@ whatwg-fetch@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-0.9.0.tgz#0e3684c6cb9995b43efc9df03e4c365d95fd9cc0"
 
-whatwg-fetch@^1.0.0, whatwg-fetch@>=0.10.0:
+whatwg-fetch@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.1.tgz#078b9461bbe91cea73cbce8bb122a05f9e92b772"
+
+whatwg-fetch@>=0.10.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
 
