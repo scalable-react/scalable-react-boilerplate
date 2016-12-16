@@ -18,8 +18,7 @@
       "production": {
         "plugins": [
           [
-            "babel-plugin-webpack-alias",
-            {
+            "babel-plugin-webpack-alias", {
               "config": "./webpack.config.prod.js"
             }
           ]
@@ -97,7 +96,6 @@
     "apollo-client": "^0.5.20",
     "components": "^0.1.0",
     "cross-env": "^2.0.0",
-    "eslint-plugin-graphql": "^0.4.0",
     "express": "^4.14.0",
     "foundation-sites": "^6.2.3",
     "functional-components": "0.0.5",
@@ -156,9 +154,10 @@
     "enzyme": "^2.4.1",
     "enzyme-to-json": "^1.0.3",
     "eslint": "^2.8.0",
-    "eslint-config-airbnb": "^4.0.0",
+    "eslint-config-airbnb": "latest",
     "eslint-loader": "^1.1.1",
-    "eslint-plugin-react": "^3.11.3",
+    "eslint-plugin-graphql": "^0.4.0",
+    "eslint-plugin-react": "latest",
     "expect": "^1.20.2",
     "expect-jsx": "^2.6.0",
     "extract-text-webpack-plugin": "^v2.0.0-beta.3",
