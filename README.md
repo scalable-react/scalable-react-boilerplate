@@ -304,3 +304,20 @@ The most often reason for an error is a mismatch in node and npm versions. In th
 Instructions for installing NVM and setting your node version for the project can be [found here](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
 
 If you get an error message, such as "Unexpected token import", that means that your Babel installation is not working right.  Please see [here](https://github.com/babel/babel/issues) for potential troubleshooting steps.
+
+## Dev Tools
+
+### Redux and Apollo Dev Tools
+Integrated in this project are two amazing dev tools, for Redux and for Apollo / GraphQL.
+
+#### Redux Dev Tools
+Please install the [Redux Dev Tools chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).  The dev tools extension is configured within the `/app/src/store.js` file and will automatically bootstrap to your store.
+
+![screen shot 2016-12-16 at 4 22 37 pm](https://cloud.githubusercontent.com/assets/13810084/21278966/e524b1b0-c3ab-11e6-9831-adc00bc6922e.png)
+![screen shot 2016-12-16 at 4 22 20 pm](https://cloud.githubusercontent.com/assets/13810084/21278967/e5277b70-c3ab-11e6-9469-a7ff212e57ca.png)
+
+#### Apollo Dev Tools
+If you are using Apollo and have a GraphQL server setup, you will be able to benefit from the Apollo Dev Tools.  For more information, read this [Medium article](https://dev-blog.apollodata.com/apollo-client-developer-tools-ff89181ebcf) and install the [chrome extension](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm) to start using the tools today.
+
+![screen shot 2016-12-16 at 4 16 19 pm](https://cloud.githubusercontent.com/assets/13810084/21278979/f39fda9e-c3ab-11e6-8a4f-3348d86b6fb8.png)
+![screen shot 2016-12-16 at 4 19 33 pm](https://cloud.githubusercontent.com/assets/13810084/21278980/f3a296b2-c3ab-11e6-9fa6-72a59a015956.png)
