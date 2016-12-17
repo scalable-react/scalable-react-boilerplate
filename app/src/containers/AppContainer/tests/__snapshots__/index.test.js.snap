@@ -5,6 +5,7 @@ exports[`<AppContainer /> should render with default props 1`] = `
       "appContainerDefaultAction": [Function],
     }
   }
+  isMobile={false}
   location={
     Object {
       "pathname": "/",

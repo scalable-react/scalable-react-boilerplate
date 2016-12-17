@@ -68,7 +68,7 @@ class LandingContainer extends Component {
           </Section>
         </Maybe>
         <Maybe predicate={!isLoading}>
-          <Box>
+          <Box full="horizontal">
             <Hero
               justify="center"
               align="center"

@@ -3,6 +3,7 @@ import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
+import { spy } from 'sinon';
 import { initialState as {{ camelCase name }} } from '../reducer';
 import {{ properCase name }}Container from '../index';
 
@@ -15,6 +16,6 @@ describe('<{{ properCase name }} />', () => {
     const wrapper = shallow(
       <{{ properCase name }}Container store={store} />
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot(); // eslint-disable-line
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

@@ -1,9 +1,14 @@
 exports[`<Contributor /> should render with default props 1`] = `
-<Heading
+<Box
   align="center"
+  announce={false}
+  direction="column"
+  focusable={true}
   justify="center"
+  pad="none"
+  responsive={true}
   size="large"
-  tag="h1">
+  tag="div">
   <undefined
     src="https://avatars.githubusercontent.com/u/13810084?v=3" />
   <Heading
@@ -25,5 +30,5 @@ exports[`<Contributor /> should render with default props 1`] = `
     tag="a">
     ryanccollins
   </Anchor>
-</Heading>
+</Box>
 `;
