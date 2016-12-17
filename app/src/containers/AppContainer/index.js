@@ -27,7 +27,7 @@ AppContainer.propTypes = {
 
 // mapStateToProps :: {State} -> {Props}
 const mapStateToProps = state => ({
-  // myProp: state.myProp,
+  isMobile: state.app.isMobile, // example / unused
 });
 
 // mapDispatchToProps :: Dispatch -> {Action}

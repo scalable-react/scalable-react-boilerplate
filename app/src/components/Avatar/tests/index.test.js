@@ -8,6 +8,6 @@ describe('<Avatar />', () => {
     const wrapper = shallow(
       <Avatar src="https://github.com/ryanccollins.png" />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot(); // eslint-disable-line
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

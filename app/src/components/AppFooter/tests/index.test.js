@@ -1,3 +1,4 @@
+/* global expect b:true */
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
@@ -8,6 +9,6 @@ describe('<AppFooter />', () => {
     const wrapper = shallow(
       <AppFooter />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot(); // eslint-disable-line
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

@@ -1,7 +1,7 @@
 import * as types from './constants';
 
 export const initialState = {
-  // Initial State goes here!
+  isMobile: false,
 };
 
 const appContainerReducer =

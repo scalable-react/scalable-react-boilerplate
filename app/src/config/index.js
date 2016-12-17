@@ -7,4 +7,6 @@ const URL_MAP = {
   production: PRODUCTION_API_URL,
 };
 
-export const BASE_URL = URL_MAP[environment];
+const BASE_URL = URL_MAP[environment];
+
+export default { BASE_URL };

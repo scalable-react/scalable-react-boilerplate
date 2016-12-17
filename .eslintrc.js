@@ -6,7 +6,7 @@ module.exports = {
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "jest": true
   },
   "rules": {
     "func-names": 0,

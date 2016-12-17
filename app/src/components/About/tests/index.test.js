@@ -19,6 +19,6 @@ describe('<About />', () => {
     const wrapper = shallow(
       <About links={links} />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot();  // eslint-disable-line
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

@@ -35,19 +35,19 @@ const WelcomeModal = ({
             label="Enter your name"
             htmlFor="nameInput"
           >
-          <input
-            {...nameInput}
-            required
-            autoFocus
-            placeholder="Ryan Collins"
-            id="nameInput"
-            autoComplete="on"
-            name="name"
-            type="text"
-            aria-invalid={nameInput.error}
-            aria-required
-            className="input"
-          />
+            <input
+              {...nameInput}
+              required
+              autoFocus
+              placeholder="Ryan Collins"
+              id="nameInput"
+              autoComplete="on"
+              name="name"
+              type="text"
+              aria-invalid={nameInput.error}
+              aria-required
+              className="input"
+            />
           </FormField>
         </FormFields>
       </Form>
@@ -60,7 +60,10 @@ const WelcomeModal = ({
 
 WelcomeModal.propTypes = {
   onClose: PropTypes.func.isRequired,
-  nameInput: PropTypes.object.isRequired,
+  nameInput: PropTypes.shape({
+    error: PropTypes.string,
+    value: PropTypes.string,
+  }),
   isVisible: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };

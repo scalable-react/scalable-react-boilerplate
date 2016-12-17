@@ -150,7 +150,14 @@ LandingContainer.propTypes = {
   isShowingModal: PropTypes.bool.isRequired,
   fields: PropTypes.object.isRequired, // eslint-disable-line
   name: PropTypes.string,
-  contributors: PropTypes.array.isRequired, // eslint-disable-line
+  contributors: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      github: PropTypes.string.isRequired,
+      bio: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 // mapStateToProps :: {State} -> {Props}
