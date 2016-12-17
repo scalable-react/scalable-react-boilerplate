@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Box from 'grommet-udacity/components/Box';
 import Paragraph from 'grommet-udacity/components/Paragraph';
 import Article from 'grommet-udacity/components/Article';
@@ -38,7 +38,7 @@ const About = ({
                 <Anchor href={link.url}>
                   {link.name}
                 </Anchor>
-              </ListItem>
+              </ListItem>,
             )}
           </List>
         </Box>
@@ -49,5 +49,14 @@ const About = ({
     </Article>
   </Box>
 );
+
+About.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }),
+  ),
+};
 
 export default About;
