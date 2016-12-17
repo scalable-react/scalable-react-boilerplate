@@ -1,16 +1,18 @@
 import React, { Component, PropTypes } from 'react';
+{{#if wantSCSSModules}}
+import cssModules from 'react-css-modules';
+{{/if}}
+{{#if wantGraphQL}}
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+{{/if}}
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as {{ properCase name }}ActionCreators from './actions';
 {{/if}}
 {{#if wantSCSSModules}}
-import cssModules from 'react-css-modules';
 import styles from './index.module.scss';
-{{/if}}
-{{#if wantGraphQL}}
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 {{/if}}
 {{#if wantSelectors}}
 import { select{{ properCase name }} } from './selectors';

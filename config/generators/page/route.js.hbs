@@ -3,7 +3,7 @@
       getComponent(location, callback) {
         System.import('./pages/{{ properCase name }}Page')  // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
-          .catch((err) => errorLoading(err));
+          .catch(err => errorLoading(err));
       },
     },
 $1

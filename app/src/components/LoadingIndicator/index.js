@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
-import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
 import Spinning from 'grommet-udacity/components/icons/Spinning';
 import Box from 'grommet-udacity/components/Box';
 import Heading from 'grommet-udacity/components/Heading';
+import styles from './index.module.scss';
 
 const LoadingIndicator = ({
   isLoading,

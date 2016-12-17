@@ -4,7 +4,7 @@ import { Router } from 'react-router';
 import { ApolloProvider } from 'react-apollo';
 import store, { history } from './store';
 import client from './apolloClient';
-import { AppContainer } from 'containers';
+import { AppContainer } from 'containers'; // eslint-disable-line
 
 /* eslint-disable */
 // Polyfill for the System.import
@@ -19,11 +19,11 @@ if (typeof System === 'undefined') {
 
 // Switching to system.import to make use of dynamic tree shaking
 // https://medium.com/modus-create-front-end-development/automatic-code-splitting-for-react-router-w-es6-imports-a0abdaa491e9#.msrxv8fwd
-const errorLoading = (err) =>
+const errorLoading = err =>
   console.error('Dynamic loading failed' + err); // eslint-disable-line
 
-const loadRoute = (cb) =>
-  (module) =>
+const loadRoute = cb =>
+  module =>
     cb(null, module.default);
 
 export const routes = {
@@ -33,7 +33,7 @@ export const routes = {
     getComponent(location, callback) {
       System.import('./pages/LandingPage') // eslint-disable-line block-scoped-var
         .then(loadRoute(callback))
-        .catch((err) => errorLoading(err));
+        .catch(err => errorLoading(err));
     },
   },
   childRoutes: [
@@ -42,7 +42,7 @@ export const routes = {
       getComponent(location, callback) {
         System.import('./pages/AboutPage') // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
-          .catch((err) => errorLoading(err));
+          .catch(err => errorLoading(err));
       },
     },
 /* GENERATOR: Newly generated Routes go here */
@@ -51,13 +51,13 @@ export const routes = {
       getComponent(location, callback) {
         System.import('./pages/NotFoundPage') // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
-          .catch((err) => errorLoading(err));
+          .catch(err => errorLoading(err));
       },
     },
   ],
 };
 
-const RouterApp = (props) => (
+const RouterApp = props => (
   <ApolloProvider {...props} store={store} client={client}>
     <Router
       history={history} // Scroll to top on route transitions

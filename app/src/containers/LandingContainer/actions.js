@@ -6,7 +6,7 @@ import {
 } from './constants';
 
 // loadDataInitiation :: None -> {Action}
-export const loadDataInitiation = (name) => ({
+export const loadDataInitiation = name => ({
   type: LOAD_DATA_INITIATION,
   name,
 });
@@ -25,13 +25,13 @@ export const openModal = () => ({
   type: OPEN_MODAL,
 });
 
-export const fakeSubmission = (name) => (dispatch) => {
+export const fakeSubmission = name => (dispatch) => {
   dispatch(
-    loadDataInitiation(name)
+    loadDataInitiation(name),
   );
   setTimeout(() => {
     dispatch(
-      loadDataSuccess()
+      loadDataSuccess(),
     );
   }, 4000);
 };

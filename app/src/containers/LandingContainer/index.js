@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as LandingActionCreators from './actions';
 import cssModules from 'react-css-modules';
-import styles from './index.module.scss';
 import Box from 'grommet-udacity/components/Box';
 import Section from 'grommet-udacity/components/Section';
 import Hero from 'grommet-udacity/components/Hero';
@@ -20,6 +18,8 @@ import {
 } from 'components';
 import { Maybe } from 'functional-components';
 import { reduxForm } from 'redux-form';
+import * as LandingActionCreators from './actions';
+import styles from './index.module.scss';
 
 export const formFields = [
   'nameInput',
@@ -77,6 +77,7 @@ class LandingContainer extends Component {
             >
               <Box align="center" justify="center" style={{ width: '100%' }} colorIndex="grey-1-a">
                 <img
+                  alt="udacity alumni"
                   className="img-responsive"
                   style={{ width: '300px' }}
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
@@ -124,7 +125,7 @@ class LandingContainer extends Component {
                 masonry
               >
                 {contributors.map((person, i) =>
-                  <Contributor key={i} person={person} />
+                  <Contributor key={i} person={person} />,
                 )}
               </Columns>
             </Section>
@@ -144,16 +145,16 @@ class LandingContainer extends Component {
 }
 
 LandingContainer.propTypes = {
-  actions: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired, // eslint-disable-line
   isLoading: PropTypes.bool.isRequired,
   isShowingModal: PropTypes.bool.isRequired,
-  fields: PropTypes.object.isRequired,
+  fields: PropTypes.object.isRequired, // eslint-disable-line
   name: PropTypes.string,
-  contributors: PropTypes.array.isRequired,
+  contributors: PropTypes.array.isRequired, // eslint-disable-line
 };
 
 // mapStateToProps :: {State} -> {Props}
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   isLoading: state.landing.isLoading,
   name: state.landing.name,
   isShowingModal: state.landing.isShowingModal,
@@ -161,10 +162,10 @@ const mapStateToProps = (state) => ({
 });
 
 // mapDispatchToProps :: Dispatch -> {Action}
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     LandingActionCreators,
-    dispatch
+    dispatch,
   ),
 });
 
@@ -177,5 +178,5 @@ const FormContainer = reduxForm({
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(FormContainer);

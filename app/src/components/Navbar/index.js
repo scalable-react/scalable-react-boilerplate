@@ -13,7 +13,7 @@ const Navbar = ({
     <Header justify="between">
       <Title>
         {typeof window !== 'undefined' ?
-          <StyledLogo src={LogoImage} alt="logo"/>
+          <StyledLogo src={LogoImage} alt="logo" />
         :
           <LogoPlaceholder />
         }

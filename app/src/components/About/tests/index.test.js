@@ -1,7 +1,7 @@
-import About from '../index';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
+import About from '../index';
 
 const links = [
   {
@@ -17,8 +17,8 @@ const links = [
 describe('<About />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <About links={links} />
+      <About links={links} />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();  // eslint-disable-line
   });
 });

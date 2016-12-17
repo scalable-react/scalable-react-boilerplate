@@ -1,5 +1,5 @@
-import * as types from './constants';
 import update from 'react-addons-update';
+import * as types from './constants';
 
 export const initialState = {
   isLoading: false,

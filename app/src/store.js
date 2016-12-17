@@ -2,12 +2,9 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore, routerActions, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
-import rootReducer from './reducers';
 import { UserAuthWrapper as userAuthWrapper } from 'redux-auth-wrapper';
+import rootReducer from './reducers';
 import client from './apolloClient';
-const isClient = typeof document !== 'undefined';
-const isDeveloping = process.env.NODE_ENV !== 'production';
-
 /* GENERATOR: Import all of your initial state */
 import { initialState as landing } from './containers/LandingContainer/reducer';
 import { initialState as app } from './containers/AppContainer/reducer';
@@ -24,8 +21,11 @@ const initialState = {
 const routingMiddleware = routerMiddleware(browserHistory);
 const middlewares = [thunk, routingMiddleware, client.middleware()];
 
+const isClient = typeof document !== 'undefined';
+const isDeveloping = process.env.NODE_ENV !== 'production';
+
 if (isDeveloping && isClient) {
-  const createLogger = require('redux-logger');
+  const createLogger = require('redux-logger'); // eslint-disable-line
   const loggerMiddleware = createLogger();
   middlewares.push(loggerMiddleware);
 }
@@ -43,7 +43,7 @@ if (isClient && isDeveloping) {
 
 const composedEnhancers = compose(
   applyMiddleware(...middlewares),
-  ...enhancers
+  ...enhancers,
 );
 
 /* Hopefully by now you understand what a store is and how redux uses them,

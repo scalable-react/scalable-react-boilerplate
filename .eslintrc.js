@@ -11,6 +11,7 @@ module.exports = {
   "rules": {
     "func-names": 0,
     "eol-last": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-bind": [ 2, {
       "ignoreRefs": false,
       "allowArrowFunctions": true,
@@ -23,6 +24,7 @@ module.exports = {
   },
   "plugins": [
     "react",
-    "graphql"
+    "graphql",
+    "jsx-a11y"
   ]
 }

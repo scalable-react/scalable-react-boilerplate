@@ -6,8 +6,8 @@ import Navbar from '../index';
 describe('<Navbar />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Navbar pathname="/" />
+      <Navbar pathname="/" />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot(); // eslint-disable-line
   });
 });

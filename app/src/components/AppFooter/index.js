@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './index.module.scss';
 import cssModules from 'react-css-modules';
 import Footer from 'grommet-udacity/components/Footer';
 import Box from 'grommet-udacity/components/Box';
 import Heading from 'grommet-udacity/components/Heading';
 import SocialShare from 'grommet-udacity/components/SocialShare';
 import Anchor from 'grommet-udacity/components/Anchor';
+import styles from './index.module.scss';
 
 const AppFooter = () => (
   <Footer pad="large" colorIndex="light-2">

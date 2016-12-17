@@ -1,9 +1,9 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
-import styles from './index.module.scss';
 {{#if wantContainer}}
 import { {{ properCase name }}Container } from 'containers';
 {{/if}}
+import styles from './index.module.scss';
 
 const {{ properCase name }}Page = () => (
   <div className={styles.container}>

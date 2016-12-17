@@ -1,7 +1,7 @@
-import Contributor from '../index';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
+import Contributor from '../index';
 
 const person = {
   name: 'Ryan Collins',
@@ -15,8 +15,8 @@ const person = {
 describe('<Contributor />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Contributor person={person} />
+      <Contributor person={person} />,
     );
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot(); // eslint-disable-line
   });
 });

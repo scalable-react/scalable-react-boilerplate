@@ -10,7 +10,7 @@ describe('Landing actions', () => {
       name,
     };
     expect(
-      actions.loadDataInitiation(name)
+      actions.loadDataInitiation(name),
     ).toEqual(expected);
   });
   it('has a type of LOAD_DATA_SUCCESS', () => {
@@ -18,7 +18,7 @@ describe('Landing actions', () => {
       type: types.LOAD_DATA_SUCCESS,
     };
     expect(
-      actions.loadDataSuccess()
+      actions.loadDataSuccess(),
     ).toEqual(expected);
   });
   it('has a type of CLOSE_MODAL', () => {
@@ -26,7 +26,7 @@ describe('Landing actions', () => {
       type: types.CLOSE_MODAL,
     };
     expect(
-      actions.closeModal()
+      actions.closeModal(),
     ).toEqual(expected);
   });
 });

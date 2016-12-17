@@ -5,7 +5,7 @@ import landingReducer, { initialState } from '../reducer';
 describe('landingReducer', () => {
   it('returns the initial state', () => {
     expect(
-      landingReducer(undefined, {})
+      landingReducer(undefined, {}),
     ).toEqual(initialState);
   });
   it('should handle reducer for CLOSE_MODAL', () => {
@@ -18,7 +18,7 @@ describe('landingReducer', () => {
     expect(
       landingReducer(stateBefore, {
         type: types.CLOSE_MODAL,
-      })
+      }),
     ).toEqual(stateAfter);
   });
   it('should handle reducer for LOAD_DATA_INITIATION', () => {
@@ -37,7 +37,7 @@ describe('landingReducer', () => {
       landingReducer(stateBefore, {
         type: types.LOAD_DATA_INITIATION,
         name,
-      })
+      }),
     ).toEqual(stateAfter);
   });
   it('should handle reducer for LOAD_DATA_SUCCESS', () => {
@@ -50,7 +50,7 @@ describe('landingReducer', () => {
     expect(
       landingReducer(stateBefore, {
         type: types.LOAD_DATA_SUCCESS,
-      })
+      }),
     ).toEqual(stateAfter);
   });
 });

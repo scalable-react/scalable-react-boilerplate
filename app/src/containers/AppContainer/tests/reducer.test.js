@@ -4,7 +4,7 @@ import appContainerReducer, { initialState } from '../reducer';
 describe('appContainerReducer', () => {
   it('returns the initial state', () => {
     expect(
-      appContainerReducer(undefined, {})
+      appContainerReducer(undefined, {}),
     ).toEqual(initialState);
   });
 });
