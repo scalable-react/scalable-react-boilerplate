@@ -92,6 +92,10 @@ Follow the onscreen instructions to create your app.
 
 ## Deployment
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-boilerplate">
+  <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
+</a>
+
 <a href="https://myrskyt.com/container/deploy/https://github.com/RyanCCollins/scalable-react-boilerplate"><img src="https://myrskyt.com/static/img/button.jpg" height="40" width="155"></a>
 
 A demo ExpressJS setup is included with the app.  The express server will serve up the production minified bundle.js, index.html and any other assets that are located in the `/server/public` folder.
