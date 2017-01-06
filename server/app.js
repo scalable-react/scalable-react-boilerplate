@@ -1,28 +1,21 @@
 /* eslint-disable */
 import express from 'express';
-import path from 'path';
 import morgan from 'morgan';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import { ApolloProvider } from 'react-apollo';
-import { getDataFromTree } from 'react-apollo/server';
-import { createNetworkInterface } from 'apollo-client';
-import store from '../app/src/store.js';
-import { routes } from '../app/src/routes.js';
-import { BASE_URL } from '../app/src/config';
-import Html from './utils/Html';
-import createApolloClient from './utils/create-apollo-client';
-import manifest from './public/manifest.json';
+import { Provider } from 'react-redux';
 import styleSheet from 'styled-components/lib/models/StyleSheet';
+import store from '../app/src/store';
+import { routes } from '../app/src/routes';
+import Html from './utils/Html';
+import manifest from './public/manifest.json';
 
 const app = express();
-const isDeveloping = process.env.NODE_ENV !== 'production';
 
 // Need to set this to your api url
 const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
-const apiUrl = `${BASE_URL}graphql`;
 
 app.use(morgan('combined'));
 app.use(express.static(__dirname + '/public'));
@@ -37,38 +30,27 @@ app.use((req, res) => {
         res.status(500);
       } else if (renderProps) {
         const styles = styleSheet.rules().map(rule => rule.cssText).join('\n');
-        const client = createApolloClient({
-          ssrMode: true,
-          networkInterface: createNetworkInterface({
-            uri: apiUrl,
-            credentials: 'same-origin',
-            headers: req.headers,
-          }),
-        });
-
         const component = (
-          <ApolloProvider client={client} store={store}>
+          <Provider store={store}>
             <RouterContext {...renderProps} />
-          </ApolloProvider>
+          </Provider>
         );
-        getDataFromTree(component).then((ctx) => {
-          const content = renderToString(component);
-          const html = (
-            <Html
-              content={content}
-              scriptHash={manifest["/main.js"]}
-              vendorHash={manifest["/vendor.js"]}
-              cssHash={manifest["/main.css"]}
-              styles={styles}
-              state={ctx.store.getState()}
-            />
-          );
-          res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
-        }).catch(e => console.error('RENDERING ERROR:', e)); // eslint-disable-line no-console
+        const content = renderToString(component);
+        const html = (
+          <Html
+            content={content}
+            scriptHash={manifest["/main.js"]}
+            vendorHash={manifest["/vendor.js"]}
+            cssHash={manifest["/main.css"]}
+            styles={styles}
+            state={store.getState()}
+          />
+        );
+        res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
       } else {
         res.status(404).send('Not found');
       }
-    })
+    });
 });
 
 app.listen(PORT, IP, (err) => {

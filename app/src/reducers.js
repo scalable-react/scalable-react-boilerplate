@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form';
-import client from './apolloClient';
 
 /* GENERATOR: Import all of your reducers */
 import landing from './containers/LandingContainer/reducer';
@@ -13,7 +12,6 @@ const rootReducer = combineReducers({
   landing,
   routing: routerReducer,
   form: formReducer,
-  apollo: client.reducer(),
 });
 
 export default rootReducer;

@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import { UserAuthWrapper as userAuthWrapper } from 'redux-auth-wrapper';
 import rootReducer from './reducers';
-import client from './apolloClient';
 /* GENERATOR: Import all of your initial state */
 import { initialState as landing } from './containers/LandingContainer/reducer';
 import { initialState as app } from './containers/AppContainer/reducer';
@@ -19,7 +18,7 @@ const initialState = {
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
 
 const routingMiddleware = routerMiddleware(browserHistory);
-const middlewares = [thunk, routingMiddleware, client.middleware()];
+const middlewares = [thunk, routingMiddleware];
 
 const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';

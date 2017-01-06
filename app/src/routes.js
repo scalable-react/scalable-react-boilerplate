@@ -1,9 +1,8 @@
 /* global System b:true */
 import React from 'react';
 import { Router } from 'react-router';
-import { ApolloProvider } from 'react-apollo';
+import { Provider } from 'react-redux';
 import store, { history } from './store';
-import client from './apolloClient';
 import { AppContainer } from 'containers'; // eslint-disable-line
 
 /* eslint-disable */
@@ -58,14 +57,14 @@ export const routes = {
 };
 
 const RouterApp = props => (
-  <ApolloProvider {...props} store={store} client={client}>
+  <Provider {...props} store={store}>
     <Router
       history={history} // Scroll to top on route transitions
       onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
     >
       {routes}
     </Router>
-  </ApolloProvider>
+  </Provider>
 );
 
 export default RouterApp;
