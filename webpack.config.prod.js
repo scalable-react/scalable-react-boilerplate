@@ -1,7 +1,6 @@
 /* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const autoprefixer = require('autoprefixer');
@@ -142,22 +141,6 @@ module.exports = {
       },
       safeToUseOptionalCaches: true,
       AppCache: false,
-    }),
-    new HtmlwebpackPlugin({
-      template: 'config/templates/_index.prod.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-      inject: true,
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
