@@ -83,7 +83,7 @@ class LandingContainer extends Component {
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
                 />
                 <Headline align="center" size="small">
-                  Scaling the Front End Feature First!
+                  Scaling the Front End Feature First!!
                 </Headline>
               </Box>
             </Hero>
@@ -107,7 +107,7 @@ class LandingContainer extends Component {
               </Heading>
               <Footer pad="large" align="center" jusify="center" direction="column">
                 <Heading align="center" tag="h2">
-                  Ready to get started?
+                  Ready to get started??
                 </Heading>
                 <Box align="center" justify="center" pad="medium">
                   <Button label="Go to About Page" href="/about" />

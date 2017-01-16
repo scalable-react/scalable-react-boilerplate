@@ -59,11 +59,9 @@ export const routes = {
 const RouterApp = props => (
   <Provider {...props} store={store}>
     <Router
-      history={history} // Scroll to top on route transitions
-      onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
-    >
-      {routes}
-    </Router>
+      history={history}
+      routes={routes}
+    />
   </Provider>
 );
 

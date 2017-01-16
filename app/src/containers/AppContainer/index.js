@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import App from 'grommet-udacity/components/App';
 import { Navbar, AppFooter } from 'components';
+import { AppContainer as ReactHotLoader } from 'react-hot-loader';
 import * as AppContainerActionCreators from './actions';
 
 class AppContainer extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -11,11 +12,13 @@ class AppContainer extends Component { // eslint-disable-line react/prefer-state
       location,
     } = this.props;
     return (
-      <App centered={false} inline>
-        <Navbar pathname={location.pathname} />
-        {React.cloneElement(this.props.children, this.props)}
-        <AppFooter />
-      </App>
+      <ReactHotLoader>
+        <App centered={false} inline>
+          <Navbar pathname={location.pathname} />
+          {React.cloneElement(this.props.children, this.props)}
+          <AppFooter />
+        </App>
+      </ReactHotLoader>
     );
   }
 }
