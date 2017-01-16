@@ -60,11 +60,9 @@ export const routes = {
 const RouterApp = props => (
   <ApolloProvider {...props} store={store} client={client}>
     <Router
-      history={history} // Scroll to top on route transitions
-      onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
-    >
-      {routes}
-    </Router>
+      history={history}
+      routes={routes}
+    />
   </ApolloProvider>
 );
 
