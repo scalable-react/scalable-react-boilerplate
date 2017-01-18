@@ -4,8 +4,11 @@
 [include]
 
 [libs]
-flow-typed
+config/flow-typed
 
 [options]
 suppress_comment=.*\\$FlowFixMe
 suppress_comment=.*\\$FlowInvalidInputTest
+module.name_mapper='\(react-redux\)' -> '<PROJECT_ROOT>/config/flow/GeneralStub.js'
+module.name_mapper='\(react\)' -> '<PROJECT_ROOT>/config/flow/GeneralStub.js'
+module.name_mapper='\(redux\)' -> '<PROJECT_ROOT>/config/flow/GeneralStub.js'
