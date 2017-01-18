@@ -52,6 +52,8 @@ The setup includes the ability to generate the boilerplate to create GraphQL / A
 
 Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
 
+If you do not need to use graphql, take a look at the [sans-apollo](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/sans-apollo) branch for a reference implementation without GraphQL / Apollo.  
+
 ### Flow
 Static types are all the rage in Front End JavaScript land right now.  
 
