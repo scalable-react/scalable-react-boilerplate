@@ -1,5 +1,5 @@
 // @flow
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Header from 'grommet-udacity/components/Header';
 import Title from 'grommet-udacity/components/Title';
 import Anchor from 'grommet-udacity/components/Anchor';
