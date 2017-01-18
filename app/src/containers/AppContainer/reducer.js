@@ -1,4 +1,4 @@
-import * as types from './constants';
+import types from './constants';
 
 export const initialState = {
   isMobile: false,
