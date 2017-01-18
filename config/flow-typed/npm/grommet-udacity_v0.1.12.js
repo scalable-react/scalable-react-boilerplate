@@ -25,7 +25,7 @@ declare module 'grommet-udacity/components/AccordionPanel' {
     a11yTitle?: string,
     active?: boolean,
     animate?: boolean,
-    heading?: ?ReactElementOrNode,
+    heading?: ReactNode,
     onChange?: Function,
     pad?: any
   }
@@ -67,7 +67,7 @@ declare module 'grommet-udacity/components/Anchor' {
     animateIcon?: boolean,
     disabled?: boolean,
     href?: string,
-    icon?: ?ReactElementOrNode,
+    icon?: ReactNode,
     id?: string,
     label?: string,
     method?: "push" | "replace",
@@ -114,8 +114,8 @@ declare module 'grommet-udacity/components/Button' {
     align?: "start" | "center" | "end",
     fill?: boolean,
     href?: string,
-    icon?: ?React$Element<any>,
-    label?: ?ReactElementOrNode,
+    icon?: React$Element<any>,
+    label?: ReactNode,
     method?: "push" | "replace",
     onClick?: Function,
     path?: string,
@@ -138,18 +138,18 @@ declare module 'grommet-udacity/components/Card' {
       horizontal?: GrommetBoxTypes$PadSizes,
       vertical?: GrommetBoxTypes$PadSizes
     },
-    description?: string | ?React$Element<any>,
-    heading?: string | ?React$Element<any>,
+    description?: string | React$Element<any>,
+    heading?: string | React$Element<any>,
     headingStrong?: boolean,
-    label?: string | ?React$Element<any>,
-    link?: ?React$Element<any>,
+    label?: string | React$Element<any>,
+    link?: React$Element<any>,
     textSize?: "xsmall" | "small" | "medium" | "large" | "xlarge",
-    thumbnail?: string | ?React$Element<any>,
+    thumbnail?: string | React$Element<any>,
     truncate?: boolean,
     video?: {
       source: string,
       type?: string
-    } | ?React$Element<any>
+    } | React$Element<any>
   } & Grommet$BoxProps<Card> & Grommet$BoxFull
 
   declare class Card extends React$Component {
@@ -187,7 +187,7 @@ declare module 'grommet-udacity/components/chart/Axis' {
     labels: Array<{
       colorIndex?: string,
       index: number,
-      label: ?ReactElementOrNode
+      label: ReactNode
     }>,
     reverse?: boolean,
     ticks?: boolean,
@@ -297,7 +297,7 @@ declare module 'grommet-udacity/components/chart/MarkerLabel' {
     colorIndex?: string,
     count?: number,
     index?: number,
-    label?: ?ReactElementOrNode,
+    label?: ReactNode,
     max?: number,
     min?: number,
     reverse?: boolean,
@@ -330,7 +330,7 @@ declare module 'grommet-udacity/components/CheckBox' {
   declare type Grommet$CheckBoxProps = {
     checked?: boolean,
     disabled?: boolean,
-    label?: ?ReactElementOrNode,
+    label?: ReactNode,
     name?: string,
     onChange?: Function,
     reverse?: boolean,
@@ -378,7 +378,7 @@ declare module 'grommet-udacity/components/Distribution' {
     a11yTitle?: string,
     full?: boolean,
     series?: Array<{
-      label?: ?ReactElementOrNode,
+      label?: ReactNode,
       value: number,
       colorIndex?: string,
       important?: boolean,
@@ -386,7 +386,7 @@ declare module 'grommet-udacity/components/Distribution' {
       icon?: {
         width?: number,
         height?: number,
-        svgElement?: ?ReactElementOrNode
+        svgElement?: ReactNode
       }
     }>,
     size?: "small" | "medium" | "large" | "full",
@@ -444,11 +444,11 @@ declare module 'grommet-udacity/components/FormattedMessage' {
 
 declare module 'grommet-udacity/components/FormField' {
   declare type Grommet$FormFieldProps = {
-    error?: ?ReactElementOrNode,
-    help?: ?ReactElementOrNode,
+    error?: ReactNode,
+    help?: ReactNode,
     hidden?: boolean,
     htmlFor?: string,
-    label?: ?ReactElementOrNode,
+    label?: ReactNode,
     size?: "medium" | "large",
     strong?: boolean
   }
@@ -460,7 +460,7 @@ declare module 'grommet-udacity/components/FormField' {
 
 declare module 'grommet-udacity/components/FormFields' {
   declare type Grommet$FormFieldsProps = {
-    children?: ?ReactElementOrNode,
+    children?: ReactNode,
     className?: string
   }
 
@@ -515,12 +515,12 @@ declare module 'grommet-udacity/components/Headline' {
 
 declare module 'grommet-udacity/components/Hero' {
   declare type Grommet$HeroProps = {
-    background?: ?React$Element<any>,
+    background?: React$Element<any>,
     backgroundColorIndex?: string,
     size?: "small" | "medium" | "large",
     backgroundImage?: string,
     backgroundPosition?: "left" | "center" | "right",
-    backgroundVideo?: ?React$Element<any>,
+    backgroundVideo?: React$Element<any>,
     colorIndex?: string,
     flush?: boolean,
     image?: string,
@@ -3252,7 +3252,7 @@ declare module 'grommet-udacity/components/Layer' {
       "bottom" |
       "left" |
       "right",
-    closer?: ?ReactElementOrNode | boolean,
+    closer?: ReactNode | boolean,
     flush?: boolean,
     hidden?: boolean,
     peek?: boolean,
@@ -3272,15 +3272,15 @@ declare module 'grommet-udacity/components/Legend' {
     onActive?: Function,
     series: Array<{
       label?: string,
-      value?: number | ?ReactElementOrNode,
-      units?: number | ?ReactElementOrNode | {
+      value?: number | ReactNode,
+      units?: number | ReactNode | {
         prefix?: string,
         suffix?: string
       },
       colorIndex?: number | string,
       onClick?: Function
     }>,
-    total?: boolean | ?ReactElementOrNode,
+    total?: boolean | ReactNode,
     units?: string | {
       prefix?: string,
       suffix?: string
@@ -3294,7 +3294,7 @@ declare module 'grommet-udacity/components/Legend' {
 
 declare module 'grommet-udacity/components/List' {
   declare type Grommet$ListProps = {
-    emptyIndicator?: ?ReactElementOrNode,
+    emptyIndicator?: ReactNode,
     onMore?: Function,
     onSelect?: Function,
     selectable?: boolean | "multiple",
@@ -3318,8 +3318,8 @@ declare module 'grommet-udacity/components/LoginForm' {
       rememberMe?: boolean
     },
     errors?: string[],
-    forgotPassword?: ?ReactElementOrNode,
-    logo?: ?ReactElementOrNode,
+    forgotPassword?: ReactNode,
+    logo?: ReactNode,
     onSubmit?: Function,
     onChange?: Function,
     rememberMe?: boolean,
@@ -3340,11 +3340,11 @@ declare module 'grommet-udacity/components/Map' {
     data: {
       categories: Array<{
         id?: string,
-        label?: ?ReactElementOrNode,
+        label?: ReactNode,
         items: Array<{
           id?: string,
           label?: string,
-          node?: ?ReactElementOrNode
+          node?: ReactNode
         }>
       }>,
       links: Array<{
@@ -3386,7 +3386,7 @@ declare module 'grommet-udacity/components/Menu' {
       right?: GrommetCustomTypes$HORIZONTAL_ALIGN_OPTIONS
     },
     dropColorIndex?: string,
-    icon?: ?ReactElementOrNode,
+    icon?: ReactNode,
     id?: string,
     inline?: boolean | "expand",
     fill?: boolean,
@@ -3407,7 +3407,7 @@ declare module 'grommet-udacity/components/Meter' {
     activeIndex?: number,
     a11yTitle?: string,
     colorIndex?: string,
-    label?: ?ReactElementOrNode,
+    label?: ReactNode,
     max?: number,
     min?: number,
     onActive?: Function,
@@ -3467,8 +3467,8 @@ declare module 'grommet-udacity/components/meter/utils' {
 
 declare module 'grommet-udacity/components/Notification' {
   declare type Grommet$NotificationProps = {
-    closer?: ?ReactElementOrNode | boolean,
-    context?: ?ReactElementOrNode,
+    closer?: ReactNode | boolean,
+    context?: ReactNode,
     message: string,
     onClose?: Function,
     percentComplete?: number,
@@ -3528,7 +3528,7 @@ declare module 'grommet-udacity/components/Quote' {
   declare type Grommet$QuoteProps = {
     borderColorIndex?: string,
     size?: "small" | "medium" | "large" | "full",
-    credit?: string | ?React$Element<any>,
+    credit?: string | React$Element<any>,
     emphasizeCredit?: boolean
   } & Grommet$BoxFull & Grommet$BoxProps<Quote>
   declare class Quote extends React$Component {
@@ -3543,7 +3543,7 @@ declare module 'grommet-udacity/components/RadioButton' {
     defaultChecked?: boolean,
     disabled?: boolean,
     id: string,
-    label: ?ReactElementOrNode,
+    label: ReactNode,
     name?: string,
     onChange?: Function,
     value?: string
@@ -3578,7 +3578,7 @@ declare module 'grommet-udacity/components/Search' {
     responsive?: boolean,
     size?: "small" | "medium" | "large",
     suggestions?: Array<{
-      label?: ?ReactElementOrNode,
+      label?: ReactNode,
       value?: any
     } | string>,
     value?: string
@@ -3645,7 +3645,7 @@ declare module 'grommet-udacity/components/Sidebar' {
 
 declare module 'grommet-udacity/components/SkipLinkAnchor' {
   declare type Grommet$SkipLinkAnchorProps = {
-    label: ?ReactElementOrNode
+    label: ReactNode
   }
   declare class SkipLinkAnchor extends React$Component {
     props: Grommet$SkipLinkAnchorProps;
@@ -3699,7 +3699,7 @@ declare module 'grommet-udacity/components/SunBurst' {
       total?: number,
       value: number
     }>,
-    label?: ?ReactElementOrNode,
+    label?: ReactNode,
     onActive?: Function,
     onClick?: Function,
     size?: "small" | "medium" | "large" | "xlarge" | "full"
@@ -3754,7 +3754,7 @@ declare module 'grommet-udacity/components/Table' {
 
 declare module 'grommet-udacity/components/TableHeader' {
   declare type Grommet$TableHeaderProps = {
-    labels: ?ReactElementOrNode[],
+    labels: ReactNode[],
     onSort?: Function,
     sortAscending?: boolean,
     sortIndex?: number
@@ -3798,7 +3798,7 @@ declare module 'grommet-udacity/components/TextInput' {
     onSelect?: Function,
     placeHolder?: string,
     suggestions?: Array<string | {
-      label?: ?ReactElementOrNode,
+      label?: ReactNode,
       value?: any
     }>,
     value?: string
@@ -3908,13 +3908,13 @@ declare module 'grommet-udacity/components/Value' {
     align?: "start" | "center" | "end",
     announce?: boolean,
     colorIndex?: string,
-    icon?: ?ReactElementOrNode,
-    label?: string | ?ReactElementOrNode,
+    icon?: ReactNode,
+    label?: string | ReactNode,
     onClick?: Function,
     size?: "xsmall" | "small" | "medium" | "large" | "xlarge",
-    trendIcon?: ?ReactElementOrNode,
-    value?: ?ReactElementOrNode | number | string,
-    units?: ?ReactElementOrNode | string
+    trendIcon?: ReactNode,
+    value?: ReactNode | number | string,
+    units?: ReactNode | string
   }
   declare class Value extends React$Component {
     props: Grommet$ValueProps;
@@ -3947,7 +3947,7 @@ declare module 'grommet-udacity/components/Video' {
       label?: string,
       time?: number
     }>,
-    title?: ?ReactElementOrNode
+    title?: ReactNode
   }
   declare class Video extends React$Component {
     props: Grommet$VideoProps;
@@ -5834,7 +5834,7 @@ declare type Grommet$Icons$GenericProps = {
   responsive?: boolean
 }
 
-declare type ReactElementOrNode = HTMLElement | React$Element<any>;
+declare type ReactNode = ReactNode | React$Element<any>;
 
 declare type Grommet$BoxProps<T> = {
   a11yTitle?: string | any,
@@ -5872,7 +5872,7 @@ declare type Grommet$BoxProps<T> = {
   separator?: "top" | "bottom" | "left" | "right" | "horizontal" | "vertical" | "all" | "none",
   tag?: string,
   textAlign?: "left" | "center" | "right",
-  texture?: ?ReactElementOrNode | string,
+  texture?: ReactNode | string,
   wrap?: boolean,
   onFocus?: Function
 }
@@ -5881,7 +5881,6 @@ declare type Grommet$BoxFull = {
   full?: "horizontal" | "vertical" | boolean,
 }
 
-declare type Grommet$BoxSizingStringTypes = 'auto' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'full';
 declare type Grommet$BoxSizing = {
   size?: {
     height?: GrommetBoxTypes$Size | {
@@ -5892,5 +5891,5 @@ declare type Grommet$BoxSizing = {
       max?: GrommetBoxTypes$FixedSizes,
       min?: GrommetBoxTypes$FixedSizes
     }
-  } | Grommet$BoxSizingStringTypes
+  }
 }
