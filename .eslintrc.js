@@ -8,6 +8,13 @@ module.exports = {
     "node": true,
     "jest": true
   },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.babel.js"
+      }
+    }
+  },
   "rules": {
     "func-names": 0,
     "eol-last": 0,
