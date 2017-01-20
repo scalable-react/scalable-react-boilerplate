@@ -43,10 +43,27 @@ Below are a few example apps that have been built with this project
 
 __NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
 
+## Performance
+This framework takes performance to the extreme and includes a whole slew of performance optimizations out of the box. We have benchmarked the initial time to first byte at under 20ms!
+1. Webpack code chunking
+2. Lazy React Router Route Loading
+3. Serverside Rendering
+4. Reselect
+Memoization and React.PureComponent
+
+5. GraphQL
+GraphQL increases performance by eliminating expensive over-fetching
+
+6. Service Worker / Offline First
+The only requirement to go offline first is using SSL.
+
+7. Immutable JS
+Immutable JS is installed by default, but not used in the example application.  By combining React.PureComponent, reselect and immutable.js, you will get some serious rendering performance enhancements.
+
 ## Experimental Features
 
 ### GraphQL / Apollo Features
-This boilerplate includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
+This framework includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
 
 The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
 
