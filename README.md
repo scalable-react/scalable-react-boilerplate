@@ -45,9 +45,13 @@ __NOTE: if you are using this boilerplate in production, we want to know!  Leave
 
 ## Performance
 This framework takes performance to the extreme and includes a whole slew of performance optimizations out of the box. We have benchmarked the initial time to first byte at under 20ms!
+
 1. Webpack code chunking
+
 2. Lazy React Router Route Loading
+
 3. Serverside Rendering
+
 4. Reselect
 Memoization and React.PureComponent
 
