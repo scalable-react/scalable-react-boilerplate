@@ -43,8 +43,32 @@ Below are a few example apps that have been built with this project
 
 __NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
 
-## Performance
-This framework takes performance to the extreme and includes a whole slew of performance optimizations out of the box. We have benchmarked the initial time to first byte at under 20ms!
+# Main Features
+### Styled Components
+This framework employs both css-modules and styled-components.  We feel that [styled-components](styled-components.com) is the best css-in-js library available.
+
+### GraphQL / Apollo
+This framework includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
+
+The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
+
+Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
+
+If you do not need to use graphql, take a look at the [sans-apollo](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/sans-apollo) branch for a reference implementation without GraphQL / Apollo.  
+
+## Experimental Features
+
+### Flow
+Static types are all the rage in Front End JavaScript land right now.  
+
+We feel that the use of Static types is paramount in the evolution of JavaScript and as such have integrated the Flow static type-checking library. 
+
+The nice thing about Flow is that you can gradually introduce it into your app, much like we have done with the example code of this boilerplate.  You can see a couple of examples of Flow in use in the project in the components directory. If this is not a feature you desire, then do not add the `// @flow` comment in any files.
+
+We have provided library definitions within the [`config/flow-typed`](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/config/flow-typed) folder and have also provided some useful configuration within the `.flowconfig` file.
+
+## Performance Optimizations
+This framework takes performance very seriously and includes a whole slew of performance optimizations out of the box. We have benchmarked the initial time to first byte at under 20ms!  Below is a brief enumeration of the main performance optimizations we employ by default.
 
 1. Webpack code chunking
 
@@ -63,26 +87,6 @@ This framework takes performance to the extreme and includes a whole slew of per
 
 7. Immutable JS
   - Immutable JS is installed by default, but not used in the example application.  By combining React.PureComponent, reselect and immutable.js, you will get some serious rendering performance enhancements.
-
-## Experimental Features
-
-### GraphQL / Apollo Features
-This framework includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
-
-The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
-
-Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
-
-If you do not need to use graphql, take a look at the [sans-apollo](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/sans-apollo) branch for a reference implementation without GraphQL / Apollo.  
-
-### Flow
-Static types are all the rage in Front End JavaScript land right now.  
-
-We feel that the use of Static types is paramount in the evolution of JavaScript and as such have integrated the Flow static type-checking library. 
-
-The nice thing about Flow is that you can gradually introduce it into your app, much like we have done with the example code of this boilerplate.  You can see a couple of examples of Flow in use in the project in the components directory. If this is not a feature you desire, then do not add the `// @flow` comment in any files.
-
-We have provided library definitions within the [`config/flow-typed`](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/config/flow-typed) folder and have also provided some useful configuration within the `.flowconfig` file.
 
 # Documentation
 
@@ -276,7 +280,6 @@ npm run test
 ```
 
 which will pick up any file with the .test.js postfix and run it through Jest.
-
 
 ## Technologies / Libraries
 
