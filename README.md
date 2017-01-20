@@ -53,20 +53,16 @@ This framework takes performance to the extreme and includes a whole slew of per
 3. Serverside Rendering
 
 4. Reselect
-
-- Memoization and React.PureComponent
+  - Memoization and React.PureComponent
 
 5. GraphQL
-
-- GraphQL increases performance by eliminating expensive over-fetching
+  - GraphQL increases performance by eliminating expensive over-fetching
 
 6. Service Worker / Offline First
-
-- The only requirement to go offline first is using SSL.
+  - The only requirement to go offline first is using SSL.
 
 7. Immutable JS
-
-- Immutable JS is installed by default, but not used in the example application.  By combining React.PureComponent, reselect and immutable.js, you will get some serious rendering performance enhancements.
+  - Immutable JS is installed by default, but not used in the example application.  By combining React.PureComponent, reselect and immutable.js, you will get some serious rendering performance enhancements.
 
 ## Experimental Features
 
