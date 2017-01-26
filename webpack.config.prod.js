@@ -50,19 +50,17 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.inline\.scss$/,
-        loader: 'isomorphic-style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
-      },
-      {
         test: /\.module\.scss$/,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
+          loader: 'css-loader?modules&importLoaders' +
+            '=1&localIdentName=[path]___[name]__[local]' +
+            '___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
         }),
       },
       {
         test: /\.scss$/,
-        exclude: [/\.inline\.scss$/, /\.module\.scss$/],
+        exclude: [/\.module\.scss$/],
         loader: ExtractTextPlugin.extract({
             fallbackLoader: 'style-loader',
             loader: '!css-loader!postcss-loader!sass-loader'
