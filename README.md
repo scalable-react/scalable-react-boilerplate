@@ -111,6 +111,11 @@ There are two options for installation:
     With Yarn installed globally, run
     `npm run setup:yarn`
 
+4. **Create environment file**
+    In order for the server and client to know which urls to connect to, we ask that you make a `.env` file.  We've included a `.env.example` file that you can rename to get started with the default values.
+    
+    `cp .env.example .env`
+
 3. **Run development server**
 
    `npm run start`
