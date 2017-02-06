@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.1.0
+- Remove dependency to Grommet Udacity and replace with Grommet
+- Update test suite and linting to deal with recent issues with both
+- Update generators to use flowtypes, functions vs const, et. al.
+
 ## 1.0.6
 - Flow static type-checking
 
