@@ -13,7 +13,7 @@ export default function Navbar(props: {
   const { pathname } = props;
   return (
     <div>
-      <Header justify="between" colorIndex="neutral">
+      <Header justify="between">
         <Title>
           {typeof window !== 'undefined' ?
             <StyledLogo src={LogoImage} alt="logo" />

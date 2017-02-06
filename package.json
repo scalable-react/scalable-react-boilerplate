@@ -79,7 +79,7 @@
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",
     "setup:yarn": "yarn",
-    "serve:bundle": "cross-env NODE_ENV=production PORT=1337 node server.js",
+    "serve:bundle": "cross-env NODE_ENV=production node server.js",
     "postinstall": "npm run deploy"
   },
   "repository": {
