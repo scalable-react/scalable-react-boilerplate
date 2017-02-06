@@ -11,6 +11,10 @@
 <div className="my-style" />
 */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   overflow-x: hidden;
 }

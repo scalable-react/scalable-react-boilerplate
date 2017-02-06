@@ -124,8 +124,8 @@ class LandingContainer extends Component {
                 justify="center"
                 masonry
               >
-                {contributors.map((person, i) =>
-                  <Contributor key={i} person={person} />,
+                {contributors.map(person =>
+                  <Contributor key={person.name} person={person} />,
                 )}
               </Columns>
             </Section>
@@ -149,7 +149,7 @@ LandingContainer.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   isShowingModal: PropTypes.bool.isRequired,
   fields: PropTypes.object.isRequired, // eslint-disable-line
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   contributors: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -157,7 +157,7 @@ LandingContainer.propTypes = {
       bio: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 // mapStateToProps :: {State} -> {Props}

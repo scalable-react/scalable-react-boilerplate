@@ -1,5 +1,5 @@
 /* @flow */
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Avatar } from 'components';
 import cssModules from 'react-css-modules';
 import Heading from 'grommet/components/Heading';
@@ -30,7 +30,7 @@ function Contributor(props: {
         {person.name}
       </Heading>
       <Paragraph>
-        {`${person.bio.slice(0, 300)}`}
+        {person.bio.slice(0, 300)}
       </Paragraph>
       <Anchor
         icon={<SocialGithubIcon />}
@@ -40,7 +40,7 @@ function Contributor(props: {
         {person.github}
       </Anchor>
     </Box>
-  )
-};
+  );
+}
 
 export default cssModules(Contributor, styles);

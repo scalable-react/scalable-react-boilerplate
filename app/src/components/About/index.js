@@ -1,5 +1,5 @@
 // @flow
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Box from 'grommet/components/Box';
 import Paragraph from 'grommet/components/Paragraph';
 import Article from 'grommet/components/Article';
@@ -20,7 +20,6 @@ type AboutLink = {
 export default function About(props: {
   links: AboutLink[],
 }) {
-  const { links } = props;
   return (
     <Box align="center">
       <Article align="center" className="panel" pad="large">
@@ -41,8 +40,8 @@ export default function About(props: {
           </Heading>
           <Box align="center" pad="medium">
             <List>
-              {links && links.map((link, i) =>
-                <ListItem key={i}>
+              {props.links && props.links.map(link =>
+                <ListItem key={link.url}>
                   <Anchor href={link.url}>
                     {link.name}
                   </Anchor>
@@ -57,4 +56,4 @@ export default function About(props: {
       </Article>
     </Box>
   );
-};
+}

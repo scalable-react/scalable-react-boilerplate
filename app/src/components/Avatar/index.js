@@ -1,11 +1,12 @@
 // @flow
-import React, { PropTypes } from 'react';
+import React from 'react';
 import cssModules from 'react-css-modules';
 import styles from './index.module.scss';
+
 const defaultAvatarUrl = 'https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/no-user.png?raw=true';
 
 function Avatar(props: {
-  src?: ?string,
+  src: ?string,
 }) {
   const { src } = props;
   const imageSrc = src || defaultAvatarUrl;
@@ -15,7 +16,7 @@ function Avatar(props: {
       src={imageSrc}
       className={styles.avatar}
     />
-  )
-};
+  );
+}
 
 export default cssModules(Avatar, styles);
