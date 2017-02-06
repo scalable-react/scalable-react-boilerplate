@@ -1,4 +1,3 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
@@ -14,7 +13,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:1337',
     'webpack/hot/only-dev-server',
-    path.resolve(ROOT_PATH, 'app/src/index'),
+    path.resolve(ROOT_PATH, './app/src'),
   ],
   output: {
     path: path.resolve(ROOT_PATH, 'app/build'),
@@ -87,8 +86,7 @@ module.exports = {
       components: path.resolve(ROOT_PATH, 'app/src/components'),
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
-      fragments: path.resolve(ROOT_PATH, 'app/src/fragments'),
-      config: path.resolve(ROOT_PATH, 'app/src/config'),
+      utils: path.resolve(ROOT_PATH, 'app/src/utils')
     },
   },
   postcss: function () {

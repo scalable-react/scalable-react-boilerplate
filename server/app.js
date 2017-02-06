@@ -1,31 +1,33 @@
-/* eslint-disable */
+/* eslint-disable no-console */
 import express from 'express';
 import path from 'path';
 import morgan from 'morgan';
 import React from 'react';
+import env from 'node-env-file';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { ApolloProvider } from 'react-apollo';
 import { getDataFromTree } from 'react-apollo/server';
 import { createNetworkInterface } from 'apollo-client';
-import store from '../app/src/store.js';
-import { routes } from '../app/src/routes.js';
-import { BASE_URL } from '../app/src/config';
-import Html from './utils/Html';
-import createApolloClient from './utils/create-apollo-client';
-import manifest from './public/manifest.json';
 import styleSheet from 'styled-components/lib/models/StyleSheet';
+import store from '../app/src/store';
+import { routes } from '../app/src/routes';
+import Html from './utils/Html';
+import createApolloClient from './utils/createApolloClient';
+import manifest from './public/manifest.json';
+
+env(path.join(__dirname, '..', '.env'));
 
 const app = express();
-const isDeveloping = process.env.NODE_ENV !== 'production';
+const serverUrl = process.env.BASE_URL || 'http://localhost:1337';
+const apiUrl = process.env.API_URL || 'http://localhost:3000';
+const PORT = serverUrl.match(/\d+/g)[0];
+const IP = serverUrl.match(/\w+/g)[1];
+const graphqlUrl = `${apiUrl}graphql`;
+const debug = process.env.DEBUG === 'true';
 
-// Need to set this to your api url
-const IP = process.env.IP || '0.0.0.0';
-const PORT = process.env.PORT || 1337;
-const apiUrl = `${BASE_URL}graphql`;
-
-app.use(morgan('combined'));
-app.use(express.static(__dirname + '/public'));
+if (debug) { app.use(morgan('combined')); }
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use((req, res) => {
   match({ routes, location: req.url },
@@ -40,7 +42,7 @@ app.use((req, res) => {
         const client = createApolloClient({
           ssrMode: true,
           networkInterface: createNetworkInterface({
-            uri: apiUrl,
+            uri: graphqlUrl,
             credentials: 'same-origin',
             headers: req.headers,
           }),
@@ -56,19 +58,19 @@ app.use((req, res) => {
           const html = (
             <Html
               content={content}
-              scriptHash={manifest["/main.js"]}
-              vendorHash={manifest["/vendor.js"]}
-              cssHash={manifest["/main.css"]}
+              scriptHash={manifest['/main.js']}
+              vendorHash={manifest['/vendor.js']}
+              cssHash={manifest['/main.css']}
               styles={styles}
               state={ctx.store.getState()}
             />
           );
           res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
-        }).catch(e => console.error('RENDERING ERROR:', e)); // eslint-disable-line no-console
+        }).catch(e => console.error('RENDERING ERROR:', e));
       } else {
         res.status(404).send('Not found');
       }
-    })
+    });
 });
 
 app.listen(PORT, IP, (err) => {
@@ -77,4 +79,3 @@ app.listen(PORT, IP, (err) => {
   }
   return console.info(`==> 😎 Listening on port ${PORT}. Open http://${IP}:${PORT} in your browser.`);
 });
-/* eslint-enable */

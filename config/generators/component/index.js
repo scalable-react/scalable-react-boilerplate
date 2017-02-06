@@ -26,7 +26,7 @@ module.exports = {
     {
       type: 'confirm',
       name: 'wantSCSSModules',
-      default: true,
+      default: false,
       message: 'Should the component use SCSS Modules?',
     },
     {
@@ -37,9 +37,31 @@ module.exports = {
     },
     {
       type: 'confirm',
-      name: 'wantPropTypes',
+      name: 'wantFlowTypes',
       default: true,
+      message: 'Should the component have FlowTypes?',
+    },
+    {
+      type: 'confirm',
+      name: 'wantPropTypes',
+      default: false,
       message: 'Should the component have PropTypes?',
+    },
+    {
+      type: 'checkbox',
+      name: 'imports',
+      message: 'Would you like to import any commonly used grommet components?',
+      choices: () => [
+        { name: 'Anchor', value: 'Anchor', checked: false },
+        { name: 'Article', value: 'Article', checked: false },
+        { name: 'Button', value: 'Button', checked: false },
+        { name: 'Card', value: 'Card', checked: false },
+        { name: 'Heading', value: 'Heading', checked: false },
+        { name: 'Header', value: 'Header', checked: false },
+        { name: 'Footer', value: 'Footer', checked: false },
+        { name: 'Paragraph', value: 'Paragraph', checked: false },
+        { name: 'Section', value: 'Section', checked: false },
+      ],
     },
   ],
   actions: (data) => {

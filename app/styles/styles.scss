@@ -1,5 +1,5 @@
 // Included if you are using grommet.  Otherwise, just erase this next line.
-@import 'grommet-udacity/scss/udacity/index';
+@import 'grommet/scss/grommet-core/index';
 
 // Add globally used utility styles here.
 // Or import scss libraries that are to be used without CSS modules.
@@ -10,6 +10,10 @@
 }
 <div className="my-style" />
 */
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   overflow-x: hidden;

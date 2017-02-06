@@ -1,17 +1,70 @@
-import * as types from './constants';
+{{#if wantFlowTypes}}
+/* @flow */
+{{/if}}
+import * as T from './constants';
+{{#if wantFlowTypes}}
+import type { {{ properCase name }}State, {{ properCase name }}Action } from './flowTypes';
+
+export const initialState: {{ properCase name }}State = {
+  isLoading: false,
+  error: null,
+};
+
+const {{ camelCase name }}Reducer = (
+  state: {{ properCase name }}State = initialState,
+  action: {{ properCase name }}Action,
+): {{ properCase name }}State => {
+  switch (action.type) {
+    case T.LOAD_DATA_INITIATION:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case T.LOAD_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+      };
+    case T.LOAD_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.error,
+      };
+    default:
+      return state;
+  }
+};
+{{else}}
 
 export const initialState = {
-  // Initial State goes here!
+  isLoading: false,
+  error: null,
 };
 
 const {{ camelCase name }}Reducer =
   (state = initialState, action) => {
     switch (action.type) {
-      case types.DEFAULT_ACTION:
-        return state;
+      case T.LOAD_DATA_INITIATION:
+        return {
+          ...state,
+          isLoading: true,
+        };
+      case T.LOAD_DATA_SUCCESS:
+        return {
+          ...state,
+          isLoading: false,
+        };
+      case T.LOAD_DATA_FAILURE:
+        return {
+          ...state,
+          isLoading: false,
+          error: action.error,
+        };
       default:
         return state;
     }
   };
+{{/if}}
 
 export default {{ camelCase name }}Reducer;

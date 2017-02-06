@@ -32,14 +32,25 @@
       "test": {
         "plugins": [
           [
+            "transform-async-to-generator"
+          ],
+          [
             "transform-es2015-modules-commonjs"
+          ],
+          [
+            "babel-plugin-webpack-alias",
+            {
+              "config": "./webpack.config.js"
+            }
           ]
         ]
       }
     }
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/config/testing/preprocessor.js",
+    "transform": {
+      ".*": "<rootDir>/config/testing/preprocessor.js"
+    },
     "moduleFileExtensions": [
       "js",
       "jsx",
@@ -50,9 +61,6 @@
       "bower_components",
       "shared"
     ]
-  },
-  "jest-webpack-alias": {
-    "configFile": "./webpack.config.babel.js"
   },
   "scripts": {
     "t": "npm run test",
@@ -71,7 +79,7 @@
     "clean": "rm -rf app/dist app/build",
     "setup": "npm install",
     "setup:yarn": "yarn",
-    "serve:bundle": "cross-env NODE_ENV=production PORT=1337 node server.js",
+    "serve:bundle": "cross-env NODE_ENV=production node server.js",
     "postinstall": "npm run deploy"
   },
   "repository": {
@@ -84,11 +92,12 @@
     "react",
     "webpack",
     "sass",
-    "css modules"
+    "css modules",
+    "grommet"
   ],
   "engines": {
-    "node": "5.2.0",
-    "npm": "3.10.7"
+    "node": "6.9.4",
+    "npm": "3.10.10"
   },
   "author": "Ryan Collins",
   "license": "MIT",
@@ -103,25 +112,24 @@
     "cross-env": "^2.0.0",
     "enzyme": "^2.4.1",
     "enzyme-to-json": "^1.0.3",
-    "eslint-import-resolver-webpack": "^0.8.0",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-flowtype-errors": "^2.0.3",
     "expect": "^1.20.2",
     "express": "^4.14.0",
-    "flow-bin": "^0.37.4",
+    "flow-bin": "^0.38.0",
     "functional-components": "0.0.5",
     "graphql-tag": "^1.1.2",
-    "grommet-udacity": "v0.1.12",
+    "grommet": "v1.2.1",
     "history": "^1.14.0",
     "immutable": "^3.7.5",
     "isomorphic-fetch": "^2.2.0",
-    "jest": "16.0.2",
-    "jest-cli": "16.0.2",
-    "jest-webpack-alias": "^3.3.3",
+    "jest": "18.1.0",
+    "jest-cli": "18.1.0",
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "minimist": "^1.2.0",
     "morgan": "^1.7.0",
+    "node-env-file": "^0.1.8",
     "offline-plugin": "^3.4.2",
     "react": "^15.1.0",
     "react-addons-css-transition-group": "^15.2.1",
@@ -150,8 +158,8 @@
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "babel-core": "^6.3.15",
-    "babel-eslint": "^6.0.4",
-    "babel-jest": "^16.0.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-webpack-alias": "^2.1.1",
     "babel-plugin-webpack-loaders": "^0.7.1",
@@ -162,13 +170,14 @@
     "babel-register": "^6.16.3",
     "babel-runtime": "^6.11.6",
     "css-loader": "^0.23.0",
-    "eslint": "^3.12.2",
-    "eslint-config-airbnb": "^13.0.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-webpack": "0.8.0",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-graphql": "^0.4.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "expect-jsx": "^2.6.0",
     "extract-text-webpack-plugin": "v2.0.0-beta.4",
     "file-loader": "^0.9.0",
@@ -188,7 +197,6 @@
     "webpack": "2.1.0-beta.19",
     "webpack-dev-server": "2.1.0-beta.3",
     "webpack-hot-middleware": "^2.10.0",
-    "webpack-manifest-plugin": "^1.1.0",
-    "webpack-visualizer-plugin": "^0.1.5"
+    "webpack-manifest-plugin": "^1.1.0"
   }
 }

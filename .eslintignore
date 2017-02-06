@@ -1,3 +1,5 @@
 app/build/
 app/dist/
 webpack.config.*.js
+webpack.config.js
+config/

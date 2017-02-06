@@ -2,9 +2,9 @@ import ApolloClient, {
   createNetworkInterface,
   addTypeName,
 } from 'apollo-client';
-import { BASE_URL } from 'config'; // eslint-disable-line
 
-const url = `${BASE_URL}graphql`;
+const baseUrl = process.env.API_URL || 'http://localhost:3000';
+const url = `${baseUrl}graphql`;
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
