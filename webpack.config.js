@@ -14,7 +14,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:1337',
     'webpack/hot/only-dev-server',
-    path.resolve(ROOT_PATH, 'app/src/index'),
+    path.resolve(ROOT_PATH, './app/src'),
   ],
   output: {
     path: path.resolve(ROOT_PATH, 'app/build'),

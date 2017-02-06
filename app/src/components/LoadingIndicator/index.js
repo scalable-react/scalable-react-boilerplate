@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
 import cssModules from 'react-css-modules';
-import Spinning from 'grommet-udacity/components/icons/Spinning';
-import Box from 'grommet-udacity/components/Box';
-import Heading from 'grommet-udacity/components/Heading';
+import Spinning from 'grommet/components/icons/Spinning';
+import Box from 'grommet/components/Box';
+import Heading from 'grommet/components/Heading';
 import styles from './index.module.scss';
 
 function LoadingIndicator(props: {

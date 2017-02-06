@@ -11,7 +11,7 @@ module.exports = {
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "webpack.config.babel.js"
+        "config": "webpack.config.js"
       }
     }
   },
@@ -30,6 +30,7 @@ module.exports = {
     }]
   },
   "plugins": [
+    "import",
     "react",
     "graphql",
     "jsx-a11y"

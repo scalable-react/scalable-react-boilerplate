@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
-import Layer from 'grommet-udacity/components/Layer';
-import Form from 'grommet-udacity/components/Form';
-import FormFields from 'grommet-udacity/components/FormFields';
-import FormField from 'grommet-udacity/components/FormField';
-import Box from 'grommet-udacity/components/Box';
-import Heading from 'grommet-udacity/components/Heading';
-import Button from 'grommet-udacity/components/Button';
-import Footer from 'grommet-udacity/components/Footer';
+import Layer from 'grommet/components/Layer';
+import Form from 'grommet/components/Form';
+import FormFields from 'grommet/components/FormFields';
+import FormField from 'grommet/components/FormField';
+import Box from 'grommet/components/Box';
+import Heading from 'grommet/components/Heading';
+import Button from 'grommet/components/Button';
+import Footer from 'grommet/components/Footer';
 import { Divider } from 'components';
 import error from './utils/error';
 

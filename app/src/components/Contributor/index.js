@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react';
 import { Avatar } from 'components';
 import cssModules from 'react-css-modules';
-import Heading from 'grommet-udacity/components/Heading';
-import Box from 'grommet-udacity/components/Box';
-import Paragraph from 'grommet-udacity/components/Paragraph';
-import Anchor from 'grommet-udacity/components/Anchor';
-import SocialGithubIcon from 'grommet-udacity/components/icons/base/SocialGithub';
+import Heading from 'grommet/components/Heading';
+import Box from 'grommet/components/Box';
+import Paragraph from 'grommet/components/Paragraph';
+import Anchor from 'grommet/components/Anchor';
+import SocialGithubIcon from 'grommet/components/icons/base/SocialGithub';
 import styles from './index.module.scss';
 
 const Contributor = ({

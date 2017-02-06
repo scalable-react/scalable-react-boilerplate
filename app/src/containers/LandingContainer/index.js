@@ -2,14 +2,14 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import cssModules from 'react-css-modules';
-import Box from 'grommet-udacity/components/Box';
-import Section from 'grommet-udacity/components/Section';
-import Hero from 'grommet-udacity/components/Hero';
-import Headline from 'grommet-udacity/components/Headline';
-import Footer from 'grommet-udacity/components/Footer';
-import Button from 'grommet-udacity/components/Button';
-import Heading from 'grommet-udacity/components/Heading';
-import Columns from 'grommet-udacity/components/Columns';
+import Box from 'grommet/components/Box';
+import Section from 'grommet/components/Section';
+import Hero from 'grommet/components/Hero';
+import Headline from 'grommet/components/Headline';
+import Footer from 'grommet/components/Footer';
+import Button from 'grommet/components/Button';
+import Heading from 'grommet/components/Heading';
+import Columns from 'grommet/components/Columns';
 import {
   LoadingIndicator,
   Divider,

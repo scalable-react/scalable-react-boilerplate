@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
-import Box from 'grommet-udacity/components/Box';
-import Paragraph from 'grommet-udacity/components/Paragraph';
-import Article from 'grommet-udacity/components/Article';
-import Heading from 'grommet-udacity/components/Heading';
-import Markdown from 'grommet-udacity/components/Markdown';
-import Section from 'grommet-udacity/components/Section';
-import List from 'grommet-udacity/components/List';
-import ListItem from 'grommet-udacity/components/ListItem';
-import Anchor from 'grommet-udacity/components/Anchor';
+import Box from 'grommet/components/Box';
+import Paragraph from 'grommet/components/Paragraph';
+import Article from 'grommet/components/Article';
+import Heading from 'grommet/components/Heading';
+import Markdown from 'grommet/components/Markdown';
+import Section from 'grommet/components/Section';
+import List from 'grommet/components/List';
+import ListItem from 'grommet/components/ListItem';
+import Anchor from 'grommet/components/Anchor';
 import { Divider } from 'components';
 import readme from './_readme.md';
 
