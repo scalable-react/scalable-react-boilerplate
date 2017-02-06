@@ -1,7 +1,14 @@
+{{#if wantFlowTypes}}
+/* @flow */
+{{/if}}
 {{#if wantPropTypes}}
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 {{else}}
-import React, { Component } from 'react';
+import React from 'react';
+{{/if}}
+import Box from 'grommet/components/Box';
+{{#if imports}}
+{{{ createImports imports }}}
 {{/if}}
 {{#if wantSCSSModules}}
 import cssModules from 'react-css-modules';
@@ -11,15 +18,21 @@ import styles from './index.module.scss';
 import { StyledWrapper } from './styles';
 {{/if}}
 
-class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+{{#if wantFlowTypes}}
+type {{ properCase name }}Props = {
+
+}
+{{/if}}
+
+class {{ properCase name }} extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  {{#if wantFlowTypes}}
+  props: {{ properCase name }}Props;
+  {{/if}}
   render() {
     return (
-      {{#if wantSCSSModules}}
-      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
-      {{else}}
-      <div>
-      {{/if}}
-      </div>
+      <Box>
+
+      </Box>
     );
   }
 }

@@ -9,7 +9,7 @@ module.exports = {
       name: 'name',
       message: 'What should it be called?',
       default: 'About',
-      validate: value => {
+      validate: (value) => {
         if ((/.+/).test(value)) {
           return componentNameCheck(value) ? 'A container with this name already exists' : true;
         }
@@ -22,6 +22,12 @@ module.exports = {
       name: 'wantSCSSModules',
       default: true,
       message: 'Do you want to use SCSS Modules for styling?',
+    },
+    {
+      type: 'confirm',
+      name: 'wantFlowTypes',
+      default: true,
+      message: 'Should the container have FlowTypes instead of PropTypes?',
     },
     {
       type: 'confirm',
@@ -42,21 +48,31 @@ module.exports = {
       message: 'Do you want to use reselect?',
     },
     {
-      type: 'confirm',
-      name: 'wantGraphQL',
-      default: false,
-      message: 'Do you want a colocated GraphQL / Apollo query and mutation for this container?',
+      type: 'checkbox',
+      name: 'imports',
+      message: 'Would you like to import any commonly used grommet components?',
+      choices: () => [
+        { name: 'Anchor', value: 'Anchor', checked: false },
+        { name: 'Article', value: 'Article', checked: false },
+        { name: 'Button', value: 'Button', checked: false },
+        { name: 'Card', value: 'Card', checked: false },
+        { name: 'Heading', value: 'Heading', checked: false },
+        { name: 'Header', value: 'Header', checked: false },
+        { name: 'Footer', value: 'Footer', checked: false },
+        { name: 'Paragraph', value: 'Paragraph', checked: false },
+        { name: 'Section', value: 'Section', checked: false },
+      ],
     },
   ],
   actions: (data) => {
     const actions = [{
       type: 'add',
-      path: '../../app/src/containers/{{properCase name}}Container/index.js',
+      path: '../../app/src/containers/{{properCase name}}/index.js',
       templateFile: './container/index.js.hbs',
       abortOnFail: true,
     }, {
       type: 'add',
-      path: '../../app/src/containers/{{properCase name}}Container/tests/index.test.js',
+      path: '../../app/src/containers/{{properCase name}}/tests/index.test.js',
       templateFile: './container/test.js.hbs',
       abortOnFail: true,
     }];
@@ -72,25 +88,34 @@ module.exports = {
     if (data.wantSCSSModules) {
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/index.module.scss',
+        path: '../../app/src/containers/{{properCase name}}/index.module.scss',
         templateFile: './container/styles.scss.hbs',
         abortOnFail: true,
       });
     }
-    
+
+    if (data.wantFlowTypes) {
+      actions.push({
+        type: 'add',
+        path: '../../app/src/containers/{{properCase name}}/flowTypes.js',
+        templateFile: './container/flowTypes.js.hbs',
+        abortOnFail: true,
+      });
+    }
+
     if (data.wantStyledComponents) {
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/styles.js',
+        path: '../../app/src/containers/{{properCase name}}/styles.js',
         templateFile: './container/styles.js.hbs',
         abortOnFail: true,
-      }) 
+      });
     }
 
     if (data.wantSelectors) {
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/selectors.js',
+        path: '../../app/src/containers/{{properCase name}}/selectors.js',
         templateFile: './container/selectors.js.hbs',
         abortOnFail: true,
       });
@@ -102,13 +127,13 @@ module.exports = {
       // Actions
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/actions.js',
+        path: '../../app/src/containers/{{properCase name}}/actions.js',
         templateFile: './container/actions.js.hbs',
         abortOnFail: true,
       });
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/tests/actions.test.js',
+        path: '../../app/src/containers/{{properCase name}}/tests/actions.test.js',
         templateFile: './container/actions.test.js.hbs',
         abortOnFail: true,
       });
@@ -141,18 +166,10 @@ module.exports = {
         template: trimTemplateFile('config/generators/container/reducers.usage.js.hbs'),
       });
 
-      // README.md
-      actions.push({
-        type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/README.md',
-        templateFile: './container/README.md.hbs',
-        abortOnFail: true,
-      });
-
       // Constants
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/constants.js',
+        path: '../../app/src/containers/{{properCase name}}/constants.js',
         templateFile: './container/constants.js.hbs',
         abortOnFail: true,
       });
@@ -160,13 +177,13 @@ module.exports = {
       // Reducer
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/reducer.js',
+        path: '../../app/src/containers/{{properCase name}}/reducer.js',
         templateFile: './container/reducer.js.hbs',
         abortOnFail: true,
       });
       actions.push({
         type: 'add',
-        path: '../../app/src/containers/{{properCase name}}Container/tests/reducer.test.js',
+        path: '../../app/src/containers/{{properCase name}}/tests/reducer.test.js',
         templateFile: './container/reducer.test.js.hbs',
         abortOnFail: true,
       });

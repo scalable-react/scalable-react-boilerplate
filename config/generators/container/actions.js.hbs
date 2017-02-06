@@ -1,6 +1,34 @@
-import * as types from './constants';
+{{#if wantFlowTypes}}
+/* @flow */
+{{/if}}
+import * as T from './constants';
+{{#if wantFlowTypes}}
+import type { {{ properCase name }}Action } from './flowTypes';
 
-// {{ camelCase name }}defaultAction :: None -> {Action}
-export const {{ camelCase name }}DefaultAction = () => ({
-  type: types.{{ uppercase name }}_DEFAULT_ACTION,
+export const loadDataInitiation = (): {{ properCase name }}Action => ({
+  type: T.LOAD_DATA_INITIATION,
 });
+
+export const loadDataSuccess = (): {{ properCase name }}Action => ({
+  type: T.LOAD_DATA_SUCCESS,
+});
+
+export const loadDataFailure = (error: { message: string }): {{ properCase name }}Action => ({
+  type: T.LOAD_DATA_FAILURE,
+  error,
+});
+{{else}}
+
+export const loadDataInitiation = () => ({
+  type: T.LOAD_DATA_INITIATION,
+});
+
+export const loadDataSuccess = () => ({
+  type: T.LOAD_DATA_SUCCESS,
+});
+
+export const loadDataFailure = (error) => ({
+  type: T.LOAD_DATA_FAILURE,
+  error,
+});
+{{/if}}

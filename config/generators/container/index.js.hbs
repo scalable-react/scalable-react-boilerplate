@@ -1,10 +1,15 @@
+{{#if wantFlowTypes}}
+/* @flow */
+import React, { Component } from 'react';
+{{else}}
 import React, { Component, PropTypes } from 'react';
+{{/if}}
 {{#if wantSCSSModules}}
 import cssModules from 'react-css-modules';
 {{/if}}
-{{#if wantGraphQL}}
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
+import Box from 'grommet/components/Box';
+{{#if imports}}
+{{{ createImports imports }}}
 {{/if}}
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
@@ -15,99 +20,88 @@ import * as {{ properCase name }}ActionCreators from './actions';
 import styles from './index.module.scss';
 {{/if}}
 {{#if wantSelectors}}
-import { select{{ properCase name }} } from './selectors';
+import { selectIsLoading, selectError } from './selectors';
+{{/if}}
+{{#if wantFlowTypes}}
+import type { {{ properCase name }}Props, {{ properCase name }}State } from './flowTypes';
 {{/if}}
 {{#if wantStyledComponents}}
 import { StyledWrapper } from './styles';
 {{/if}}
 
-class {{ properCase name }}Container extends Component { // eslint-disable-line react/prefer-stateless-function
+// eslint-disable-next-line react/prefer-stateless-function
+class {{ properCase name }} extends Component {
+  {{#if wantFlowTypes}}
+  props: {{ properCase name }}Props;
+  {{/if}}
   render() {
     return (
-      {{#if wantSCSSModules}}
-      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
-      {{else}}
-      <div>
-      {{/if}}
-      </div>
+      <Box>
+        // the web is your canvas and grommet is your paintbrush 🖌
+      </Box>
     );
   }
 }
 
-{{ properCase name }}Container.propTypes = {
+{{#unless wantFlowTypes}}
+{{ properCase name }}.propTypes = {
   // isLoading: PropTypes.bool.isRequired,
 };
+{{/unless}}
 
 {{#if wantActionsAndReducer}}
 {{#if wantSelectors}}
-const mapStateToProps = (state) => ({
-  // myProp: select{{properCase name}}(state.{{ camelCase name }}),
+{{#if wantFlowTypes}}
+const mapStateToProps = (state: {{ properCase name }}State) => ({
+  isLoading: selectIsLoading(state),
+  errorLoading: selectError(state),
 });
 {{else}}
-// mapStateToProps :: {State} -> {Props}
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
+  isLoading: selectIsLoading(state),
+  errorLoading: selectError(state),
+});
+{{/if}}
+{{else}}
+const mapStateToProps = state => ({
   // myProp: state.myProp,
 });
 {{/if}}
 
-// mapDispatchToProps :: Dispatch -> {Action}
-const mapDispatchToProps = (dispatch) => ({
+{{#if wantFlowTypes}}
+const mapDispatchToProps = (dispatch: any) => ({
   actions: bindActionCreators(
     {{ properCase name }}ActionCreators,
-    dispatch
+    dispatch,
+  ),
+});
+{{else}}
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {{ properCase name }}ActionCreators,
+    dispatch,
   ),
 });
 {{/if}}
-{{#if wantSCSSModules}}
-
-const Container = cssModules({{ properCase name }}Container, styles);
-{{else}}
-
-const Container = {{ properCase name }}Container;
 {{/if}}
 
-{{#if wantGraphQL}}
-const {{ camelCase name }}Query = gql`
-  query {{ camelCase name }} {
-    {{ camelCase name }} {
-      __typename
-    }
-  }
-`;
-
-const ContainerWithData = graphql({{ camelCase name }}Query, {
-  props: ({ data: { loading, error, {{ camelCase name }} } }) => ({
-    {{ camelCase name }},
-    loading,
-    error,
-  }),
-})(Container);
-
-const {{ camelCase name }}Mutation = gql`
-  mutation {{ camelCase name }} {
-    {{ camelCase name }} {
-      __typename
-    }
-  }
-`;
-
-const ContainerWithMutation = graphql({{ camelCase name }}Mutation)(ContainerWithData);
-{{/if}}
 {{#if wantActionsAndReducer}}
-  {{#if wantGraphQL}}
-
+{{#if wantSCSSModules}}
+const Container = cssModules({{ properCase name }}, styles);
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
-)(ContainerWithMutation);
-  {{else}}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Container);
+{{else}}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)({{ properCase name }});
 {{/if}}
 {{else}}
-
-export default Container;
+{{#if wantSCSSModules}}
+export default cssModules({{ properCase name }}, styles);
+{{else}}
+export default {{ properCase name }};
+{{/if}}
 {{/if}}

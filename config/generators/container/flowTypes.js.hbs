@@ -1,0 +1,20 @@
+/* @flow */
+{{#if wantActionsAndReducer}}
+export type LOAD_DATA_INITIATION_TYPE = '{{ uppercase name }}/LOAD_DATA_INITIATION';
+export type LOAD_DATA_SUCCESS_TYPE = '{{ uppercase name }}/LOAD_DATA_SUCCESS';
+export type LOAD_DATA_FAILURE_TYPE = '{{ uppercase name }}/LOAD_DATA_FAILURE';
+
+export type {{ properCase name }}State = {
+  isLoading: boolean,
+  error?: ?{ message: string },
+}
+
+export type {{ properCase name }}Action = {
+  type: LOAD_DATA_INITIATION_TYPE | LOAD_DATA_SUCCESS_TYPE | LOAD_DATA_FAILURE_TYPE,
+  error?: { message: string },
+}
+{{/if}}
+
+export type {{ properCase name }}Props = {
+
+}

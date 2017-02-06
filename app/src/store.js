@@ -6,11 +6,13 @@ import { UserAuthWrapper as userAuthWrapper } from 'redux-auth-wrapper';
 import rootReducer from './reducers';
 import client from './apolloClient';
 /* GENERATOR: Import all of your initial state */
+import { initialState as test } from './containers/Test/reducer';
 import { initialState as landing } from './containers/LandingContainer/reducer';
 import { initialState as app } from './containers/AppContainer/reducer';
 
 const initialState = {
   /* GENERATOR: Compile all of your initial state */
+  test,
   app,
   landing,
 };
