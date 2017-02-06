@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 
 function LoadingIndicator(props: {
   isLoading: boolean,
-  message: string
+  message: ?string
 }) {
   const { message, isLoading } = props;
   const title = message || 'Loading';

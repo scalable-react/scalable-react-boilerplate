@@ -1,7 +1,7 @@
 /* eslint-disable */
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.babel.js');
+var config = require('./webpack.config.js');
 const path = require('path');
 
 const PORT = process.env.PORT || 1337;

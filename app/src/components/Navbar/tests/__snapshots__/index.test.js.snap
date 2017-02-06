@@ -2,6 +2,7 @@ exports[`<Navbar /> should render with default props 1`] = `
 <div>
   <Header
     align="center"
+    colorIndex="neutral"
     direction="row"
     justify="between"
     pad={
@@ -13,7 +14,8 @@ exports[`<Navbar /> should render with default props 1`] = `
     }
     responsive={false}>
     <Title
-      responsive={true}>
+      responsive={true}
+      truncate={true}>
       <styled.img
         alt="logo"
         src={Object {}} />
@@ -26,12 +28,14 @@ exports[`<Navbar /> should render with default props 1`] = `
       <Anchor
         className="active"
         href="/"
+        method="push"
         tag="a">
         Home
       </Anchor>
       <Anchor
         className=""
         href="/about"
+        method="push"
         tag="a">
         About
       </Anchor>

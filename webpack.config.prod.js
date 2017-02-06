@@ -1,4 +1,3 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -20,17 +19,17 @@ module.exports = {
     vendor: [
       'react',
       'react-dom',
-      'grommet-udacity',
+      'grommet',
+      'react-redux',
+      'react-router',
+      'react-router-redux',
+      'redux',
+      'redux-form',
+      'reselect',
+      'styled-components'
     ],
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loaders: [],
-        include: path.resolve(ROOT_PATH, './app'),
-      },
-    ],
     loaders: [
       {
         test: /\.jsx?$/,

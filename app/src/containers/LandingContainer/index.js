@@ -10,14 +10,14 @@ import Footer from 'grommet/components/Footer';
 import Button from 'grommet/components/Button';
 import Heading from 'grommet/components/Heading';
 import Columns from 'grommet/components/Columns';
+import { Maybe } from 'functional-components';
+import { reduxForm } from 'redux-form';
 import {
   LoadingIndicator,
   Divider,
   WelcomeModal,
   Contributor,
 } from 'components';
-import { Maybe } from 'functional-components';
-import { reduxForm } from 'redux-form';
 import * as LandingActionCreators from './actions';
 import styles from './index.module.scss';
 
