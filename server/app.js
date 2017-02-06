@@ -13,7 +13,7 @@ import styleSheet from 'styled-components/lib/models/StyleSheet';
 import store from '../app/src/store';
 import { routes } from '../app/src/routes';
 import Html from './utils/Html';
-import createApolloClient from './utils/create-apollo-client';
+import createApolloClient from './utils/createApolloClient';
 import manifest from './public/manifest.json';
 
 env(path.join(__dirname, '..', '.env'));
