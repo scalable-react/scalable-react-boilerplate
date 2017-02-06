@@ -2,7 +2,6 @@ exports[`<Navbar /> should render with default props 1`] = `
 <div>
   <Header
     align="center"
-    colorIndex="neutral"
     direction="row"
     justify="between"
     pad={

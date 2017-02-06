@@ -3,9 +3,13 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.js');
 const path = require('path');
+const env = require('node-env-file');
 
-const PORT = process.env.PORT || 1337;
-const IP = process.env.IP || 'localhost';
+env(path.join(__dirname, '.env'));
+
+const serverUrl = process.env.BASE_URL || 'http://localhost:1337';
+const PORT = serverUrl.match(/\d+/g)[0];
+const IP = serverUrl.match(/\w+/g)[1];
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,

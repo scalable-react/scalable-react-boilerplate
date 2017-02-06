@@ -86,8 +86,7 @@ module.exports = {
       components: path.resolve(ROOT_PATH, 'app/src/components'),
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
-      fragments: path.resolve(ROOT_PATH, 'app/src/fragments'),
-      config: path.resolve(ROOT_PATH, 'app/src/config'),
+      utils: path.resolve(ROOT_PATH, 'app/src/utils')
     },
   },
   postcss: function () {
