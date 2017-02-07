@@ -48,7 +48,7 @@ __NOTE: if you are using this boilerplate in production, we want to know!  Leave
 This framework employs both css-modules and styled-components.  We feel that [styled-components](styled-components.com) is the best css-in-js library available.
 
 ### Grommet
-[Grommet](https://grommet.github.io/) is the world's most advanced UX framework.  It contains hundreds of reusable UI components that you can use right away.  We are using a customize fork of grommet called grommet-udacity, although we recommend upgrading to the latest version of Grommet if you are just starting out a new project.
+[Grommet](https://grommet.github.io/) is the world's most advanced UX framework.  It contains hundreds of reusable UI components that you can use right away.
 
 ### GraphQL / Apollo
 This framework includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
