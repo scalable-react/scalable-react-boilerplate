@@ -11,6 +11,9 @@ You can read more about the organizational strategy used in this app in [this Me
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
+# TypeScript Version
+We now have a TypeScript version of this project.  [See here](https://github.com/RyanCCollins/scalable-react-ts-boilerplate).
+
 # What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
