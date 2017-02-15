@@ -26,8 +26,8 @@ function {{ properCase name }}(props: {}) {
     </Box>
   );
 }
-{{else if wantPropTypes}}
-{{#unless wantFlowTypes}}
+{{else}}
+{{#if wantPropTypes}}
 function {{ properCase name }}(props) {
   return (
     <Box>
@@ -35,7 +35,6 @@ function {{ properCase name }}(props) {
     </Box>
   );
 }
-{{/unless}}
 {{else}}
 function {{ properCase name }}() {
   return (
@@ -44,6 +43,7 @@ function {{ properCase name }}() {
     </Box>
   );
 }
+{{/if}}
 {{/if}}
 
 {{#if wantPropTypes}}
