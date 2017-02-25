@@ -125,18 +125,6 @@ There are two options for installation:
 
    Your app will be served at: http://localhost:1337
 
-or, you can install it using Slush via the npm package
-```
-npm install -g slush slush-generator-scalable-react
-```
-
-cd into the folder where you want to create your project and run:
-```
-slush generator-scalable-react
-```
-
-Follow the onscreen instructions to create your app.
-
 ## Deployment
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-boilerplate">
