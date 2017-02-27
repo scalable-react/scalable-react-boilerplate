@@ -11,10 +11,7 @@ const serverUrl = process.env.BASE_URL || 'http://localhost:1337';
 const PORT = serverUrl.match(/\d+/g)[0];
 const IP = serverUrl.match(/\w+/g)[1];
 
-new WebpackDevServer(
-  webpack(
-    config
-  ), {
+new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,

@@ -119,17 +119,6 @@ module.exports = {
       }
     ]
   },
-  // sassLoader: {
-  //   includePaths: [
-  //     './node_modules',
-  //   ]
-  // },
-  // postcss: function () {
-  //   return {
-  //     defaults: [precss, autoprefixer],
-  //     cleaner:  [autoprefixer({ browsers: [] })]
-  //   };
-  // },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css'],
     alias: {

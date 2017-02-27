@@ -15,7 +15,7 @@ import { reduxForm } from 'redux-form';
 import {
   LoadingIndicator,
   Divider,
-  // WelcomeModal,
+  WelcomeModal,
   Contributor,
 } from 'components';
 import * as LandingActionCreators from './actions';
@@ -43,21 +43,21 @@ class LandingContainer extends Component {
     const {
       isLoading,
       actions,
-      // isShowingModal,
+      isShowingModal,
       contributors,
       name,
-      // fields: {
-        // nameInput,
-      // },
+      fields: {
+        nameInput,
+      },
     } = this.props;
     return (
       <Box className={styles.container} colorIndex="light-2">
-        {/* <WelcomeModal */}
-        {/* onSubmit={this.handleSubmit} */}
-        {/* nameInput={nameInput} */}
-        {/* onClose={actions.closeModal} */}
-        {/* isVisible={true} */}
-        {/* /> */}
+        <WelcomeModal
+          onSubmit={this.handleSubmit}
+          nameInput={nameInput}
+          onClose={actions.closeModal}
+          isVisible={isShowingModal}
+        />
         <Maybe predicate={isLoading}>
           <Section
             align="center"

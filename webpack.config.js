@@ -108,7 +108,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('[name].[contenthash].css'),
     new webpack.HotModuleReplacementPlugin(),
-    // new NpmInstallPlugin(),
+    // new NpmInstallPlugin(), Cannot read property 'plugin' of null
     new HtmlwebpackPlugin({
       title: 'Scalable React Boilerplate',
       template: 'config/templates/_index.dev.html',
