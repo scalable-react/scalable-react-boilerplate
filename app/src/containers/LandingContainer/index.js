@@ -105,7 +105,7 @@ class LandingContainer extends Component {
               <Heading align="center" tag="h2">
                 We worked super hard to make this a useful starter project
               </Heading>
-              <Footer pad="large" align="center" jusify="center" direction="column">
+              <Footer pad="large" align="center" justify="center" direction="column">
                 <Heading align="center" tag="h2">
                   Ready to get started?
                 </Heading>
@@ -129,7 +129,7 @@ class LandingContainer extends Component {
                 )}
               </Columns>
             </Section>
-            <Footer pad="large" align="center" jusify="center" direction="column">
+            <Footer pad="large" align="center" justify="center" direction="column">
               <Heading align="center" tag="h2">
                 Have any questions??
               </Heading>
