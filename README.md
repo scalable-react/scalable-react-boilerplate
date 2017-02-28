@@ -11,6 +11,9 @@ You can read more about the organizational strategy used in this app in [this Me
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
+# TypeScript Version
+We now have a TypeScript version of this project.  [See here](https://github.com/RyanCCollins/scalable-react-ts-boilerplate).
+
 # What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
@@ -45,10 +48,10 @@ __NOTE: if you are using this boilerplate in production, we want to know!  Leave
 
 # Main Features
 ### Styled Components
-This framework employs both css-modules and styled-components.  We feel that [styled-components](styled-components.com) is the best css-in-js library available.
+This framework employs both css-modules and styled-components.  We feel that [styled-components](https://github.com/styled-components/styled-components) is the best css-in-js library available.
 
 ### Grommet
-[Grommet](https://grommet.github.io/) is the world's most advanced UX framework.  It contains hundreds of reusable UI components that you can use right away.  We are using a customize fork of grommet called grommet-udacity, although we recommend upgrading to the latest version of Grommet if you are just starting out a new project.
+[Grommet](https://grommet.github.io/) is the world's most advanced UX framework.  It contains hundreds of reusable UI components that you can use right away.
 
 ### GraphQL / Apollo
 This framework includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
@@ -121,18 +124,6 @@ There are two options for installation:
    `npm run start`
 
    Your app will be served at: http://localhost:1337
-
-or, you can install it using Slush via the npm package
-```
-npm install -g slush slush-generator-scalable-react
-```
-
-cd into the folder where you want to create your project and run:
-```
-slush generator-scalable-react
-```
-
-Follow the onscreen instructions to create your app.
 
 ## Deployment
 
