@@ -34,40 +34,76 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel'],
+        use: ['babel-loader'],
       },
       {
         test: /\.md$/,
-        loader: "html!markdown"
+        use: ['html-loader','markdown-loader']
       },
       {
         test: /\.svg$/,
-        loader: 'babel!svg-react'
+        use: ['babel-loader','svg-react-loader']
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        use: 'json-loader'
+      },
+      {
+        test: /\.(sass|sss|css)$/,
+        use: [
+            'style-loader',
+            'css-loader',
+            {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: function() {
+                        return [
+                            require('precess'),
+                            require('autoprefixer'),
+                            autoprefixer({browsers: []})
+                        ]
+                    }
+                }
+            },
+            'sass-loader'
+        ]
       },
       {
         test: /\.module\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?modules&importLoaders' +
-            '=1&localIdentName=[path]___[name]__[local]' +
-            '___[hash:base64:5]!resolve-url-loader!postcss-loader!sass-loader'
-        }),
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              fallback: 'style-loader',
+              modules: 1,
+              importLoaders: 1,
+              localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+            },
+          },
+          'resolve-url-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.scss$/,
         exclude: [/\.module\.scss$/],
-        loader: ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: '!css-loader!postcss-loader!sass-loader'
-          }),
-      },
-      {
-        test: /\.css$/,
-        loader: "style-loader!css-loader"
+        use: ExtractTextPlugin.extract({
+        use: [
+          'css-loader',
+          'postcss-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                includePaths: [
+                  path.join(ROOT_PATH, 'node_modules')
+                ],
+                outputStyle: 'compressed'
+              }
+            }
+          ]
+        })
       },
       {
         test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
@@ -79,29 +115,21 @@ module.exports = {
       },
       {
         test: /\.(jpg|png)$/,
-        loader: 'file?name=[path][name].[hash].[ext]'
+        loader: 'file-loader?name=[path][name].[hash].[ext]'
       }
     ]
   },
-  sassLoader: {
-    includePaths: [
-      './node_modules',
-    ]
-  },
-  postcss: function () {
-    return {
-      defaults: [precss, autoprefixer],
-      cleaner:  [autoprefixer({ browsers: [] })]
-    };
-  },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json', '.scss', '.css'],
     alias: {
       components: path.resolve(ROOT_PATH, 'app/src/components'),
       containers: path.resolve(ROOT_PATH, 'app/src/containers'),
       pages: path.resolve(ROOT_PATH, 'app/src/pages'),
       utils: path.resolve(ROOT_PATH, 'app/src/utils')
     },
+    modules: [
+        path.join(__dirname, 'src'), 'node_modules'
+    ],
   },
   output: {
     path: path.resolve(ROOT_PATH, 'server/public'),
@@ -142,7 +170,6 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false
     }),

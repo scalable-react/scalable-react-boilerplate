@@ -46,3 +46,4 @@ jspm_packages
 /server/public/**/*.css
 /server/public/**/*.map
 /server/public/**/*.json
+/server/public/__offline_serviceworker
