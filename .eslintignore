@@ -3,3 +3,6 @@ app/dist/
 webpack.config.*.js
 webpack.config.js
 config/
+node_modules
+server/
+config/

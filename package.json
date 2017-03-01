@@ -72,7 +72,7 @@
     "generate:component": "plop --plopfile config/generators/index.js component",
     "generate:container": "plop --plopfile config/generators/index.js container",
     "generate:page": "plop --plopfile config/generators/index.js page",
-    "lint": "eslint . --ext .js --ext .jsx; exit 0",
+    "lint": "./node_modules/.bin/eslint . --ext .js --ext .jsx",
     "predeploy": "rimraf server/public/*.*",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
     "start": "npm run dev",
