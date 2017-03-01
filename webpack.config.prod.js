@@ -26,7 +26,10 @@ module.exports = {
       'redux',
       'redux-form',
       'reselect',
-      'styled-components'
+      'styled-components',
+      'redux-auth-wrapper',
+      'redux-thunk',
+      'functional-components'
     ],
   },
   module: {
@@ -51,59 +54,61 @@ module.exports = {
       {
         test: /\.(sass|sss|css)$/,
         use: [
-            'style-loader',
-            'css-loader',
-            {
-                loader: 'postcss-loader',
-                options: {
-                    plugins: function() {
-                        return [
-                            require('precess'),
-                            require('autoprefixer'),
-                            autoprefixer({browsers: []})
-                        ]
-                    }
-                }
-            },
-            'sass-loader'
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function() {
+                return [
+                  require('precess'),
+                  require('autoprefixer'),
+                  autoprefixer({browsers: []})
+                ]
+              }
+            }
+          },
+          'sass-loader'
         ]
       },
       {
         test: /\.module\.scss$/,
-        use: [
-          {
-            loader: 'css-loader',
-            options: {
-              fallback: 'style-loader',
-              modules: 1,
-              importLoaders: 1,
-              localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                fallback: 'style-loader',
+                modules: 1,
+                importLoaders: 1,
+                localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+              },
             },
-          },
-          'resolve-url-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+            'resolve-url-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
+        })
       },
       {
         test: /\.scss$/,
         exclude: [/\.module\.scss$/],
         use: ExtractTextPlugin.extract({
-        use: [
-          'css-loader',
-          'postcss-loader',
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-                includePaths: [
-                  path.join(ROOT_PATH, 'node_modules')
-                ],
-                outputStyle: 'compressed'
+          use: [
+            'css-loader',
+            'postcss-loader',
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true,
+                  includePaths: [
+                    path.join(ROOT_PATH, 'node_modules')
+                  ],
+                  outputStyle: 'compressed'
+                }
               }
-            }
-          ]
-        })
+            ]
+          })
       },
       {
         test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
