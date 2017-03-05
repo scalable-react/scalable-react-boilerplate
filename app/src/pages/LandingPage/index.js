@@ -1,12 +1,11 @@
 import React from 'react';
-import cssModules from 'react-css-modules';
+import Box from 'grommet/components/Box';
 import { LandingContainer } from 'containers';
-import styles from './index.module.scss';
 
-const LandingPage = () => (
-  <div className={styles.container}>
-    <LandingContainer />
-  </div>
-);
-
-export default cssModules(LandingPage, styles);
+export default function LandingPage() {
+  return (
+    <Box>
+      <LandingContainer />
+    </Box>
+  );
+}

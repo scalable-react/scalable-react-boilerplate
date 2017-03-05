@@ -1,0 +1,22 @@
+exports[`<Landing /> should render with default props 1`] = `
+<Landing
+  actions={
+    Object {
+      "loadDataFailure": [Function],
+      "loadDataInitiation": [Function],
+      "loadDataSuccess": [Function],
+    }
+  }
+  errorLoading={null}
+  isLoading={false}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  } />
+`;
