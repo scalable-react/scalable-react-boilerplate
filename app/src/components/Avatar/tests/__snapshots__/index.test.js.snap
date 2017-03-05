@@ -1,5 +1,0 @@
-exports[`<Avatar /> should render with default props 1`] = `
-<img
-  alt="Avatar"
-  src="https://github.com/ryanccollins.png" />
-`;
