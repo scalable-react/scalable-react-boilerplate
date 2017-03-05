@@ -1,3 +1,3 @@
 /* GENERATOR: Assemble all pages for export */
-export Landing from './Landing';
+export LandingPage from './LandingPage';
 export NotFoundPage from './NotFoundPage/index';

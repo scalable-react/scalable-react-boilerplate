@@ -10,7 +10,7 @@ class Landing extends Component {
   render() {
     return (
       <Box>
-        the web is your canvas and grommet is your paintbrush 🖌
+        Welcome from landing page!
       </Box>
     );
   }
