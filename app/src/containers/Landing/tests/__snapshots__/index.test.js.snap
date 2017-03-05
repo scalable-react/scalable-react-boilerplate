@@ -1,16 +1,14 @@
-exports[`<AppContainer /> should render with default props 1`] = `
-<AppContainer
+exports[`<Landing /> should render with default props 1`] = `
+<Landing
   actions={
     Object {
-      "appContainerDefaultAction": [Function],
+      "loadDataFailure": [Function],
+      "loadDataInitiation": [Function],
+      "loadDataSuccess": [Function],
     }
   }
-  isMobile={false}
-  location={
-    Object {
-      "pathname": "/",
-    }
-  }
+  errorLoading={null}
+  isLoading={false}
   store={
     Object {
       "clearActions": [Function],
@@ -20,7 +18,5 @@ exports[`<AppContainer /> should render with default props 1`] = `
       "replaceReducer": [Function],
       "subscribe": [Function],
     }
-  }>
-  <div />
-</AppContainer>
+  } />
 `;

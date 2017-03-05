@@ -5,10 +5,8 @@ import client from './apolloClient';
 
 /* GENERATOR: Import all of your reducers */
 import landing from './containers/Landing/reducer';
-import app from './containers/AppContainer/reducer';
 
 const rootReducer = combineReducers({
-  app,
   /* GENERATOR: Compile all of your reducers */
   landing,
   routing: routerReducer,

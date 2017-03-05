@@ -10,7 +10,7 @@ class Landing extends Component {
   render() {
     return (
       <Box>
-        Welcome from landing page!
+        Welcome from landing container!
       </Box>
     );
   }

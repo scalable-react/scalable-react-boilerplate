@@ -7,12 +7,10 @@ import rootReducer from './reducers';
 import client from './apolloClient';
 /* GENERATOR: Import all of your initial state */
 import { initialState as landing } from './containers/Landing/reducer';
-import { initialState as app } from './containers/AppContainer/reducer';
 
 const initialState = {
   /* GENERATOR: Compile all of your initial state */
   landing,
-  app,
 };
 
 /* Commonly used middlewares and enhancers */
