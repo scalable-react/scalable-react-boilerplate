@@ -37,14 +37,6 @@ export const routes = {
     },
   },
   childRoutes: [
-    {
-      path: '/about',
-      getComponent(location, callback) {
-        System.import('./pages/AboutPage') // eslint-disable-line block-scoped-var
-          .then(loadRoute(callback))
-          .catch(err => errorLoading(err));
-      },
-    },
 /* GENERATOR: Newly generated Routes go here */
     {
       path: '*',
