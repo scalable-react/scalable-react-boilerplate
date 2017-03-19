@@ -149,7 +149,7 @@ LandingContainer.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   isShowingModal: PropTypes.bool.isRequired,
   fields: PropTypes.object.isRequired, // eslint-disable-line
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   contributors: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
