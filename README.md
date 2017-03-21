@@ -52,6 +52,15 @@ The setup includes the ability to generate the boilerplate to create GraphQL / A
 
 Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
 
+### Flow
+Static types are all the rage in Front End JavaScript land right now.  
+
+We feel that the use of Static types is paramount in the evolution of JavaScript and as such have integrated the Flow static type-checking library. 
+
+The nice thing about Flow is that you can gradually introduce it into your app, much like we have done with the example code of this boilerplate.  You can see a couple of examples of Flow in use in the project in the components directory. If this is not a feature you desire, then do not add the `// @flow` comment in any files.
+
+We have provided library definitions within the [`config/flow-typed`](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/config/flow-typed) folder and have also provided some useful configuration within the `.flowconfig` file.
+
 # Documentation
 
 ## Getting Started
@@ -91,6 +100,10 @@ slush generator-scalable-react
 Follow the onscreen instructions to create your app.
 
 ## Deployment
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-boilerplate">
+  <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
+</a>
 
 <a href="https://myrskyt.com/container/deploy/https://github.com/RyanCCollins/scalable-react-boilerplate"><img src="https://myrskyt.com/static/img/button.jpg" height="40" width="155"></a>
 

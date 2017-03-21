@@ -1,4 +1,4 @@
-import * as types from './constants';
+import types from './constants';
 
 // appContainerdefaultAction :: None -> {Action}
 export const appContainerDefaultAction = () => ({  // eslint-disable-line

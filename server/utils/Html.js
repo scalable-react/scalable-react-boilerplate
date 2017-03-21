@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger*/
 import React, { PropTypes } from 'react';
 import serialize from 'serialize-javascript';
 
@@ -33,7 +34,7 @@ Html.propTypes = {
   cssHash: PropTypes.string.isRequired,
   vendorHash: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  styles: PropTypes.array,
+  styles: PropTypes.string,
   state: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import App from 'grommet-udacity/components/App';
+import { AppContainer as ReactHotLoader } from 'react-hot-loader';
 import { Navbar, AppFooter } from 'components';
 import { AppContainer as ReactHotLoader } from 'react-hot-loader';
 import * as AppContainerActionCreators from './actions';
