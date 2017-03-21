@@ -25,15 +25,10 @@ module.exports = {
       "allowArrowFunctions": true,
       "allowBind": true
     }],
-    "graphql/template-strings": ['error', {
-      env: 'apollo',
-      schemaJsonFilepath: path.resolve(__dirname, './config/schema/schema.json'),
-    }]
   },
   "plugins": [
     "import",
     "react",
-    "graphql",
     "jsx-a11y"
   ]
 }
