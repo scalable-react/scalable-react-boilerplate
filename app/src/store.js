@@ -23,8 +23,7 @@ const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
 if (isDeveloping && isClient) {
-  const createLogger = require('redux-logger'); // eslint-disable-line
-  const loggerMiddleware = createLogger();
+  const loggerMiddleware = require('redux-logger').default(); // eslint-disable-line
   middlewares.push(loggerMiddleware);
 }
 
