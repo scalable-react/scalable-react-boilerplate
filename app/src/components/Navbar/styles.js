@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Menu from 'grommet-udacity/components/Menu';
+import Menu from 'grommet/components/Menu';
 
 export const StyledMenu = styled(Menu)`
   flex-direction: row !important;

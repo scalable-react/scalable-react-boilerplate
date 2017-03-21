@@ -1,6 +1,6 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
-import { LandingContainer } from 'containers'; // eslint-disable-line
+import { LandingContainer } from 'containers';
 import styles from './index.module.scss';
 
 const LandingPage = () => (

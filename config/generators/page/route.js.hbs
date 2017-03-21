@@ -1,7 +1,7 @@
     {
       path: '{{ path }}',
       getComponent(location, callback) {
-        System.import('./pages/{{ properCase name }}Page')  // eslint-disable-line block-scoped-var
+        System.import('./pages/{{ properCase name }}')  // eslint-disable-line block-scoped-var
           .then(loadRoute(callback))
           .catch(err => errorLoading(err));
       },

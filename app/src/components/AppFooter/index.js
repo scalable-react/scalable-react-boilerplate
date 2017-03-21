@@ -1,10 +1,10 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
-import Footer from 'grommet-udacity/components/Footer';
-import Box from 'grommet-udacity/components/Box';
-import Heading from 'grommet-udacity/components/Heading';
-import SocialShare from 'grommet-udacity/components/SocialShare';
-import Anchor from 'grommet-udacity/components/Anchor';
+import Footer from 'grommet/components/Footer';
+import Box from 'grommet/components/Box';
+import Heading from 'grommet/components/Heading';
+import SocialShare from 'grommet/components/SocialShare';
+import Anchor from 'grommet/components/Anchor';
 import styles from './index.module.scss';
 
 const AppFooter = () => (

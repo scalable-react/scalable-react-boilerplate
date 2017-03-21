@@ -1,6 +1,6 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
-import { AboutContainer } from 'containers';  // eslint-disable-line
+import { AboutContainer } from 'containers';
 import styles from './index.module.scss';
 
 const AboutPage = () => (

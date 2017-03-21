@@ -2,22 +2,22 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import cssModules from 'react-css-modules';
-import Box from 'grommet-udacity/components/Box';
-import Section from 'grommet-udacity/components/Section';
-import Hero from 'grommet-udacity/components/Hero';
-import Headline from 'grommet-udacity/components/Headline';
-import Footer from 'grommet-udacity/components/Footer';
-import Button from 'grommet-udacity/components/Button';
-import Heading from 'grommet-udacity/components/Heading';
-import Columns from 'grommet-udacity/components/Columns';
+import Box from 'grommet/components/Box';
+import Section from 'grommet/components/Section';
+import Hero from 'grommet/components/Hero';
+import Headline from 'grommet/components/Headline';
+import Footer from 'grommet/components/Footer';
+import Button from 'grommet/components/Button';
+import Heading from 'grommet/components/Heading';
+import Columns from 'grommet/components/Columns';
+import { Maybe } from 'functional-components';
+import { reduxForm } from 'redux-form';
 import {
   LoadingIndicator,
   Divider,
   WelcomeModal,
   Contributor,
 } from 'components';
-import { Maybe } from 'functional-components';
-import { reduxForm } from 'redux-form';
 import * as LandingActionCreators from './actions';
 import styles from './index.module.scss';
 
@@ -83,7 +83,7 @@ class LandingContainer extends Component {
                   src="https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/udacity-alumni-png.png?raw=true"
                 />
                 <Headline align="center" size="small">
-                  Scaling the Front End Feature First!!
+                  Scaling the Front End Feature First!
                 </Headline>
               </Box>
             </Hero>
@@ -105,9 +105,9 @@ class LandingContainer extends Component {
               <Heading align="center" tag="h2">
                 We worked super hard to make this a useful starter project
               </Heading>
-              <Footer pad="large" align="center" jusify="center" direction="column">
+              <Footer pad="large" align="center" justify="center" direction="column">
                 <Heading align="center" tag="h2">
-                  Ready to get started??
+                  Ready to get started?
                 </Heading>
                 <Box align="center" justify="center" pad="medium">
                   <Button label="Go to About Page" href="/about" />
@@ -124,12 +124,12 @@ class LandingContainer extends Component {
                 justify="center"
                 masonry
               >
-                {contributors.map((person, i) =>
-                  <Contributor key={i} person={person} />,
+                {contributors.map(person =>
+                  <Contributor key={person.name} person={person} />,
                 )}
               </Columns>
             </Section>
-            <Footer pad="large" align="center" jusify="center" direction="column">
+            <Footer pad="large" align="center" justify="center" direction="column">
               <Heading align="center" tag="h2">
                 Have any questions??
               </Heading>
@@ -157,7 +157,7 @@ LandingContainer.propTypes = {
       bio: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 // mapStateToProps :: {State} -> {Props}

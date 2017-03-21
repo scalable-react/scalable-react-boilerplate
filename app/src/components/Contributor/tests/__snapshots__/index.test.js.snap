@@ -9,7 +9,7 @@ exports[`<Contributor /> should render with default props 1`] = `
   responsive={true}
   size="large"
   tag="div">
-  <undefined
+  <Avatar
     src="https://avatars.githubusercontent.com/u/13810084?v=3" />
   <Heading
     align="center"
@@ -23,9 +23,9 @@ exports[`<Contributor /> should render with default props 1`] = `
     href="https://github.com/ryanccollins"
     icon={
       <SocialGithub
-        a11yTitleId="social-github-title"
         responsive={true} />
     }
+    method="push"
     primary={true}
     tag="a">
     ryanccollins

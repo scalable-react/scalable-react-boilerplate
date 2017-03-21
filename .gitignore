@@ -40,3 +40,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+.env
+.vscode
+/server/public/**/*.js
+/server/public/**/*.css
+/server/public/**/*.map
+/server/public/**/*.json
+/server/public/__offline_serviceworker

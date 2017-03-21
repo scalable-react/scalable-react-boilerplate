@@ -11,6 +11,9 @@ You can read more about the organizational strategy used in this app in [this Me
 
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 
+# TypeScript Version
+We now have a TypeScript version of this project.  [See here](https://github.com/RyanCCollins/scalable-react-ts-boilerplate).
+
 # What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion.  For example, your tests exist in a test folder, your styles in a styles folder.  This boilerplate takes a different approach.
 
@@ -43,14 +46,17 @@ Below are a few example apps that have been built with this project
 
 __NOTE: if you are using this boilerplate in production, we want to know!  Leave an issue, or submit a PR and we will merge it in.  Thanks!__
 
+# Main Features
+### Styled Components
+This framework employs both css-modules and styled-components.  We feel that [styled-components](https://github.com/styled-components/styled-components) is the best css-in-js library available.
+
+### Grommet
+[Grommet](https://grommet.github.io/) is the world's most advanced UX framework.  It contains hundreds of reusable UI components that you can use right away.
+
+### GraphQL / Apollo
+This branch excludes GraphQL and ApolloClient. If you need to use graphql, take a look at the [master](https://github.com/RyanCCollins/scalable-react-boilerplate/) branch for a reference implementation with GraphQL / Apollo.  
+
 ## Experimental Features
-
-### GraphQL / Apollo Features
-This boilerplate includes some basic setup for GraphQL and ApolloClient.  You will have to setup your own GraphQL Server.  Alternatively, take a look at the [GraphQL Anywhere](https://github.com/apollostack/graphql-anywhere) package (not installed), which would allow you to process GraphQL queries client-side.
-
-The setup includes the ability to generate the boilerplate to create GraphQL / ApolloClient queries and mutations within your containers.  It also adds the eslint-graphql-plugin to lint your collocated GraphQL queries / mutations.  The way it works is to load a schema.json file to create an AST of your GraphQL schema.  You will need to provide your own schema.json file and leave it in the `/config/schema/` folder.
-
-Take a look at the [Example Apps](https://github.com/RyanCCollins/scalable-react-boilerplate#example-apps) section to see examples of GraphQL configuration in practice.
 
 ### Flow
 Static types are all the rage in Front End JavaScript land right now.  
@@ -60,6 +66,27 @@ We feel that the use of Static types is paramount in the evolution of JavaScript
 The nice thing about Flow is that you can gradually introduce it into your app, much like we have done with the example code of this boilerplate.  You can see a couple of examples of Flow in use in the project in the components directory. If this is not a feature you desire, then do not add the `// @flow` comment in any files.
 
 We have provided library definitions within the [`config/flow-typed`](https://github.com/RyanCCollins/scalable-react-boilerplate/tree/master/config/flow-typed) folder and have also provided some useful configuration within the `.flowconfig` file.
+
+## Performance Optimizations
+This framework takes performance very seriously and includes a whole slew of performance optimizations out of the box. We have benchmarked the initial time to first byte at under 20ms!  Below is a brief enumeration of the main performance optimizations we employ by default.
+
+1. Webpack code chunking
+
+2. Lazy React Router Route Loading
+
+3. Serverside Rendering
+
+4. Reselect
+  - Memoization and React.PureComponent
+
+5. GraphQL
+  - GraphQL increases performance by eliminating expensive over-fetching
+
+6. Service Worker / Offline First
+  - The only requirement to go offline first is using SSL.
+
+7. Immutable JS
+  - Immutable JS is installed by default, but not used in the example application.  By combining React.PureComponent, reselect and immutable.js, you will get some serious rendering performance enhancements.
 
 # Documentation
 
@@ -81,23 +108,16 @@ There are two options for installation:
     With Yarn installed globally, run
     `npm run setup:yarn`
 
+4. **Create environment file**
+    In order for the server and client to know which urls to connect to, we ask that you make a `.env` file.  We've included a `.env.example` file that you can rename to get started with the default values.
+    
+    `cp .env.example .env`
+
 3. **Run development server**
 
    `npm run start`
 
    Your app will be served at: http://localhost:1337
-
-or, you can install it using Slush via the npm package
-```
-npm install -g slush slush-generator-scalable-react
-```
-
-cd into the folder where you want to create your project and run:
-```
-slush generator-scalable-react
-```
-
-Follow the onscreen instructions to create your app.
 
 ## Deployment
 
@@ -253,7 +273,6 @@ npm run test
 ```
 
 which will pick up any file with the .test.js postfix and run it through Jest.
-
 
 ## Technologies / Libraries
 

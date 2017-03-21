@@ -11,13 +11,14 @@ module.exports = {
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "webpack.config.babel.js"
+        "config": "webpack.config.js"
       }
     }
   },
   "rules": {
     "func-names": 0,
     "eol-last": 0,
+    "react/no-unused-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-bind": [ 2, {
       "ignoreRefs": false,
@@ -30,6 +31,7 @@ module.exports = {
     }]
   },
   "plugins": [
+    "import",
     "react",
     "graphql",
     "jsx-a11y"
