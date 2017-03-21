@@ -26,15 +26,15 @@ exports[`<Navbar /> should render with default props 1`] = `
       responsive={false}>
       <Anchor
         className="active"
-        href="/"
         method="push"
+        path="/"
         tag="a">
         Home
       </Anchor>
       <Anchor
         className=""
-        href="/about"
         method="push"
+        path="/about"
         tag="a">
         About
       </Anchor>
