@@ -20,7 +20,6 @@ const serverUrl = process.env.BASE_URL || 'http://localhost:1337';
 const apiUrl = process.env.API_URL || 'http://localhost:3000';
 const PORT = serverUrl.match(/\d+/g)[0];
 const IP = serverUrl.match(/\w+/g)[1];
-const graphqlUrl = `${apiUrl}graphql`;
 const debug = process.env.DEBUG === 'true';
 
 if (debug) { app.use(morgan('combined')); }
