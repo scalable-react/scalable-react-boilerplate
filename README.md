@@ -1,3 +1,5 @@
+__NOTE:__ This repo is not being updated very often.  Please feel free to use it and submit PRs if you can make improvements.  We will be focusing the majority of our future efforts on the [TypeScript version](https://github.com/scalable-react/scalable-react-typescript-boilerplate) of this project since we feel that TypeScript provides a more scalable long-term solution than Flow + Babel.
+
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
 # Scalable React Boilerplate
