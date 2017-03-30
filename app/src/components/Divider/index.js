@@ -6,5 +6,4 @@ const Divider = () => (
   <span className={styles.divider} />
 );
 
-
 export default cssModules(Divider, styles);

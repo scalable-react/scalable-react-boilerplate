@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger*/
 import React, { PropTypes } from 'react';
 import serialize from 'serialize-javascript';
 
@@ -15,14 +16,14 @@ function Html({ content, state, scriptHash, vendorHash, cssHash, styles }) {
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
-        <script src={`${scriptHash}`} charSet="UTF-8" />
-        <script src={`${vendorHash}`} type="text/javascript" />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.__APOLLO_STATE__=${serialize(state, { isJSON: true })};`,
           }}
           charSet="UTF-8"
         />
+        <script src={`${scriptHash}`} charSet="UTF-8" />
+        <script src={`${vendorHash}`} type="text/javascript" />
       </body>
     </html>
   );
@@ -33,7 +34,7 @@ Html.propTypes = {
   cssHash: PropTypes.string.isRequired,
   vendorHash: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  styles: PropTypes.array,
+  styles: PropTypes.string,
   state: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 

@@ -24,7 +24,7 @@ exports[`<About /> should render with default props 1`] = `
         tag="h1">
         Scalable React Boilerplate
       </Heading>
-      <undefined />
+      <Divider />
     </Section>
     <Section
       align="center"
@@ -65,6 +65,7 @@ exports[`<About /> should render with default props 1`] = `
             separator="bottom">
             <Anchor
               href="https://github.com/udacityalumni/alumni-client"
+              method="push"
               tag="a">
               Udacity Alumni Web App
             </Anchor>
@@ -82,6 +83,7 @@ exports[`<About /> should render with default props 1`] = `
             separator="bottom">
             <Anchor
               href="https://github.com/RyanCCollins/react-weekly"
+              method="push"
               tag="a">
               React Weekly
             </Anchor>

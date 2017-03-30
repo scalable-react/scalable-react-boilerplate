@@ -1,0 +1,25 @@
+[ignore]
+.*/node_modules/.*
+config/
+
+[include]
+./app/src/
+./app/src/components/
+./app/src/containers/
+./app
+
+[libs]
+config/flow-typed/npm
+
+[options]
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowInvalidInputTest
+module.name_mapper='\(react-redux\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+module.name_mapper='\(redux\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+module.name_mapper='.*\(.scss\|.png\|.md\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+module.name_mapper='^containers\/\(.*\)$' -> '<PROJECT_ROOT>/app/src/containers/\1'
+module.name_mapper='^containers$' -> '<PROJECT_ROOT>/app/src/containers'
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/app/src/components/\1'
+module.name_mapper='^components$' -> '<PROJECT_ROOT>/app/src/components'
+module.name_mapper='^utils\/\(.*\)$' -> '<PROJECT_ROOT>/app/src/utils/\1'
+module.name_mapper='^utils$' -> '<PROJECT_ROOT>/app/src/utils'

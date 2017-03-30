@@ -18,7 +18,7 @@ exports[`<WelcomeModal /> should render with default props 1`] = `
       tag="h1">
       What should we call you?
     </Heading>
-    <undefined />
+    <Divider />
     <Form
       compact={false}
       fill={false}
@@ -64,6 +64,7 @@ exports[`<WelcomeModal /> should render with default props 1`] = `
       responsive={false}>
       <Button
         label="Submit"
+        method="push"
         onClick={[Function]}
         primary={true}
         type="button" />

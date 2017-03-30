@@ -16,7 +16,6 @@ const initialState = {
 
 /* Commonly used middlewares and enhancers */
 /* See: http://redux.js.org/docs/advanced/Middleware.html*/
-
 const routingMiddleware = routerMiddleware(browserHistory);
 const middlewares = [thunk, routingMiddleware];
 
@@ -24,14 +23,10 @@ const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
 if (isDeveloping && isClient) {
-  const createLogger = require('redux-logger'); // eslint-disable-line
-  const loggerMiddleware = createLogger();
+  const loggerMiddleware = require('redux-logger').default(); // eslint-disable-line
   middlewares.push(loggerMiddleware);
 }
 
-/* Everyone should use redux dev tools */
-/* https://github.com/gaearon/redux-devtools */
-/* https://medium.com/@meagle/understanding-87566abcfb7a */
 const enhancers = [];
 if (isClient && isDeveloping) {
   const devToolsExtension = window.devToolsExtension;
@@ -45,10 +40,6 @@ const composedEnhancers = compose(
   ...enhancers,
 );
 
-/* Hopefully by now you understand what a store is and how redux uses them,
- * But if not, take a look at: https://github.com/reactjs/redux/blob/master/docs/api/createStore.md
- * And https://egghead.io/lessons/javascript-redux-implementing-store-from-scratch
- */
 const store = createStore(
   rootReducer,
   initialState,

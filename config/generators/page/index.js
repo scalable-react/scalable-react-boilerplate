@@ -22,9 +22,9 @@ module.exports = {
     }, {
       type: 'input',
       name: 'path',
-      message: 'Enter the path of the page component.',
+      message: 'Enter the route path of the page component.',
       default: '/about',
-      validate: value => {
+      validate: (value) => {
         if ((/.+/).test(value)) {
           return true;
         }
@@ -32,32 +32,20 @@ module.exports = {
         return 'path is required';
       },
     },
-    {
-      type: 'confirm',
-      name: 'wantContainer',
-      default: true,
-      message: 'Do you want to import a container by the same name?',
-    },
   ],
 
 
-  actions: data => {
+  actions: () => {
     // Generate index.js and index.module.scss
     const actions = [{
       type: 'add',
-      path: '../../app/src/pages/{{properCase name}}Page/index.js',
+      path: '../../app/src/pages/{{properCase name}}/index.js',
       templateFile: './page/index.js.hbs',
-      abortOnFail: true,
-    }, {
-      type: 'add',
-      path: '../../app/src/pages/{{properCase name}}Page/index.module.scss',
-      templateFile: './page/index.module.scss.hbs',
       abortOnFail: true,
     }];
 
     // Add the route to the routes.js file above the error route
     // automatic export in root index.js
-    // TODO smarter route adding
     actions.push({
       type: 'modify',
       path: '../../app/src/routes.js',
@@ -68,14 +56,6 @@ module.exports = {
       path: '../../app/src/pages/index.js',
       pattern: /(\/\* GENERATOR: Assemble all pages for export \*\/)/g,
       template: trimTemplateFile('config/generators/page/export.js.hbs'),
-    });
-
-    // README.md
-    actions.push({
-      type: 'add',
-      path: '../../app/src/pages/{{properCase name}}Page/README.md',
-      templateFile: './page/README.md.hbs',
-      abortOnFail: true,
     });
 
     return actions;

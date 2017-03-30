@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Box from 'grommet-udacity/components/Box';
-import Section from 'grommet-udacity/components/Section';
-import Headline from 'grommet-udacity/components/Headline';
+import Box from 'grommet/components/Box';
+import Section from 'grommet/components/Section';
+import Headline from 'grommet/components/Headline';
 import { Divider, About } from 'components';
 import links from './data';
 

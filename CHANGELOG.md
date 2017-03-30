@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.1.0
+- Remove dependency to Grommet Udacity and replace with Grommet
+- Update test suite and linting to deal with recent issues with both
+- Update generators to use flowtypes, functions vs const, et. al.
+
+## 1.0.6
+- Flow static type-checking
+
+## 1.0.5
+- SSR improvements
+
 ## 1.0.4
 Styled components were added as an option to containers and components when generated
 

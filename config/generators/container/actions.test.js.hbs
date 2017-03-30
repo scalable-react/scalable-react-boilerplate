@@ -1,12 +1,25 @@
-import expect from 'expect';
-import * as actions from '../actions';
-import * as types from '../constants';
+import * as A from '../actions';
+import * as T from '../constants';
 
 describe('{{ properCase name }} actions', () => {
-  it('has a type of {{ uppercase name }}_DEFAULT_ACTION', () => {
+  it('should have a type of {{ uppercase name }}/LOAD_DATA_INITIATION', () => {
     const expected = {
-      type: types.{{ uppercase name }}_DEFAULT_ACTION,
+      type: T.LOAD_DATA_INITIATION,
     };
-    expect(actions.{{ camelCase name }}DefaultAction()).toEqual(expected);
+    expect(A.loadDataInitiation()).toEqual(expected);
+  });
+  it('should have a type of {{ uppercase name }}/LOAD_DATA_SUCCESS', () => {
+    const expected = {
+      type: T.LOAD_DATA_SUCCESS,
+    };
+    expect(A.loadDataSuccess()).toEqual(expected);
+  });
+  it('should have a type of {{ uppercase name }}/LOAD_DATA_FAILURE', () => {
+    const error = new Error('Ooopsie');
+    const expected = {
+      type: T.LOAD_DATA_FAILURE,
+      error,
+    };
+    expect(A.loadDataFailure(error)).toEqual(expected);
   });
 });

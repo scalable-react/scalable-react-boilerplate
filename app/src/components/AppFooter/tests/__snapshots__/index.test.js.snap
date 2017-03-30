@@ -1,5 +1,6 @@
 exports[`<AppFooter /> should render with default props 1`] = `
 <Footer
+  align="center"
   colorIndex="light-2"
   direction="row"
   pad="large"
@@ -35,6 +36,7 @@ exports[`<AppFooter /> should render with default props 1`] = `
       <br />
       <Anchor
         href="https://github.com/RyanCCollins/ryancollinsio"
+        method="push"
         tag="a">
         source code.
       </Anchor>
