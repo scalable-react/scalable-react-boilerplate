@@ -1,7 +1,8 @@
 # No longer maintained
 ![Not Maintained](https://github.com/RyanCCollins/cdn/blob/master/road_not_maintained.jpg?raw=true)
 
-Sadly, this repository is no longer maintained.  We will accept Pull Requests and will leave it as it is to serve as a reference.  In the meantime, we will be working on the [TypeScript version of this project](https://github.com/scalable-react/scalable-react-typescript-boilerplate) for the foreseeable future.
+Sadly, this repository is no longer maintained or updated.  We will accept Pull Requests and will leave it as it is to serve as a reference.  In the meantime, we will be working on the [TypeScript version of this project](https://github.com/scalable-react/scalable-react-typescript-boilerplate) for the foreseeable future.
+
 
 ![Scalable Boilerplate Logo](https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/scalable-boilerplate-logo.png?raw=true)
 
